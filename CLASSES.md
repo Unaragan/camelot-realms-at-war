@@ -39,6 +39,19 @@ Je Fraktion drei Archetypen, passend zur Nicht-jetzt-Grenze ("max. 3 Klassen pro
 | Druid | Heiler | Naturbasierte Heilung/Support, Flächenwirkung |
 | Ranger | Fernkampf/Stealth-nah | Distanzkampf mit Mobilitäts- und Tarnungselementen |
 
+## Spezialisierungs-Pfade (Talent-Wahl pro Archetyp)
+
+Jeder Archetyp bekommt zwei Talent-Pfade – einen defensiv/support-orientierten, einen offensiv/schadensorientierten. Passt zum "schlanke Talent-Wahlpunkte"-Prinzip aus SYSTEMS.md (2-3 Optionen, keine tiefe Verzweigung).
+
+| Archetyp | Spec A (defensiv/support) | Spec B (offensiv) |
+|---|---|---|
+| Tank (Paladin/Berserker/Champion) | Def-Tank: hohe Verteidigung, Aggro-Bindung, Gruppenschutz | 2H-Schaden: offensiv, hoher Einzelschaden, weniger Verteidigung |
+| Heiler (Cleric/Shaman/Druid) | Gruppenheilung: AoE-Heal, Buffs | Einzelheilung + Schaden: starke Einzelzielheilung, offensive Hybrid-Fähigkeiten |
+| Caster (Wizard) | Flächenschaden: mehrere Ziele gleichzeitig, schwächer pro Ziel | Einzelziel-Burst: hoher Schaden auf ein Ziel |
+| Fernkämpfer (Hunter/Ranger) | Kontrolle: Fesseln/Verlangsamen, Gruppenkontrolle | Präzision: hoher Einzelschaden, Mobilität |
+
+Technisch: ein Wahlpunkt pro Archetyp/Levelstufe in der Talent-Tabelle aus SYSTEMS.md, keine tiefere Verzweigung als diese zwei Optionen.
+
 ## Für den Vertical Slice (Phase 2)
 
 - **Task #6:** eine Klasse für Fraktion 1 (Vorschlag: Paladin oder Wizard — deckt Tank- bzw. Caster-Grundgefühl ab)
