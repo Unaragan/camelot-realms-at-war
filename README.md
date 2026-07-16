@@ -28,6 +28,14 @@ Der Kern von DAOC, den dieses Projekt einfangen will: **kleine, taktische Kämpf
 - **Netzwerkmodell (Prototyp):** Listen Server; Dedicated Server erst wenn nötig
 - **Auth/Persistenz:** bewusst zurückgestellt bis der Kampf-Loop steht (siehe Nicht-jetzt-Liste). Wenn nötig: separater Web-Service (Login/Token) außerhalb der Engine, UE-Server validiert beim Connect – passt zum eigenen Netzwerk-/Auth-Hintergrund.
 
+## Lokalisierung (Multi-Language von Anfang an: DE, EN, FR, ES)
+
+Bewusste Architekturentscheidung von Tag 1, nicht nachträglich: **jeder spieler-sichtbare Text als `FText`**, nie als rohes `FString`/hartcodierter String – in C++ über `LOCTEXT`/`NSLOCTEXT`, in Blueprints als `Text`-Typ, in DataTables (Klassen-/Item-/Fähigkeitsnamen) als `FText`-Spalten statt `FString`. Größere/wiederkehrende Textblöcke über String Tables.
+
+**Workflow:** UE5s eingebautes Localization Dashboard – Zielsprachen `en` (Quelle), `de`, `fr`, `es` konfigurieren → Gather Text → Export `.po` → Übersetzung → Import → Kompilierung zu `.locres`, Sprache zur Laufzeit umschaltbar.
+
+**Jetzt vs. später:** Infrastruktur (FText-Disziplin, Zielsprachen konfiguriert) von Anfang an. Tatsächliche Übersetzungsinhalte für DE/FR/ES kommen inkrementell, sobald es stabilen Content gibt – kein Blocker für den Vertical Slice.
+
 ## Art-Stil: Comic/Toon als bewusste Platzhalter- und Zielstrategie
 
 Grafiken werden zunächst im **Comic-/Toon-Stil** angelegt (Cel-Shading Post-Process + Outline-Effekt) und später nach Grundfunktion ersetzt bzw. verfeinert. Gründe:
