@@ -50,6 +50,25 @@ Konkrete Entscheidungen für UE5:
 - UE5-Skalierungsstufen (Low–Epic) von Anfang an mittesten, nicht nur auf dem eigenen Entwicklerrechner
 - Ziel-Hardware bewusst festlegen (Mittelklasse-GPU, ca. 5 Jahre alt) und regelmäßig dagegen testen
 
+## Server & Test-Hardware
+
+**Test-Hardware bereits vorhanden (kein Neukauf nötig):**
+- **HP ZBook** (mobile Workstation, NVIDIA G100/Einstiegsklasse professionelle Grafik) – dient als unteres Performance-Ziel, da mobile Workstation-GPUs für Echtzeit-Rendering/Gaming schwächer sind als vergleichbare Gaming-Laptops
+- **Desktop-PC mit AMD Ryzen 9 + NVIDIA RTX 40er-Serie** – dient als High-End-Referenz
+
+Damit ist Task #10 (Performance-Budget) von Anfang an gegen beide Enden des Spektrums testbar, ohne zusätzliche Anschaffung.
+
+**Server-Bedarf entlang der Roadmap:**
+
+| Phase | Bedarf | Kosten |
+|---|---|---|
+| Phase 0-1 (Lernen/Lyra-Setup) | Kein Server – Tests via "Play in Editor" mit mehreren lokalen Client-Instanzen | 0 € |
+| Phase 2, Netzwerk-Grundgerüst (Task #5) | Listen Server + Epic Online Services (EOS, fest in UE5 integriert, kostenlose Free-Tier, übernimmt NAT-Traversal/Sessions) | 0 € |
+| Übergang zu dediziertem Test-/Staging-Server – sobald Listen-Server unpraktisch wird (Playtester nicht gleichzeitig mit Host online, oder externe Mitstreiter aus dem Team-Kapitel kommen dazu) | Kleiner VPS für headless Dedicated-Server-Build (CPU-Kerne wichtiger als GPU). Aktuelles Beispiel: Contabo Cloud VPS 4 (4 vCPU, 8 GB RAM, 100 GB SSD) | ~5,50 €/Monat (24-Monats-Vertragspreis, kürzere Laufzeit teurer; Preise zum Entscheidungszeitpunkt neu prüfen) |
+| Falls Projekt wächst – breiterer Alpha/Beta-Test mit mehr gleichzeitigen Spielern | Größerer VPS, z. B. Contabo Cloud VPS 8 (8 vCPU, 24 GB RAM) oder vergleichbar | ~14 €/Monat aufwärts, je nach Spielerzahl |
+
+Hinweis: Hetzner-Preise sind laut Recherche seit 15.06.2026 stark gestiegen (teils 2,5–3x) – Contabo ist aktuell die günstigere, verifizierte Alternative; Anbieter zum jeweiligen Entscheidungszeitpunkt neu vergleichen.
+
 ## Skalierung: MMO-Realität einordnen
 
 UE5s Standard-Replikation ist für Action-Multiplayer ausgelegt (Dutzende bis ~100 Spieler), nicht für Tausende. Referenzprojekt: *Ashes of Creation* wird mit UE5 gebaut und zielt auf große Belagerungsschlachten (~250–500 Spieler), benötigt dafür aber massiv angepasste Netzwerkschicht (Interest-Management, Server-Meshing, Iris-Replikation) – ein mehrjähriges Engineering-Projekt, kein Solo-Feature.
