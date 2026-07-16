@@ -113,6 +113,12 @@ Frühere DAOC-Nachfolgeprojekte aus der Community sind wiederholt im Sand verlau
 - Wenn Rekrutierung ansteht: DAOC-Community (Subreddit/Discords) für Nostalgie-getriebene Mitstreiter, Unreal-Slackers-Discord/r/unrealengine für Skill, itch.io/IndieDB-Devlogs für organisches Anziehen durch sichtbaren Fortschritt
 - Für einzelne Assets eher bezahlte Auftragsarbeit als offene Freiwilligen-Suche erwägen – verbindlicher, kein Team-Management nötig
 
+## Werkzeug-Aufteilung: Copilot vs. Claude
+
+Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach bekanntem Muster, DataTable-Struct, Utility-Funktion, Testgerüst) wird **GitHub Copilot** (kostenlos verfügbar) direkt im Editor genutzt – schnell, kein Projektkontext nötig. Für alles, was Projektkontext über mehrere Dateien, Architekturentscheidungen oder Planung braucht, bleibt **Claude Code** der Ansprechpartner.
+
+**Faustregel:** "Erstelle X nach folgendem Muster" → Copilot. "Wie sollten wir X strukturieren" / "was hat das für Auswirkungen auf Y" → Claude.
+
 ## Referenzen & Recherche
 
 - **Dawn of Light (DOL):** Open-Source-Server-Emulator (GPL) für DAOC – wertvolle Referenz zum *Verstehen* von Kampf-/RvR-Formeln, nicht zum direkten Übernehmen von Code (Lizenz beachten)
