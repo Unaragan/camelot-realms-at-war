@@ -1,0 +1,43 @@
+# --- Unreal Engine generierte Ordner ---
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# --- IDE / Editor ---
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.opendb
+
+# --- Compiler-Artefakte ---
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+*.so
+*.dylib
+*.dll
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app
+
+# --- Sonstiges ---
+.DS_Store
+Thumbs.db
+*.log
