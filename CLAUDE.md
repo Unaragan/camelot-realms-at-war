@@ -1,6 +1,6 @@
 # Camelot: Realms at War — Projektleitfaden
 
-Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
+Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
 
 ## Nicht verhandelbare Regeln
 
