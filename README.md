@@ -69,6 +69,10 @@ Damit ist Task #10 (Performance-Budget) von Anfang an gegen beide Enden des Spek
 
 Hinweis: Hetzner-Preise sind laut Recherche seit 15.06.2026 stark gestiegen (teils 2,5–3x) – Contabo ist aktuell die günstigere, verifizierte Alternative; Anbieter zum jeweiligen Entscheidungszeitpunkt neu vergleichen.
 
+**Betriebssystem:** Linux (nicht Windows Server) – keine zusätzlichen OS-Lizenzkosten, UE5 Dedicated Server unterstützt Linux nativ.
+
+**Vollständige Kosten-Tracking-Tabelle (laufend, geplant, Freeware-Tools):** siehe [COSTS.md](COSTS.md).
+
 ## Skalierung: MMO-Realität einordnen
 
 UE5s Standard-Replikation ist für Action-Multiplayer ausgelegt (Dutzende bis ~100 Spieler), nicht für Tausende. Referenzprojekt: *Ashes of Creation* wird mit UE5 gebaut und zielt auf große Belagerungsschlachten (~250–500 Spieler), benötigt dafür aber massiv angepasste Netzwerkschicht (Interest-Management, Server-Meshing, Iris-Replikation) – ein mehrjähriges Engineering-Projekt, kein Solo-Feature.
