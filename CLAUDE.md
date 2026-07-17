@@ -1,6 +1,11 @@
 # Camelot: Realms at War — Projektleitfaden
 
-Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
+Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Unreal-MCP-Setup: [SETUP.md](SETUP.md).
+
+## Wichtig: zwei getrennte Arbeitsumgebungen
+
+- **GUI-Chat** (diese Art von Session): Planung, Recherche, GitHub/Repo-Arbeit, Dokumentation. Kein Zugriff auf Unreal-MCP-Werkzeuge, kein `/plugin`-Befehl verfügbar.
+- **Terminal mit laufender `claude`-Sitzung**: einzige Umgebung, in der Unreal-MCP-Werkzeuge (direkte Editor-Steuerung) funktionieren. Siehe SETUP.md. Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
 
 ## Nicht verhandelbare Regeln
 

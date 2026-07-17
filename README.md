@@ -121,6 +121,10 @@ Frühere DAOC-Nachfolgeprojekte aus der Community sind wiederholt im Sand verlau
 - Wenn Rekrutierung ansteht: DAOC-Community (Subreddit/Discords) für Nostalgie-getriebene Mitstreiter, Unreal-Slackers-Discord/r/unrealengine für Skill, itch.io/IndieDB-Devlogs für organisches Anziehen durch sichtbaren Fortschritt
 - Für einzelne Assets eher bezahlte Auftragsarbeit als offene Freiwilligen-Suche erwägen – verbindlicher, kein Team-Management nötig
 
+## Unreal MCP: Claude Code direkt im Editor
+
+Über Epics offizielles Plugin kann Claude Code direkt mit dem Unreal Editor verbunden werden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren) – ohne unzuverlässiges GUI-Klicken über Screenshots. Funktioniert nur in einer echten Terminal-Sitzung, nicht in GUI-Chat-Oberflächen. Vollständige Einrichtung inkl. gelöster Stolperfallen: [SETUP.md](SETUP.md).
+
 ## Werkzeug-Aufteilung: Copilot vs. Claude
 
 Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach bekanntem Muster, DataTable-Struct, Utility-Funktion, Testgerüst) wird **GitHub Copilot** (kostenlos verfügbar) direkt im Editor genutzt – schnell, kein Projektkontext nötig. Für alles, was Projektkontext über mehrere Dateien, Architekturentscheidungen oder Planung braucht, bleibt **Claude Code** der Ansprechpartner.

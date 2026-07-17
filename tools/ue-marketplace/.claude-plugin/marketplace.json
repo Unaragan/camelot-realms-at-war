@@ -1,0 +1,13 @@
+{
+  "name": "ue-local-marketplace",
+  "owner": { "name": "Unaragan" },
+  "plugins": [
+    {
+      "name": "unreal-engine-skills",
+      "source": {
+        "source": "github",
+        "repo": "EpicGames/unreal-engine-skills-for-claude-code-plugin"
+      }
+    }
+  ]
+}
