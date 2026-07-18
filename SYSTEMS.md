@@ -68,6 +68,25 @@ Tags treiben in GAS Aktivierungssperren, Cooldown-Tracking und CC-Zustände – 
 
 Angriffe von hinten verursachen doppelten Schaden – als wiederverwendbare Mechanik, nicht nur für einzelne Fähigkeiten. Technisch: Winkel-Check zwischen der Blickrichtung des Ziels und der Position des Angreifers zum Aktivierungszeitpunkt (z. B. Angreifer innerhalb eines ~120°-Kegels hinter dem Ziel = Rückenangriff). **Serverseitig auswerten**, nicht clientseitig – sonst leicht manipulierbar. Nur der Schadensanteil verdoppelt sich, nicht Heilungsanteile bei Hybrid-Fähigkeiten.
 
+## 2d. Bekannte Einschränkung: reines Blueprint-Projekt (kein C++-Modul)
+
+Das Projekt läuft aktuell als reines Blueprint-Projekt ohne eigenes C++-Modul – abweichend vom Tech-Stack-Grundsatz "C++ für Kernsysteme" in der README/CLAUDE.md. Praktische Konsequenz: **`InitAbilityActorInfo` ist in reinen Blueprint-Projekten nicht aufrufbar** (nicht BlueprintCallable in dieser Engine-Version ohne C++-Modul).
+
+**Funktionierender Workaround** (verifiziert per PIE-Test): Ziel-/Eigentümer-Actor über `GetOuterObject → CastToActor` ermitteln statt über `GetAvatarActorFromActorInfo`. Funktioniert einwandfrei mit `TryActivateAbilityByClass`.
+
+**Zu entscheiden, sobald mehr Klassen dazukommen (Task #7):** entweder weiter mit diesem Blueprint-Workaround arbeiten, oder an dem Punkt ein C++-Modul einführen für sauberere GAS-Integration. Keine Eile – der Workaround funktioniert nachweislich.
+
+## Erste Referenzimplementierung (Ritter-Prototyp)
+
+Erfolgreich umgesetzt und per PIE verifiziert (Stand 2026-07-19), unter `/Game/Knights/`:
+- `BP_KnightAttributeSet` – Health/MaxHealth je 250
+- `GE_MeleeDamageHeal` – ein wiederverwendbarer GameplayEffect mit zwei Set-by-Caller-Magnitudes ("Damage", "Healing") – genau das modulare Muster aus Abschnitt 2
+- `BP_KnightAttackAbilityBase` (ServerOnly) mit serverseitigem 120°-Rücken-Winkel-Check per Dot-Product (siehe 2c)
+- `GA_KnightAttack1` (25 Schaden), `GA_KnightAttack2` (15 Schaden + 15 Selbstheilung – Heilungsanteil verdoppelt sich bei Rückenangriff bewusst NICHT)
+- `BP_Sword` (Platzhalter-Waffe, ChildActorComponent am hand_r-Socket), `BP_Knight` (Character mit ASC, Primitiv-Körper, Team-Farben)
+
+Bestätigte Testresultate: Frontalangriff 1 = −25 HP, Frontalangriff 2 = Ziel −15 HP/Angreifer +15 HP, Rückenangriff 1 = −50 HP (verdoppelt), Rückenangriff 2 = Ziel −30 HP (verdoppelt) + Heilung weiterhin +15 HP (unverändert). Noch offen: Tod/Respawn-Handling, Netzwerk-Replikation über echte Client-Server-Verbindung (nicht nur Einzel-PIE) – siehe Task #5/#6.
+
 ## 3. GUI (HUD)
 
 **Architekturprinzip:** UMG-Widgets binden sich an GAS-Attribute-Delegates (`OnAttributeChanged`), statt den Wert jeden Tick abzufragen – performanter und passt zum Performance-Grundsatz aus der README. MVVM-Pattern (Model-View-ViewModel, in UE5 nativ über UMG Viewmodels unterstützt) entkoppelt UI-Widgets von der Gameplay-Logik – wichtig, damit später der Art-Stil-Wechsel (Platzhalter → finale Art) die UI nicht mit umbauen muss.
