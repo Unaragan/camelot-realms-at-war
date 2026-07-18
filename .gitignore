@@ -37,6 +37,9 @@ Plugins/*/Intermediate/
 *.out
 *.app
 
+# --- Claude Code lokale Einstellungen (maschinenspezifisch) ---
+.claude/settings.local.json
+
 # --- Sonstiges ---
 .DS_Store
 Thumbs.db
