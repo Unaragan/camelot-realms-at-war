@@ -1,8 +1,10 @@
 # start-dev.ps1 - Startet Unreal Editor (mit automatischem MCP-Server-Start) + Claude-Code-Terminal
 # Camelot: Realms at War
 
-$ProjectPath = "C:\Users\micha\Documents\Unreal Projects\CamelotRAW\CamelotRAW.uproject"
-$ProjectDir  = "C:\Users\micha\Documents\Unreal Projects\CamelotRAW"
+# WICHTIG: Projekt liegt jetzt im Git-Repo selbst (nicht mehr unter Documents\Unreal Projects)
+# damit Editor-Arbeit und Versionierung nicht auseinanderlaufen. Siehe SETUP.md.
+$ProjectPath = "D:\Claude\camelot-realms-at-war\CamelotRAW.uproject"
+$ProjectDir  = "D:\Claude\camelot-realms-at-war"
 $EnginePath  = "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe"
 
 if (-not (Test-Path $EnginePath)) {

@@ -76,6 +76,7 @@ Bei korrekter Einrichtung: 41 Toolsets, u. a. ActorTools, BlueprintTools, DataTa
 | Zwei Befehle werden als einer interpretiert | Beide Zeilen ohne Enter dazwischen eingegeben | Jeden Befehl einzeln eingeben, auf Antwort warten, dann nächsten |
 | "Nur ein System-Reminder, keine Aufgabe" | Bloßer Tool-Name statt natürlichsprachlicher Anweisung eingegeben | Als vollständigen Satz formulieren, z. B. "Führe list_toolsets aus" |
 | Server verbindet nicht trotz Plugin-Install | `/plugin install` registriert nur den Skill, nicht die Serververbindung | Zusätzlich manuell: `claude mcp add --transport http unreal-mcp http://localhost:8000/mcp` |
+| Neue Assets fehlen im Git, obwohl im Editor sichtbar | Editor/Terminal arbeiteten an einer zweiten Projekt-Kopie außerhalb des Repos (`Documents\Unreal Projects\CamelotRAW`) statt am Repo selbst | **Nur noch eine Kopie verwenden:** Projekt liegt jetzt direkt unter `D:\Claude\camelot-realms-at-war\CamelotRAW.uproject`. Immer darüber öffnen (z. B. via `tools/start-dev.ps1`), nie eine zweite Kopie parallel bearbeiten |
 
 ## Status
 
