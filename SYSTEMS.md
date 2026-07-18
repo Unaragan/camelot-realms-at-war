@@ -64,6 +64,10 @@ Tags treiben in GAS Aktivierungssperren, Cooldown-Tracking und CC-Zustände – 
 - **Skill-Tree/Talente:** begrenzte Auswahlpunkte (Spieler wählt zwischen wenigen Spezialisierungs-Optionen bei bestimmten Levelstufen), kein sprawling Talentbaum. Eigene schlanke Talent-Tabelle: eine Zeile pro Wahlpunkt mit 2-3 Optionen, keine tiefe Verzweigung.
 - **Crafting-UI:** separat und später (siehe Nicht-jetzt-Liste: Crafting) – entweder eigene Leiste oder direkt aus der Rezeptliste. Keine Festlegung jetzt nötig, nur als bekannter offener Punkt vermerkt.
 
+## 2c. Positionsabhängiger Schaden (Rückenangriff)
+
+Angriffe von hinten verursachen doppelten Schaden – als wiederverwendbare Mechanik, nicht nur für einzelne Fähigkeiten. Technisch: Winkel-Check zwischen der Blickrichtung des Ziels und der Position des Angreifers zum Aktivierungszeitpunkt (z. B. Angreifer innerhalb eines ~120°-Kegels hinter dem Ziel = Rückenangriff). **Serverseitig auswerten**, nicht clientseitig – sonst leicht manipulierbar. Nur der Schadensanteil verdoppelt sich, nicht Heilungsanteile bei Hybrid-Fähigkeiten.
+
 ## 3. GUI (HUD)
 
 **Architekturprinzip:** UMG-Widgets binden sich an GAS-Attribute-Delegates (`OnAttributeChanged`), statt den Wert jeden Tick abzufragen – performanter und passt zum Performance-Grundsatz aus der README. MVVM-Pattern (Model-View-ViewModel, in UE5 nativ über UMG Viewmodels unterstützt) entkoppelt UI-Widgets von der Gameplay-Logik – wichtig, damit später der Art-Stil-Wechsel (Platzhalter → finale Art) die UI nicht mit umbauen muss.
