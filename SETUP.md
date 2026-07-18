@@ -1,29 +1,37 @@
 # Setup: Unreal MCP (Claude Code ↔ Unreal Editor)
 
-Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren, u. v. m. – ohne blindes GUI-Klicken). Basiert auf Epics offiziellem Plugin [`unreal-engine-skills-for-claude-code-plugin`](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin).
+Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren, DataTables, UMG-Widgets, u. v. m. – ohne blindes GUI-Klicken). Basiert auf Epics offiziellem Plugin [`unreal-engine-skills-for-claude-code-plugin`](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin). Erfolgreich getestet: **41 Toolsets** registriert, inkl. aller GAS-Werkzeuge (GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, GameplayCueToolset).
 
 ## Wichtige Voraussetzung: richtiges Fenster benutzen
 
 **Diese Einrichtung funktioniert nur in einer echten Terminal-Sitzung** (`claude` direkt in PowerShell/Git Bash/Eingabeaufforderung gestartet) – **nicht** in GUI-basierten Claude-Oberflächen (z. B. Desktop-App-Chats). Slash-Befehle wie `/plugin` sind dort nicht verfügbar. Für alles, was direkt in der Unreal Engine passieren soll, muss im Terminal-Fenster gearbeitet werden.
 
-## Schritt 1: MCP-Server im Unreal Editor starten
+## Schritt 1: Toolset-Plugins im Unreal Editor aktivieren
 
-1. Plugin aktivieren: **Edit → Plugins** → nach "MCP" suchen → **ModelContextProtocol** und **AllToolsets** aktivieren → Editor neu starten
-2. Konsole öffnen, um Befehle einzugeben:
-   - **Bei deutscher Tastatur (QWERTZ) funktioniert die `~`-Taste oft nicht** – stattdessen: **Window → Output Log** öffnen, dort unten im Eingabefeld ("Cmd") die Befehle eintippen
-   - Alternativ: Taste links neben "1", über Tab (meist `^`/`°` beschriftet) probieren
-   - Alternativ: Konsolen-Taste in den Editor-Eingabeeinstellungen neu belegen
-3. Im Konsolen-/Output-Log-Eingabefeld:
-   ```
-   ModelContextProtocol.StartServer
-   ```
-   Läuft standardmäßig auf Port 8000.
+1. **Edit → Plugins** → nach **"Toolset"** suchen (nicht nur "MCP" – sonst tauchen die einzelnen Toolset-Plugins nicht auf!)
+2. Mindestens aktivieren: **All Toolsets** (Aggregator), **EditorToolset**, **GASToolsets** (für unser Gameplay Ability System). Optional: NiagaraToolsets, PhysicsToolsets, je nach Bedarf.
+3. Zusätzlich nach **"MCP"** suchen und **ModelContextProtocol** aktivieren
+4. **Editor komplett neu starten** – newly aktivierte Plugins greifen sonst nicht, auch wenn der Server schon läuft. Das haben wir live erlebt: ohne Neustart wurde nur 1 statt 41 Toolsets registriert.
 
-## Schritt 2: Plugin in Claude Code installieren (im Terminal!)
+## Schritt 2: Konsole finden (Windows/QWERTZ-Falle)
+
+- **Bei deutscher Tastatur (QWERTZ) funktioniert die `~`-Taste oft nicht** – stattdessen: **Window → Output Log** öffnen, dort unten im Eingabefeld ("Cmd") die Befehle eintippen
+- Alternativ: Taste links neben "1", über Tab (meist `^`/`°` beschriftet) probieren
+- Alternativ: Konsolen-Taste in den Editor-Eingabeeinstellungen neu belegen
+
+## Schritt 3: MCP-Server im Editor starten
+
+Im Output-Log-Eingabefeld:
+```
+ModelContextProtocol.StartServer
+```
+Läuft standardmäßig auf Port 8000, Pfad `/mcp`.
+
+## Schritt 4: Plugin/Skill in Claude Code installieren (im Terminal!)
 
 Das Epic-Repo ist als **einzelnes Plugin** aufgebaut (`.claude-plugin/plugin.json`), nicht als Marketplace-Katalog (`marketplace.json`). Direktes `/plugin marketplace add EpicGames/...` schlägt deshalb fehl ("Marketplace file not found"). Lösung: lokaler Marketplace-Wrapper, der im Repo liegt unter [`tools/ue-marketplace/`](tools/ue-marketplace/).
 
-Im Terminal, `claude` gestartet, dann **zwei getrennte Befehle, jeder mit eigenem Enter**:
+Im Terminal, `claude` gestartet, **zwei getrennte Befehle, jeder mit eigenem Enter**:
 
 ```
 /plugin marketplace add <Pfad-zum-Repo>/tools/ue-marketplace
@@ -37,19 +45,38 @@ Danach als neue Eingabe:
 
 Bei der Installationsabfrage **"Install for you (user scope)"** wählen.
 
-## Bekannte Stolperfallen (bereits gelöst, falls sie wieder auftauchen)
+**Wichtig:** Dieser Schritt installiert nur den *Skill* (die Anleitung/Beschreibung) – **nicht automatisch die eigentliche Serververbindung.** Das ist ein separater Schritt (5).
+
+## Schritt 5: MCP-Server-Verbindung manuell registrieren
+
+Claude-Sitzung kurz verlassen (`exit`) oder neues Terminal-Fenster, **außerhalb** der interaktiven `claude`-Sitzung:
+
+```
+claude mcp add --transport http unreal-mcp http://localhost:8000/mcp
+```
+
+Danach `claude` neu starten. Zur Kontrolle `/mcp` eingeben → "List/manage MCP servers" wählen → `unreal-mcp` sollte jetzt als verbundener Server auftauchen.
+
+## Schritt 6: Testen
+
+**Wichtig:** Der bloße Tool-Name allein (z. B. nur `list_toolsets` eintippen) wird nicht als Anweisung erkannt – das öffnet nur eine Detailansicht. Immer als **natürlichsprachlicher Satz**:
+
+> "Rufe das Werkzeug list_toolsets bei unreal-mcp auf und zeig mir alle registrierten Toolsets"
+
+Bei korrekter Einrichtung: 41 Toolsets, u. a. ActorTools, BlueprintTools, DataTableTools, MaterialTools, GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, UMGToolSet.
+
+## Bekannte Stolperfallen (bereits gelöst)
 
 | Fehler | Ursache | Lösung |
 |---|---|---|
+| Nur 1 Toolset (`AgentSkillToolset`) statt 41 | Toolset-Plugins aktiviert, aber Editor nicht neu gestartet | Editor komplett neu starten nach Plugin-Aktivierung |
 | `Host key verification failed` | GitHub noch nicht in `known_hosts` bekannt | `ssh-keyscan -t ed25519,rsa,ecdsa github.com >> ~/.ssh/known_hosts` |
 | `Permission denied (publickey)` | Kein SSH-Key bei GitHub hinterlegt (Account nutzte bisher nur HTTPS via `gh`) | SSH-Key erzeugen (`ssh-keygen -t ed25519`), dann `gh ssh-key add ~/.ssh/id_ed25519.pub` (braucht ggf. `gh auth refresh -s admin:public_key`) |
 | `/plugin isn't available in this environment` | Falsches Fenster – GUI-Chat statt Terminal | Im echten Terminal mit laufender `claude`-Sitzung arbeiten |
 | Zwei Befehle werden als einer interpretiert | Beide Zeilen ohne Enter dazwischen eingegeben | Jeden Befehl einzeln eingeben, auf Antwort warten, dann nächsten |
-
-## Nach erfolgreicher Installation
-
-Test im Terminal: *"Liste alle verfügbaren Unreal-MCP-Werkzeuge auf"* oder *"Spawne einen Actor in der aktuellen Szene"* – bei laufendem MCP-Server im Editor sollte das funktionieren.
+| "Nur ein System-Reminder, keine Aufgabe" | Bloßer Tool-Name statt natürlichsprachlicher Anweisung eingegeben | Als vollständigen Satz formulieren, z. B. "Führe list_toolsets aus" |
+| Server verbindet nicht trotz Plugin-Install | `/plugin install` registriert nur den Skill, nicht die Serververbindung | Zusätzlich manuell: `claude mcp add --transport http unreal-mcp http://localhost:8000/mcp` |
 
 ## Status
 
-🟢 Erfolgreich eingerichtet (Stand: 2026-07-18). Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
+🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-18) – 41 Toolsets bestätigt verbunden. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
