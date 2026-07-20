@@ -90,25 +90,31 @@ vor. Layout-seitig sind das sinnvolle Verfeinerungen des Konzepts oben:
   Schneesturm über Midgard, dunstige Wälder über Hibernia); zusätzliches Mittel zur
   Reichs-Unterscheidbarkeit aus der Luft.
 
-## Rendering-Hinweis (wichtig — Konflikt mit CLAUDE.md)
+## Rendering-Hinweis: POC fest Toon/Flat, finale Artdirection bewusst offen
 
 Copilot schlug für den finalen Look zusätzlich **"UE5.8-Look mit Lumen, Nanite,
-Volumetric Fog und realistischer Beleuchtung"** vor. Das steht im Widerspruch zu den
-**nicht verhandelbaren Regeln** in [CLAUDE.md](../../CLAUDE.md):
+Volumetric Fog und realistischer Beleuchtung"** vor. Klarstellung des Nutzers
+(2026-07-21): Für den **POC/Vertical Slice bleibt es bei Toon/Flat** mit gebackenem
+Licht (Lightmass) — daran ändert sich nichts, siehe [CLAUDE.md](../../CLAUDE.md). Für
+die **finale Produktversion** ist ein realistischerer Look (Lumen/Nanite/Volumetric Fog)
+dagegen bewusst **nicht ausgeschlossen** — das ist eine offene, spätere Design-/
+Technik-Entscheidung, kein Widerspruch mehr, den es aufzulösen gilt.
 
-- **Kein Lumen** — das Projekt setzt bewusst auf gebackenes Licht (Lightmass); Lumen und
-  Lightmass schließen sich technisch gegenseitig aus.
-- **Kein Nanite für Charaktere** (für Landscape/Umgebung wäre Nanite laut Regel nicht
-  grundsätzlich ausgeschlossen, aber der realistische Gesamt-Look widerspricht der
-  bereits begründeten Flat/Toon-Artdirection aus README.md).
-- **Ziel-Hardware ist Mittelklasse**, nicht der Entwicklerrechner — ein
-  Lumen/Nanite-"echter MMO-Map-Render"-Look ist als Performance-Ziel nicht vorgesehen.
+Praktisch heißt das für jetzt:
 
-**Einordnung:** Die photorealistischen Copilot-Bilder bleiben trotzdem nützlich — aber
-nur als **Kompositions-/Layout-Referenz** (Anordnung, Sichtachsen, Maßstab), nicht als
-Ziel-Look für das tatsächliche Rendering. Die Landscape-Umsetzung in Unreal 5.8 muss den
-Look in die bestehende flache/Toon-Artdirection mit gebackenem Licht übersetzen, nicht
-den fotorealistischen Look 1:1 übernehmen.
+- **POC/Vertical Slice:** striktes Toon/Flat, gebackenes Licht, Mittelklasse-Hardware —
+  unverändert nicht verhandelbar (Performance-Ziel, RvR-Lesbarkeit, günstigere
+  Produktion laut README.md).
+- **Finale Version:** offen — die photorealistischen Copilot-Bilder sind dafür ein
+  gültiger Stimmungs-/Ziel-Look-Kandidat, nicht nur Kompositions-/Layout-Referenz.
+  Sollte diese Entscheidung getroffen werden, betrifft sie: Landscape-Rendering-Pipeline
+  (Lumen vs. Lightmass), ob Nanite auch für Charaktere infrage kommt, Ziel-Hardware-
+  Anforderungen (steigen bei realistischem Look spürbar), und ob Mesh/Material-Austausch
+  (siehe CLAUDE.md, Platzhalter-Toon-Art muss ersetzbar sein) für einen Stilwechsel
+  reicht oder größere Rework nötig wird.
+- Diese Entscheidung sollte **nicht vor dem Vertical Slice** getroffen werden — Scope-
+  Disziplin laut README.md gilt weiter, das ist nur die Vormerkung, dass die Tür offen
+  bleibt.
 
 ## Frontier-Design: erzwungener Kontakt statt getrennter Zonen
 

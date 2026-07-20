@@ -10,7 +10,7 @@ Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details
 ## Nicht verhandelbare Regeln
 
 - **Jeder spieler-sichtbare Text ist `FText`**, nie `FString`/hartcodiert. C++: `LOCTEXT`/`NSLOCTEXT`. Blueprints: `Text`-Typ. DataTables: `FText`-Spalten. Zielsprachen: en (Quelle), de, fr, es.
-- **Kein Lumen, kein Nanite für Charaktere.** Gebackenes Licht (Lightmass). Ziel-Hardware ist Mittelklasse, nicht der Entwicklerrechner.
+- **Kein Lumen, kein Nanite für Charaktere.** Gebackenes Licht (Lightmass). Ziel-Hardware ist Mittelklasse, nicht der Entwicklerrechner. *Gilt für POC/Vertical Slice.* Artdirection/Rendering-Technik fürs finale Produkt (ggf. Lumen/Nanite/realistischer Look) ist bewusst noch offen — siehe [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
 - **Gameplay-Klassen referenzieren Mesh/Material als austauschbare Variable**, nie hart verdrahtet — Platzhalter-Toon-Art muss später ersetzbar sein, ohne Logik anzufassen. Standard-Mannequin-Skeleton für Animations-Retargeting.
 - **C++ für Kernsysteme, Blueprints/DataTables für Content & Balancing.**
 - **Kein Original-DAOC-Content** (Assets, Texte, exakte Markennamen). Namensgebung siehe [CLASSES.md](CLASSES.md) — Archetypen ja, unverwechselbare erfundene Namen nein.
