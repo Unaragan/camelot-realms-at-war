@@ -59,6 +59,57 @@ Zwinger als Kern-Ziel.**
     nur 2 sichtbare Brücken für 3 Reiche — bei Umsetzung klären, ob 3 symmetrische
     Zugänge oder bewusst asymmetrisch/2 Brücken plus Fußweg)
 
+## Layout-Verfeinerung v2 (Copilot-Feedback zum Photobash, 2026-07-21)
+
+Nach dem ersten Moodboard hat der Nutzer mit Copilot ein weiteres "Photobash"-Beispiel
+erzeugt; Copilot selbst schlug für eine "finale Produktionsvorlage" diese Verbesserungen
+vor. Layout-seitig sind das sinnvolle Verfeinerungen des Konzepts oben:
+
+- **Nur 3 eindeutig erkennbare Reichs-Keeps** — Lesbarkeit geht vor Detailfülle, jeder
+  Keep muss auf einen Blick seinem Reich zuordenbar sein (siehe Reichsidentität unten).
+- **Zentralburg ca. 30–40 % kleiner** als im ersten Moodboard — wirkt sonst zu dominant
+  im Verhältnis zu den Reichs-Keeps und den Zwischenzielen.
+- **Sichtbare äußere Eroberungspunkte** als konkrete Typen statt generischer
+  "Zwischenziele": Türme, Dörfer, Minen, Schreine — jeder Typ kann eine eigene
+  Gameplay-Belohnung tragen (z. B. Mine = Ressourcen, Schrein = Buff, Turm = Sichtlinie/
+  Rally-Punkt, Dorf = Versorgung).
+- **Deutlichere Reichsidentität pro Biom**, statt nur unterschiedlicher Fahnenfarben:
+  - **Albion** → Ritterburgen, offene Felder, Nebel
+  - **Midgard** → Fjorde, Schnee, Felsklippen
+  - **Hibernia** → riesige Eichen, Dolmen, mystische Wälder
+- **Große offene PvP-Schlachtfelder zwischen den Keep-Routen** — ergänzt/konkretisiert
+  den [erzwungenen Kontakt](#frontier-design-erzwungener-kontakt-statt-getrennter-zonen):
+  nicht nur schmale Nadelöhre, sondern auch echte offene Flächen zum Feldschlacht-Kampf.
+- **Natürliche Chokepoints an Flüssen und Gebirgspässen** — deckt sich mit dem
+  bestehenden Gebirgs-/Fluss-Konzept, hier nochmal explizit als Gameplay-Funktion
+  (Flaschenhals, kein bloßes Terrain-Deko).
+- **Belagerungsstraßen mit sichtbaren Marschrouten** — Wege sollen als klare,
+  lesbare Vormarsch-Linien gestaltet sein (Truppenbewegung visuell nachvollziehbar),
+  nicht nur als generische Verbindungspfade.
+- **Wetterzonen pro Reich** — passend zur Biom-Identität (z. B. Nebel über Albion,
+  Schneesturm über Midgard, dunstige Wälder über Hibernia); zusätzliches Mittel zur
+  Reichs-Unterscheidbarkeit aus der Luft.
+
+## Rendering-Hinweis (wichtig — Konflikt mit CLAUDE.md)
+
+Copilot schlug für den finalen Look zusätzlich **"UE5.8-Look mit Lumen, Nanite,
+Volumetric Fog und realistischer Beleuchtung"** vor. Das steht im Widerspruch zu den
+**nicht verhandelbaren Regeln** in [CLAUDE.md](../../CLAUDE.md):
+
+- **Kein Lumen** — das Projekt setzt bewusst auf gebackenes Licht (Lightmass); Lumen und
+  Lightmass schließen sich technisch gegenseitig aus.
+- **Kein Nanite für Charaktere** (für Landscape/Umgebung wäre Nanite laut Regel nicht
+  grundsätzlich ausgeschlossen, aber der realistische Gesamt-Look widerspricht der
+  bereits begründeten Flat/Toon-Artdirection aus README.md).
+- **Ziel-Hardware ist Mittelklasse**, nicht der Entwicklerrechner — ein
+  Lumen/Nanite-"echter MMO-Map-Render"-Look ist als Performance-Ziel nicht vorgesehen.
+
+**Einordnung:** Die photorealistischen Copilot-Bilder bleiben trotzdem nützlich — aber
+nur als **Kompositions-/Layout-Referenz** (Anordnung, Sichtachsen, Maßstab), nicht als
+Ziel-Look für das tatsächliche Rendering. Die Landscape-Umsetzung in Unreal 5.8 muss den
+Look in die bestehende flache/Toon-Artdirection mit gebackenem Licht übersetzen, nicht
+den fotorealistischen Look 1:1 übernehmen.
+
 ## Frontier-Design: erzwungener Kontakt statt getrennter Zonen
 
 DAOCs klassischer Frontier ist real pro Reich in eigene Grenzgebiete unterteilt —
