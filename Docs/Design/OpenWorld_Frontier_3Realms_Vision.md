@@ -1,9 +1,16 @@
-# Battleground-Vision: 3-Reiche-Frontier (Design-Idee, nicht final)
+# Open-World-Frontier-Vision: 3 Reiche (Design-Idee, nicht final)
 
-> **Status:** Frühe Design-Idee für eine spätere Ausbaustufe. **Nicht** der aktuelle
-> Vertical-Slice-Auftrag — siehe [Konflikt mit der Roadmap](#konflikt-mit-der-aktuellen-roadmap-bewusst-offen-dokumentiert)
-> unten. Festgehalten, damit die Idee nicht verloren geht, bevor entschieden ist, ob/wann
-> sie umgesetzt wird.
+> **Status:** Frühe Design-Idee, **nicht** der aktuelle Vertical-Slice-Auftrag — siehe
+> [Einordnung](#einordnung-open-world-frontier-vs-battleground) unten. Festgehalten,
+> damit die Idee nicht verloren geht, bevor entschieden ist, ob/wann sie umgesetzt wird.
+>
+> **Wichtige Klarstellung (Nutzer, 2026-07-21):** Das hier ist **kein** größerer Ersatz
+> für den kleinen Vertical-Slice-Battleground. Es ist die Design-Idee für die spätere,
+> **separate** normale Open World der drei Reiche, die es im fertigen Spiel neben dem/den
+> Battleground(s) ohnehin geben soll — vergleichbar mit DAOCs Trennung zwischen kleinen
+> RvR-Zonen (Thidranki, Braemar) und den großen persistenten Frontier-Zonen
+> (Emain Macha, Odin's Gate, etc.). Der kleine 2-Fraktionen-BG aus der Roadmap bleibt
+> unangetastet und wird zuerst gebaut.
 
 ## Ausgangspunkt
 
@@ -45,25 +52,24 @@ Zwinger als Kern-Ziel.**
     nur 2 sichtbare Brücken für 3 Reiche — bei Umsetzung klären, ob 3 symmetrische
     Zugänge oder bewusst asymmetrisch/2 Brücken plus Fußweg)
 
-## Konflikt mit der aktuellen Roadmap (bewusst offen dokumentiert)
+## Einordnung: Open World Frontier vs. Battleground
 
-[README.md](../../README.md) Phase 2 sagt für den **ersten** Battleground etwas anderes:
+[README.md](../../README.md) Phase 2 beschreibt den **ersten Battleground** bewusst
+anders — klein, symmetrisch, ein zentrales Ziel (Flagge/Node), Grayboxing reicht, Vorbild
+DAOCs kleine RvR-Zonen (Thidranki, Braemar), zwei Fraktionen zum Start, dritte
+(Hibernia) kommt erst später ([CLASSES.md](../../CLASSES.md) Phase-2-Abschnitt). Dieser
+kleine BG ist und bleibt der aktuelle Task — daran ändert dieses Dokument nichts.
 
-- **Klein, symmetrisch, ein zentrales Ziel** (Flagge/Node), Grayboxing reicht — Vorbild
-  DAOCs kleine RvR-Zonen (Thidranki, Braemar), **nicht** die große Frontier-Welt.
-- **Zwei Fraktionen zum Start**, die dritte (Hibernia) kommt erst, sobald sich der
-  Zwei-Fraktionen-Kampf schon gut anfühlt ([CLASSES.md](../../CLASSES.md) Phase-2-Abschnitt).
+Diese Vision hier gehört zu einer anderen, späteren Kategorie: der **normalen offenen
+Welt der drei Reiche**, die README.md unter "Danach: Entscheidung, ob/wie Richtung
+größerer Welt erweitert wird" erwähnt. Offene Welt, Gebirge, Flüsse, volle
+Burg-Belagerungsmechanik (Zwinger etc.), alle drei Reiche gleichzeitig — das ist
+konzeptionell näher an DAOCs großen Frontier-Zonen als an Thidranki/Braemar, und damit
+ein eigenständiges späteres Feature, kein Ersatz für Roadmap-Punkt 4.
 
-Diese Vision hier ist das **Gegenteil in Umfang**: offene Welt, Gebirge, Flüsse, volle
-Burg-Belagerungsmechanik (Zwinger etc.), alle drei Reiche gleichzeitig. Das ist deutlich
-näher an DAOCs großen Frontier-Zonen als an Thidranki/Braemar — passt eher zu **"Danach:
-Entscheidung, ob/wie Richtung größerer Welt erweitert wird"** (README.md, nach dem
-Vertical Slice) als zum aktuellen Task.
-
-**Empfehlung, wenn/wann diese Idee weiterverfolgt wird:** aktuellen Vertical-Slice-Scope
-(kleine symmetrische 2-Fraktionen-Node-Map) zuerst fertigstellen. Diese Datei als
-Referenz für die **spätere** 3-Reiche-Ausbaustufe behalten, nicht als Ersatz für Task
-Roadmap-Punkt 4 verwenden.
+**Empfehlung:** aktuellen Vertical-Slice-Scope (kleiner symmetrischer 2-Fraktionen-BG)
+zuerst fertigstellen und den Kampf-Kern beweisen. Diese Datei als Referenz für die
+spätere Open-World-Frontier-Phase behalten.
 
 ## Offene Fragen
 
