@@ -11,6 +11,13 @@
 > RvR-Zonen (Thidranki, Braemar) und den großen persistenten Frontier-Zonen
 > (Emain Macha, Odin's Gate, etc.). Der kleine 2-Fraktionen-BG aus der Roadmap bleibt
 > unangetastet und wird zuerst gebaut.
+>
+> **Ergänzung (Nutzer, 2026-07-21):** (1) Battlegrounds sollen langfristig — wie in
+> DAOC — **mehrere, level-gestaffelte und unterschiedliche** Karten sein, nicht nur die
+> eine kleine Vertical-Slice-Map. (2) Diese große Frontier-Zone soll sich zwar wie in
+> DAOC über alle drei Reiche erstrecken, aber **anders als im klassischen DAOC-Frontier**
+> soll man sich in den Gebieten zwangsläufig über den Weg laufen — siehe
+> [Frontier-Design: erzwungener Kontakt](#frontier-design-erzwungener-kontakt-statt-getrennter-zonen).
 
 ## Ausgangspunkt
 
@@ -51,6 +58,40 @@ Zwinger als Kern-Ziel.**
   - Brücken/Tore als einzige Zugänge über den Graben, ein Zugang je Reich (im Moodboard
     nur 2 sichtbare Brücken für 3 Reiche — bei Umsetzung klären, ob 3 symmetrische
     Zugänge oder bewusst asymmetrisch/2 Brücken plus Fußweg)
+
+## Frontier-Design: erzwungener Kontakt statt getrennter Zonen
+
+DAOCs klassischer Frontier ist real pro Reich in eigene Grenzgebiete unterteilt —
+Realm-vs-Realm-Kontakt entsteht meist nur an wenigen Vorstoß-/Grenzpunkten, große Teile
+der eigenen Seite sind PvE-ruhig. Für dieses Projekt ausdrücklich **anders gewünscht**:
+die drei Reichs-Sektoren dieser Frontier-Zone sollen **kein** rein getrenntes
+Hinterland haben, sondern so gestaltet sein, dass Spieler aus verschiedenen Reichen sich
+auch abseits der Zentralburg zwangsläufig begegnen — z. B. gemeinsame Zwischenziele
+(Belagerungslager/Außenposten aus dem Layout-Konzept), Ressourcenpunkte oder
+Durchgangs-Pässe, die nicht eindeutig einem Reich zugeordnet sind, statt strikt
+reichseigener Korridore. Die Gebirgszüge trennen also nicht drei komplett isolierte
+Wege zur Burg, sondern erzeugen eher Nadelöhre/geteilte Übergänge, an denen Kontakt
+wahrscheinlich statt vermeidbar ist.
+
+**Konsequenz fürs Layout:** Bei Umsetzung prüfen, ob z. B. Flussüberquerungen,
+Passstraßen durch die Gebirgszüge oder einzelne Zwischenziele bewusst
+**reich-neutral/geteilt** liegen (nicht klar im Sektor eines einzelnen Reichs), damit
+zwei oder drei Reiche denselben Punkt anlaufen müssen.
+
+## Battlegrounds (Plural): level-gestaffelt und unterschiedlich
+
+Über den einen Vertical-Slice-BG hinaus ist langfristig eine **Serie** von Battlegrounds
+geplant, analog zu DAOCs mehreren BGs für verschiedene Level-Bänder (z. B. Thidranki,
+Braemar, Molvik — jede mit eigenem Layout/Charakter statt einer Kopie mit anderem
+Level-Cap). Für dieses Projekt heißt das:
+
+- Jedes künftige BG braucht ein **eigenes Layout-Konzept**, nicht nur eine Reskin-Kopie
+  des ersten.
+- Level-Gating/Bracket-Zuordnung (welches BG ab welchem Level) ist noch offen — erst
+  relevant, sobald es überhaupt ein Level-/Progressionssystem gibt (siehe
+  [SYSTEMS.md](../../SYSTEMS.md)).
+- Reihenfolge bleibt roadmap-konform: erst der eine kleine 2-Fraktionen-BG fertig und
+  spielbar, dann Entscheidung über weitere BGs bzw. die Open-World-Frontier.
 
 ## Einordnung: Open World Frontier vs. Battleground
 
