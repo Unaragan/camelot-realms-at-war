@@ -177,7 +177,16 @@ name banners at each camp, no readable body text needed). Wide 3:2 aspect
 ratio, top-down strategic game map look.
 ```
 
-**~Level 30 "Umkämpftes Hochland"** — noch keine Bildreferenz erzeugt:
+**~Level 30 "Umkämpftes Hochland"** — bereits generiert:
+[`References/bg_lvl30_hochland_moodref.jpg`](References/bg_lvl30_hochland_moodref.jpg)
+— Flussüberquerung mit Steinbrücke, zentraler einwandiger Steinturm/Keep mit sichtbarem
+Belagerungsgerät (Wagen, Leitern, Kisten) davor, felsigeres Hochland-Terrain, drei
+Reichslager (Albion, Midgard, Hibernia). **Auffällig:** die KI hat unten rechts ein
+viertes, unbeschriftetes Lager ohne Banner erzeugt — bei Weiterverwendung als Referenz
+ignorieren bzw. beim nächsten Durchlauf explizit "exactly three faction camps, no
+additional unlabeled camps" in den Prompt aufnehmen.
+
+Ursprünglicher Prompt:
 
 ```text
 Aerial oblique fantasy map illustration, painterly digital art style, same
