@@ -152,17 +152,67 @@ Level-Cap). Für dieses Projekt heißt das:
 
 ### Moodboard-Referenzen pro Level-Band
 
-Erste Copilot-Konzeptbilder für die geplante BG-Serie (Prompts siehe Chat-Verlauf,
-gleicher Bildstil-Ansatz wie das Frontier-Moodboard oben):
+Copilot-Konzeptbilder für die geplante BG-Serie, gleicher Bildstil-Ansatz wie das
+Frontier-Moodboard oben. Prompts hier archiviert, damit sie nicht nur im Chat-Verlauf
+existieren.
 
-- **~Level 20 "Grenzland-Scharmützel"**, erster generierter Entwurf:
-  [`References/bg_lvl20_grenzland_moodref.jpg`](References/bg_lvl20_grenzland_moodref.jpg)
-  — drei kleine Palisaden-Lager mit Reichsbannern (Albion rot, Midgard blau, Hibernia
-  grün), einfache niedrige Steinringmauer um ein zentrales Banner/Altar als einziges
-  Ziel, Feldwege als Verbindung, offenes Grasland mit leichtem Nebel. Trifft den
-  gewünschten kleinen/symmetrischen Charakter für die erste Level-Stufe gut.
-- ~Level 30 "Umkämpftes Hochland" und ~Level 50 "Bastion der Kill-Zone": noch keine
-  Bildreferenz erzeugt.
+**~Level 20 "Grenzland-Scharmützel"** — bereits generiert:
+[`References/bg_lvl20_grenzland_moodref.jpg`](References/bg_lvl20_grenzland_moodref.jpg)
+— drei kleine Palisaden-Lager mit Reichsbannern (Albion rot, Midgard blau, Hibernia
+grün), einfache niedrige Steinringmauer um ein zentrales Banner/Altar als einziges Ziel,
+Feldwege als Verbindung, offenes Grasland mit leichtem Nebel. Trifft den gewünschten
+kleinen/symmetrischen Charakter für die erste Level-Stufe gut.
+
+```text
+Aerial oblique fantasy map illustration, painterly digital art style, muted
+misty color palette, light fog for depth. Open grassy borderland with rolling
+hills and scattered low hedgerows, no big mountains. Three small wooden-and-stone
+outpost camps at the edges (one per faction), simple palisade walls, a few
+watchfires. In the center, a modest stone ring wall (single low gate, no moat)
+surrounding a small shrine/banner altar as the single capture objective —
+compact and readable, not an epic castle. Dirt paths connecting each camp to
+the center. Daylight, soft overcast sky, light morning mist. Small compass
+rose bottom-right corner. Clean fantasy-map label style (optional faction
+name banners at each camp, no readable body text needed). Wide 3:2 aspect
+ratio, top-down strategic game map look.
+```
+
+**~Level 30 "Umkämpftes Hochland"** — noch keine Bildreferenz erzeugt:
+
+```text
+Aerial oblique fantasy map illustration, painterly digital art style, same
+muted color palette and misty atmosphere as a matched concept-art series.
+Rockier highland terrain with a narrow river/ravine crossing through the
+middle, one stone bridge. Three faction outposts on higher ground at the
+map edges, modest stone-and-timber fortifications. Central objective: a
+single-wall stone keep with one gate and a shallow dry ditch (no full moat
+yet), light siege equipment nearby (ladders, a small ram) hinting at
+escalation. Sparse pine forest patches, dusk lighting, warm torchlight
+glow against cooler blue dusk sky. Small compass rose bottom-right corner.
+Wide 3:2 aspect ratio, top-down strategic game map look.
+```
+
+**~Level 50 "Bastion der Kill-Zone"** — noch keine Bildreferenz erzeugt:
+
+```text
+Aerial oblique fantasy map illustration, painterly digital art style, dramatic
+misty atmosphere, matched color palette to a concept-art series. Larger scale
+than the two lower-level battlegrounds but still a self-contained arena, not
+an open world. Three fortified faction camps at the map edges with towers and
+banners, siege camps with trebuchets/catapults between them and the center.
+Central objective: a proper stone castle with double walls — an outer wall,
+a full water-filled moat with one bridge per faction, and a narrow open
+kill-zone ring between the outer and inner wall bristling with arrow slits
+and spikes, inner keep/donjon at the core. Heavy fog, scattered watchfires,
+dramatic overcast sky. Small compass rose bottom-right corner. Wide 3:2
+aspect ratio, top-down strategic game map look, same visual family as the
+existing "Central Relic Castle" reference image but a distinct map/theme.
+```
+
+Praxis-Hinweis: KI-Bildgeneratoren verhaspeln sich oft bei eingebettetem Text (siehe die
+leicht kryptische Schrift "Midgrnd" statt "Midgard" im Level-20-Bild). Für saubere
+Beschriftung: ohne Text generieren und danach selbst beschriften, oder die Ungenauigkeit
+wie bisher akzeptieren.
 
 Hinweis: Diese Bilder sind — wie das Frontier-Moodboard — nur Layout-/Stimmungsreferenz
 für den POC; siehe [Rendering-Hinweis](#rendering-hinweis-poc-fest-toonflat-finale-artdirection-bewusst-offen)
