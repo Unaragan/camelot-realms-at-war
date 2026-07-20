@@ -181,10 +181,10 @@ ratio, top-down strategic game map look.
 [`References/bg_lvl30_hochland_moodref.jpg`](References/bg_lvl30_hochland_moodref.jpg)
 — Flussüberquerung mit Steinbrücke, zentraler einwandiger Steinturm/Keep mit sichtbarem
 Belagerungsgerät (Wagen, Leitern, Kisten) davor, felsigeres Hochland-Terrain, drei
-Reichslager (Albion, Midgard, Hibernia). **Auffällig:** die KI hat unten rechts ein
-viertes, unbeschriftetes Lager ohne Banner erzeugt — bei Weiterverwendung als Referenz
-ignorieren bzw. beim nächsten Durchlauf explizit "exactly three faction camps, no
-additional unlabeled camps" in den Prompt aufnehmen.
+Reichslager (Albion, Midgard, Hibernia). Zusätzlich ein unbeschriftetes viertes Lager
+ohne Banner — siehe [Einordnung unten](#neutrale-zusatzpunkte-balance-idee): kein
+Fehler, sondern als neutraler Zusatzpunkt nutzbar (Belagerungslager-Idee aus dem
+Layout-Konzept).
 
 Ursprünglicher Prompt:
 
@@ -201,7 +201,14 @@ glow against cooler blue dusk sky. Small compass rose bottom-right corner.
 Wide 3:2 aspect ratio, top-down strategic game map look.
 ```
 
-**~Level 50 "Bastion der Kill-Zone"** — noch keine Bildreferenz erzeugt:
+**~Level 50 "Bastion der Kill-Zone"** — bereits generiert:
+[`References/bg_lvl50_killzone_moodref.jpg`](References/bg_lvl50_killzone_moodref.jpg)
+— Zentralburg jetzt mit doppelter Ringmauer, vollem Wassergraben, mehreren Brücken
+(eine je Reich) und Bergfried im Kern; drei Reichslager plus mehrere kleinere
+unbeschriftete Zwischenlager verteilt entlang der Anfahrtswege. Trifft den gewünschten
+Kulminationscharakter vor der großen RvR-Frontier gut.
+
+Ursprünglicher Prompt:
 
 ```text
 Aerial oblique fantasy map illustration, painterly digital art style, dramatic
@@ -219,9 +226,33 @@ existing "Central Relic Castle" reference image but a distinct map/theme.
 ```
 
 Praxis-Hinweis: KI-Bildgeneratoren verhaspeln sich oft bei eingebettetem Text (siehe die
-leicht kryptische Schrift "Midgrnd" statt "Midgard" im Level-20-Bild). Für saubere
-Beschriftung: ohne Text generieren und danach selbst beschriften, oder die Ungenauigkeit
-wie bisher akzeptieren.
+leicht kryptische Schrift "Midgrnd"/"Midicard" statt "Midgard" in den Bildern). Für
+saubere Beschriftung: ohne Text generieren und danach selbst beschriften, oder die
+Ungenauigkeit wie bisher akzeptieren.
+
+### Neutrale Zusatzpunkte (Balance-Idee, Nutzer 2026-07-21)
+
+In den Level-30- und Level-50-Bildern erzeugt die KI durchgängig zusätzliche,
+unbeschriftete kleine Lager neben den drei Reichslagern (vermutlich eine Interpretation
+der "Belagerungslager/Zwischenziele" aus dem Layout-Konzept). Der Nutzer schlägt vor,
+das als bewusste Spielmechanik zu nutzen statt als Bildfehler zu behandeln — ein
+**neutraler Zusatzpunkt pro Karte**, der wahlweise:
+
+- **die Zentralburg schwächt**, wenn er erobert wird (z. B. reduzierte Mauer-/Tor-HP,
+  kürzere Zwinger-Verteidigung, deaktivierte Falle/Geschütz) — Angriffsanreiz abseits
+  der reinen Burg-Erstürmung, oder
+- **das zahlenmäßig unterlegene Reich unterstützt**: wird die Karte mit ungleicher
+  Spielerzahl gestartet, kann das Reich mit weniger aktiven Spielern an diesem Punkt
+  zusätzliche NPC-Söldner/Verstärkung anheuern — direkte Antwort auf das
+  Populations-Ungleichgewicht, das laut Roadmap ohnehin ansteht (2 Fraktionen zum
+  Start, später 3; auch später ungleiche Realm-Population ist ein reales RvR-Problem).
+
+**Status:** Idee, noch nicht ausbalanciert — offene Fragen: fest einer der beiden
+Effekte pro Punkt, oder wählbar/kontextabhängig (z. B. automatisch NPC-Support-Modus,
+sobald Populationsunterschied einen Schwellwert überschreitet)? Wie viele solcher Punkte
+pro Karte (einer reicht evtl. für kleine BGs, größere könnten mehrere vertragen)? Woher
+kommen die anheuerbaren NPCs (feste Garnison am Punkt vs. Ressourcen, die im Lager
+gegen Verstärkung eingetauscht werden)?
 
 Hinweis: Diese Bilder sind — wie das Frontier-Moodboard — nur Layout-/Stimmungsreferenz
 für den POC; siehe [Rendering-Hinweis](#rendering-hinweis-poc-fest-toonflat-finale-artdirection-bewusst-offen)
