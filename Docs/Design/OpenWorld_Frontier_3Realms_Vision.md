@@ -150,6 +150,24 @@ Level-Cap). Für dieses Projekt heißt das:
 - Reihenfolge bleibt roadmap-konform: erst der eine kleine 2-Fraktionen-BG fertig und
   spielbar, dann Entscheidung über weitere BGs bzw. die Open-World-Frontier.
 
+### Moodboard-Referenzen pro Level-Band
+
+Erste Copilot-Konzeptbilder für die geplante BG-Serie (Prompts siehe Chat-Verlauf,
+gleicher Bildstil-Ansatz wie das Frontier-Moodboard oben):
+
+- **~Level 20 "Grenzland-Scharmützel"**, erster generierter Entwurf:
+  [`References/bg_lvl20_grenzland_moodref.jpg`](References/bg_lvl20_grenzland_moodref.jpg)
+  — drei kleine Palisaden-Lager mit Reichsbannern (Albion rot, Midgard blau, Hibernia
+  grün), einfache niedrige Steinringmauer um ein zentrales Banner/Altar als einziges
+  Ziel, Feldwege als Verbindung, offenes Grasland mit leichtem Nebel. Trifft den
+  gewünschten kleinen/symmetrischen Charakter für die erste Level-Stufe gut.
+- ~Level 30 "Umkämpftes Hochland" und ~Level 50 "Bastion der Kill-Zone": noch keine
+  Bildreferenz erzeugt.
+
+Hinweis: Diese Bilder sind — wie das Frontier-Moodboard — nur Layout-/Stimmungsreferenz
+für den POC; siehe [Rendering-Hinweis](#rendering-hinweis-poc-fest-toonflat-finale-artdirection-bewusst-offen)
+oben zur Artdirection-Einordnung.
+
 ## Einordnung: Open World Frontier vs. Battleground
 
 [README.md](../../README.md) Phase 2 beschreibt den **ersten Battleground** bewusst
