@@ -76,7 +76,22 @@ Das Projekt läuft aktuell als reines Blueprint-Projekt ohne eigenes C++-Modul �
 
 **Zu entscheiden, sobald mehr Klassen dazukommen (Task #7):** entweder weiter mit diesem Blueprint-Workaround arbeiten, oder an dem Punkt ein C++-Modul einführen für sauberere GAS-Integration. Keine Eile – der Workaround funktioniert nachweislich.
 
-## Erste Referenzimplementierung (Ritter-Prototyp)
+## Referenzimplementierung v2: Ritter-Prototyp auf Lyra-Basis (2026-07-21)
+
+Neuaufbau des Kampfsystem-Prototyps nach dem Umstieg auf Lyra – konsequent als Blueprint-Unterklassen von Lyras bestehenden C++-Klassen, kein neuer C++-Code (siehe CLAUDE.md, "Blueprint-first"). Unter `/Game/Characters/TestKnights/`:
+
+- **`BP_TestKnight`** – eigenständige GAS-Testcharakter-Basis, Unterklasse mit fertigem `LyraAbilitySystemComponent`, `LyraHealthSet`, `LyraCombatSet` (Lyras eigene Attribute-Set-Klassen, kein eigenes Set von Grund auf). BeginPlay (serverseitig): setzt Health/MaxHealth auf 250, gewährt beide Angriffs-Fähigkeiten, findet automatisch den jeweils anderen platzierten Ritter als Ziel.
+- **`GA_TestKnight_MeleeBase`** – gemeinsame Basis-Ability (Unterklasse von `LyraGameplayAbility`, ServerOnly) mit zwei wiederverwendbaren Funktionen: `ApplyMeleeAttack` (Schaden mit Winkel-Check) und `ApplyMeleeHeal` (Heilung, ohne Winkel-Bezug).
+- **`GA_Attack1`/`GA_Attack2`** – Attack1 = 25 Schaden, Attack2 = 15 Schaden + 15 Selbstheilung.
+- **Wichtiger Fund:** Beide nutzen Lyras **bereits vorhandene** modulare SetByCaller-GameplayEffects (`GE_Damage_Basic_SetByCaller`/`GE_Heal_SetByCaller`, basierend auf `LyraDamageExecution`/`LyraHealExecution`) – kein neuer Effekt nötig, Lyra bringt genau das Set-by-Caller-Muster aus Abschnitt 2 schon fertig mit.
+- **`GE_Init_TestKnightHealth`** – nach Lyras eigenem Muster (MaxHealth-Override + Heal-Execution) für die 250-Health-Initialisierung.
+- **Rücken-Check:** `Transformation|GetHorizontalDotProductTo` zwischen Ziel-Blickrichtung und Angreifer-Position, serverseitig via `HasAuthority` + ServerOnly-Ability; bei ≤ -0,5 (= 120°-Rückenkegel) verdoppelt sich nur der Schadensanteil, Heilung bleibt unverändert.
+
+**PIE-Testergebnisse** (Level `/ShooterTests/Maps/L_ShooterTest_Basic`, zwei platzierte `BP_TestKnight`-Instanzen): Frontal exakt 25/15 Schaden pro Treffer, kein Multiplikator. Angreifer im 120°-Rückenkegel: Schaden verdoppelt (50/30), Heilung blieb unverändert bei 15. Deckt sich vollständig mit den Ergebnissen der ersten (verworfenen) Implementierung.
+
+**Namensgebung bewusst neutral** ("TestKnight") – noch keine Umsetzung als konkrete CLASSES.md-Klasse (z. B. Paladin), das bleibt ein separater Schritt.
+
+## Erste Referenzimplementierung (Ritter-Prototyp, verworfen — vor Lyra-Umstieg, nur zur Historie)
 
 Erfolgreich umgesetzt und per PIE verifiziert (Stand 2026-07-19), unter `/Game/Knights/`:
 - `BP_KnightAttributeSet` – Health/MaxHealth je 250
