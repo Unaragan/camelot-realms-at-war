@@ -49,6 +49,31 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 >
 > Keep the tone grounded/medieval, not high-fantasy melodrama. No mention of Dark Age of Camelot or DAOC-specific proper nouns."
 
+**Ergebnis (Copilot, 2026-07-21):**
+
+> **Quest Title:** The Silent Frontier
+>
+> **Quest Description:** Several of Lord Ector's border scouts have failed to return from their patrols along the frontier. What first seemed like poor weather or delayed travel now feels far more troubling. Investigate the scouts' last known route and uncover any sign of what befell them.
+>
+> **Objectives:**
+> 1. Travel to the frontier watch road and inspect the scouts' last reported camp.
+> 2. Search the surrounding area for traces of the missing patrol.
+> 3. Return your findings to Lord Ector.
+>
+> **Opening Dialogue (Lord Ector):**
+> Our border scouts know these lands better than most men know their own hearths, yet several have vanished without word.
+> At first I took it for bad weather or a broken supply train. Now I fear something else is at work.
+> Ride to their last reported camp and see what can be learned.
+> I would rather discover a simple answer than nurture darker suspicions.
+>
+> **Closing Dialogue (Lord Ector):**
+> Tracks ending in open ground... abandoned gear... and no bodies found. That is a hard tale to weigh.
+> The frontier has always been dangerous, yet this bears little resemblance to an ordinary ambush.
+> If our scouts were taken, then by whom—and why leave so little behind?
+> Stay vigilant. I suspect this matter is only beginning.
+
+Trifft den gewünschten Ton gut (bedächtig, kein Bodyfund als billiger Cliffhanger, endet in offener Frage statt Auflösung) – passt direkt als Übergabe an Quest 2 (Beweis-Suche).
+
 **Quest 2 – Beweise für einen gezielten Übergriff:**
 
 > "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, Lord Ector as quest giver, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the SECOND quest of the 3-part chain, following directly from a quest where the player investigated missing border scouts.
@@ -75,7 +100,7 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 > - Dialogue from Kay offering the quest (blunt, impatient, 3-4 lines)
 > - A closing line from Kay right before the player heads to the frontier/battleground, giving the moment a sense of stakes rising — this line should work as a narrative bridge into actual RvR combat content."
 
-**Status:** Beispiel-Generierung, noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
+**Status:** Quest 1 per Copilot generiert und dokumentiert (2026-07-21), Quest 2/3 noch offen. Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
 
 ## Status
 
