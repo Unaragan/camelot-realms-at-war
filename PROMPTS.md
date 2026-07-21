@@ -87,6 +87,29 @@ Trifft den gewünschten Ton gut (bedächtig, kein Bodyfund als billiger Cliffhan
 > - Dialogue from Ector reacting to the evidence (4-5 lines, shift from calm to genuine concern)
 > - A short closing line where Ector says he's sending the player to his military commander, 'Burgvogt Kay', to decide next steps — this is the handoff into quest 3."
 
+**Ergebnis (Copilot, 2026-07-21):**
+
+> **Quest Title:** Shadows Across the Border
+>
+> **Quest Description:** The clues you uncovered paint a troubling picture. What first seemed like a tragic disappearance now bears the marks of a deliberate intrusion from beyond Albion's borders. Lord Ector must judge the evidence and determine whether a greater threat is gathering in the wilds.
+>
+> **Objectives:**
+> 1. Gather and confirm evidence of the scouts' fate.
+> 2. Return the evidence to Lord Ector.
+> 3. Receive Lord Ector's orders and report to Burgvogt Kay.
+>
+> **Lord Ector Dialogue:**
+> "You've returned. Tell me, what did you find out there?"
+> "A broken banner... tracks from foreign boots... and a weapon unlike any forged in our realm?"
+> "No... this was no accident. Our scouts did not simply vanish into the wilderness."
+> "Someone crossed our border with purpose, and they took great care to hide their trail."
+> "If hostile forces are testing our defenses, we may be facing far more than a handful of missing men."
+>
+> **Quest Closing:**
+> "This matter has grown beyond my authority to ignore. Take what you've found to Burgvogt Kay, my military commander. He will decide our next course of action."
+
+Guter Anschluss an Quest 1 (greift Banner/Spuren/Waffe als offene Fragen von Quest 1 wieder auf), Eskalation von Sorge zu Handlungsbedarf trägt den Ton, sauberer Handoff an Kay für Quest 3.
+
 **Quest 3 – Mobilisierung / Grenzpatrouille:**
 
 > "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the THIRD and final quest of the 3-part chain. The quest giver is now 'Burgvogt Kay', Albion's military commander — more impatient and action-oriented than Lord Ector, eager to respond decisively.
@@ -100,7 +123,7 @@ Trifft den gewünschten Ton gut (bedächtig, kein Bodyfund als billiger Cliffhan
 > - Dialogue from Kay offering the quest (blunt, impatient, 3-4 lines)
 > - A closing line from Kay right before the player heads to the frontier/battleground, giving the moment a sense of stakes rising — this line should work as a narrative bridge into actual RvR combat content."
 
-**Status:** Quest 1 per Copilot generiert und dokumentiert (2026-07-21), Quest 2/3 noch offen. Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
+**Status:** Quest 1 + 2 per Copilot generiert und dokumentiert (2026-07-21), Quest 3 noch offen. Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
 
 ## Status
 
