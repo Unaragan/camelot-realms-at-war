@@ -16,6 +16,7 @@ Plugins/*/Intermediate/
 !/Content/Characters/
 /Content/Characters/*
 !/Content/Characters/TestKnights/
+!/Content/Characters/Paladin/
 /Plugins/
 
 # --- IDE / Editor ---
