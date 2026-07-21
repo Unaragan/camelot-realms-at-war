@@ -30,9 +30,9 @@ Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) 
 
 Verwendet für: Play startet standardmäßig Lyras eigenes Frontend/Default-Game statt unserer Testkarte.
 
-> "Change the project's startup map so pressing Play always loads our own test level instead of Lyra's default frontend/game map. In Project Settings → Maps & Modes: set both 'Editor Startup Map' and 'Game Default Map' to `/ShooterTests/Maps/L_ShooterTest_Basic` (the level with our two placed `BP_Paladin` instances). Confirm by pressing Play — it should load directly into that level with both knights present, not Lyra's default frontend."
+> "The editor is opening Lyra's default showcase hub level (L_DefaultEditorOverview) on startup instead of our test level. Fix both settings: (1) Project Settings → Maps & Modes → set 'Editor Startup Map' and 'Game Default Map' to `/ShooterTests/Maps/L_ShooterTest_Basic`. (2) Editor Preferences → General → Loading & Saving → 'Load Level at Startup' → set to 'Editor Startup Map' (not 'Last Opened Level' or similar) so it actually respects setting (1). Confirm by fully closing and reopening the editor — it should open directly into `L_ShooterTest_Basic` with both Paladin instances, not the Lyra showcase hub."
 
-**Hinweis:** `[Levelpfad]` ggf. anpassen, falls ein anderer Testlevel als `L_ShooterTest_Basic` aktuell in Benutzung ist (siehe SYSTEMS.md → Referenzimplementierung).
+**Hinweis:** `[Levelpfad]` ggf. anpassen, falls ein anderer Testlevel als `L_ShooterTest_Basic` aktuell in Benutzung ist (siehe SYSTEMS.md → Referenzimplementierung). Beide Einstellungen (Project Settings *und* Editor Preferences) sind nötig — Erkenntnis vom 2026-07-22: Project Settings allein reichte nicht, Lyras eigene "Default Editor Overview"-Hub-Map öffnete sich trotzdem, mit einem eingeblendeten Hinweis im Level selbst auf genau diese zwei Stellen.
 
 ## Albion-Team + Farbe zuweisen (Task #6 Abschluss)
 
