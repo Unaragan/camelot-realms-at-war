@@ -20,6 +20,12 @@ Verwendet für: Task #6, Tod/Respawn-Handling für die TestKnight-Charaktere. De
 
 **Anpassbare Platzhalter:** `[X]` Respawn-Delay in Sekunden (Vorschlag: 5).
 
+## Umbenennung TestKnight → Paladin (Task #6 Abschluss)
+
+Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) → "TestKnight → Paladin: Umbenennungs-Mapping".
+
+> "Benenne die TestKnight-Prototyp-Assets unter `/Game/Characters/TestKnights/` gemäß Mapping-Tabelle in CLASSES.md zur finalen Paladin-Klasse um: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`. Verschiebe die Assets nach `/Game/Characters/Paladin/`. Werte (250 Health, 25/15 Schaden) unverändert lassen – reine Umbenennung, keine Balance-Änderung. Weise beiden platzierten Instanzen zusätzlich Albion als Team über Lyras vorhandenes Team-System zu (Team-Farbe sichtbar). Prüfe nach der Umbenennung alle internen Referenzen (Blueprint-Reparent, Asset-Referenzen in BeginPlay/Grant-Ability-Logik) und teste per PIE erneut das komplette Duell inkl. Tod/Respawn, um sicherzustellen, dass nichts durch die Umbenennung gebrochen ist."
+
 ## Beleuchtung bauen (schwarzer Spiel-Viewport)
 
 > "Baue die Beleuchtung für das aktuelle Level ([Levelname])."

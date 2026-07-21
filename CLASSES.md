@@ -64,9 +64,24 @@ Technisch: ein Wahlpunkt pro Archetyp/Levelstufe in der Talent-Tabelle aus SYSTE
 
 ## Für den Vertical Slice (Phase 2)
 
-- **Task #6:** eine Klasse für Fraktion 1 (Vorschlag: Paladin oder Wizard — deckt Tank- bzw. Caster-Grundgefühl ab)
+- **Task #6:** eine Klasse für Fraktion 1 – **entschieden: Paladin** (der bisherige `BP_TestKnight`-Prototyp passt bereits inhaltlich: hoher Health-Pool, Angriff + Selbstheil-Angriff = Tank/Support-Hybrid, siehe unten "TestKnight → Paladin")
 - **Task #7:** erste Klasse für Fraktion 2 (Vorschlag: Berserker — maximal unterschiedliches Kampfgefühl zur ersten Klasse, testet die Asymmetrie am deutlichsten)
 - Fraktion 3 (Hibernia) und weitere Klassen pro Fraktion kommen nach der Nicht-jetzt-Liste erst, wenn sich der Zwei-Fraktionen-Kampf schon gut anfühlt
+
+### TestKnight → Paladin: Umbenennungs-Mapping (Task #6 Abschluss)
+
+Reine Umbenennung/Neuflavorisierung der bestehenden, verifizierten Assets (siehe SYSTEMS.md → "Referenzimplementierung v2") – keine neue Mechanik, keine Wertänderung. Werte (250 HP, 25/15 Schaden) bleiben vorerst unverändert; echte Stat-Differenzierung zwischen Klassen folgt erst mit Task #13 (DataTable-Schema) bzw. sobald Task #7 (Berserker) für spürbaren Kontrast sorgt.
+
+| Alt | Neu | Hinweis |
+|---|---|---|
+| `BP_TestKnight` | `BP_Paladin` | Actor-Blueprint |
+| `GA_TestKnight_MeleeBase` | `GA_Paladin_MeleeBase` | Basis-Ability (Schaden-/Heil-Funktionen, Rücken-Check) |
+| `GA_Attack1` (25 Schaden) | `GA_Paladin_Strike` | Basisangriff |
+| `GA_Attack2` (15 Schaden + 15 Selbstheilung) | `GA_Paladin_LayOnHands` | Passt inhaltlich gut zum Tank/Support-Hybrid – Selbstheil-Angriff ist ein generischer Paladin-Trope, kein DAOC-spezifischer Name |
+| `GE_Init_TestKnightHealth` | `GE_Init_PaladinHealth` | Health-Initialisierung |
+| `/Game/Characters/TestKnights/` | `/Game/Characters/Paladin/` | Ordnerstruktur – Vorbild für künftige Klassenordner (Task #7: `/Game/Characters/Berserker/`) |
+
+Zusätzlich: Albion-Team/-Farbe über Lyras vorhandenes Team-System zuweisen – sinnvoll jetzt, weil Task #7 ohnehin zwei unterscheidbare Teams braucht.
 
 ## Status
 
