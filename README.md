@@ -131,6 +131,8 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 
 **Faustregel:** "Erstelle X nach folgendem Muster" → Copilot. "Wie sollten wir X strukturieren" / "was hat das für Auswirkungen auf Y" → Claude.
 
+**Auch für Bild-/Konzept-Art:** Copilot (bzw. dessen Bildgenerierung) für Moodboards/Referenzbilder nutzen, nicht Claudes SVG-Zeichnungen – im direkten Vergleich (Battleground-Moodboards) war Copilot spürbar besser, siehe [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
+
 ## Referenzen & Recherche
 
 - **Dawn of Light (DOL):** Open-Source-Server-Emulator (GPL) für DAOC – wertvolle Referenz zum *Verstehen* von Kampf-/RvR-Formeln, nicht zum direkten Übernehmen von Code (Lizenz beachten)
