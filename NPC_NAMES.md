@@ -79,6 +79,8 @@ Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3
 
 **Einordnung:** reine Design-Vorlage, keine ausgearbeiteten Quest-Skripte/Dialoge — relevant erst ab der Startgebiet-Phase (siehe Roadmap in README.md, nach dem Vertical Slice), ändert nichts am aktuellen Battleground-Fokus.
 
+**Erweiterung um Eroberungspunkt-NPCs (Wachtürme, Dörfer, Minen, Schreine, neutrales Belagerungslager):** siehe [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md) — dort auch der Quest-Backlog mit Copilot-Prompt-Vorlage für die spätere Open-World-Frontier.
+
 ## Praktische Nutzung für Questgeber
 
 Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:

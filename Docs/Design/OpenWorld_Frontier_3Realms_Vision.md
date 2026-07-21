@@ -254,6 +254,11 @@ pro Karte (einer reicht evtl. für kleine BGs, größere könnten mehrere vertra
 kommen die anheuerbaren NPCs (feste Garnison am Punkt vs. Ressourcen, die im Lager
 gegen Verstärkung eingetauscht werden)?
 
+**Konkretisierung (2026-07-21):** NPC-Rollenzuordnung für diesen und die übrigen
+Eroberungspunkt-Typen (Wachturm, Dorf, Mine, Schrein) inkl. Vorschlag zur obigen
+Doppel-Effekt-Frage und Quest-Backlog: siehe
+[Frontier_NPCs_and_Questlines.md](Frontier_NPCs_and_Questlines.md).
+
 Hinweis: Diese Bilder sind — wie das Frontier-Moodboard — nur Layout-/Stimmungsreferenz
 für den POC; siehe [Rendering-Hinweis](#rendering-hinweis-poc-fest-toonflat-finale-artdirection-bewusst-offen)
 oben zur Artdirection-Einordnung.

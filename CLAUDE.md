@@ -1,6 +1,6 @@
 # Camelot: Realms at War — Projektleitfaden
 
-Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Unreal-MCP-Setup: [SETUP.md](SETUP.md). Wiederverwendbare Terminal-Prompts: [PROMPTS.md](PROMPTS.md). NPC-Namenspools: [NPC_NAMES.md](NPC_NAMES.md).
+Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Unreal-MCP-Setup: [SETUP.md](SETUP.md). Wiederverwendbare Terminal-Prompts: [PROMPTS.md](PROMPTS.md). NPC-Namenspools: [NPC_NAMES.md](NPC_NAMES.md). Frontier-NPCs & Questline-Backlog: [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md).
 
 ## Wichtig: zwei getrennte Arbeitsumgebungen
 
