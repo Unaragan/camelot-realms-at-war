@@ -65,6 +65,15 @@ Danach `claude` neu starten. Zur Kontrolle `/mcp` eingeben → "List/manage MCP 
 
 Bei korrekter Einrichtung: 41 Toolsets, u. a. ActorTools, BlueprintTools, DataTableTools, MaterialTools, GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, UMGToolSet.
 
+## Projekt-Basis: Lyra + Sync-Workflow
+
+Seit Task #4 basiert das Projekt auf **Lyra Starter Game** (C++-Projekt, kein reines Blueprint mehr). Content (1,8 GB) und Plugins (1,6 GB) sprengen das kostenlose GitHub-LFS-Kontingent (1 GB, siehe COSTS.md) und sind deshalb **bewusst nicht versioniert** (`.gitignore`).
+
+**Workflow für einen zweiten Rechner:**
+1. Lyra Starter Game separat über Epic Games Launcher installieren (Ziel-Ordner: derselbe Repo-Pfad, z. B. `D:\Claude\camelot-realms-at-war`)
+2. Danach `git clone`/`git pull` – synchronisiert nur `Source/`, `Config/`, `.uproject` und eigene Doku, **nicht** Content/Plugins
+3. Sobald eigener Content entsteht (z. B. `Content/Camelot/`), wird das gezielt per `.gitignore`-Ausnahme (`!Content/Camelot/`) freigegeben und dann synchronisiert
+
 ## Bekannte Stolperfallen (bereits gelöst)
 
 | Fehler | Ursache | Lösung |

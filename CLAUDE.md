@@ -29,4 +29,4 @@ Linux-VPS für späteres Dedicated-Server-Hosting (Contabo). Zwei vorhandene Tes
 
 ## Bekannte technische Einschränkung
 
-Git LFS auf GitHub Free hat nur 1 GB Speicher/Monat — bei wachsendem Asset-Umfang im Auge behalten (siehe COSTS.md).
+Git LFS auf GitHub Free hat nur 1 GB Speicher/Monat — mit Lyra als Basis (Content 1,8 GB, Plugins 1,6 GB) bereits eingetreten. Lösung: Content/Plugins bewusst nicht versioniert, separat pro Rechner über Epic Games Launcher installiert. Siehe SETUP.md → "Projekt-Basis: Lyra + Sync-Workflow".
