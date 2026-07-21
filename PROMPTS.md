@@ -10,6 +10,14 @@ Verwendet für: erste Ritter-Testcharaktere (POC, verworfen), Neuaufbau nach Lyr
 
 **Anpassbare Platzhalter:** `[Rollen]` (z. B. Ritter/Paladin/Berserker aus CLASSES.md), `[X]` Health/Schaden/Heilung-Werte aus SYSTEMS.md.
 
+## Tod & Respawn (Lyra-Basis)
+
+Verwendet für: Task #6, Tod/Respawn-Handling für die TestKnight-Charaktere. Design-Hintergrund: [SYSTEMS.md](SYSTEMS.md) → "2e. Tod & Respawn-Handling".
+
+> "Prüfe zuerst, ob `BP_TestKnight` bereits eine `ULyraHealthComponent` besitzt. Falls nicht, ergänze sie – Lyras `LyraHealthSet` löst bereits ein `OnOutOfHealth`-Delegate aus, sobald Health auf 0 fällt, das übernimmt die komplette Tod-Sequenz (State-Tags, `GA_Hero_Death`-Ability für Ragdoll/Deaktivierung) automatisch, kein neuer Code nötig. Richte danach Respawn ein: [X] Sekunden Verzögerung nach dem Tod, Respawn an der ursprünglich platzierten Position (kein Team-Spawnsystem, das kommt erst mit der Battleground-Map), volle Health, keine übrig gebliebenen State-Tags/Cooldowns. Prüfe, ob die Gegner-Ziel-Findung aus `BeginPlay` beim Respawn erneut ausgelöst werden muss. Teste per PIE: Ritter im Duell bis zum Tod kämpfen lassen, Tod-Sequenz (Ragdoll/Deaktivierung) und Respawn nach Ablauf des Timers beobachten."
+
+**Anpassbare Platzhalter:** `[X]` Respawn-Delay in Sekunden (Vorschlag: 5).
+
 ## Beleuchtung bauen (schwarzer Spiel-Viewport)
 
 > "Baue die Beleuchtung für das aktuelle Level ([Levelname])."

@@ -76,6 +76,24 @@ Das Projekt läuft aktuell als reines Blueprint-Projekt ohne eigenes C++-Modul �
 
 **Zu entscheiden, sobald mehr Klassen dazukommen (Task #7):** entweder weiter mit diesem Blueprint-Workaround arbeiten, oder an dem Punkt ein C++-Modul einführen für sauberere GAS-Integration. Keine Eile – der Workaround funktioniert nachweislich.
 
+## 2e. Tod & Respawn-Handling
+
+**Grundsatz:** kein neuer eigener Code — Lyra liefert Tod/Respawn bereits vollständig fertig gebaut, nur verdrahten/konfigurieren (siehe CLAUDE.md, "Blueprint-first").
+
+**Bereits vorhandene Lyra-Bausteine (wiederverwenden statt neu bauen):**
+- `LyraHealthSet` hat ein `OnOutOfHealth`-Delegate, das feuert, sobald Health auf 0 fällt (unser `GE_Damage_Basic_SetByCaller` löst das automatisch mit aus, kein Zusatzcode nötig).
+- `ULyraHealthComponent` (Actor-Component) hört auf dieses Delegate und orchestriert die komplette Tod-Sequenz: `StartDeath()` → State-Tag `Lyra.Death.Dying`, `FinishDeath()` → `Lyra.Death.Dead`, inkl. `OnDeathStarted`/`OnDeathFinished`-Delegates für Folgelogik (Ragdoll, Input/Kollision deaktivieren).
+- `GA_Hero_Death` – vorgefertigte GameplayAbility, wird über den Death-State-Tag automatisch ausgelöst, übernimmt Ragdoll-Umschaltung und Deaktivierung.
+- `ULyraPlayerSpawningManagerComponent` (auf dem GameState) – steuert Respawn-Timing und Spawnpunkt-Auswahl nach Pawn-Tod.
+
+**Zu prüfen/verdrahten für `BP_TestKnight`:**
+- Ob bereits eine `ULyraHealthComponent` vorhanden ist – die v2-Implementierung setzt Health/MaxHealth aktuell manuell in `BeginPlay` statt über Lyras reguläre PawnData-Pipeline, die Component muss ggf. nachträglich ergänzt werden.
+- Respawn-Delay: Vorschlag 5 Sekunden (MMO-üblich), konfigurierbar.
+- Respawn-Position für den reinen 2-Ritter-PIE-Test: an der ursprünglich platzierten Position, kein Team-/Fraktions-Spawnsystem nötig – das kommt erst mit der echten Battleground-Map (Task #8), die dann pro Fraktion eigene Spawnpunkte braucht.
+- Reset beim Respawn: volle Health, keine übrig gebliebenen State-Tags/Cooldowns; prüfen ob die Ziel-Findungs-Logik aus `BeginPlay` beim Respawn erneut laufen muss (abhängig davon, ob Lyra den Pawn neu spawnt oder denselben Actor reaktiviert).
+
+**Bewusst nicht jetzt:** Fraktions-Spawnpunkte, Respawn-Wellen/-Timer-UI, Tod-Statistiken/Killfeed – das ist Battleground-Scope (Task #8), hier geht es nur um funktionierendes Tod/Respawn am aktuellen Testcharakter.
+
 ## Referenzimplementierung v2: Ritter-Prototyp auf Lyra-Basis (2026-07-21)
 
 Neuaufbau des Kampfsystem-Prototyps nach dem Umstieg auf Lyra – konsequent als Blueprint-Unterklassen von Lyras bestehenden C++-Klassen, kein neuer C++-Code (siehe CLAUDE.md, "Blueprint-first"). Unter `/Game/Characters/TestKnights/`:
