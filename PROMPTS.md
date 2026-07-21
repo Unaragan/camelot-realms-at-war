@@ -26,6 +26,12 @@ Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) 
 
 > "Benenne die TestKnight-Prototyp-Assets unter `/Game/Characters/TestKnights/` gemäß Mapping-Tabelle in CLASSES.md zur finalen Paladin-Klasse um: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`. Verschiebe die Assets nach `/Game/Characters/Paladin/`. Werte (250 Health, 25/15 Schaden) unverändert lassen – reine Umbenennung, keine Balance-Änderung. Weise beiden platzierten Instanzen zusätzlich Albion als Team über Lyras vorhandenes Team-System zu (Team-Farbe sichtbar). Prüfe nach der Umbenennung alle internen Referenzen (Blueprint-Reparent, Asset-Referenzen in BeginPlay/Grant-Ability-Logik) und teste per PIE erneut das komplette Duell inkl. Tod/Respawn, um sicherzustellen, dass nichts durch die Umbenennung gebrochen ist."
 
+## Albion-Team + Farbe zuweisen (Task #6 Abschluss)
+
+Verwendet für: letzter offener Punkt aus der TestKnight→Paladin-Umbenennung. Voraussetzung: `RealmTeamStatics` (C++-Wrapper um `ULyraTeamSubsystem::ChangeTeamForActor`) ist kompiliert, siehe [SYSTEMS.md](SYSTEMS.md) → Abschnitt 2d.
+
+> "Verdrahte die Albion-Team-Zuweisung in `BP_Paladin`s `BeginPlay`: nach einem `Switch Has Authority`-Node ausschließlich im Authority-Zweig `AssignTeam(Actor=Self, TeamId=0)` aus `RealmTeamStatics` aufrufen — zwingend, da `ChangeTeamForActor` selbst keine Authority prüft, sonst würden auch Clients `SetGenericTeamId` lokal aufrufen. Danach eine einfache sichtbare Material-Einfärbung für Team 0/Albion ergänzen (Karminrot laut README-Fraktionsfarben) — per dynamischer Material-Instance, ausgelöst entweder über `OnTeamIndexChangedDelegate` oder direkt im Anschluss an den `AssignTeam`-Aufruf. Teste per PIE: Team-Zugehörigkeit ist sichtbar (Farbe bzw. Print-Ausgabe), und bestätige, dass der Aufruf nur serverseitig passiert."
+
 ## Beleuchtung bauen (schwarzer Spiel-Viewport)
 
 > "Baue die Beleuchtung für das aktuelle Level ([Levelname])."
