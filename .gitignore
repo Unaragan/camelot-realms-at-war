@@ -7,6 +7,14 @@ Saved/
 Plugins/*/Binaries/
 Plugins/*/Intermediate/
 
+# --- Lyra-Basis-Content nicht versioniert (GitHub-LFS-Kontingent, siehe COSTS.md) ---
+# Content (1,8 GB) + Plugins (1,6 GB) sprengen das kostenlose 1-GB-LFS-Kontingent.
+# Workflow: Lyra wird auf jedem Rechner separat ueber Epic Games Launcher installiert,
+# nur eigene Aenderungen (Source/, Config/, .uproject) werden ueber Git synchronisiert.
+# Sobald eigener Content entsteht (z. B. Content/Camelot/), hier gezielt mit "!" freigeben.
+/Content/
+/Plugins/
+
 # --- IDE / Editor ---
 .vs/
 .vscode/
