@@ -26,6 +26,14 @@ Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) 
 
 > "Benenne die TestKnight-Prototyp-Assets unter `/Game/Characters/TestKnights/` gemäß Mapping-Tabelle in CLASSES.md zur finalen Paladin-Klasse um: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`. Verschiebe die Assets nach `/Game/Characters/Paladin/`. Werte (250 Health, 25/15 Schaden) unverändert lassen – reine Umbenennung, keine Balance-Änderung. Weise beiden platzierten Instanzen zusätzlich Albion als Team über Lyras vorhandenes Team-System zu (Team-Farbe sichtbar). Prüfe nach der Umbenennung alle internen Referenzen (Blueprint-Reparent, Asset-Referenzen in BeginPlay/Grant-Ability-Logik) und teste per PIE erneut das komplette Duell inkl. Tod/Respawn, um sicherzustellen, dass nichts durch die Umbenennung gebrochen ist."
 
+## Startup-Map setzen (statt Lyras Standard-Frontend)
+
+Verwendet für: Play startet standardmäßig Lyras eigenes Frontend/Default-Game statt unserer Testkarte.
+
+> "Change the project's startup map so pressing Play always loads our own test level instead of Lyra's default frontend/game map. In Project Settings → Maps & Modes: set both 'Editor Startup Map' and 'Game Default Map' to `/ShooterTests/Maps/L_ShooterTest_Basic` (the level with our two placed `BP_Paladin` instances). Confirm by pressing Play — it should load directly into that level with both knights present, not Lyra's default frontend."
+
+**Hinweis:** `[Levelpfad]` ggf. anpassen, falls ein anderer Testlevel als `L_ShooterTest_Basic` aktuell in Benutzung ist (siehe SYSTEMS.md → Referenzimplementierung).
+
 ## Albion-Team + Farbe zuweisen (Task #6 Abschluss)
 
 Verwendet für: letzter offener Punkt aus der TestKnight→Paladin-Umbenennung. Voraussetzung: `RealmTeamStatics` (C++-Wrapper um `ULyraTeamSubsystem::ChangeTeamForActor`) ist kompiliert, siehe [SYSTEMS.md](SYSTEMS.md) → Abschnitt 2d.
