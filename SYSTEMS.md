@@ -68,13 +68,15 @@ Tags treiben in GAS Aktivierungssperren, Cooldown-Tracking und CC-Zustände – 
 
 Angriffe von hinten verursachen doppelten Schaden – als wiederverwendbare Mechanik, nicht nur für einzelne Fähigkeiten. Technisch: Winkel-Check zwischen der Blickrichtung des Ziels und der Position des Angreifers zum Aktivierungszeitpunkt (z. B. Angreifer innerhalb eines ~120°-Kegels hinter dem Ziel = Rückenangriff). **Serverseitig auswerten**, nicht clientseitig – sonst leicht manipulierbar. Nur der Schadensanteil verdoppelt sich, nicht Heilungsanteile bei Hybrid-Fähigkeiten.
 
-## 2d. Bekannte Einschränkung: reines Blueprint-Projekt (kein C++-Modul)
+## 2d. Bekannte Einschränkung: reines Blueprint-Projekt (kein C++-Modul) — **historisch, überholt seit Lyra-Umstieg**
 
-Das Projekt läuft aktuell als reines Blueprint-Projekt ohne eigenes C++-Modul – abweichend vom Tech-Stack-Grundsatz "C++ für Kernsysteme" in der README/CLAUDE.md. Praktische Konsequenz: **`InitAbilityActorInfo` ist in reinen Blueprint-Projekten nicht aufrufbar** (nicht BlueprintCallable in dieser Engine-Version ohne C++-Modul).
+Galt für den ersten, verworfenen Prototyp (vor Lyra): das Projekt lief als reines Blueprint-Projekt ohne eigenes C++-Modul – abweichend vom Tech-Stack-Grundsatz "C++ für Kernsysteme" in der README/CLAUDE.md. Praktische Konsequenz war: `InitAbilityActorInfo` war nicht aufrufbar (nicht BlueprintCallable ohne C++-Modul). Workaround: Ziel-/Eigentümer-Actor über `GetOuterObject → CastToActor` statt `GetAvatarActorFromActorInfo`.
 
-**Funktionierender Workaround** (verifiziert per PIE-Test): Ziel-/Eigentümer-Actor über `GetOuterObject → CastToActor` ermitteln statt über `GetAvatarActorFromActorInfo`. Funktioniert einwandfrei mit `TryActivateAbilityByClass`.
+**Seit dem Lyra-Umstieg überholt:** Lyra selbst *ist* ein C++-Projekt (`Source/`-Ordner, `LyraGame`-Modul), die Einschränkung besteht nicht mehr. Die "Zu entscheiden, sobald mehr Klassen dazukommen"-Frage von hier ist damit ebenfalls beantwortet, siehe unten.
 
-**Zu entscheiden, sobald mehr Klassen dazukommen (Task #7):** entweder weiter mit diesem Blueprint-Workaround arbeiten, oder an dem Punkt ein C++-Modul einführen für sauberere GAS-Integration. Keine Eile – der Workaround funktioniert nachweislich.
+**Erste konkrete Nutzung der C++-Ausnahmeregel (2026-07-21):** `RealmTeamStatics` – ein schlanker Blueprint-Funktionsbibliotheks-Wrapper um `ULyraTeamSubsystem::ChangeTeamForActor`, nötig für die Albion-Team-/Farbzuweisung des Paladins, da diese Engine-Funktion nicht anders aus Blueprint erreichbar ist. Passt genau zur "Ausnahmefall, wenn in Blueprint wirklich nicht machbar"-Klausel in CLAUDE.md ("Blueprint-first"). Bestätigt: der Blueprint-first-Grundsatz bleibt die Regel, gelegentliche kleine C++-Wrapper um nicht-Blueprint-exponierte Lyra-Engine-Funktionen sind der vorgesehene Ausnahmefall, kein Kurswechsel.
+
+**Wichtiger Fund dabei:** `ChangeTeamForActor` prüft selbst **keine** Authority (`LyraTeamSubsystem.cpp:134`) – der Header-Kommentar "Authority only" ist nur Dokumentation, nicht erzwungen. Beim Verdrahten in Blueprint (z. B. `AssignTeam(Actor, 0)` in `BeginPlay`) daher **zwingend ein `Switch Has Authority`-Node davorschalten**, sonst rufen auch Clients `SetGenericTeamId` lokal auf (Netzwerk-Desync). Relevant für jede künftige Klasse, die Team-Zuweisung braucht (Task #7: Midgard-Team für den Berserker).
 
 ## 2e. Tod & Respawn-Handling
 
