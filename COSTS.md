@@ -12,7 +12,7 @@ Laufende Dokumentation aller Kosten für Camelot: Realms at War – aktuell anfa
 
 | Kategorie | Posten | Kosten | Status | Notiz |
 |---|---|---|---|---|
-| Server | Dedizierter VPS (**Linux**, z. B. Contabo Cloud VPS 4) | ~5,50 €/Monat | geplant, ab Ende Phase 2 | Linux statt Windows Server – keine zusätzliche OS-Lizenzkosten, UE5 Dedicated Server unterstützt Linux nativ |
+| Server | Dedizierter VPS (**Linux**, z. B. Contabo Cloud VPS 4) | ~5,50 €/Monat | zurückgestellt – LAN-Test läuft stattdessen kostenlos über vorhandenes Linux-Notebook | Erst relevant, falls über Internet/außerhalb des Heimnetzes getestet werden soll oder ein 24/7-Server ohne eigene laufende Hardware gebraucht wird |
 | Server | Größerer VPS bei Wachstum (z. B. Contabo Cloud VPS 8) | ~14 €/Monat aufwärts | geplant, falls Spielerzahl wächst | Linux |
 | Marken/IP | DPMA-Markenanmeldung (nur Deutschland) | ~290 € | zurückgestellt bis kurz vor Release | + ggf. Anwaltskosten |
 | Marken/IP | EUIPO-Markenanmeldung (EU-weit) | ~850 € | zurückgestellt bis kurz vor Release | Alternative/Ergänzung zu DPMA |
@@ -29,6 +29,7 @@ Laufende Dokumentation aller Kosten für Camelot: Realms at War – aktuell anfa
 | Repo | GitHub (privates Repo) | 0 € | Im Rahmen des bestehenden GitHub-Accounts |
 | Test-Hardware | HP ZBook (unteres Performance-Ziel) | 0 € | bereits vorhanden |
 | Test-Hardware | Ryzen 9 + RTX 40er Desktop (High-End-Referenz) | 0 € | bereits vorhanden |
+| Server | Altes Linux-Notebook (LAN-Dedicated-Server-Test, Task #5) | 0 € | bereits vorhanden, ersetzt VPS fürs LAN-Testing |
 
 ## Performance-Analyse-Tools (Freeware, für später)
 
