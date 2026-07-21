@@ -33,6 +33,52 @@ Aoife, Niamh, Oisín, Brigid, Lugh, Danu, Aengus, Fand, Etain
 - Männlich: Aidan, Ronan, Cormac, Declan, Eamon, Cian, Fintan, Diarmuid, Tadhg, Ruairi
 - Weiblich: Aoibheann, Siobhan, Fionnuala, Saoirse, Brenna, Maeve, Orla, Niav, Ailbhe, Sorcha
 
+## Wichtige NPCs: Burgherren & Militärische Befehlshaber (Reichsführung)
+
+Pro Reich zwei benannte, wiederkehrende Führungsfiguren — bewusst aus dem oben reservierten "besondere/einmalige NPCs"-Pool der jeweiligen Mythologie gewählt (nicht aus den generischen Füll-Namen), da sie öfter in Quest-Dialogen auftauchen als gewöhnliche Questgeber. Trennung zwischen **Burgherr(in)** (politischer/adliger Besitzer der Reichsfeste) und **militärischer Befehlshaber(in)** (professioneller Verteidiger/Anführer) — historisch begründetes Muster (z. B. Lehnsherr vs. Burgvogt), erzeugt auch erzählerisch Reibung (Diplomatie vs. Konfrontation), die sich gut für Questlinien eignet.
+
+### Albion
+
+| Rolle | Titel + Name | Charakter |
+|---|---|---|
+| Burgherr | Lord Ector | Bedächtig, pflichtbewusst, hält an Recht/Tradition fest — sieht den Reichsanspruch auf die zentrale Reliktburg als ererbtes Recht, nicht als Eroberung |
+| Militärischer Befehlshaber | Burgvogt Kay | Ungeduldiger als Ector, drängt auf entschlossenes Handeln, verwaltet Ausbildung und Verteidigung der Burg |
+
+### Midgard
+
+| Rolle | Titel + Name | Charakter |
+|---|---|---|
+| Burgherrin | Jarl Skadi | Stolz, prüft Neuankömmlinge auf Tatkraft, bevor sie in der Halle Ansehen gewinnen — Ehre muss bewiesen werden, nicht behauptet |
+| Militärischer Befehlshaber | Hersir Vidar | Wortkarg, entschlossen, führt Raid-/Vorstoßtrupps an die Grenze — testet Rekruten direkt im Feld statt durch Zeremonie |
+
+### Hibernia
+
+| Rolle | Titel + Name | Charakter |
+|---|---|---|
+| Burgherr | Rí Aengus | Sieht sich als Hüter, nicht Besitzer der Reliktstätte — Sorge gilt dem Gleichgewicht des Landes selbst (Waldsterben/schwindende Wardstein-Magie als wiederkehrendes Thema) |
+| Militärische Befehlshaberin | Ceann Cogaidh Aoife | Bildet Neulinge im hibernischen Scharmützel-/Guerillastil aus, prüft sie in kleinen Gefechten, bevor sie zur Grenzverteidigung zugelassen werden |
+
+**Hinweis:** Ector/Kay, Skadi/Vidar, Aengus/Aoife gelten ab jetzt als reserviert für diese Reichsführungsrollen — nicht zusätzlich für beliebige Füll-NPCs wiederverwenden, um Verwechslung zu vermeiden.
+
+## Grundkonflikt-Vorschlag (Basis für Questlinien)
+
+Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md): alle drei Reiche erheben Anspruch auf dieselbe zentrale Reliktstätte, aber aus unterschiedlichen, reichstypischen Beweggründen — das liefert automatisch unterschiedlichen Ton pro Reichs-Questlinie, ohne dass die Reiche sich mechanisch unterscheiden müssen:
+
+- **Albion – Rechtsanspruch:** die Reliktstätte wurde einst von albischen Vorfahren errichtet/versiegelt, der Anspruch ist ererbtes Recht, keine Eroberung. Passt zu Lord Ectors bedächtigem Auftreten.
+- **Midgard – Ehr-/Eroberungsanspruch:** die Reliktstätte gehört dem, der sie halten und verteidigen kann — Anspruch muss im Kampf bewiesen werden, nicht durch Urkunden. Passt zu Jarl Skadis Prüfungs-Ethos.
+- **Hibernia – Hüteranspruch:** die Reliktstätte ist keine Trophäe, sondern schützt das Land selbst (Wardstein-Magie, Waldgleichgewicht) — Hibernia sieht sich als Wächter in Verantwortung, nicht als Besitzer. Passt zu Rí Aengus' Sorge ums Gleichgewicht.
+
+**Kleinteilige Quest-Hooks fürs spätere Startgebiet** (niedrige Einstiegsstufe, führt schrittweise zum Battleground-Übergang):
+
+- *Lord Ector:* vermisste Grenzkundschafter nahe dem Reichsrand — niedrigschwellige Erkundungsquest, führt Spieler erstmals an die Reichsgrenze heran.
+- *Burgvogt Kay:* Ausbildungs-/Bewährungsaufträge (Trainingsgegner, kleine Wachposten sichern), eskalierend bis zur ersten echten Grenzpatrouille — natürlicher Übergang Startgebiet → Battleground.
+- *Jarl Skadi:* Bewährungsprobe-Kette, bevor Neuankömmlinge als vollwertige Krieger der Halle gelten.
+- *Hersir Vidar:* direkter Rekrutierungs-Hook für einen ersten Vorstoßtrupp an die Grenze — die unmittelbarste Brücke ins Battleground.
+- *Rí Aengus:* ein Hain/Steinkreis nahe der Grenze zeigt Verfallserscheinungen (Wardstein-Magie schwächelt) — Erkundungs-/Untersuchungsquest mit Naturmagie-Ton statt Militär-Ton.
+- *Ceann Cogaidh Aoife:* kleine Scharmützel-Bewährungsproben im hibernischen Guerilla-Stil, bevor Rekruten zur Grenzverteidigung zugelassen werden.
+
+**Einordnung:** reine Design-Vorlage, keine ausgearbeiteten Quest-Skripte/Dialoge — relevant erst ab der Startgebiet-Phase (siehe Roadmap in README.md, nach dem Vertical Slice), ändert nichts am aktuellen Battleground-Fokus.
+
 ## Praktische Nutzung für Questgeber
 
 Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:
@@ -44,4 +90,4 @@ Rollen-Ideen für Questgeber: Schmied, Wache, Ältester/Älteste, Heiler(in), H�
 
 ## Status
 
-🟡 Design-Referenz, reiner Namenspool — keine konkreten NPC-Charaktere/Quests damit verknüpft. Relevant erst ab Startgebiet-Phase (siehe README-Roadmap, nach dem Vertical Slice).
+🟡 Design-Referenz. Namenspool weiterhin ohne konkrete Quests verknüpft; die sechs Reichsführungs-NPCs (Burgherren/militärische Befehlshaber) haben jetzt Charakter- und Quest-Hook-Vorschläge (2026-07-21), aber noch keine ausgearbeiteten Quest-Skripte/Dialoge. Relevant erst ab Startgebiet-Phase (siehe README-Roadmap, nach dem Vertical Slice).
