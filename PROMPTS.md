@@ -123,7 +123,30 @@ Guter Anschluss an Quest 1 (greift Banner/Spuren/Waffe als offene Fragen von Que
 > - Dialogue from Kay offering the quest (blunt, impatient, 3-4 lines)
 > - A closing line from Kay right before the player heads to the frontier/battleground, giving the moment a sense of stakes rising — this line should work as a narrative bridge into actual RvR combat content."
 
-**Status:** Quest 1 + 2 per Copilot generiert und dokumentiert (2026-07-21), Quest 3 noch offen. Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
+**Ergebnis (Copilot, 2026-07-21):**
+
+> **Quest Title:** To the Borderlands
+>
+> **Quest Description:** Lord Ector's findings leave little room for doubt: trouble is stirring beyond Albion's borders. Burgvogt Kay has no patience for endless discussions—if war is coming, Albion needs soldiers who can fight, not talk.
+> Before assigning you to the frontier patrol, Kay will put your readiness to the test. Prove your skill in training, then ride with Albion's scouts to begin your first watch along the border.
+>
+> **Objectives:**
+> 1. Defeat 5 Training Warriors in the garrison yard.
+> 2. Report your success to Burgvogt Kay.
+> 3. Join the Border Patrol and travel to the Frontier Watchpost.
+>
+> **Quest Offer Dialogue (Burgvogt Kay):**
+> "Ector has his proof. Good. That's all I needed to hear."
+> "If our neighbors are stirring, we'll answer with steel—not speculation."
+> "Show me you can hold your own. Settle a few scores in the training yard, then report back."
+> "After that, you're riding for the frontier. Albion needs eyes and blades on the border."
+>
+> **Closing Line from Kay:**
+> "The frontier isn't a training yard, recruit. Beyond those walls, every banner you see belongs to someone who wants what Albion has. Ride out, stay sharp, and be ready—the next battle may already be waiting for you."
+
+Kays Ton (ungeduldig, handlungsorientiert) hebt sich klar von Ectors bedächtiger Art ab – funktioniert als Kontrast. Objective 1 ("5 Training Warriors") ist direkt als Kampf-Tutorial nutzbar (Test gegen `BP_TestKnight`-ähnliche Trainingsgegner, siehe Task #6), die Closing Line ist eine saubere erzählerische Brücke zur Battleground-Map (Task #8).
+
+**Status:** Komplette 3-Quest-Kette (Quest 1–3) per Copilot generiert und dokumentiert (2026-07-21). Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
 
 ## Status
 
