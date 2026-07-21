@@ -12,7 +12,10 @@ Plugins/*/Intermediate/
 # Workflow: Lyra wird auf jedem Rechner separat ueber Epic Games Launcher installiert,
 # nur eigene Aenderungen (Source/, Config/, .uproject) werden ueber Git synchronisiert.
 # Sobald eigener Content entsteht (z. B. Content/Camelot/), hier gezielt mit "!" freigeben.
-/Content/
+/Content/*
+!/Content/Characters/
+/Content/Characters/*
+!/Content/Characters/TestKnights/
 /Plugins/
 
 # --- IDE / Editor ---
