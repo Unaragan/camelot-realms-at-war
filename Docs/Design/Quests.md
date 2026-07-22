@@ -49,12 +49,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | AEQ-04 | 5 | First Blood | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-05 | 7 | A Soldier's Instinct | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-06 | 9 | The Cartographer's Warning | Solo | 🟢 fertig (unten) | 🔴 |
-| AEQ-07 | 11 | Eleanor's Missing Wagons | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-08 | 13 | The Old Ward-Keeper's Journal | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-09 | 15 | Osric's Trail | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-10 | 16 | Recruits of the Watch — **Instanz #1** (Boss: Osric the Turned) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-11 | 18 | Aftermath at the Hollow | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| AEQ-07 | 11 | Eleanor's Missing Wagons | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-08 | 13 | The Old Ward-Keeper's Journal | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-09 | 15 | Osric's Trail | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-10 | 16 | Recruits of the Watch — **Instanz #1** (Boss: Osric the Turned) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| AEQ-11 | 18 | Aftermath at the Hollow | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | AEQ-13 | 23 | Lord Ector's Suspicion | Solo | ⚪ nur Prämisse | 🔴 |
 | AEQ-14 | 26 | What the Archives Hide | Solo | ⚪ nur Prämisse | 🔴 |
 | AEQ-15 | 27 | The Cartographer's Fear | Solo | ⚪ nur Prämisse | 🔴 |
@@ -80,12 +80,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | MEQ-04 | 5 | Blood on the Ice | Solo | 🟢 fertig (unten) | 🔴 |
 | MEQ-05 | 7 | Gunnar's Watch | Solo | 🟢 fertig (unten) | 🔴 |
 | MEQ-06 | 9 | The Skald's Doubt | Solo | 🟢 fertig (unten) | 🔴 |
-| MEQ-07 | 11 | Ulf's Vanishing Ore | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-08 | 13 | The Half-Sworn Rune | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-09 | 15 | Erik's Trail | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-10 | 16 | Wolves Among Wolves — **Instanz #1** (Boss: Erik, First of the Ironbrood) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-11 | 18 | What the Wolves Left Behind | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| MEQ-07 | 11 | Ulf's Vanishing Ore | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-08 | 13 | The Half-Sworn Rune | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-09 | 15 | Erik's Trail | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-10 | 16 | Wolves Among Wolves — **Instanz #1** (Boss: Erik, First of the Ironbrood) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| MEQ-11 | 18 | What the Wolves Left Behind | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | MEQ-13 | 23 | Skadi's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-14 | 26 | The Unbound Oath | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-15 | 27 | The Skald's Warning | Solo | ⚪ nur Prämisse | 🔴 |
@@ -111,12 +111,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | HEQ-04 | 5 | First Skirmish | Solo | 🟢 fertig (unten) | 🔴 |
 | HEQ-05 | 7 | Niav's Silence | Solo | 🟢 fertig (unten) | 🔴 |
 | HEQ-06 | 9 | The Seer's Unease | Solo | 🟢 fertig (unten) | 🔴 |
-| HEQ-07 | 11 | Cormac's Stolen Iron | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-08 | 13 | The Old Grove-Keeper's Rite | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-09 | 15 | Eamon's Trail | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-10 | 16 | The Withering Circle — **Instanz #1** (Boss: Eamon the Withered) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-11 | 18 | What the Roots Remember | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| HEQ-07 | 11 | Cormac's Stolen Iron | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-08 | 13 | The Old Grove-Keeper's Rite | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-09 | 15 | Eamon's Trail | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-10 | 16 | The Withering Circle — **Instanz #1** (Boss: Eamon the Withered) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| HEQ-11 | 18 | What the Roots Remember | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | HEQ-13 | 23 | Aengus' Fear | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-14 | 26 | The Rootbound Rite | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-15 | 27 | The Seer's Vision | Solo | ⚪ nur Prämisse | 🔴 |
@@ -136,24 +136,24 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 
 | ID | Reich | Titel | Schwierigkeit | Content | Engine |
 |---|---|---|---|---|---|
-| ASQ-01 | Albion | Smith Godwin's Request | Leicht | ⚪ nur Prämisse | 🔴 |
-| ASQ-02 | Albion | Cedric's Lost Hound | Leicht | ⚪ nur Prämisse | 🔴 |
-| ASQ-03 | Albion | The Widow's Debt | Mittel | ⚪ nur Prämisse | 🔴 |
-| ASQ-04 | Albion | Rosalind's Cure | Mittel | ⚪ nur Prämisse | 🔴 |
-| ASQ-05 | Albion | Harold's Wager | Mittel | ⚪ nur Prämisse | 🔴 |
-| ASQ-06 | Albion | The Tax Collector's Ledger | Schwer | ⚪ nur Prämisse | 🔴 |
-| MSQ-01 | Midgard | Bjorn's Boast | Leicht | ⚪ nur Prämisse | 🔴 |
-| MSQ-02 | Midgard | Astrid's Catch | Leicht | ⚪ nur Prämisse | 🔴 |
-| MSQ-03 | Midgard | The Frozen Raiders | Mittel | ⚪ nur Prämisse | 🔴 |
-| MSQ-04 | Midgard | Sigrid's Runes | Mittel | ⚪ nur Prämisse | 🔴 |
-| MSQ-05 | Midgard | Halvar's Duel | Mittel | ⚪ nur Prämisse | 🔴 |
-| MSQ-06 | Midgard | The Ice-Bound Wyrm | Schwer | ⚪ nur Prämisse | 🔴 |
-| HSQ-01 | Hibernia | Ronan's Lost Charm | Leicht | ⚪ nur Prämisse | 🔴 |
-| HSQ-02 | Hibernia | Siobhan's Herbs | Leicht | ⚪ nur Prämisse | 🔴 |
-| HSQ-03 | Hibernia | The Hungry Wood | Mittel | ⚪ nur Prämisse | 🔴 |
-| HSQ-04 | Hibernia | Declan's Wager | Mittel | ⚪ nur Prämisse | 🔴 |
-| HSQ-05 | Hibernia | Maeve's Warning | Mittel | ⚪ nur Prämisse | 🔴 |
-| HSQ-06 | Hibernia | The Old Oak's Grief | Schwer | ⚪ nur Prämisse | 🔴 |
+| ASQ-01 | Albion | Smith Godwin's Request | Leicht | 🟢 fertig (unten) | 🔴 |
+| ASQ-02 | Albion | Cedric's Lost Hound | Leicht | 🟢 fertig (unten) | 🔴 |
+| ASQ-03 | Albion | The Widow's Debt | Mittel | 🟢 fertig (unten) | 🔴 |
+| ASQ-04 | Albion | Rosalind's Cure | Mittel | 🟢 fertig (unten) | 🔴 |
+| ASQ-05 | Albion | Harold's Wager | Mittel | 🟢 fertig (unten) | 🔴 |
+| ASQ-06 | Albion | The Tax Collector's Ledger | Schwer | 🟢 fertig (unten) | 🔴 |
+| MSQ-01 | Midgard | Bjorn's Boast | Leicht | 🟢 fertig (unten) | 🔴 |
+| MSQ-02 | Midgard | Astrid's Catch | Leicht | 🟢 fertig (unten) | 🔴 |
+| MSQ-03 | Midgard | The Frozen Raiders | Mittel | 🟢 fertig (unten) | 🔴 |
+| MSQ-04 | Midgard | Sigrid's Runes | Mittel | 🟢 fertig (unten) | 🔴 |
+| MSQ-05 | Midgard | Halvar's Duel | Mittel | 🟢 fertig (unten) | 🔴 |
+| MSQ-06 | Midgard | The Ice-Bound Wyrm | Schwer | 🟢 fertig (unten) | 🔴 |
+| HSQ-01 | Hibernia | Ronan's Lost Charm | Leicht | 🟢 fertig (unten) | 🔴 |
+| HSQ-02 | Hibernia | Siobhan's Herbs | Leicht | 🟢 fertig (unten) | 🔴 |
+| HSQ-03 | Hibernia | The Hungry Wood | Mittel | 🟢 fertig (unten) | 🔴 |
+| HSQ-04 | Hibernia | Declan's Wager | Mittel | 🟢 fertig (unten) | 🔴 |
+| HSQ-05 | Hibernia | Maeve's Warning | Mittel | 🟢 fertig (unten) | 🔴 |
+| HSQ-06 | Hibernia | The Old Oak's Grief | Schwer | 🟢 fertig (unten) | 🔴 |
 
 ### Frontier-Punkt-NPCs (FNQ) — siehe [Frontier_NPCs_and_Questlines.md](Frontier_NPCs_and_Questlines.md)
 
@@ -656,8 +656,236 @@ Generiert von Claude (2026-07-22). Bewusst eigenständig von HEQ-05 gehalten (an
 
 **Umsetzungs-Checkliste:** siehe generische Liste oben, alle 5 Punkte 🔴.
 
+### Nebenquests: Albion (ASQ)
+
+> **ASQ-01 — Smith Godwin's Request** (Leicht, Item)
+> Description: The village smith needs rare ore to finish a commission — a simple errand, but Godwin pays well for reliable hands.
+> Objectives: 1. Speak with Smith Godwin. 2. Retrieve ore from the nearby quarry. 3. Deliver the ore to Godwin.
+> Opening (Godwin): "You look capable enough. I need ore from the old quarry — my usual supplier's gone quiet. Nothing dangerous, just watch your footing up there."
+> Closing (Godwin): "Good stock, this'll do nicely. Here — first blade off my new batch. Better than whatever you're carrying now."
+
+> **ASQ-02 — Cedric's Lost Hound** (Leicht, XP)
+> Description: Cedric's hunting hound bolted after a hare and hasn't returned — he's more worried than he'll admit.
+> Objectives: 1. Speak with Cedric. 2. Follow the hound's trail into the woods. 3. Bring the hound back to Cedric.
+> Opening (Cedric): "You haven't seen a dog running loose, have you? Big fool of a thing, answers to Bramble. Or doesn't, usually."
+> Closing (Cedric): "There you are, you menace. My thanks — don't tell the others I fussed over a dog like this."
+
+> **ASQ-03 — The Widow's Debt** (Mittel, Item)
+> Description: A farmer named Wulfric is being extorted by highwaymen demanding a "toll" for the road past his fields.
+> Objectives: 1. Speak with Wulfric at his farm. 2. Locate the highwaymen's camp. 3. Drive off the highwaymen.
+> Opening (Wulfric): "They come every fortnight now. Say it's a toll for using 'their' road — my own road, mind you. I've paid twice. Can't afford a third."
+> Closing (Wulfric): "Gone, truly gone? I'll believe it when the harvest comes in undisturbed. Take this — little enough, but honest."
+
+> **ASQ-04 — Rosalind's Cure** (Mittel, XP)
+> Description: A herbalist needs a rare mountain flower to finish a fever cure — it only grows on dangerous, exposed terrain.
+> Objectives: 1. Speak with Rosalind. 2. Climb to the ridge where the flower grows. 3. Return the flower to Rosalind.
+> Opening (Rosalind): "Frostbloom, it's called. Grows where sensible people don't go. A child in the village has a fever that won't break. I need it soon."
+> Closing (Rosalind): "Perfect condition, you didn't crush the petals. The fever will break by morning, I expect. You've done more good than you know."
+
+> **ASQ-05 — Harold's Wager** (Mittel, Item)
+> Description: A soldier named Harold bet he could clear a den of wolves alone — pride made poor company.
+> Objectives: 1. Investigate Harold's camp. 2. Track him to the wolf den. 3. Help Harold fight free.
+> Opening (Harold, before setting out): "A den of wolves, alone, no help needed. Wager stands — thirty coin says I clear it before dusk. Come along if you like. You can watch."
+> Closing (Harold, humbled): "...Don't. Just — don't say it. Bring the wager back after this? I'll owe you more than coin at this rate."
+
+> **ASQ-06 — The Tax Collector's Ledger** (Schwer, Item besonders)
+> Description: A corrupt tax official has been skimming coin from villagers under threat — proving it takes more than accusations.
+> Objectives: 1. Gather testimony from affected villagers. 2. Recover the collector's private ledger. 3. Decide how to handle what you've found.
+> Opening (Village Elder): "He takes more than the crown allows, and threatens any who speak of it. Proof is what we lack. Words alone won't move a lord's court."
+> Closing (Village Elder): "This ledger... this is damning. You've done what none of us dared. What happens to him now is not for me to say — but the village thanks you."
+
+### Nebenquests: Midgard (MSQ)
+
+> **MSQ-01 — Bjorn's Boast** (Leicht, XP)
+> Description: Bjorn won't stop bragging about a victory that grows taller with each telling — a sparring match should set the record straight.
+> Objectives: 1. Speak with Bjorn. 2. Accept his sparring challenge. 3. Defeat him in the practice ring.
+> Opening (Bjorn): "You've heard the story, surely — how I felled three raiders with one stroke? Doubt me, do you? Prove it in the ring, then."
+> Closing (Bjorn): "...Perhaps it was one raider. And perhaps I stumbled. Fine bout, though. Don't let it go to your head."
+
+> **MSQ-02 — Astrid's Catch** (Leicht, Item)
+> Description: Astrid needs a good haul of fish for the coming hall-feast.
+> Objectives: 1. Speak with Astrid. 2. Fish the marked stretch of the fjord. 3. Deliver the catch to Astrid.
+> Opening (Astrid): "The feast is in two days and my nets are empty. Fetch me a proper catch, would you? Mind the current past the rocks — stronger than it looks."
+> Closing (Astrid): "Now that's a haul, the hall will eat well tonight. Take this for your trouble — caught fresh, cooked better."
+
+> **MSQ-03 — The Frozen Raiders** (Mittel, Item)
+> Description: Bandits have been raiding fishing villages along the coast — Sven wants them answered before winter makes it worse.
+> Objectives: 1. Speak with Sven. 2. Track the raiders to their coastal camp. 3. Drive off the raiders.
+> Opening (Sven): "Three villages robbed this month. Fishing folk, not warriors — easy prey, they think. Someone should remind them our coast isn't undefended."
+> Closing (Sven): "Good. Let word spread of what happens to those who prey on the weak. You've earned this."
+
+> **MSQ-04 — Sigrid's Runes** (Mittel, XP)
+> Description: A rune-carver needs rare stones from dangerous cliffside terrain.
+> Objectives: 1. Speak with Sigrid. 2. Climb the cliffs to gather rune-stones. 3. Return the stones to Sigrid.
+> Opening (Sigrid): "The stones I need only form where the cliffs meet the sea-spray. Dangerous footing, but worth it."
+> Closing (Sigrid): "These will hold a fine edge of luck. My thanks — you've a steady hand, for someone who isn't a carver."
+
+> **MSQ-05 — Halvar's Duel** (Mittel, Item)
+> Description: Halvar has an honor duel to settle and could use help preparing.
+> Objectives: 1. Speak with Halvar. 2. Help him prepare for the duel. 3. Witness the duel's outcome.
+> Opening (Halvar): "A duel, over an old insult that should've been forgotten years ago. Too late now — honor demands it."
+> Closing (Halvar): "Won, though it cost me more bruises than I'd like to admit. Take this — you earned a share of the victory."
+
+> **MSQ-06 — The Ice-Bound Wyrm** (Schwer, Item besonders)
+> Description: A dangerous beast lies half-dormant in the ice near a village, waking as the season turns.
+> Objectives: 1. Speak with Torvald. 2. Track the beast to its icy lair. 3. Defeat the wyrm before it fully wakens.
+> Opening (Torvald): "It's been sleeping in the ice as long as anyone remembers. Now it's stirring, and I don't like what that means."
+> Closing (Torvald): "You actually did it. Take its fang as proof — and as payment. You've earned both."
+
+### Nebenquests: Hibernia (HSQ)
+
+> **HSQ-01 — Ronan's Lost Charm** (Leicht, XP)
+> Description: Ronan lost a charm he swears keeps ill luck away.
+> Objectives: 1. Speak with Ronan. 2. Search the path he walked that morning. 3. Return the charm to Ronan.
+> Opening (Ronan): "My charm's gone. Lost it on the low path, I think. Silly to fuss over a trinket, I know. But bad luck follows fast once it starts."
+> Closing (Ronan): "There it is. You've no idea what a weight off my shoulders this is."
+
+> **HSQ-02 — Siobhan's Herbs** (Leicht, Item)
+> Description: A healer needs a fresh supply of herbs from the nearby woods.
+> Objectives: 1. Speak with Siobhan. 2. Gather the herbs she describes. 3. Deliver them to Siobhan.
+> Opening (Siobhan): "The woods this time of year are generous, if you know where to look. Bring me a good bundle."
+> Closing (Siobhan): "Fresh and unbruised — you have a gentle hand. Take this in thanks."
+
+> **HSQ-03 — The Hungry Wood** (Mittel, Item)
+> Description: Corrupted wildlife has been attacking travelers on the forest path.
+> Objectives: 1. Speak with Declan. 2. Locate the creatures' nest. 3. Clear the nest.
+> Opening (Declan): "Something's wrong with the animals near the old path. Vicious, where they used to be shy. Deal with it before a traveler pays the price."
+> Closing (Declan): "Good, the path should be safe again — for now. You've done the wood a favor, whether it knows it or not."
+
+> **HSQ-04 — Declan's Wager** (Mittel, XP)
+> Description: Declan claims he can outhunt anyone in the district.
+> Objectives: 1. Speak with Declan. 2. Hunt game in the marked territory. 3. Return with more game than Declan.
+> Opening (Declan): "You hunt, do you? Wager says I bring back more game than you by sundown. Loser buys the ale."
+> Closing (Declan): "...Fine. Fine! You win this round. Ale's on me — don't let it go to your head."
+
+> **HSQ-05 — Maeve's Warning** (Mittel, Item)
+> Description: A seer named Maeve had an ominous vision and wants a specific site investigated.
+> Objectives: 1. Speak with Maeve. 2. Investigate the site from her vision. 3. Report your findings to Maeve.
+> Opening (Maeve): "I dreamed of a hollow tree bleeding sap black as pitch. I do not dream idly. Find it. Tell me if the dream lied."
+> Closing (Maeve): "It did not lie, then. I feared as much. Take this — small thanks for confirming a fear I'd hoped was nothing."
+
+> **HSQ-06 — The Old Oak's Grief** (Schwer, Item besonders)
+> Description: An ancient tree, old enough to be a minor spirit of the wood, is dying from unknown corruption.
+> Objectives: 1. Speak with Brenna. 2. Travel to the ancient oak. 3. Attempt to ease its suffering or uncover the cause.
+> Opening (Brenna): "The old oak has stood since before my grandmother's grandmother. Now it weeps sap like tears, and I do not know why. It should not die alone and unwitnessed."
+> Closing (Brenna): "You stayed with it. That matters more than you know, even if you found no cure. Whatever comes for it, comes for all of us in time."
+
+**Umsetzungs-Checkliste (alle 18 Nebenquests):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
+## Akt 2 (Level 11–20/13–20): Instanz-Vorlauf und BG-Debüt aller drei Reiche
+
+### Albion (AEQ-07 bis AEQ-12)
+
+> **AEQ-07 — Eleanor's Missing Wagons** (Lv 11, Solo, Vorsteherin Eleanor)
+> Description: Supply wagons bound for the frontier have been vanishing along the trade road — not the work of rival scouts, Eleanor suspects.
+> Objectives: 1. Speak with Vorsteherin Eleanor. 2. Investigate the last wagon's route. 3. Report your findings to Eleanor.
+> Opening (Eleanor): "Three wagons gone this month. Rival raiders take goods and leave a mess — whoever's doing this leaves nothing at all."
+> Closing (Eleanor): "No wreckage, no bodies, no tracks worth following... just gone. That's not raiders. That's something far more careful."
+
+> **AEQ-08 — The Old Ward-Keeper's Journal** (Lv 13, Solo, Fundstück)
+> Description: A centuries-old journal found near a ruined chapel speaks of "the Oath that was broken" — a name lost to time, until now.
+> Objectives: 1. Search the ruined chapel. 2. Recover the journal. 3. Bring it to Lord Ector for study.
+> Journal Excerpt (kein NPC-Dialog, Fundtext): "...the Order swore to hold the seal unbroken until the world's ending. Those who could not bear the weight of that oath left in the night, and we do not speak their names..."
+
+> **AEQ-09 — Osric's Trail** (Lv 15, Solo, Burgvogt Kay)
+> Description: Evidence points to a former Albion soldier turned traitor — Osric — now leading a hidden cell near the borderlands.
+> Objectives: 1. Question locals near the abandoned homestead. 2. Follow the trail to Osric's hideout. 3. Report the location to Burgvogt Kay.
+> Opening (Kay): "A name, finally — Osric. Former soldier, good one too, before he vanished years back. Find where he's hiding."
+> Closing (Kay): "Good work. Now we hit that hideout before he knows we're coming. Gather your strength — this won't be a solo fight."
+
+> **AEQ-10 — Recruits of the Watch** (Lv 16, **Instanz #1**, Boss: Osric the Turned)
+> Description: A full assault on Osric's hidden cell — the first real confrontation with the group behind the border's troubles.
+> Objectives: 1. Enter the hideout with your group. 2. Clear the outer chamber. 3. Defeat Osric the Turned.
+> Opening (Kay): "This is it. Whatever Osric's become, he was Albion once — don't let that stay your hand."
+> Closing (Fundtext auf Osric): a torn oath-parchment reading "...the Oath was never meant to last forever..."
+
+> **AEQ-11 — Aftermath at the Hollow** (Lv 18, Solo, Lord Ector)
+> Description: Sorting through what Osric's cell left behind reveals plans far larger than a single hideout.
+> Objectives: 1. Search the hideout's remains. 2. Recover any surviving documents. 3. Deliver them to Lord Ector.
+> Closing (Ector): "These plans... they speak of the relic itself, not merely our borders. I fear Osric was never more than a piece on someone else's board."
+
+> **AEQ-12 — Grenzland-Scharmützel** (Lv 20, **Gruppe/RvR, BG-Debüt**, Burgvogt Kay)
+> Description: With the frontier boiling over, Burgvogt Kay leads Albion's first real push into open Battleground combat — the war stops being distant.
+> Objectives: 1. Speak with Burgvogt Kay. 2. Join the Grenzland-Scharmützel Battleground. 3. Help secure Albion's foothold.
+> Opening (Kay): "This is no longer scouts and shadows. This is the real thing. Get out there and hold the line."
+> Closing (Kay): "First blood in a real battle. Remember this feeling — it doesn't get easier, only more familiar."
+
+### Midgard (MEQ-07 bis MEQ-12)
+
+> **MEQ-07 — Ulf's Vanishing Ore** (Lv 11, Solo, Minenaufseher Ulf)
+> Description: Ore shipments keep disappearing en route to the smiths — too disciplined a pattern for common thieves.
+> Objectives: 1. Speak with Minenaufseher Ulf. 2. Investigate the mine route. 3. Report back to Ulf.
+> Opening (Ulf): "Ore's vanishing before it reaches the forges. Thieves are sloppy — this isn't sloppy."
+> Closing (Ulf): "No cart tracks leading off, no struggle at the checkpoints. Whoever's doing this knows exactly what they're doing."
+
+> **MEQ-08 — The Half-Sworn Rune** (Lv 13, Solo, Fundstück)
+> Description: A broken oath-ring bearing an unfamiliar rune surfaces near an abandoned camp — the first real clue to a group with no known allegiance.
+> Objectives: 1. Search the abandoned camp. 2. Recover the broken ring. 3. Show it to Hersir Vidar.
+> Closing (Vidar): "I don't know this mark. And I know every warband's mark worth knowing. That bothers me more than I'd like to admit."
+
+> **MEQ-09 — Erik's Trail** (Lv 15, Solo, Hersir Vidar)
+> Description: The rune leads to a name — Erik, once a promising warrior, now leading a warband that answers to no jarl.
+> Objectives: 1. Question travelers near the border camp. 2. Track Erik's warband to their lair. 3. Report the location to Hersir Vidar.
+> Opening (Vidar): "Erik. I remember him — strong arm, weak temper. Find where he's hiding."
+> Closing (Vidar): "Good. Gather your strength. This one won't go down without a real fight."
+
+> **MEQ-10 — Wolves Among Wolves** (Lv 16, **Instanz #1**, Boss: Erik, First of the Ironbrood)
+> Description: A full assault on Erik's hidden lair — the first real confrontation with the Ironbrood.
+> Objectives: 1. Enter the lair with your group. 2. Clear the outer camp. 3. Defeat Erik, First of the Ironbrood.
+> Opening (Vidar): "Whatever he's become, he bleeds like anyone else. Show him that."
+> Closing (Fundtext auf Erik): a battered, half-melted oath-ring engraved "no oath outlasts the blade that breaks it."
+
+> **MEQ-11 — What the Wolves Left Behind** (Lv 18, Solo, Jarl Skadi)
+> Description: Documents recovered from Erik's lair hint at something far bigger than a rogue warband.
+> Objectives: 1. Search the lair's remains. 2. Recover surviving documents. 3. Deliver them to Jarl Skadi.
+> Closing (Skadi): "This isn't just dishonor, this is design. Someone is building toward something, and Erik was only the beginning."
+
+> **MEQ-12 — Grenzland-Scharmützel** (Lv 20, **Gruppe/RvR, BG-Debüt**, Hersir Vidar)
+> Description: Hersir Vidar leads Midgard's first real push into open Battleground combat.
+> Objectives: 1. Speak with Hersir Vidar. 2. Join the Grenzland-Scharmützel Battleground. 3. Help secure Midgard's foothold.
+> Opening (Vidar): "No more shadows and rumors. This is a real fight now. Go earn your place in it."
+> Closing (Vidar): "You held your ground. That's worth more than any boast in the hall."
+
+### Hibernia (HEQ-07 bis HEQ-12)
+
+> **HEQ-07 — Cormac's Stolen Iron** (Lv 11, Solo, Vorsteher Cormac)
+> Description: Materials bound for Cormac's forge keep vanishing — too precise a pattern for ordinary bandits.
+> Objectives: 1. Speak with Vorsteher Cormac. 2. Investigate the supply route. 3. Report back to Cormac.
+> Opening (Cormac): "My iron's disappearing before it reaches the forge. Bandits leave a mess. This leaves nothing."
+> Closing (Cormac): "No signs of struggle, no dropped goods. Whoever's taking it wants precisely what they take and nothing more."
+
+> **HEQ-08 — The Old Grove-Keeper's Rite** (Lv 13, Solo, Fundstück)
+> Description: A forgotten stone circle holds the remnants of an ancient guardian rite — twisted, and recently used by unknown hands.
+> Objectives: 1. Search the forgotten stone circle. 2. Examine the disturbed ritual markings. 3. Report your findings to Rí Aengus.
+> Closing (Aengus): "This rite... it is ours, or was. Someone has taken what my ancestors made to protect, and bent it toward something else."
+
+> **HEQ-09 — Eamon's Trail** (Lv 15, Solo, Ceann Cogaidh Aoife)
+> Description: The corrupted rite leads to a name — Eamon, once a respected grove-tender, now leading a cell in the deep wood.
+> Objectives: 1. Question the woodfolk near the corrupted grove. 2. Track Eamon's cell to their hollow. 3. Report the location to Ceann Cogaidh Aoife.
+> Opening (Aoife): "Eamon. I trained beside him once. Find where he's gone to ground."
+> Closing (Aoife): "Gather what allies you can. Whatever he's become, he won't come quietly."
+
+> **HEQ-10 — The Withering Circle** (Lv 16, **Instanz #1**, Boss: Eamon the Withered)
+> Description: A full assault on Eamon's corrupted grove — the first real confrontation with the Withered Circle.
+> Objectives: 1. Enter the corrupted grove with your group. 2. Clear the outer grove. 3. Defeat Eamon the Withered.
+> Opening (Aoife): "Whatever grew wrong in him can be cut away. Or ended. Either serves."
+> Closing (Fundtext auf Eamon): a withered branch carved with spiraling marks, still faintly warm to the touch.
+
+> **HEQ-11 — What the Roots Remember** (Lv 18, Solo, Rí Aengus)
+> Description: What's left of Eamon's grove hints at a purpose far larger than one corrupted cell.
+> Objectives: 1. Search the grove's remains. 2. Recover any surviving markings or writings. 3. Bring them to Rí Aengus.
+> Closing (Aengus): "This was never only about one grove, or one man. Something deeper stirs, and I fear we have only glimpsed its edge."
+
+> **HEQ-12 — Grenzland-Scharmützel** (Lv 20, **Gruppe/RvR, BG-Debüt**, Ceann Cogaidh Aoife)
+> Description: Ceann Cogaidh Aoife leads Hibernia's first real push into open Battleground combat.
+> Objectives: 1. Speak with Ceann Cogaidh Aoife. 2. Join the Grenzland-Scharmützel Battleground. 3. Help secure Hibernia's foothold.
+> Opening (Aoife): "The quiet fighting is over, for now. Go make yourself useful where it counts."
+> Closing (Aoife): "You fought well. Remember how it felt — the frontier will ask this of you again."
+
+**Umsetzungs-Checkliste (alle 18 Akt-2-Quests):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
 ---
 
 ## Status
 
-🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). 97 Einträge insgesamt, davon **19 mit fertigem Content** (kompletter Akt 1 aller drei Reiche: AEQ-01–06, MEQ-01–06, HEQ-01–06, plus FNQ-05 — von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers). Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
+🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). 103 Einträge insgesamt, davon **55 mit fertigem Content**: kompletter Akt 1 + Akt 2 aller drei Reiche (AEQ-01–12, MEQ-01–12, HEQ-01–12), alle 18 Nebenquests (ASQ/MSQ/HSQ), plus FNQ-05 — von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers ("mach alles fertig"). Wird fortgesetzt (Akt 3–5 + restliche FNQ). Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
