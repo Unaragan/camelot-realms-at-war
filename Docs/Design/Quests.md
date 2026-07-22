@@ -55,12 +55,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | AEQ-10 | 16 | Recruits of the Watch — **Instanz #1** (Boss: Osric the Turned) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | AEQ-11 | 18 | Aftermath at the Hollow | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
-| AEQ-13 | 23 | Lord Ector's Suspicion | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-14 | 26 | What the Archives Hide | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-15 | 27 | The Cartographer's Fear | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-16 | 28 | Baldwin's Last Watch — **Instanz #2** (Boss: Leofric the Hollow-Marked) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| AEQ-18 | 33 | The Vanishing Ward-Stone | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-13 | 23 | Lord Ector's Suspicion | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-14 | 26 | What the Archives Hide | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-15 | 27 | The Cartographer's Fear | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-16 | 28 | Baldwin's Last Watch — **Instanz #2** (Boss: Leofric the Hollow-Marked) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| AEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
+| AEQ-18 | 33 | The Vanishing Ward-Stone | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-19 | 36 | Kay's Warpath | Solo | ⚪ nur Prämisse | 🔴 |
 | AEQ-20 | 38 | The Sentinel's Ground | Solo | ⚪ nur Prämisse | 🔴 |
 | AEQ-21 | 39 | Into the Hollow — **Instanz #3** (Boss: The Hollow Sentinel) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
@@ -86,12 +86,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | MEQ-10 | 16 | Wolves Among Wolves — **Instanz #1** (Boss: Erik, First of the Ironbrood) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | MEQ-11 | 18 | What the Wolves Left Behind | Solo | 🟢 fertig (unten) | 🔴 |
 | MEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
-| MEQ-13 | 23 | Skadi's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-14 | 26 | The Unbound Oath | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-15 | 27 | The Skald's Warning | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-16 | 28 | Gunnar's Last Stand — **Instanz #2** (Boss: Ingvar of the Ironbrood) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| MEQ-18 | 33 | The Silent Fjord | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-13 | 23 | Skadi's Doubt | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-14 | 26 | The Unbound Oath | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-15 | 27 | The Skald's Warning | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-16 | 28 | Gunnar's Last Stand — **Instanz #2** (Boss: Ingvar of the Ironbrood) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| MEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
+| MEQ-18 | 33 | The Silent Fjord | Solo | 🟢 fertig (unten) | 🔴 |
 | MEQ-19 | 36 | Vidar's Reckoning | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-20 | 38 | The Iron Wolf's Den | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-21 | 39 | Into the Ironbrood's Hold — **Instanz #3** (Boss: The Iron Wolf) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
@@ -117,12 +117,12 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | HEQ-10 | 16 | The Withering Circle — **Instanz #1** (Boss: Eamon the Withered) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | HEQ-11 | 18 | What the Roots Remember | Solo | 🟢 fertig (unten) | 🔴 |
 | HEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
-| HEQ-13 | 23 | Aengus' Fear | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-14 | 26 | The Rootbound Rite | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-15 | 27 | The Seer's Vision | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-16 | 28 | Niav's Vigil — **Instanz #2** (Boss: Tadhg the Withered) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| HEQ-18 | 33 | The Drowned Dolmen | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-13 | 23 | Aengus' Fear | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-14 | 26 | The Rootbound Rite | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-15 | 27 | The Seer's Vision | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-16 | 28 | Niav's Vigil — **Instanz #2** (Boss: Tadhg the Withered) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| HEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
+| HEQ-18 | 33 | The Drowned Dolmen | Solo | 🟢 fertig (unten) | 🔴 |
 | HEQ-19 | 36 | Aoife's Resolve | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-20 | 38 | The Bramble Threshold | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-21 | 39 | Into the Rootbound Hollow — **Instanz #3** (Boss: The Bramble Warden) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
@@ -159,13 +159,13 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 
 | ID | Reich | NPC/Punkt | Content | Engine |
 |---|---|---|---|---|
-| FNQ-01 | Albion | Wachhauptmann Baldwin, Wachturm | ⚪ nur Prämisse | 🔴 |
-| FNQ-02 | Albion | Vorsteherin Eleanor, Dorf | ⚪ nur Prämisse | 🔴 |
-| FNQ-03 | Midgard | Wachhauptmann Gunnar, Wachturm | ⚪ nur Prämisse | 🔴 |
-| FNQ-04 | Midgard | Minenaufseher Ulf, Mine | ⚪ nur Prämisse | 🔴 |
+| FNQ-01 | Albion | Wachhauptmann Baldwin, Wachturm | 🟢 fertig (unten) | 🔴 |
+| FNQ-02 | Albion | Vorsteherin Eleanor, Dorf | 🟢 fertig (unten) | 🔴 |
+| FNQ-03 | Midgard | Wachhauptmann Gunnar, Wachturm | 🟢 fertig (unten) | 🔴 |
+| FNQ-04 | Midgard | Minenaufseher Ulf, Mine | 🟢 fertig (unten) | 🔴 |
 | FNQ-05 | Hibernia | Schreinhüterin Niav, Schrein | 🟢 fertig (unten) | 🔴 |
-| FNQ-06 | Hibernia | Vorsteher Cormac, Schmiedelager | ⚪ nur Prämisse | 🔴 |
-| FNQ-07 | Neutral | Namenloser Lagerhauptmann, Belagerungslager | ⚪ nur Prämisse | 🔴 |
+| FNQ-06 | Hibernia | Vorsteher Cormac, Schmiedelager | 🟢 fertig (unten) | 🔴 |
+| FNQ-07 | Neutral | Namenloser Lagerhauptmann, Belagerungslager | 🟢 fertig (unten) | 🔴 |
 
 ---
 
@@ -884,8 +884,165 @@ Generiert von Claude (2026-07-22). Bewusst eigenständig von HEQ-05 gehalten (an
 
 **Umsetzungs-Checkliste (alle 18 Akt-2-Quests):** siehe generische Liste oben, alle 5 Punkte 🔴.
 
+## Frontier-Punkt-NPCs (FNQ-01 bis FNQ-04, FNQ-06, FNQ-07)
+
+Hinweis zur Abgrenzung: FNQ-01/02/04 haben denselben NPC/dieselbe Ausgangslage wie AEQ-05/07 bzw. MEQ-07 (Baldwin/Eleanor/Ulf), sind hier aber bewusst als **Folgequest nach der Hauptstory** angelegt — der ursprüngliche Vorfall ist gelöst, jetzt geht es um dauerhafte Sicherung des Punktes (passt zum "regionalen Bonus"-Konzept aus Frontier_NPCs_and_Questlines.md Abschnitt 3), nicht um eine zweite, widersprüchliche Ermittlung.
+
+> **FNQ-01 — Baldwin's Watch, Rekindled** (Albion, Wachhauptmann Baldwin, Wachturm)
+> Description: With the culprit gone but the tower's signal fire still out, Baldwin needs it relit — and shown how holding this point matters beyond one man's watch.
+> Objectives: 1. Speak with Wachhauptmann Baldwin. 2. Relight the signal fire. 3. Learn how holding the watchtower benefits Albion's forces.
+> Opening (Baldwin): "The one who did this is dealt with, but the fire's still dark. A watchtower that can't signal is worth nothing."
+> Closing (Baldwin): "There — burning true again. Hold this tower when it matters, and Albion sees farther than any enemy expects."
+
+> **FNQ-02 — Eleanor's Lasting Watch** (Albion, Vorsteherin Eleanor, Dorf)
+> Description: With the wagon raiders dealt with, Eleanor wants a standing arrangement — a reliable escort route to keep supplies flowing to the frontier.
+> Objectives: 1. Speak with Vorsteherin Eleanor. 2. Escort a supply wagon safely along the route. 3. Confirm the route is secure for regular use.
+> Opening (Eleanor): "The raiders are gone, but I won't rest until I know this route holds. Escort the next wagon yourself — see it through."
+> Closing (Eleanor): "Delivered safe and whole. This village will keep Albion's soldiers fed and equipped as long as this road stays open."
+
+> **FNQ-03 — Gunnar's Standard** (Midgard, Wachhauptmann Gunnar, Wachturm)
+> Description: Gunnar won't let just anyone stand watch at his tower — prove your discipline before he'll trust you with the post.
+> Objectives: 1. Speak with Wachhauptmann Gunnar. 2. Complete his watch-discipline trial. 3. Receive his approval.
+> Opening (Gunnar): "A tower's only as good as the one watching it. Show me you can hold still and hold sharp, both."
+> Closing (Gunnar): "Good enough. Stand this watch when it's needed, and I'll not have cause to doubt you again."
+
+> **FNQ-04 — Ulf's Reckoning** (Midgard, Minenaufseher Ulf, Mine)
+> Description: With the ore thieves dealt with, Ulf wants the mine route proven safe for good — a standing patrol duty, not a one-time fix.
+> Objectives: 1. Speak with Minenaufseher Ulf. 2. Patrol the mine route with an ore shipment. 3. Confirm the route is secure.
+> Opening (Ulf): "One clean run isn't proof of anything. Walk the route with the next shipment — see it through yourself."
+> Closing (Ulf): "Delivered without a scratch. Good. This mine feeds Midgard's forges — I'd sleep easier knowing it's watched."
+
+> **FNQ-06 — Cormac's Rare Ore** (Hibernia, Vorsteher Cormac, Schmiedelager)
+> Description: Cormac needs rare materials from the contested borderland to keep arming Hibernia's skirmishers — dangerous ground, but necessary.
+> Objectives: 1. Speak with Vorsteher Cormac. 2. Gather the rare ore from the contested borderland. 3. Deliver it to Cormac.
+> Opening (Cormac): "The metal I need only comes from ground neither side fully holds. Dangerous, but my forge runs dry without it."
+> Closing (Cormac): "This'll arm a dozen skirmishers properly. You've done more for Hibernia's defense than you know."
+
+> **FNQ-07 — No Banner, No Loyalty** (Neutral, Namenloser Lagerhauptmann, Belagerungslager)
+> Description: A mercenary camp flying no banner offers help to whoever pays — the nameless captain won't say which side he favors, if any.
+> Objectives: 1. Approach the bannerless camp. 2. Negotiate terms with the nameless captain. 3. Complete the task he sets, and observe the consequences.
+> Opening (Nameless Captain): "No banner over my camp, because I answer to no realm. Coin, though — coin I understand."
+> Closing (Nameless Captain): "Done, and done well. What happens to the Bastion because of it... that's not my concern. Was never my concern."
+
+**Umsetzungs-Checkliste (FNQ-01–04/06/07):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
+## Akt 3 (Level 23–35): Risse im Siegel — alle drei Reiche
+
+### Albion (AEQ-13 bis AEQ-18)
+
+> **AEQ-13 — Lord Ector's Suspicion** (Lv 23, Solo, Lord Ector)
+> Description: Ector wants answers from Albion's own archives — if Osric's group has roots in the old Order, the records should say so.
+> Objectives: 1. Speak with Lord Ector. 2. Travel to the Bibliotheksfeste archive. 3. Begin the search Ector has requested.
+> Opening (Ector): "Osric spoke of an Oath before he fell. I would know what oath, and who swore it first. Our archives may hold the answer."
+> Closing (Ector): "Take what time you need in the archive. If the answer is there, I would rather know it slowly than not at all."
+
+> **AEQ-14 — What the Archives Hide** (Lv 26, Solo, Gelehrte)
+> Description: Buried in Albion's oldest records lies the truth of the Order that once bound the relic's seal — and the schism that broke it.
+> Objectives: 1. Search the archive's oldest records. 2. Piece together the account of the Order's founding. 3. Report the discovery to Lord Ector.
+> Opening (Gelehrte): "Few come looking this deep. Whatever you're chasing, I hope you're prepared for what these shelves remember."
+> Closing (Gelehrte): "So it's true. The Order that raised the seal also broke over it — some swore to guard it forever, others could not bear the cost. Take this to your Lord."
+
+> **AEQ-15 — The Cartographer's Fear** (Lv 27, Solo, Kartograf)
+> Description: The cartographer from the map-guild has fled to a new region, badly shaken — what she's found matches the archive's darkest warnings.
+> Objectives: 1. Locate the cartographer in her new refuge. 2. Hear her account of the corrupted region. 3. Report back to Lord Ector.
+> Opening (Cartographer): "You again. Good — I don't know who else would believe me. The land past the ridge isn't just shifting anymore. It's wrong."
+> Closing (Cartographer): "Take my notes, if they're worth anything. I won't be going back there myself. Some maps are better left unfinished."
+
+> **AEQ-16 — Baldwin's Last Watch** (Lv 28, **Instanz #2**, Boss: Leofric the Hollow-Marked)
+> Description: A large Broken Oath force besieges Baldwin's tower — Albion's forces must break the siege before the tower falls.
+> Objectives: 1. Reach Baldwin's tower with your group. 2. Break the siege lines. 3. Defeat Leofric the Hollow-Marked.
+> Opening (Baldwin): "They came at dawn, more of them than I've ever seen. I can hold a little longer — but not forever."
+> Closing (Baldwin): "You came. I wasn't certain anyone would, in time. Whoever their commander was, he won't trouble this tower again."
+
+> **AEQ-17 — Umkämpftes Hochland** (Lv 30, **Gruppe/RvR, BG-Debüt #2**, Burgvogt Kay)
+> Description: The Broken Oath's escalation has dragged the RvR war into the contested highlands — Albion answers in force.
+> Objectives: 1. Muster with Albion's forces. 2. Join the Umkämpftes Hochland Battleground. 3. Push back the opposing realms.
+> Opening (Kay): "The highlands are burning with more than just Albion's fire. Get out there."
+> Closing (Kay): "Hard-fought ground, but ours for now. Whatever's driving this war wider, it's working exactly as they intended."
+
+> **AEQ-18 — The Vanishing Ward-Stone** (Lv 33, Solo, Lord Ector)
+> Description: A wardstone near the border has gone completely dark — the same wrongness now confirmed across all three realms.
+> Objectives: 1. Travel to the border wardstone. 2. Examine the extinguished stone. 3. Report the finding to Lord Ector.
+> Closing (Ector): "Dark, you say — not damaged, not destroyed. Dark, as if something drank the light from it. I begin to fear this was never only about Albion's border."
+
+### Midgard (MEQ-13 bis MEQ-18)
+
+> **MEQ-13 — Skadi's Doubt** (Lv 23, Solo, Jarl Skadi)
+> Description: Skadi senses something dishonorable in the recent raids — she sends the player to the old oath-halls for answers.
+> Objectives: 1. Speak with Jarl Skadi. 2. Travel to the old Eideshalle. 3. Begin the search she's asked for.
+> Opening (Skadi): "Erik broke no honest oath — he never swore one worth breaking, I think. But someone did, once. Find out who."
+> Closing (Skadi): "Take what you need from the old halls. I want the truth, however unwelcome it proves."
+
+> **MEQ-14 — The Unbound Oath** (Lv 26, Solo, Älteste)
+> Description: The old oath-halls remember a warrior who broke his sworn word to save his warband — and was exiled for it rather than honored.
+> Objectives: 1. Search the old oath-hall records. 2. Piece together the account. 3. Report the discovery to Jarl Skadi.
+> Opening (Älteste): "You've come far to dig up an old shame. Few do, these days."
+> Closing (Älteste): "Ragnar, his name was. He broke his oath to save his people and was cast out for the saving, not spared for it. Take that back to your Jarl."
+
+> **MEQ-15 — The Skald's Warning** (Lv 27, Solo, Skald)
+> Description: The traveling skald has since witnessed a corrupted region matching the oath-hall's darkest verses — badly shaken by what he saw.
+> Objectives: 1. Find the skald in his new camp. 2. Hear his account of the corrupted region. 3. Report back to Jarl Skadi.
+> Opening (Skald): "You again. Good — I need someone who'll believe a singer over their own doubt. What I saw past the misty cliffs wasn't in any saga I know."
+> Closing (Skald): "Take my account, such as it is. I'll not sing that verse again until I understand it myself."
+
+> **MEQ-16 — Gunnar's Last Stand** (Lv 28, **Instanz #2**, Boss: Ingvar of the Ironbrood)
+> Description: A large Ironbrood force besieges Gunnar's watch post — Midgard's warriors must break the siege before it falls.
+> Objectives: 1. Reach Gunnar's post with your group. 2. Break the siege lines. 3. Defeat Ingvar of the Ironbrood.
+> Opening (Gunnar): "More of them than I've ever faced. I'll hold as long as I can — no longer promise than that."
+> Closing (Gunnar): "You came. Whoever led that assault, he won't trouble this post again. My thanks — more than words can carry."
+
+> **MEQ-17 — Umkämpftes Hochland** (Lv 30, **Gruppe/RvR, BG-Debüt #2**, Hersir Vidar)
+> Description: The Ironbrood's escalation drags the RvR war into the contested highlands — Midgard answers in force.
+> Objectives: 1. Muster with Midgard's forces. 2. Join the Umkämpftes Hochland Battleground. 3. Push back the opposing realms.
+> Opening (Vidar): "The highlands are burning with more than Midgard's fire. Get out there and make them regret it."
+> Closing (Vidar): "Hard-fought ground, but ours for now. Whatever's driving this wider war, it's working exactly as intended."
+
+> **MEQ-18 — The Silent Fjord** (Lv 33, Solo, Jarl Skadi)
+> Description: A runestone along the coast has gone completely dark — the same wrongness spreading everywhere else.
+> Objectives: 1. Travel to the coastal runestone. 2. Examine the extinguished stone. 3. Report the finding to Jarl Skadi.
+> Closing (Skadi): "Dark, not broken. I don't like what that tells me. This was never only about Erik, or Ragnar, or any one man's grudge."
+
+### Hibernia (HEQ-13 bis HEQ-18)
+
+> **HEQ-13 — Aengus' Fear** (Lv 23, Solo, Rí Aengus)
+> Description: Aengus sends the player to Hibernia's oldest stone-circle archive, hoping to understand the corruption at its root.
+> Objectives: 1. Speak with Rí Aengus. 2. Travel to the Steinkreis-Archiv. 3. Begin the search he's requested.
+> Opening (Aengus): "Eamon spoke of no oath, no order — only of undoing what was bound. I fear that is an older story than I know. The old archive may remember what I do not."
+> Closing (Aengus): "Take what time the stones will allow you. I would rather know the truth slowly than lose the land to ignorance."
+
+> **HEQ-14 — The Rootbound Rite** (Lv 26, Solo, Gelehrte)
+> Description: The stone-circle archive remembers a guardian who tried to bind himself to the land forever — and the ritual that consumed him.
+> Objectives: 1. Search the archive's oldest carvings. 2. Piece together the account of the binding rite. 3. Report the discovery to Rí Aengus.
+> Opening (Gelehrte): "Few read these stones anymore. Fewer still wish to understand what they say."
+> Closing (Gelehrte): "Fintan, his name was carved. He sought to become the land's guardian eternal — and the rite unmade him instead. Take this to your Rí. He will grieve it, I think."
+
+> **HEQ-15 — The Seer's Vision** (Lv 27, Solo, Seherin)
+> Description: The wandering seer has since witnessed a corrupted region matching the archive's darkest carvings.
+> Objectives: 1. Find the seer in her new resting place. 2. Hear her account of the corrupted region. 3. Report back to Rí Aengus.
+> Opening (Seer): "You again. Good — the visions have grown too clear to bear alone. What I saw in the misty moor was no ordinary omen."
+> Closing (Seer): "Take my account, for what it's worth. I will not walk that moor again unaccompanied — not while it looks back."
+
+> **HEQ-16 — Niav's Vigil** (Lv 28, **Instanz #2**, Boss: Tadhg the Withered)
+> Description: A large Withered Circle force besieges Niav's shrine — Hibernia's defenders must break the assault before it falls silent for good.
+> Objectives: 1. Reach Niav's shrine with your group. 2. Break the assault. 3. Defeat Tadhg the Withered.
+> Opening (Niav): "They come for the stones themselves, not for me. I will not let them have either."
+> Closing (Niav): "You came, and the shrine still sings. Whoever led that assault, he will trouble these stones no longer. I am grateful beyond words."
+
+> **HEQ-17 — Umkämpftes Hochland** (Lv 30, **Gruppe/RvR, BG-Debüt #2**, Ceann Cogaidh Aoife)
+> Description: The Withered Circle's escalation drags the RvR war into the contested highlands — Hibernia answers in force.
+> Objectives: 1. Muster with Hibernia's forces. 2. Join the Umkämpftes Hochland Battleground. 3. Push back the opposing realms.
+> Opening (Aoife): "The highlands burn with more than our fire now. Go make yourself useful where it counts most."
+> Closing (Aoife): "Hard-won ground, ours for now. Whatever stirs this wider war, it is working exactly as intended — and that unsettles me more than the fighting itself."
+
+> **HEQ-18 — The Drowned Dolmen** (Lv 33, Solo, Rí Aengus)
+> Description: A dolmen near the border has gone completely dark — the same wrongness now confirmed everywhere else.
+> Objectives: 1. Travel to the border dolmen. 2. Examine the extinguished stone. 3. Report the finding to Rí Aengus.
+> Closing (Aengus): "Dark, not broken, not destroyed — as if something drank the light from within it. I fear this was never only Hibernia's wound to bear."
+
+**Umsetzungs-Checkliste (Akt 3, alle 3 Reiche):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
 ---
 
 ## Status
 
-🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). 103 Einträge insgesamt, davon **55 mit fertigem Content**: kompletter Akt 1 + Akt 2 aller drei Reiche (AEQ-01–12, MEQ-01–12, HEQ-01–12), alle 18 Nebenquests (ASQ/MSQ/HSQ), plus FNQ-05 — von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers ("mach alles fertig"). Wird fortgesetzt (Akt 3–5 + restliche FNQ). Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
+🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). 103 Einträge insgesamt, davon **79 mit fertigem Content**: Akt 1–3 aller drei Reiche (AEQ-01–18, MEQ-01–18, HEQ-01–18), alle 18 Nebenquests (ASQ/MSQ/HSQ), alle 7 Frontier-Punkt-NPCs (FNQ-01–07) — von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers ("mach alles fertig"). Wird fortgesetzt (Akt 4–5, je 8 Stufen pro Reich). Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
