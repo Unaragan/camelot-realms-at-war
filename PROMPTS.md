@@ -50,9 +50,11 @@ Nötig nach jedem neuen/geänderten Level, wenn Lumen deaktiviert ist (siehe CLA
 
 Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – siehe [README.md](README.md) → "Werkzeug-Aufteilung: Copilot vs. Claude". Claude Code hat keinen direkten Zugriff auf Copilot (kein MCP, IDE-Tippen ist ohnehin blockiert) – diese Prompts müssen manuell eingefügt werden.
 
-### Beispiel-Questline Albion: Lord Ector → Burgvogt Kay (2026-07-21)
+**Wichtig:** Diese Datei enthält nur die **Anfrage-Vorlagen** (Prompts), nicht die generierten Ergebnisse. Fertiger Quest-Content plus Umsetzungsstand im Spiel lebt in [Docs/Design/Quests.md](Docs/Design/Quests.md) – dort auch der Master-Index aller Quest-IDs (AEQ, FNQ).
 
-3-teilige Kette, Beispiel-Content passend zu den Quest-Hooks aus [NPC_NAMES.md](NPC_NAMES.md) → "Grundkonflikt-Vorschlag". Eskalation Diplomatie (Ector) → Mobilisierung (Kay), endet mit Übergang Richtung Grenze/Battleground. Ausgabe bewusst auf Englisch angefordert (FText-Quellsprache laut CLAUDE.md).
+### Beispiel-Questline Albion: Lord Ector → Burgvogt Kay (AEQ-01 bis AEQ-03, 2026-07-21)
+
+3-teilige Kette, Beispiel-Content passend zu den Quest-Hooks aus [NPC_NAMES.md](NPC_NAMES.md) → "Grundkonflikt-Vorschlag". Eskalation Diplomatie (Ector) → Mobilisierung (Kay), endet mit Übergang Richtung Grenze/Battleground. Ausgabe bewusst auf Englisch angefordert (FText-Quellsprache laut CLAUDE.md). Ergebnisse: siehe [Quests.md](Docs/Design/Quests.md) → AEQ-01/02/03.
 
 **Quest 1 – Vermisste Grenzkundschafter:**
 
@@ -69,31 +71,6 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 >
 > Keep the tone grounded/medieval, not high-fantasy melodrama. No mention of Dark Age of Camelot or DAOC-specific proper nouns."
 
-**Ergebnis (Copilot, 2026-07-21):**
-
-> **Quest Title:** The Silent Frontier
->
-> **Quest Description:** Several of Lord Ector's border scouts have failed to return from their patrols along the frontier. What first seemed like poor weather or delayed travel now feels far more troubling. Investigate the scouts' last known route and uncover any sign of what befell them.
->
-> **Objectives:**
-> 1. Travel to the frontier watch road and inspect the scouts' last reported camp.
-> 2. Search the surrounding area for traces of the missing patrol.
-> 3. Return your findings to Lord Ector.
->
-> **Opening Dialogue (Lord Ector):**
-> Our border scouts know these lands better than most men know their own hearths, yet several have vanished without word.
-> At first I took it for bad weather or a broken supply train. Now I fear something else is at work.
-> Ride to their last reported camp and see what can be learned.
-> I would rather discover a simple answer than nurture darker suspicions.
->
-> **Closing Dialogue (Lord Ector):**
-> Tracks ending in open ground... abandoned gear... and no bodies found. That is a hard tale to weigh.
-> The frontier has always been dangerous, yet this bears little resemblance to an ordinary ambush.
-> If our scouts were taken, then by whom—and why leave so little behind?
-> Stay vigilant. I suspect this matter is only beginning.
-
-Trifft den gewünschten Ton gut (bedächtig, kein Bodyfund als billiger Cliffhanger, endet in offener Frage statt Auflösung) – passt direkt als Übergabe an Quest 2 (Beweis-Suche).
-
 **Quest 2 – Beweise für einen gezielten Übergriff:**
 
 > "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, Lord Ector as quest giver, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the SECOND quest of the 3-part chain, following directly from a quest where the player investigated missing border scouts.
@@ -107,29 +84,6 @@ Trifft den gewünschten Ton gut (bedächtig, kein Bodyfund als billiger Cliffhan
 > - Dialogue from Ector reacting to the evidence (4-5 lines, shift from calm to genuine concern)
 > - A short closing line where Ector says he's sending the player to his military commander, 'Burgvogt Kay', to decide next steps — this is the handoff into quest 3."
 
-**Ergebnis (Copilot, 2026-07-21):**
-
-> **Quest Title:** Shadows Across the Border
->
-> **Quest Description:** The clues you uncovered paint a troubling picture. What first seemed like a tragic disappearance now bears the marks of a deliberate intrusion from beyond Albion's borders. Lord Ector must judge the evidence and determine whether a greater threat is gathering in the wilds.
->
-> **Objectives:**
-> 1. Gather and confirm evidence of the scouts' fate.
-> 2. Return the evidence to Lord Ector.
-> 3. Receive Lord Ector's orders and report to Burgvogt Kay.
->
-> **Lord Ector Dialogue:**
-> "You've returned. Tell me, what did you find out there?"
-> "A broken banner... tracks from foreign boots... and a weapon unlike any forged in our realm?"
-> "No... this was no accident. Our scouts did not simply vanish into the wilderness."
-> "Someone crossed our border with purpose, and they took great care to hide their trail."
-> "If hostile forces are testing our defenses, we may be facing far more than a handful of missing men."
->
-> **Quest Closing:**
-> "This matter has grown beyond my authority to ignore. Take what you've found to Burgvogt Kay, my military commander. He will decide our next course of action."
-
-Guter Anschluss an Quest 1 (greift Banner/Spuren/Waffe als offene Fragen von Quest 1 wieder auf), Eskalation von Sorge zu Handlungsbedarf trägt den Ton, sauberer Handoff an Kay für Quest 3.
-
 **Quest 3 – Mobilisierung / Grenzpatrouille:**
 
 > "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the THIRD and final quest of the 3-part chain. The quest giver is now 'Burgvogt Kay', Albion's military commander — more impatient and action-oriented than Lord Ector, eager to respond decisively.
@@ -142,31 +96,6 @@ Guter Anschluss an Quest 1 (greift Banner/Spuren/Waffe als offene Fragen von Que
 > - 3 short objective steps (e.g., defeat a few training opponents to prove readiness, then join a border patrol)
 > - Dialogue from Kay offering the quest (blunt, impatient, 3-4 lines)
 > - A closing line from Kay right before the player heads to the frontier/battleground, giving the moment a sense of stakes rising — this line should work as a narrative bridge into actual RvR combat content."
-
-**Ergebnis (Copilot, 2026-07-21):**
-
-> **Quest Title:** To the Borderlands
->
-> **Quest Description:** Lord Ector's findings leave little room for doubt: trouble is stirring beyond Albion's borders. Burgvogt Kay has no patience for endless discussions—if war is coming, Albion needs soldiers who can fight, not talk.
-> Before assigning you to the frontier patrol, Kay will put your readiness to the test. Prove your skill in training, then ride with Albion's scouts to begin your first watch along the border.
->
-> **Objectives:**
-> 1. Defeat 5 Training Warriors in the garrison yard.
-> 2. Report your success to Burgvogt Kay.
-> 3. Join the Border Patrol and travel to the Frontier Watchpost.
->
-> **Quest Offer Dialogue (Burgvogt Kay):**
-> "Ector has his proof. Good. That's all I needed to hear."
-> "If our neighbors are stirring, we'll answer with steel—not speculation."
-> "Show me you can hold your own. Settle a few scores in the training yard, then report back."
-> "After that, you're riding for the frontier. Albion needs eyes and blades on the border."
->
-> **Closing Line from Kay:**
-> "The frontier isn't a training yard, recruit. Beyond those walls, every banner you see belongs to someone who wants what Albion has. Ride out, stay sharp, and be ready—the next battle may already be waiting for you."
-
-Kays Ton (ungeduldig, handlungsorientiert) hebt sich klar von Ectors bedächtiger Art ab – funktioniert als Kontrast. Objective 1 ("5 Training Warriors") ist direkt als Kampf-Tutorial nutzbar (Test gegen `BP_TestKnight`-ähnliche Trainingsgegner, siehe Task #6), die Closing Line ist eine saubere erzählerische Brücke zur Battleground-Map (Task #8).
-
-**Status:** Komplette 3-Quest-Kette (Quest 1–3) per Copilot generiert und dokumentiert (2026-07-21). Noch nicht ins Spiel/DataTable übernommen – relevant erst ab Startgebiet-Phase (siehe NPC_NAMES.md-Status).
 
 ## Status
 

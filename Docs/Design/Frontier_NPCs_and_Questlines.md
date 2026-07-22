@@ -67,17 +67,19 @@ Zwei getrennte Mechanik-Spuren, um die offene Frage aus der Vision-Datei ("Neutr
 
 ### Backlog
 
-| # | NPC | Punkt | Kurzprämisse | Status |
-|---|---|---|---|---|
-| 1 | Wachhauptmann Baldwin | Albion, Wachturm | Das Signalfeuer des Turms ist erloschen — Spieler soll die Ursache klären und es wieder entzünden | offen |
-| 2 | Vorsteherin Eleanor | Albion, Dorf | Versorgungswagen zur Grenze werden überfallen — Spieler soll Route sichern/Täter aufspüren | offen |
-| 3 | Wachhauptmann Gunnar | Midgard, Wachturm | Gunnar verlangt einen Bewährungsbeweis, bevor er den Spieler zur Wache zulässt (Echo von Jarl Skadis Prüfungs-Ethos) | offen |
-| 4 | Minenaufseher Ulf | Midgard, Mine | Erzlieferungen verschwinden auf dem Weg zu den Schmieden — Sabotage-/Diebstahlverdacht | offen |
-| 5 | Schreinhüterin Niav | Hibernia, Schrein | Die Wardsteine am Hain verblassen — direkte Fortsetzung von Rí Aengus' Sorge aus NPC_NAMES.md | **ausformuliert, siehe unten** |
-| 6 | Vorsteher Cormac | Hibernia, Dorf/Schmiede | Braucht seltene Materialien aus dem umkämpften Grenzgebiet, um weiter Waffen zu schmieden | offen |
-| 7 | Der namenlose Lagerhauptmann | Neutral, Belagerungslager | Bietet Hilfe gegen Bezahlung an, ohne Treue zu erkennen zu geben — Spieler erfährt die Zentralburg-Konsequenz (Abschnitt 3) erst als Folge, nicht als Ansage der Figur selbst | offen |
+**Hinweis:** fertiger Content und Umsetzungsstand im Spiel werden zentral in [Quests.md](Quests.md) getrackt (Master-Index, Tabelle "Frontier-Punkt-NPCs"), nicht hier. Diese Tabelle bleibt die Prämissen-Quelle.
 
-### Ausformuliertes Beispiel: #5, Schreinhüterin Niav
+| ID | NPC | Punkt | Kurzprämisse | Status |
+|---|---|---|---|---|
+| FNQ-01 | Wachhauptmann Baldwin | Albion, Wachturm | Das Signalfeuer des Turms ist erloschen — Spieler soll die Ursache klären und es wieder entzünden | offen |
+| FNQ-02 | Vorsteherin Eleanor | Albion, Dorf | Versorgungswagen zur Grenze werden überfallen — Spieler soll Route sichern/Täter aufspüren | offen |
+| FNQ-03 | Wachhauptmann Gunnar | Midgard, Wachturm | Gunnar verlangt einen Bewährungsbeweis, bevor er den Spieler zur Wache zulässt (Echo von Jarl Skadis Prüfungs-Ethos) | offen |
+| FNQ-04 | Minenaufseher Ulf | Midgard, Mine | Erzlieferungen verschwinden auf dem Weg zu den Schmieden — Sabotage-/Diebstahlverdacht | offen |
+| FNQ-05 | Schreinhüterin Niav | Hibernia, Schrein | Die Wardsteine am Hain verblassen — direkte Fortsetzung von Rí Aengus' Sorge aus NPC_NAMES.md | **Prompt ausformuliert, siehe unten** |
+| FNQ-06 | Vorsteher Cormac | Hibernia, Dorf/Schmiede | Braucht seltene Materialien aus dem umkämpften Grenzgebiet, um weiter Waffen zu schmieden | offen |
+| FNQ-07 | Der namenlose Lagerhauptmann | Neutral, Belagerungslager | Bietet Hilfe gegen Bezahlung an, ohne Treue zu erkennen zu geben — Spieler erfährt die Zentralburg-Konsequenz (Abschnitt 3) erst als Folge, nicht als Ansage der Figur selbst | offen |
+
+### Ausformuliertes Beispiel: FNQ-05, Schreinhüterin Niav
 
 > "You are writing content for 'Camelot: Realms at War', a toon-styled 3-faction RvR fantasy game (spiritual successor to Dark Age of Camelot, but with no DAOC-specific names/lore reused). Write ONE self-contained quest for the Hibernia faction, given by 'Shrine-Keeper Niav' (mystical, speaks in nature metaphors, tends an ancient warding-stone shrine in a grove near the frontier). Quest premise: the warding stones around the shrine have begun to dim, and Niav fears the same weakening that troubles Hibernia's ruler is spreading here too — she asks the player to investigate the cause near the frontier's edge.
 >

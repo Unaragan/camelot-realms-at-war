@@ -133,7 +133,30 @@ Erfolgreich umgesetzt und per PIE verifiziert (Stand 2026-07-19), unter `/Game/K
 
 Bestätigte Testresultate: Frontalangriff 1 = −25 HP, Frontalangriff 2 = Ziel −15 HP/Angreifer +15 HP, Rückenangriff 1 = −50 HP (verdoppelt), Rückenangriff 2 = Ziel −30 HP (verdoppelt) + Heilung weiterhin +15 HP (unverändert). Noch offen: Tod/Respawn-Handling, Netzwerk-Replikation über echte Client-Server-Verbindung (nicht nur Einzel-PIE) – siehe Task #5/#6.
 
-## 3. GUI (HUD)
+## 3. Quests (Datenschema-Vorschlag)
+
+Analog zum Fähigkeiten-Schema in Abschnitt 2: eine Quest anzulegen soll "neue DataTable-Zeile" heißen, kein neuer Code. Der eigentliche Quest-**Inhalt** (Texte, Story, Umsetzungsstand) lebt in [Docs/Design/Quests.md](Docs/Design/Quests.md) – hier nur das technische Schema, nach dem er später ins Spiel eingepflegt wird.
+
+**DataTable-Schema-Vorschlag** (eine Zeile = eine Quest):
+
+| Spalte | Typ | Zweck |
+|---|---|---|
+| QuestID | Name | Eindeutiger Schlüssel (z. B. `AEQ-01`, siehe Quests.md-Konvention) |
+| DisplayName | FText | Questtitel (lokalisiert) |
+| Description | FText | Questlog-Beschreibung (lokalisiert) |
+| GiverNPC | Objekt-Referenz | Welcher NPC-Blueprint vergibt die Quest |
+| Objectives | Array\<FText\> | Zielschritte (lokalisiert) |
+| PrerequisiteQuestID | Name | Ketten-Voraussetzung, leer = keine |
+| RequiresGroup | bool | Solo vs. Gruppenpflicht (siehe Albion-Epic-Questline-Stufen mit Gruppenzwang) |
+| MinLevel | int | Level-Empfehlung |
+| RewardID | Objekt-Referenz | Platzhalter-Referenz, bis ein echtes Itemization-System existiert (Nicht-jetzt-Liste) |
+| DialogueOpening / DialogueClosing | FText | Dialogzeilen (lokalisiert) |
+
+**Bewusst noch nicht entschieden:** ob Dialogzeilen direkt in der Quest-DataTable liegen oder in einer separaten Dialogue-Tabelle (bei mehrzeiligen Dialogen mit Verzweigungen sinnvoller) – relevant erst, wenn die ersten Quests aus Quests.md tatsächlich implementiert werden.
+
+**Status:** reines Schema, noch keine Implementierung – kein Quest-System (DataTable, Dialog-UI, Objective-Tracking) existiert bisher im Projekt. Das ist selbst der wichtigste offene Punkt, bevor einzelne Quests aus Quests.md ins Spiel wandern können.
+
+## 4. GUI (HUD)
 
 **Architekturprinzip:** UMG-Widgets binden sich an GAS-Attribute-Delegates (`OnAttributeChanged`), statt den Wert jeden Tick abzufragen – performanter und passt zum Performance-Grundsatz aus der README. MVVM-Pattern (Model-View-ViewModel, in UE5 nativ über UMG Viewmodels unterstützt) entkoppelt UI-Widgets von der Gameplay-Logik – wichtig, damit später der Art-Stil-Wechsel (Platzhalter → finale Art) die UI nicht mit umbauen muss.
 
