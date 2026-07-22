@@ -61,14 +61,14 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | AEQ-16 | 28 | Baldwin's Last Watch — **Instanz #2** (Boss: Leofric the Hollow-Marked) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | AEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | AEQ-18 | 33 | The Vanishing Ward-Stone | Solo | 🟢 fertig (unten) | 🔴 |
-| AEQ-19 | 36 | Kay's Warpath | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-20 | 38 | The Sentinel's Ground | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-21 | 39 | Into the Hollow — **Instanz #3** (Boss: The Hollow Sentinel) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-22 | 42 | The Leader's Name | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-23 | 45 | The Price of an Oath | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-24 | 47 | Muster for the Bastion | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-25 | 49 | The Last Vigil | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-26 | 50 | The Hollow Warden (FINALE — Instanz #4, Boss: Sir Alaric) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| AEQ-19 | 36 | Kay's Warpath | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-20 | 38 | The Sentinel's Ground | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-21 | 39 | Into the Hollow — **Instanz #3** (Boss: The Hollow Sentinel) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| AEQ-22 | 42 | The Leader's Name | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-23 | 45 | The Price of an Oath | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-24 | 47 | Muster for the Bastion | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-25 | 49 | The Last Vigil | Solo | 🟢 fertig (unten) | 🔴 |
+| AEQ-26 | 50 | The Hollow Warden (FINALE — Instanz #4, Boss: Sir Alaric) | **Gruppe, Endgegner** | 🟢 fertig (unten) | 🔴 |
 
 ### Midgard Epic Questline (MEQ, Level 1–50, 26 Stufen) — siehe [Midgard_Epic_Questline.md](Midgard_Epic_Questline.md)
 
@@ -92,14 +92,14 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | MEQ-16 | 28 | Gunnar's Last Stand — **Instanz #2** (Boss: Ingvar of the Ironbrood) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | MEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | MEQ-18 | 33 | The Silent Fjord | Solo | 🟢 fertig (unten) | 🔴 |
-| MEQ-19 | 36 | Vidar's Reckoning | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-20 | 38 | The Iron Wolf's Den | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-21 | 39 | Into the Ironbrood's Hold — **Instanz #3** (Boss: The Iron Wolf) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-22 | 42 | The Wolf Unbound | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-23 | 45 | What Honor Costs | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-24 | 47 | The Long Hunt | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-25 | 49 | The Last Toast | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-26 | 50 | Ragnar Half-Sworn (FINALE — Instanz #4, Boss: Ragnar Half-Sworn) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| MEQ-19 | 36 | Vidar's Reckoning | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-20 | 38 | The Iron Wolf's Den | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-21 | 39 | Into the Ironbrood's Hold — **Instanz #3** (Boss: The Iron Wolf) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| MEQ-22 | 42 | The Wolf Unbound | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-23 | 45 | What Honor Costs | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-24 | 47 | The Long Hunt | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-25 | 49 | The Last Toast | Solo | 🟢 fertig (unten) | 🔴 |
+| MEQ-26 | 50 | Ragnar Half-Sworn (FINALE — Instanz #4, Boss: Ragnar Half-Sworn) | **Gruppe, Endgegner** | 🟢 fertig (unten) | 🔴 |
 
 ### Hibernia Epic Questline (HEQ, Level 1–50, 26 Stufen) — siehe [Hibernia_Epic_Questline.md](Hibernia_Epic_Questline.md)
 
@@ -123,14 +123,14 @@ Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline �
 | HEQ-16 | 28 | Niav's Vigil — **Instanz #2** (Boss: Tadhg the Withered) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
 | HEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | 🟢 fertig (unten) | 🔴 |
 | HEQ-18 | 33 | The Drowned Dolmen | Solo | 🟢 fertig (unten) | 🔴 |
-| HEQ-19 | 36 | Aoife's Resolve | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-20 | 38 | The Bramble Threshold | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-21 | 39 | Into the Rootbound Hollow — **Instanz #3** (Boss: The Bramble Warden) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-22 | 42 | The Warden Who Grew Wild | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-23 | 45 | The Wild and the Bound | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-24 | 47 | The Gathering Wood | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-25 | 49 | The Last Rite | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-26 | 50 | Fintan the Rootbound (FINALE — Instanz #4, Boss: Fintan the Rootbound) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| HEQ-19 | 36 | Aoife's Resolve | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-20 | 38 | The Bramble Threshold | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-21 | 39 | Into the Rootbound Hollow — **Instanz #3** (Boss: The Bramble Warden) | **Gruppe** | 🟢 fertig (unten) | 🔴 |
+| HEQ-22 | 42 | The Warden Who Grew Wild | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-23 | 45 | The Wild and the Bound | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-24 | 47 | The Gathering Wood | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-25 | 49 | The Last Rite | Solo | 🟢 fertig (unten) | 🔴 |
+| HEQ-26 | 50 | Fintan the Rootbound (FINALE — Instanz #4, Boss: Fintan the Rootbound) | **Gruppe, Endgegner** | 🟢 fertig (unten) | 🔴 |
 
 ### Nebenquests: Albion (ASQ), Midgard (MSQ), Hibernia (HSQ)
 
@@ -1041,8 +1041,175 @@ Hinweis zur Abgrenzung: FNQ-01/02/04 haben denselben NPC/dieselbe Ausgangslage w
 
 **Umsetzungs-Checkliste (Akt 3, alle 3 Reiche):** siehe generische Liste oben, alle 5 Punkte 🔴.
 
+## Akt 4 (Level 36–46): Der Feind bekommt ein Gesicht — alle drei Reiche
+
+### Albion (AEQ-19 bis AEQ-23)
+
+> **AEQ-19 — Kay's Warpath** (Lv 36, Solo, Burgvogt Kay)
+> Description: Kay wants to strike the Broken Oath directly rather than wait — a growing rift with Ector's caution.
+> Objectives: 1. Speak with Burgvogt Kay. 2. Hear his case for immediate action. 3. Decide whether to back his plan or urge patience.
+> Opening (Kay): "Ector wants more proof, more study, more waiting. I want them dead before they finish whatever they're building."
+> Closing (Kay): "You've heard me out. Whatever you decide, decide it fast. I won't wait on Ector's patience forever."
+
+> **AEQ-20 — The Sentinel's Ground** (Lv 38, Solo, Burgvogt Kay)
+> Description: Scouting the entrance to the Broken Oath's hidden stronghold reveals a guardian construct far beyond anything faced so far.
+> Objectives: 1. Scout the entrance to the underground cult site. 2. Observe the guardian without engaging. 3. Report back to Burgvogt Kay.
+> Closing (Kay): "A construct, you say — no breath, no heartbeat, just purpose. We'll need everyone we can muster to get past that."
+
+> **AEQ-21 — Into the Hollow** (Lv 39, **Instanz #3**, Boss: The Hollow Sentinel)
+> Description: The full assault on the stronghold entrance — defeating the guardian construct opens the way to Alaric himself.
+> Objectives: 1. Enter the stronghold with your group. 2. Advance through the outer halls. 3. Defeat The Hollow Sentinel.
+> Opening (Kay): "Whatever that thing is, it doesn't tire and it doesn't fear. Hit it until it stops. That's the whole plan."
+> Closing (Fundtext): the Sentinel's shattered core reveals a fragment humming with old, cold magic.
+
+> **AEQ-22 — The Leader's Name** (Lv 42, Solo, Lord Ector)
+> Description: Beyond the fallen guardian lies proof of who truly commands the Broken Oath — a name out of Albion's own history.
+> Objectives: 1. Search the inner sanctum. 2. Recover records naming the Broken Oath's leader. 3. Report the name to Lord Ector.
+> Closing (Ector): "Alaric... the knight who sealed the relic himself, centuries past. If this is truly him, then we face something far older than any traitor."
+
+> **AEQ-23 — The Price of an Oath** (Lv 45, Solo, Lord Ector)
+> Description: Deeper records reveal Alaric's tragedy — bound undying by his own seal, driven to madness by centuries of solitary vigil.
+> Objectives: 1. Study the recovered records further. 2. Piece together Alaric's full history. 3. Share the account with Lord Ector.
+> Closing (Ector): "He wanted to die, and could not. I do not know whether to hate him or to pity him. Perhaps, in the end, both are required."
+
+### Midgard (MEQ-19 bis MEQ-23)
+
+> **MEQ-19 — Vidar's Reckoning** (Lv 36, Solo, Hersir Vidar)
+> Description: Vidar recognizes Ragnar's handiwork — they were once shield-brothers. This is personal now.
+> Objectives: 1. Speak with Hersir Vidar. 2. Hear his account of their shared past. 3. Decide how to support him.
+> Opening (Vidar): "Ragnar. I should have known his hand in this the moment I saw the rune. We fought side by side once, before he broke and I didn't."
+> Closing (Vidar): "You've heard it now. Whatever happens when we find him, know that this is mine to finish — but I won't turn away help."
+
+> **MEQ-20 — The Iron Wolf's Den** (Lv 38, Solo, Hersir Vidar)
+> Description: Scouting Ragnar's hidden hall reveals a corrupted guardian beast far beyond any warband raider.
+> Objectives: 1. Scout the entrance to the hidden hall. 2. Observe the guardian without engaging. 3. Report back to Hersir Vidar.
+> Closing (Vidar): "That's no ordinary wolf. Something's twisted it past anything natural. We'll need everyone we can muster."
+
+> **MEQ-21 — Into the Ironbrood's Hold** (Lv 39, **Instanz #3**, Boss: The Iron Wolf)
+> Description: The full assault on Ragnar's hall — defeating the corrupted guardian opens the way to him.
+> Objectives: 1. Enter the hall with your group. 2. Advance through the outer chambers. 3. Defeat The Iron Wolf.
+> Opening (Vidar): "It won't fall easy. Nothing guarding Ragnar ever does."
+> Closing (Fundtext): a fang, cracked but still warm, torn from the beast.
+
+> **MEQ-22 — The Wolf Unbound** (Lv 42, Solo, Hersir Vidar)
+> Description: Beyond the fallen guardian lies the full truth of Ragnar's fall — betrayal meant as rescue, repaid with exile.
+> Objectives: 1. Search the inner hall. 2. Recover records of Ragnar's history. 3. Report the truth to Hersir Vidar.
+> Closing (Vidar): "I knew he broke his oath. I never knew why. Saving his men should have been honored, not punished. I don't know what that makes any of us, if this is true."
+
+> **MEQ-23 — What Honor Costs** (Lv 45, Solo, Hersir Vidar)
+> Description: Vidar wrestles with whether Ragnar's exile was ever just — the fight ahead no longer feels simple.
+> Objectives: 1. Speak with Hersir Vidar. 2. Hear his doubts. 3. Stand with him regardless.
+> Opening (Vidar): "If Ragnar was wronged, does that make what he's doing now any less dangerous? I don't have an answer. I only have a blade."
+> Closing (Vidar): "Whatever the old halls decided, wrongly or rightly, doesn't change what he threatens now. We finish this. Together."
+
+### Hibernia (HEQ-19 bis HEQ-23)
+
+> **HEQ-19 — Aoife's Resolve** (Lv 36, Solo, Ceann Cogaidh Aoife)
+> Description: Aoife wants to strike the Withered Circle directly — growing tension with Aengus' more cautious path.
+> Objectives: 1. Speak with Ceann Cogaidh Aoife. 2. Hear her case for direct action. 3. Decide whether to back her plan or urge patience.
+> Opening (Aoife): "Aengus wants to understand them. I want them stopped before they unmake another grove. Understanding can come after."
+> Closing (Aoife): "You've heard me. Whatever you decide, decide quickly. The wood doesn't wait on councils."
+
+> **HEQ-20 — The Bramble Threshold** (Lv 38, Solo, Ceann Cogaidh Aoife)
+> Description: Scouting the entrance to Fintan's hollow reveals a guardian grown from corrupted wood and thorn.
+> Objectives: 1. Scout the entrance to the verwucherte Höhle. 2. Observe the guardian without engaging. 3. Report back to Ceann Cogaidh Aoife.
+> Closing (Aoife): "That thing was never an animal, and I don't think it was ever fully plant either. We'll need everyone we can muster to pass it."
+
+> **HEQ-21 — Into the Rootbound Hollow** (Lv 39, **Instanz #3**, Boss: The Bramble Warden)
+> Description: The full assault on the hollow's entrance — defeating the guardian opens the way to Fintan himself.
+> Objectives: 1. Enter the hollow with your group. 2. Advance through the outer roots. 3. Defeat The Bramble Warden.
+> Opening (Aoife): "It doesn't tire, and it doesn't bleed like anything living should. Cut through it anyway."
+> Closing (Fundtext): a fragment of heartwood still pulses faintly, warm as living flesh.
+
+> **HEQ-22 — The Warden Who Grew Wild** (Lv 42, Solo, Rí Aengus)
+> Description: Beyond the fallen guardian lies the truth of Fintan — a guardian who went too far trying to protect what he loved.
+> Objectives: 1. Search the inner hollow. 2. Recover records of Fintan's history. 3. Report the truth to Rí Aengus.
+> Closing (Aengus): "He wished only to protect the land forever, and the land answered by unmaking him instead. I grieve for what he was, even as I fear what he has become."
+
+> **HEQ-23 — The Wild and the Bound** (Lv 45, Solo, Rí Aengus)
+> Description: Aengus wrestles with whether Fintan's warning against too much binding holds some truth.
+> Objectives: 1. Speak with Rí Aengus. 2. Hear his doubts. 3. Reaffirm your resolve together.
+> Opening (Aengus): "Perhaps he is not entirely wrong, that too much binding wounds the land as surely as too little. And perhaps that makes what he threatens no less dangerous."
+> Closing (Aengus): "Balance, not extremity — that is what Hibernia has always sought. We do not seek to destroy what Fintan protects. We seek only to stop him from destroying it himself."
+
+**Umsetzungs-Checkliste (Akt 4, alle 3 Reiche):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
+## Akt 5 (Level 47–50): Die Bastion der Kill-Zone — Finale aller drei Reiche
+
+### Albion (AEQ-24 bis AEQ-26)
+
+> **AEQ-24 — Muster for the Bastion** (Lv 47, Solo, Lord Ector, Burgvogt Kay)
+> Description: Ector and Kay unite Albion's forces for the final march on the Broken Oath's stronghold.
+> Objectives: 1. Speak with Lord Ector and Burgvogt Kay together. 2. Help muster Albion's forces. 3. Prepare for the march to the Bastion.
+> Opening (Ector): "Whatever doubts divided us, they end here. Albion marches as one, or not at all."
+> Opening (Kay): "About time. Let's finish what Osric started and Alaric intends to end."
+> Closing (Ector): "The muster is complete. Rest tonight, if you can. Tomorrow, we march on the Bastion itself."
+
+> **AEQ-25 — The Last Vigil** (Lv 49, Solo, Lord Ector, Burgvogt Kay)
+> Description: A quiet night before the assault — Ector and Kay each offer the player a personal token.
+> Objectives: 1. Speak with Lord Ector at the vigil fire. 2. Speak with Burgvogt Kay. 3. Rest before the dawn march.
+> Opening (Ector): "Take this — my father's, and his before him. I would rather it protect someone still willing to fight than gather dust in a vault."
+> Opening (Kay): "Don't get killed tomorrow. That's not sentiment, that's an order. But... good luck, all the same."
+> Closing (Erzähltext): The camp falls quiet before the dawn march. Whatever comes at the Bastion, Albion faces it together.
+
+> **AEQ-26 — The Hollow Warden** (Lv 50, **FINALE — Instanz #4, Gruppe, Endgegner**, Boss: Sir Alaric)
+> Description: The full assault on the Bastion of the Kill-Zone — the final confrontation with Sir Alaric, the Hollow Warden.
+> Objectives: 1. Storm the Bastion with your group. 2. Fight through the Broken Oath's last defenders. 3. Defeat Sir Alaric.
+> Opening (Alaric): "Centuries I have stood watch over a seal that will not let me rest. You come to defend it further? Then you come to prolong my suffering — and the land's."
+> Closing (Alaric, defeated): "...Perhaps this is the peace I sought, after all. Guard it better than I did, if you can. Guard it kinder."
+> Closing (Lord Ector, after): "The seal holds, and holds true. Whatever Alaric was, he is answered now — not with hatred, but with an ending he could not grant himself. Albion owes you a debt it cannot fully repay."
+
+### Midgard (MEQ-24 bis MEQ-26)
+
+> **MEQ-24 — The Long Hunt** (Lv 47, Solo, Jarl Skadi, Hersir Vidar)
+> Description: Skadi and Vidar unite Midgard's warriors for the final march against The Ironbrood.
+> Objectives: 1. Speak with Jarl Skadi and Hersir Vidar together. 2. Help muster Midgard's warriors. 3. Prepare for the march to the Bastion.
+> Opening (Skadi): "Whatever this began as, it ends as Midgard's fight, together. No more lone hunts."
+> Opening (Vidar): "This one's mine to finish. But I'll not pretend I can finish it alone."
+> Closing (Skadi): "The hall stands ready. Rest while you can — the Bastion will not wait for us to be rested."
+
+> **MEQ-25 — The Last Toast** (Lv 49, Solo, Jarl Skadi, Hersir Vidar)
+> Description: A quiet feast before the assault — Skadi and Vidar each offer the player a personal token.
+> Objectives: 1. Join Jarl Skadi at the hall-feast. 2. Speak with Hersir Vidar. 3. Rest before the dawn march.
+> Opening (Skadi): "Drink. Whatever tomorrow brings, tonight we are still whole, still ourselves."
+> Opening (Vidar): "Take this. Better in your hands than left to rust in mine, if tomorrow goes poorly."
+> Closing (Erzähltext): The hall grows quiet as the fires burn low. Tomorrow, Midgard marches as one.
+
+> **MEQ-26 — Ragnar Half-Sworn** (Lv 50, **FINALE — Instanz #4, Gruppe, Endgegner**, Boss: Ragnar Half-Sworn)
+> Description: The full assault on the Bastion — the final confrontation between Vidar and his once shield-brother Ragnar.
+> Objectives: 1. Storm the Bastion with your group. 2. Fight through the Ironbrood's last defenders. 3. Defeat Ragnar Half-Sworn.
+> Opening (Ragnar): "Vidar. Come to finish what the elders started, have you? Or come to ask why, at last?"
+> Closing (Vidar, to Ragnar): "I should have asked years ago. I'm asking now — was it worth everything it cost you?"
+> Closing (Ragnar, falling): "...Ask me again, brother, when you've carried the weight I have. Until then — hold your oath better than I held mine."
+> Closing (Jarl Skadi, after): "Half-sworn or not, he was Midgard once. We honor what he was, and answer what he became. That is enough."
+
+### Hibernia (HEQ-24 bis HEQ-26)
+
+> **HEQ-24 — The Gathering Wood** (Lv 47, Solo, Rí Aengus, Ceann Cogaidh Aoife)
+> Description: Aengus and Aoife unite Hibernia's warriors for the final march against The Withered Circle.
+> Objectives: 1. Speak with Rí Aengus and Ceann Cogaidh Aoife together. 2. Help muster Hibernia's warriors. 3. Prepare for the march to the Bastion.
+> Opening (Aengus): "Whatever divided our counsel, it ends here. Hibernia moves as one, in defense of what we hold dear."
+> Opening (Aoife): "Finally. Let's finish what the wood itself has been warning us of."
+> Closing (Aengus): "The gathering is complete. Rest, if the night allows it. Tomorrow, we march to the Bastion together."
+
+> **HEQ-25 — The Last Rite** (Lv 49, Solo, Rí Aengus, Ceann Cogaidh Aoife)
+> Description: A quiet blessing rite before the assault — Aengus and Aoife each offer the player a personal token.
+> Objectives: 1. Join Rí Aengus at the blessing rite. 2. Speak with Ceann Cogaidh Aoife. 3. Rest before the dawn march.
+> Opening (Aengus): "Take this — a token blessed by the land itself, or what remains willing to bless anything, these days."
+> Opening (Aoife): "Stay sharp tomorrow. And... stay alive. I'd rather not train another recruit this season."
+> Closing (Erzähltext): The rite fire burns low as night deepens. Tomorrow, Hibernia marches as one toward the Bastion.
+
+> **HEQ-26 — Fintan the Rootbound** (Lv 50, **FINALE — Instanz #4, Gruppe, Endgegner**, Boss: Fintan the Rootbound)
+> Description: The full assault on the Bastion — the final confrontation with Fintan, the guardian who grew wild.
+> Objectives: 1. Storm the Bastion with your group. 2. Fight through the Withered Circle's last defenders. 3. Defeat Fintan the Rootbound.
+> Opening (Fintan): "You come to preserve a wound, calling it a seal. I come to let the land breathe free at last, whatever the cost."
+> Closing (Fintan, defeated): "...Perhaps free was never the word. Perhaps only... quiet, at last. Tend the land better than I did, in the end."
+> Closing (Rí Aengus, after): "The seal holds, and the land breathes easier for it. Fintan sought to protect what he loved and lost himself in the seeking. May his rest be gentler than his vigil was. Hibernia will not forget what you have done here."
+
+**Umsetzungs-Checkliste (Akt 5, alle 3 Reiche):** siehe generische Liste oben, alle 5 Punkte 🔴.
+
 ---
 
 ## Status
 
-🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). 103 Einträge insgesamt, davon **79 mit fertigem Content**: Akt 1–3 aller drei Reiche (AEQ-01–18, MEQ-01–18, HEQ-01–18), alle 18 Nebenquests (ASQ/MSQ/HSQ), alle 7 Frontier-Punkt-NPCs (FNQ-01–07) — von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers ("mach alles fertig"). Wird fortgesetzt (Akt 4–5, je 8 Stufen pro Reich). Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
+🟢 **Alle 103 Einträge inhaltlich fertig** (2026-07-22) — alle drei Epic-Questlines (AEQ/MEQ/HEQ-01 bis -26, inkl. aller drei Finale-Bosskämpfe), alle 18 Nebenquests (ASQ/MSQ/HSQ) und alle 7 Frontier-Punkt-NPCs (FNQ-01–07) haben jetzt Titel/Beschreibung/Ziele/Dialog. Von Claude direkt generiert statt über Copilot, auf Bitte des Nutzers ("mach alles fertig"). Inhaltlich als erster Entwurf zu verstehen (Ton/Balance ggf. später anpassen), nicht als finaler Text. Kein Eintrag hat Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14) und ist damit die eigentliche nächste Hürde, nicht der Content mehr.
