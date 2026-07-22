@@ -4,7 +4,7 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 
 ## Wie diese Datei benutzt wird
 
-- **Story-Konzepte/Prämissen** leben weiter in ihren Quelldokumenten: [Albion_Epic_Questline.md](Albion_Epic_Questline.md) (Stufen AEQ-01 bis AEQ-20), [Frontier_NPCs_and_Questlines.md](Frontier_NPCs_and_Questlines.md) (Punkt-NPCs FNQ-01 bis FNQ-07), [NPC_NAMES.md](../../NPC_NAMES.md) (Reichsführungs-Hooks). Hier **nicht** duplizieren.
+- **Story-Konzepte/Prämissen** leben weiter in ihren Quelldokumenten: [Albion_Epic_Questline.md](Albion_Epic_Questline.md) (AEQ-01 bis AEQ-26), [Midgard_Epic_Questline.md](Midgard_Epic_Questline.md) (MEQ-01 bis MEQ-26), [Hibernia_Epic_Questline.md](Hibernia_Epic_Questline.md) (HEQ-01 bis HEQ-26), [Frontier_NPCs_and_Questlines.md](Frontier_NPCs_and_Questlines.md) (Punkt-NPCs FNQ-01 bis FNQ-07), [NPC_NAMES.md](../../NPC_NAMES.md) (Reichsführungs-Hooks). Hier **nicht** duplizieren.
 - **Diese Datei** ist der Tracker: welche Quest hat schon fertigen Text (Titel/Beschreibung/Ziele/Dialog), und was fehlt noch, um sie tatsächlich im Spiel zu haben.
 - **Technisches Schema:** [SYSTEMS.md](../../SYSTEMS.md) → Abschnitt 3 "Quests (Datenschema-Vorschlag)".
 
@@ -24,9 +24,22 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 4. Objective-Tracking-Logik gebaut (z. B. Trigger-Volume, Kill-Counter, Item-Pickup)
 5. Reward vergeben (vorerst Platzhalter, da Itemization noch nicht existiert)
 
+## Instanzen-Übersicht (level-abhängige Gruppen-Dungeons)
+
+Jedes Reich hat vier gruppenpflichtige Instanzen entlang seiner Epic-Questline — drei "Zwischen-Instanzen" plus die Finalinstanz, die alle drei Reiche in derselben Lv~50-Bastion zusammenführt (siehe Frontier-Vision). Jede Instanz hat einen benannten Boss und ein Loot-Konzept (kein fertiges Zahlendesign, siehe SYSTEMS.md Abschnitt 1).
+
+| Lv | Albion | Midgard | Hibernia |
+|---|---|---|---|
+| **~16** | *Recruits of the Watch* (AEQ-10) — Boss **Osric the Turned**, Loot: *Osric's Broken Blade* (selten) | *Wolves Among Wolves* (MEQ-10) — Boss **Erik, First of the Ironbrood**, Loot: *Erik's War-Axe* (selten) | *The Withering Circle* (HEQ-10) — Boss **Eamon the Withered**, Loot: *Eamon's Thorned Staff* (selten) |
+| **~28** | *Baldwin's Last Watch* (AEQ-16) — Boss **Leofric the Hollow-Marked**, Loot: *Leofric's Warhorn* (selten) | *Gunnar's Last Stand* (MEQ-16) — Boss **Ingvar of the Ironbrood**, Loot: *Ingvar's Storm-Shield* (selten) | *Niav's Vigil* (HEQ-16) — Boss **Tadhg the Withered**, Loot: *Tadhg's Bramble Crown* (selten) |
+| **~39** | *Into the Hollow* (AEQ-21) — Boss **The Hollow Sentinel**, Loot: *Sentinel's Ward-Fragment* (episch) | *Into the Ironbrood's Hold* (MEQ-21) — Boss **The Iron Wolf**, Loot: *Iron Wolf's Fang* (episch) | *Into the Rootbound Hollow* (HEQ-21) — Boss **The Bramble Warden**, Loot: *Bramble Warden's Heartwood* (episch) |
+| **~50 (Finale)** | *The Hollow Warden* (AEQ-26) — Boss **Sir Alaric**, Loot: episches Set-Stück + Titel | *Ragnar Half-Sworn* (MEQ-26) — Boss **Ragnar Half-Sworn**, Loot: episches Set-Stück + Titel | *Fintan the Rootbound* (HEQ-26) — Boss **Fintan the Rootbound**, Loot: episches Set-Stück + Titel |
+
+**Progression:** Lv~16/28/39-Instanzen sind jeweils der Höhepunkt eines Akts (siehe Realm-Dateien), nicht optionale Beikost — sie treiben die Haupthandlung voran (Ermittlung → Bestätigung → Konfrontation). Die Lv-50-Finalinstanz aller drei Reiche liegt an derselben Karte ("Bastion der Kill-Zone"), aber mit reichseigenem Boss/Ausgang.
+
 ## Master-Index
 
-### Albion Epic Questline (AEQ, Level 1–50) — siehe [Albion_Epic_Questline.md](Albion_Epic_Questline.md)
+### Albion Epic Questline (AEQ, Level 1–50, 26 Stufen) — siehe [Albion_Epic_Questline.md](Albion_Epic_Questline.md)
 
 | ID | Lv | Titel | Typ | Content | Engine |
 |---|---|---|---|---|---|
@@ -34,24 +47,30 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 | AEQ-02 | 2 | Shadows Across the Border | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-03 | 3 | To the Borderlands | Solo | 🟢 fertig (unten) | 🔴 |
 | AEQ-04 | 5 | First Blood | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-05 | 8 | A Soldier's Instinct | Solo | ⚪ Prompt bereit (Albion_Epic_Questline.md) | 🔴 |
-| AEQ-06 | 10 | Eleanor's Missing Wagons | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-07 | 13 | The Old Ward-Keeper's Journal | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-08 | 16 | Recruits of the Watch | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-09 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| AEQ-10 | 23 | Lord Ector's Suspicion | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-11 | 26 | What the Archives Hide | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-12 | 28 | Baldwin's Last Watch | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-13 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| AEQ-14 | 33 | The Vanishing Ward-Stone | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-15 | 36 | Kay's Warpath | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-16 | 39 | Into the Hollow | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| AEQ-17 | 42 | The Leader's Name | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-18 | 45 | The Price of an Oath | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-19 | 47 | Muster for the Bastion | Solo | ⚪ nur Prämisse | 🔴 |
-| AEQ-20 | 50 | The Hollow Warden (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| AEQ-05 | 7 | A Soldier's Instinct | Solo | ⚪ Prompt bereit (Albion_Epic_Questline.md) | 🔴 |
+| AEQ-06 | 9 | The Cartographer's Warning | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-07 | 11 | Eleanor's Missing Wagons | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-08 | 13 | The Old Ward-Keeper's Journal | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-09 | 15 | Osric's Trail | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-10 | 16 | Recruits of the Watch — **Instanz #1** (Boss: Osric the Turned) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| AEQ-11 | 18 | Aftermath at the Hollow | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| AEQ-13 | 23 | Lord Ector's Suspicion | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-14 | 26 | What the Archives Hide | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-15 | 27 | The Cartographer's Fear | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-16 | 28 | Baldwin's Last Watch — **Instanz #2** (Boss: Leofric the Hollow-Marked) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| AEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| AEQ-18 | 33 | The Vanishing Ward-Stone | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-19 | 36 | Kay's Warpath | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-20 | 38 | The Sentinel's Ground | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-21 | 39 | Into the Hollow — **Instanz #3** (Boss: The Hollow Sentinel) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| AEQ-22 | 42 | The Leader's Name | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-23 | 45 | The Price of an Oath | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-24 | 47 | Muster for the Bastion | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-25 | 49 | The Last Vigil | Solo | ⚪ nur Prämisse | 🔴 |
+| AEQ-26 | 50 | The Hollow Warden (FINALE — Instanz #4, Boss: Sir Alaric) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
 
-### Midgard Epic Questline (MEQ, Level 1–50) — siehe [Midgard_Epic_Questline.md](Midgard_Epic_Questline.md)
+### Midgard Epic Questline (MEQ, Level 1–50, 26 Stufen) — siehe [Midgard_Epic_Questline.md](Midgard_Epic_Questline.md)
 
 | ID | Lv | Titel | Typ | Content | Engine |
 |---|---|---|---|---|---|
@@ -59,24 +78,30 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 | MEQ-02 | 2 | Prove Your Worth | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-03 | 3 | The Hersir's Summons | Solo | ⚪ nur Prämisse | 🔴 |
 | MEQ-04 | 5 | Blood on the Ice | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-05 | 8 | Gunnar's Watch | Solo | ⚪ Prompt bereit (Midgard_Epic_Questline.md) | 🔴 |
-| MEQ-06 | 10 | Ulf's Vanishing Ore | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-07 | 13 | The Half-Sworn Rune | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-08 | 16 | Wolves Among Wolves | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-09 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| MEQ-10 | 23 | Skadi's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-11 | 26 | The Unbound Oath | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-12 | 28 | Gunnar's Last Stand | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-13 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| MEQ-14 | 33 | The Silent Fjord | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-15 | 36 | Vidar's Reckoning | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-16 | 39 | Into the Ironbrood's Hold | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| MEQ-17 | 42 | The Wolf Unbound | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-18 | 45 | What Honor Costs | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-19 | 47 | The Long Hunt | Solo | ⚪ nur Prämisse | 🔴 |
-| MEQ-20 | 50 | Ragnar Half-Sworn (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| MEQ-05 | 7 | Gunnar's Watch | Solo | ⚪ Prompt bereit (Midgard_Epic_Questline.md) | 🔴 |
+| MEQ-06 | 9 | The Skald's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-07 | 11 | Ulf's Vanishing Ore | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-08 | 13 | The Half-Sworn Rune | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-09 | 15 | Erik's Trail | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-10 | 16 | Wolves Among Wolves — **Instanz #1** (Boss: Erik, First of the Ironbrood) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-11 | 18 | What the Wolves Left Behind | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| MEQ-13 | 23 | Skadi's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-14 | 26 | The Unbound Oath | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-15 | 27 | The Skald's Warning | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-16 | 28 | Gunnar's Last Stand — **Instanz #2** (Boss: Ingvar of the Ironbrood) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| MEQ-18 | 33 | The Silent Fjord | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-19 | 36 | Vidar's Reckoning | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-20 | 38 | The Iron Wolf's Den | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-21 | 39 | Into the Ironbrood's Hold — **Instanz #3** (Boss: The Iron Wolf) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-22 | 42 | The Wolf Unbound | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-23 | 45 | What Honor Costs | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-24 | 47 | The Long Hunt | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-25 | 49 | The Last Toast | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-26 | 50 | Ragnar Half-Sworn (FINALE — Instanz #4, Boss: Ragnar Half-Sworn) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
 
-### Hibernia Epic Questline (HEQ, Level 1–50) — siehe [Hibernia_Epic_Questline.md](Hibernia_Epic_Questline.md)
+### Hibernia Epic Questline (HEQ, Level 1–50, 26 Stufen) — siehe [Hibernia_Epic_Questline.md](Hibernia_Epic_Questline.md)
 
 | ID | Lv | Titel | Typ | Content | Engine |
 |---|---|---|---|---|---|
@@ -84,22 +109,28 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 | HEQ-02 | 2 | Whispers in the Root | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-03 | 3 | Aoife's Trial | Solo | ⚪ nur Prämisse | 🔴 |
 | HEQ-04 | 5 | First Skirmish | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-05 | 8 | Niav's Silence | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-06 | 10 | Cormac's Stolen Iron | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-07 | 13 | The Old Grove-Keeper's Rite | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-08 | 16 | The Withering Circle | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-09 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| HEQ-10 | 23 | Aengus' Fear | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-11 | 26 | The Rootbound Rite | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-12 | 28 | Niav's Vigil | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-13 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
-| HEQ-14 | 33 | The Drowned Dolmen | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-15 | 36 | Aoife's Resolve | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-16 | 39 | Into the Rootbound Hollow | **Gruppe** | ⚪ nur Prämisse | 🔴 |
-| HEQ-17 | 42 | The Warden Who Grew Wild | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-18 | 45 | The Wild and the Bound | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-19 | 47 | The Gathering Wood | Solo | ⚪ nur Prämisse | 🔴 |
-| HEQ-20 | 50 | Fintan the Rootbound (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+| HEQ-05 | 7 | Niav's Silence | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-06 | 9 | The Seer's Unease | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-07 | 11 | Cormac's Stolen Iron | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-08 | 13 | The Old Grove-Keeper's Rite | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-09 | 15 | Eamon's Trail | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-10 | 16 | The Withering Circle — **Instanz #1** (Boss: Eamon the Withered) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-11 | 18 | What the Roots Remember | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-12 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| HEQ-13 | 23 | Aengus' Fear | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-14 | 26 | The Rootbound Rite | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-15 | 27 | The Seer's Vision | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-16 | 28 | Niav's Vigil — **Instanz #2** (Boss: Tadhg the Withered) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-17 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| HEQ-18 | 33 | The Drowned Dolmen | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-19 | 36 | Aoife's Resolve | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-20 | 38 | The Bramble Threshold | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-21 | 39 | Into the Rootbound Hollow — **Instanz #3** (Boss: The Bramble Warden) | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-22 | 42 | The Warden Who Grew Wild | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-23 | 45 | The Wild and the Bound | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-24 | 47 | The Gathering Wood | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-25 | 49 | The Last Rite | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-26 | 50 | Fintan the Rootbound (FINALE — Instanz #4, Boss: Fintan the Rootbound) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
 
 ### Nebenquests: Albion (ASQ), Midgard (MSQ), Hibernia (HSQ)
 
@@ -227,4 +258,4 @@ Kays Ton (ungeduldig, handlungsorientiert) hebt sich klar von Ectors bedächtige
 
 ## Status
 
-🟡 Erweitert (2026-07-22) — bündelt den bereits generierten Ector/Kay-Content (vorher in PROMPTS.md) und trackt jetzt alle bekannten Quest-IDs: Albion-Epic (AEQ), Midgard-Epic (MEQ, neu), Hibernia-Epic (HEQ, neu), Nebenquests aller drei Reiche (ASQ/MSQ/HSQ, neu) und Frontier-Punkt-NPCs (FNQ). 79 Einträge insgesamt, davon 3 (AEQ-01–03) mit fertigem Content. Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).
+🟡 Erweitert (2026-07-22) — alle drei Epic-Questlines auf 26 Stufen ausgebaut (vorher je 20), mit vier benannten Instanz-Bossen + Loot-Konzept pro Reich (siehe "Instanzen-Übersicht"). Trackt jetzt alle bekannten Quest-IDs: Albion-Epic (AEQ-01–26), Midgard-Epic (MEQ-01–26), Hibernia-Epic (HEQ-01–26), Nebenquests aller drei Reiche (ASQ/MSQ/HSQ), Frontier-Punkt-NPCs (FNQ-01–07). 97 Einträge insgesamt, davon 3 (AEQ-01–03) mit fertigem Content. Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).

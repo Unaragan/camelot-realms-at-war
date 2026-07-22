@@ -87,6 +87,8 @@ Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3
 
 **Erweiterung um Hibernia-Epic-Questline (Level 1–50):** siehe [Docs/Design/Hibernia_Epic_Questline.md](Docs/Design/Hibernia_Epic_Questline.md) — Antagonistin/Antagonist: **Fintan the Rootbound**, Anführer von **"The Withered Circle"**. Name aus dem generischen Hibernia-Männerpool (Fintan) – ab jetzt reserviert.
 
+**Instanz-Bosse (Lv~16/28/39, siehe [Docs/Design/Quests.md](Docs/Design/Quests.md) → "Instanzen-Übersicht"):** ebenfalls aus den generischen Pools entnommen, ab jetzt für diese Encounter reserviert – **Osric the Turned, Leofric the Hollow-Marked** (Albion); **Erik/Ingvar of the Ironbrood** (Midgard); **Eamon the Withered, Tadhg the Withered** (Hibernia). Die drei Wächter-Konstrukte (The Hollow Sentinel, The Iron Wolf, The Bramble Warden) sind Kreaturen, keine Personennamen, keine Pool-Reservierung nötig.
+
 ## Praktische Nutzung für Questgeber
 
 Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:
