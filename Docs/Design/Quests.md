@@ -51,6 +51,79 @@ Zentrale Sammelstelle für **fertig ausformulierten Quest-Content** und den **St
 | AEQ-19 | 47 | Muster for the Bastion | Solo | ⚪ nur Prämisse | 🔴 |
 | AEQ-20 | 50 | The Hollow Warden (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
 
+### Midgard Epic Questline (MEQ, Level 1–50) — siehe [Midgard_Epic_Questline.md](Midgard_Epic_Questline.md)
+
+| ID | Lv | Titel | Typ | Content | Engine |
+|---|---|---|---|---|---|
+| MEQ-01 | 1 | Trial of the First Blade | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-02 | 2 | Prove Your Worth | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-03 | 3 | The Hersir's Summons | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-04 | 5 | Blood on the Ice | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-05 | 8 | Gunnar's Watch | Solo | ⚪ Prompt bereit (Midgard_Epic_Questline.md) | 🔴 |
+| MEQ-06 | 10 | Ulf's Vanishing Ore | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-07 | 13 | The Half-Sworn Rune | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-08 | 16 | Wolves Among Wolves | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-09 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| MEQ-10 | 23 | Skadi's Doubt | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-11 | 26 | The Unbound Oath | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-12 | 28 | Gunnar's Last Stand | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-13 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| MEQ-14 | 33 | The Silent Fjord | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-15 | 36 | Vidar's Reckoning | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-16 | 39 | Into the Ironbrood's Hold | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| MEQ-17 | 42 | The Wolf Unbound | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-18 | 45 | What Honor Costs | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-19 | 47 | The Long Hunt | Solo | ⚪ nur Prämisse | 🔴 |
+| MEQ-20 | 50 | Ragnar Half-Sworn (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+
+### Hibernia Epic Questline (HEQ, Level 1–50) — siehe [Hibernia_Epic_Questline.md](Hibernia_Epic_Questline.md)
+
+| ID | Lv | Titel | Typ | Content | Engine |
+|---|---|---|---|---|---|
+| HEQ-01 | 1 | The Fading Grove | Solo | ⚪ Prompt bereit (Hibernia_Epic_Questline.md) | 🔴 |
+| HEQ-02 | 2 | Whispers in the Root | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-03 | 3 | Aoife's Trial | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-04 | 5 | First Skirmish | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-05 | 8 | Niav's Silence | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-06 | 10 | Cormac's Stolen Iron | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-07 | 13 | The Old Grove-Keeper's Rite | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-08 | 16 | The Withering Circle | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-09 | 20 | Grenzland-Scharmützel (BG-Debüt) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| HEQ-10 | 23 | Aengus' Fear | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-11 | 26 | The Rootbound Rite | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-12 | 28 | Niav's Vigil | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-13 | 30 | Umkämpftes Hochland (BG-Debüt #2) | **Gruppe/RvR** | ⚪ nur Prämisse | 🔴 |
+| HEQ-14 | 33 | The Drowned Dolmen | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-15 | 36 | Aoife's Resolve | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-16 | 39 | Into the Rootbound Hollow | **Gruppe** | ⚪ nur Prämisse | 🔴 |
+| HEQ-17 | 42 | The Warden Who Grew Wild | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-18 | 45 | The Wild and the Bound | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-19 | 47 | The Gathering Wood | Solo | ⚪ nur Prämisse | 🔴 |
+| HEQ-20 | 50 | Fintan the Rootbound (Finale) | **Gruppe, Endgegner** | ⚪ nur Prämisse | 🔴 |
+
+### Nebenquests: Albion (ASQ), Midgard (MSQ), Hibernia (HSQ)
+
+| ID | Reich | Titel | Schwierigkeit | Content | Engine |
+|---|---|---|---|---|---|
+| ASQ-01 | Albion | Smith Godwin's Request | Leicht | ⚪ nur Prämisse | 🔴 |
+| ASQ-02 | Albion | Cedric's Lost Hound | Leicht | ⚪ nur Prämisse | 🔴 |
+| ASQ-03 | Albion | The Widow's Debt | Mittel | ⚪ nur Prämisse | 🔴 |
+| ASQ-04 | Albion | Rosalind's Cure | Mittel | ⚪ nur Prämisse | 🔴 |
+| ASQ-05 | Albion | Harold's Wager | Mittel | ⚪ nur Prämisse | 🔴 |
+| ASQ-06 | Albion | The Tax Collector's Ledger | Schwer | ⚪ nur Prämisse | 🔴 |
+| MSQ-01 | Midgard | Bjorn's Boast | Leicht | ⚪ nur Prämisse | 🔴 |
+| MSQ-02 | Midgard | Astrid's Catch | Leicht | ⚪ nur Prämisse | 🔴 |
+| MSQ-03 | Midgard | The Frozen Raiders | Mittel | ⚪ nur Prämisse | 🔴 |
+| MSQ-04 | Midgard | Sigrid's Runes | Mittel | ⚪ nur Prämisse | 🔴 |
+| MSQ-05 | Midgard | Halvar's Duel | Mittel | ⚪ nur Prämisse | 🔴 |
+| MSQ-06 | Midgard | The Ice-Bound Wyrm | Schwer | ⚪ nur Prämisse | 🔴 |
+| HSQ-01 | Hibernia | Ronan's Lost Charm | Leicht | ⚪ nur Prämisse | 🔴 |
+| HSQ-02 | Hibernia | Siobhan's Herbs | Leicht | ⚪ nur Prämisse | 🔴 |
+| HSQ-03 | Hibernia | The Hungry Wood | Mittel | ⚪ nur Prämisse | 🔴 |
+| HSQ-04 | Hibernia | Declan's Wager | Mittel | ⚪ nur Prämisse | 🔴 |
+| HSQ-05 | Hibernia | Maeve's Warning | Mittel | ⚪ nur Prämisse | 🔴 |
+| HSQ-06 | Hibernia | The Old Oak's Grief | Schwer | ⚪ nur Prämisse | 🔴 |
+
 ### Frontier-Punkt-NPCs (FNQ) — siehe [Frontier_NPCs_and_Questlines.md](Frontier_NPCs_and_Questlines.md)
 
 | ID | Reich | NPC/Punkt | Content | Engine |
@@ -154,4 +227,4 @@ Kays Ton (ungeduldig, handlungsorientiert) hebt sich klar von Ectors bedächtige
 
 ## Status
 
-🟡 Neu angelegt (2026-07-22) — bündelt den bereits generierten Ector/Kay-Content (vorher in PROMPTS.md) und legt den Umsetzungs-Tracker für alle bekannten Quest-IDs (AEQ, FNQ) an. Content für AEQ-04 bis AEQ-20 und FNQ-01 bis FNQ-07 steht noch aus. Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3).
+🟡 Erweitert (2026-07-22) — bündelt den bereits generierten Ector/Kay-Content (vorher in PROMPTS.md) und trackt jetzt alle bekannten Quest-IDs: Albion-Epic (AEQ), Midgard-Epic (MEQ, neu), Hibernia-Epic (HEQ, neu), Nebenquests aller drei Reiche (ASQ/MSQ/HSQ, neu) und Frontier-Punkt-NPCs (FNQ). 79 Einträge insgesamt, davon 3 (AEQ-01–03) mit fertigem Content. Kein Eintrag hat bisher Engine-Fortschritt — das Quest-Grundsystem selbst existiert noch nicht (siehe SYSTEMS.md Abschnitt 3, Task #14).

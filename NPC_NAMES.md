@@ -83,6 +83,10 @@ Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3
 
 **Erweiterung um Albion-Epic-Questline (Level 1–50):** siehe [Docs/Design/Albion_Epic_Questline.md](Docs/Design/Albion_Epic_Questline.md) — führt einen neuen Antagonisten ein: **Sir Alaric**, "der Hollow Warden", Anführer der häretischen Splittergruppe "Der Gebrochene Eid". Name aus dem generischen Albion-Männerpool oben entnommen (Alaric) – ab jetzt für diese Rolle reserviert, nicht zusätzlich als Füll-NPC-Name verwenden.
 
+**Erweiterung um Midgard-Epic-Questline (Level 1–50):** siehe [Docs/Design/Midgard_Epic_Questline.md](Docs/Design/Midgard_Epic_Questline.md) — Antagonist: **Ragnar Half-Sworn**, Anführer von **"The Ironbrood"**, einer Splittergruppe, die Midgards Kriegereid-Ehrenkodex verwirft. Name aus dem generischen Midgard-Männerpool (Ragnar) – ab jetzt reserviert.
+
+**Erweiterung um Hibernia-Epic-Questline (Level 1–50):** siehe [Docs/Design/Hibernia_Epic_Questline.md](Docs/Design/Hibernia_Epic_Questline.md) — Antagonistin/Antagonist: **Fintan the Rootbound**, Anführer von **"The Withered Circle"**. Name aus dem generischen Hibernia-Männerpool (Fintan) – ab jetzt reserviert.
+
 ## Praktische Nutzung für Questgeber
 
 Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:

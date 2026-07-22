@@ -66,6 +66,19 @@ Episch angelegt, dient als sichtbarer Übergang in den dauerhaften RvR-Einstieg 
 - Sichtbarer Titel (z. B. "Warden of the Seal") als Statussymbol im RvR
 - Bewusst **kein** fertiges Zahlen-/Stat-Design – das ist Teil der noch offenen Itemization-Frage (siehe Nicht-jetzt-Liste in README.md), hier nur konzeptionell verankert
 
+## Nebenquests (Albion, ASQ)
+
+Kleinere, in sich geschlossene Quests abseits des Hauptbogens — nutzen den generischen Albion-Namenspool aus NPC_NAMES.md, nicht die reservierten Haupt-NPCs (Ector/Kay/Baldwin/Eleanor/Alaric bleiben unangetastet). Unterschiedliche Schwierigkeit für Abwechslung im Leveling.
+
+| ID | Titel | Schwierigkeit | Belohnung | NPC | Kurzinhalt |
+|---|---|---|---|---|---|
+| ASQ-01 | *Smith Godwin's Request* | Leicht | Item | Godwin | Ein Schmied braucht seltenes Erz — einfacher Beschaffungsauftrag, Belohnung ist eine frühe Starterwaffe. |
+| ASQ-02 | *Cedric's Lost Hound* | Leicht | XP | Cedric | Simpler Such-/Rettungsauftrag, komödiantischer Ton. |
+| ASQ-03 | *The Widow's Debt* | Mittel | Item | Wulfric | Ein Bauer wird von Wegelagerern erpresst — diese ausräuchern. |
+| ASQ-04 | *Rosalind's Cure* | Mittel | XP | Rosalind | Eine Kräuterkundige braucht eine seltene Pflanze aus gefährlichem Gebiet. |
+| ASQ-05 | *Harold's Wager* | Mittel | Item | Harold | Ein Soldat hat sich übernommen (Wettkampf gegen ein Wolfsrudel allein) und braucht Rettung — leichte moralische Würze möglich (necken oder nicht). |
+| ASQ-06 | *The Tax Collector's Ledger* | Schwer | Item (besonders) | – (unbenannt) | Ein korrupter Beamter unterschlägt Steuern — politisch heikel, testet Spielerurteil, markante Belohnung. |
+
 ## Copilot-Prompt-Vorlage (für die einzelnen Stufen)
 
 > "You are writing content for 'Camelot: Realms at War', a toon-styled 3-faction RvR fantasy game (spiritual successor to Dark Age of Camelot, but with no DAOC-specific names/lore reused). This is stage [#] of a 20-stage Albion main questline (level 1–50). Context so far: [Kurzinhalt der vorherigen Stufe(n)]. Write this quest: given by [NPC] at [Ort-Platzhalter], for a level-[Lv] character. Premise: [Kurzinhalt aus der Tabelle]. [Falls Gruppe: This quest requires a group of 3–4 players, not soloable — reflect that in tone/difficulty framing.] Please generate, in English: quest title, a 2-3 sentence quest description, 3-5 objective steps, opening dialogue, closing dialogue. Tone: [je nach Akt — bedächtig/wachsend besorgt/episch]. No mention of Dark Age of Camelot or DAOC-specific proper nouns."
