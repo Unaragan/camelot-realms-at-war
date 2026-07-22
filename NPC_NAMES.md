@@ -81,6 +81,8 @@ Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3
 
 **Erweiterung um Eroberungspunkt-NPCs (Wachtürme, Dörfer, Minen, Schreine, neutrales Belagerungslager):** siehe [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md) — dort auch der Quest-Backlog mit Copilot-Prompt-Vorlage für die spätere Open-World-Frontier.
 
+**Erweiterung um Albion-Epic-Questline (Level 1–50):** siehe [Docs/Design/Albion_Epic_Questline.md](Docs/Design/Albion_Epic_Questline.md) — führt einen neuen Antagonisten ein: **Sir Alaric**, "der Hollow Warden", Anführer der häretischen Splittergruppe "Der Gebrochene Eid". Name aus dem generischen Albion-Männerpool oben entnommen (Alaric) – ab jetzt für diese Rolle reserviert, nicht zusätzlich als Füll-NPC-Name verwenden.
+
 ## Praktische Nutzung für Questgeber
 
 Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:
