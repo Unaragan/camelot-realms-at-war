@@ -146,13 +146,18 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 
 Bewusst zurückgestellt, um Scope-Explosion zu vermeiden:
 
-- Crafting
-- Housing
+- Crafting — für die Release-Version vorgesehen (Materialien per Kauf gegen
+  Ingame-Currency oder per Farmen), siehe
+  [Docs/Design/OpenWorld_HomeRealms_Vision.md](Docs/Design/OpenWorld_HomeRealms_Vision.md)
+  → "Pacing"
+- Housing — als Addon nach Release vorgesehen, siehe selbe Quelle
 - Offene, persistente Welt
 - Login-/Account-Server, Datenbank-Persistenz
 - Tiefe Itemization/Loot-Systeme
 - Mehr als 3 Klassen pro Fraktion
-- Startgebiet/Tutorial-Zone (bis nach dem Vertical Slice)
+- Startgebiet/Tutorial-Zone (bis nach dem Vertical Slice) — Konzeptidee für die spätere
+  Heimatreich-Open-World bereits skizziert, siehe
+  [Docs/Design/OpenWorld_HomeRealms_Vision.md](Docs/Design/OpenWorld_HomeRealms_Vision.md)
 - Große Netzwerk-Skalierung (100+ vs. 100+) – erst falls/wenn das Projekt wächst
 
 ## Status
