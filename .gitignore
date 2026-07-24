@@ -17,6 +17,10 @@ Plugins/*/Intermediate/
 /Content/Characters/*
 !/Content/Characters/TestKnights/
 !/Content/Characters/Paladin/
+!/Content/Maps/
+!/Content/System/
+/Content/System/*
+!/Content/System/Experiences/
 /Plugins/
 
 # --- IDE / Editor ---

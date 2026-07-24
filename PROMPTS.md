@@ -26,9 +26,11 @@ Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) 
 
 > "Benenne die TestKnight-Prototyp-Assets unter `/Game/Characters/TestKnights/` gemäß Mapping-Tabelle in CLASSES.md zur finalen Paladin-Klasse um: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`. Verschiebe die Assets nach `/Game/Characters/Paladin/`. Werte (250 Health, 25/15 Schaden) unverändert lassen – reine Umbenennung, keine Balance-Änderung. Weise beiden platzierten Instanzen zusätzlich Albion als Team über Lyras vorhandenes Team-System zu (Team-Farbe sichtbar). Prüfe nach der Umbenennung alle internen Referenzen (Blueprint-Reparent, Asset-Referenzen in BeginPlay/Grant-Ability-Logik) und teste per PIE erneut das komplette Duell inkl. Tod/Respawn, um sicherzustellen, dass nichts durch die Umbenennung gebrochen ist."
 
-## Startup-Map setzen (statt Lyras Standard-Frontend)
+## Startup-Map setzen (statt Lyras Standard-Frontend) — historisch, gelöst seit ShooterCore-Deaktivierung
 
-Verwendet für: Play startet standardmäßig Lyras eigenes Frontend/Default-Game statt unserer Testkarte.
+**Status (2026-07-22): erledigt.** Seit die ShooterCore-Plugin-Familie komplett deaktiviert wurde (siehe SETUP.md) und `/Game/Maps/L_PaladinTest` als eigenes Testlevel existiert, zeigen `GameDefaultMap`/`EditorStartupMap` in `Config/DefaultEngine.ini` korrekt darauf. Dieser Prompt bleibt nur als Referenz für das damalige Symptom/die Lösung stehen.
+
+Verwendet für (historisch): Play startete standardmäßig Lyras eigenes Frontend/Default-Game statt unserer Testkarte.
 
 > "The editor is opening Lyra's default showcase hub level (L_DefaultEditorOverview) on startup instead of our test level. Fix both settings: (1) Project Settings → Maps & Modes → set 'Editor Startup Map' and 'Game Default Map' to `/ShooterTests/Maps/L_ShooterTest_Basic`. (2) Editor Preferences → General → Loading & Saving → 'Load Level at Startup' → set to 'Editor Startup Map' (not 'Last Opened Level' or similar) so it actually respects setting (1). Confirm by fully closing and reopening the editor — it should open directly into `L_ShooterTest_Basic` with both Paladin instances, not the Lyra showcase hub."
 
