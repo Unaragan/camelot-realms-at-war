@@ -142,6 +142,14 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 - `/inspect`-Exports (eigene Charakterdaten) als Kalibrierungsreferenz für Itemization-Wertebereiche, nicht zum Import
 - **Ashes of Creation** als Referenz für UE5 + Großschlachten-Netzwerkarchitektur (siehe Skalierung)
 
+## Rückfalloption, falls Lyra sich als Sackgasse erweist (nicht aktiv verfolgt)
+
+Bewusst als Absicherung dokumentiert (2026-07-25), nicht als aktueller Plan: Der Großteil der Reibung bisher kam aus Lyras fortgeschrittenem Experience-/PawnData-System (spielbarer Held als "echter" Lyra-Hero), nicht aus dem Kampfsystem selbst. Sollte das dauerhaft mehr kosten als bringen, wäre die einfachere Alternative Epics **Third Person Template** (kein Experience-System, kein GAS von Haus aus, dafür sofort funktionierende Bewegung/Animation/Kamera) plus manuell nachgerüstetes GAS – ein gut dokumentiertes Community-Muster (z. B. "Getting Started with GAS in Unreal Engine" Tutorials, oder Serien wie [TheDevRealm](https://www.youtube.com/@TheDevRealm)s MMO-Tutorial-Reihe, die genau darauf aufbaut).
+
+**Was dabei erhalten bliebe:** unser eigenes Kampf-/Rückenangriff-/Tod-Respawn-Design (SYSTEMS.md) ist generisches GAS-Wissen, nicht Lyra-spezifisch – der Umbau würde vor allem das Charakter-/Team-/Replikations-Grundgerüst betreffen, das Lyra uns bisher kostenlos liefert.
+
+**Nicht aktiv verfolgt**, solange sich die aktuellen Probleme (siehe SYSTEMS.md Referenzimplementierung v3) als lösbare Einzelfehler statt als grundsätzliche Sackgasse erweisen.
+
 ## Nicht-jetzt-Liste
 
 Bewusst zurückgestellt, um Scope-Explosion zu vermeiden:
