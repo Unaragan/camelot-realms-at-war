@@ -19,6 +19,7 @@ Laufende Dokumentation aller Kosten für Camelot: Realms at War – aktuell anfa
 | Marken/IP | USPTO-Markenanmeldung (USA) | ~250–350 $ | zurückgestellt, falls US-Markt relevant wird | |
 | Domain/Branding | Domain + Social-Handles (camelotrealmsatwar.*) | wenige €/Jahr | jederzeit machbar, günstiger Zwischenschritt | Kein Ersatz für Markenschutz, aber sinnvoll früh zu sichern |
 | Content | Marketplace/Fab-Assets (Platzhalter-Toon-Art) | variabel | offen, noch nicht budgetiert | Abhängig von Umfang der benötigten Platzhalter-Assets |
+| Content | Epic Paragon-Assets (kostenlos, kommerziell nutzbar) für spätere realistischere Charaktere/Waffen (Task #9, nach Toon-Platzhalter-Phase) | 0 € | offener Punkt, noch nicht eingebunden | Komplette Sammlung (39 Helden) ~76 GB — **nicht ins Repo versionieren** (Content-Ausschluss, gleiches Muster wie Lyra selbst), nur gezielt 1-2 passende Helden lokal per Fab laden, wenn tatsächlich gebraucht. Siehe README "Rückfalloption"/Art-Stil-Abschnitt. |
 
 ## Bereits gedeckt (kein zusätzlicher Kostenpunkt)
 
