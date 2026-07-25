@@ -27,6 +27,10 @@ Crafting, Housing, offene persistente Welt, Login-/Account-Server, tiefe Itemiza
 
 Linux-VPS für späteres Dedicated-Server-Hosting (Contabo). Zwei vorhandene Testgeräte: HP ZBook (unteres Performance-Ziel), Ryzen-9/RTX-40er-Desktop (High-End-Referenz) — beide gegen testen, nicht nur den Entwicklerrechner.
 
+## Bug-Tracking
+
+Aktive, noch ungelöste Bugs werden als **GitHub Issues** mit Label `bug` angelegt (`gh issue create --label bug`), nicht nur in SETUP.md/SYSTEMS.md erwähnt. Beim Beheben: Issue schließen (`gh issue close <Nummer>`) mit Verweis auf die Doku-Stelle (SETUP.md-Stolperfallen-Tabelle oder SYSTEMS.md-Referenzimplementierung), die den Fix erklärt. Unterschied zur bisherigen Doku: SETUP.md/SYSTEMS.md sind die **Wissensbasis** (wie wurde X gelöst), GitHub Issues sind der **Statusüberblick** (was ist gerade offen) – `gh issue list --label bug` zeigt auf einen Blick, was noch aktiv ist.
+
 ## Bekannte technische Einschränkung
 
 Git LFS auf GitHub Free hat nur 1 GB Speicher/Monat — mit Lyra als Basis (Content 1,8 GB, Plugins 1,6 GB) bereits eingetreten. Lösung: Content/Plugins bewusst nicht versioniert, separat pro Rechner über Epic Games Launcher installiert. Siehe SETUP.md → "Projekt-Basis: Lyra + Sync-Workflow".
