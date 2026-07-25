@@ -6,6 +6,11 @@ Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details
 
 - **GUI-Chat** (diese Art von Session): Planung, Recherche, GitHub/Repo-Arbeit, Dokumentation. Kein Zugriff auf Unreal-MCP-Werkzeuge, kein `/plugin`-Befehl verfügbar.
 - **Terminal mit laufender `claude`-Sitzung**: einzige Umgebung, in der Unreal-MCP-Werkzeuge (direkte Editor-Steuerung) funktionieren. Siehe SETUP.md. Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
+- **Beide Sitzungen committen/pushen eigenständig ins selbe Repo.** Deshalb: vor Beginn neuer Arbeit immer erst `git pull`, um nicht auf einem veralteten Stand aufzusetzen oder Commits der jeweils anderen Sitzung zu übersehen.
+
+## Definition of Done (Editor-Arbeit)
+
+Eine Terminal-Sitzung darf eine Änderung **nicht** als "behoben"/"verifiziert" melden, nur weil Logs fehlerfrei sind oder Objekt-Properties den erwarteten Wert zeigen. Log-/Property-Checks bestätigen nur "keine Fehlermeldung", nicht "sieht beim tatsächlichen Spielen richtig aus" — das ist wiederholt auseinandergefallen (Animation, Kamera, Instanz-Anzahl). Als "erledigt" gilt eine Änderung erst, wenn der Nutzer sie selbst in einer laufenden Play-Session (nicht nur Edit-Modus) bestätigt hat, idealerweise mit Screenshot. Bis dahin: als "vorgenommen, ungetestet" oder "vorgenommen, wartet auf Bestätigung" melden, nicht als erledigt.
 
 ## Nicht verhandelbare Regeln
 

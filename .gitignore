@@ -11,8 +11,13 @@ Plugins/*/Intermediate/
 # Content (1,8 GB) + Plugins (1,6 GB) sprengen das kostenlose 1-GB-LFS-Kontingent.
 # Workflow: Lyra wird auf jedem Rechner separat ueber Epic Games Launcher installiert,
 # nur eigene Aenderungen (Source/, Config/, .uproject) werden ueber Git synchronisiert.
-# Sobald eigener Content entsteht (z. B. Content/Camelot/), hier gezielt mit "!" freigeben.
+# Konvention ab 2026-07-25: NEUER eigener Content geht unter /Content/Camelot/ statt verstreuter
+# Unterordner - eine einzige Freigabe unten deckt alles Kuenftige ab, keine Jagd nach neuen
+# Ausnahmen pro Ordner mehr. Bestehender verstreuter Content (Characters/Paladin, Maps,
+# System/Experiences) bleibt vorerst dort (Umzug nur per In-Editor-"Move", sonst brechen
+# Asset-Referenzen) - bei Gelegenheit in der Terminal-Sitzung nach /Content/Camelot/ migrieren.
 /Content/*
+!/Content/Camelot/
 !/Content/Characters/
 /Content/Characters/*
 !/Content/Characters/TestKnights/
