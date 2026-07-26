@@ -4,7 +4,7 @@
 # WICHTIG: Projekt liegt jetzt im Git-Repo selbst (nicht mehr unter Documents\Unreal Projects)
 # damit Editor-Arbeit und Versionierung nicht auseinanderlaufen. Siehe SETUP.md.
 $ProjectDir  = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
-$ProjectPath = Join-Path $ProjectDir "Camelot_RAW.uproject"
+$ProjectPath = Join-Path $ProjectDir "CamelotRAW_TP.uproject"
 $EnginePath  = "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe"
 
 if (-not (Test-Path $EnginePath)) {

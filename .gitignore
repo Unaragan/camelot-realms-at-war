@@ -7,25 +7,12 @@ Saved/
 Plugins/*/Binaries/
 Plugins/*/Intermediate/
 
-# --- Lyra-Basis-Content nicht versioniert (GitHub-LFS-Kontingent, siehe COSTS.md) ---
-# Content (1,8 GB) + Plugins (1,6 GB) sprengen das kostenlose 1-GB-LFS-Kontingent.
-# Workflow: Lyra wird auf jedem Rechner separat ueber Epic Games Launcher installiert,
-# nur eigene Aenderungen (Source/, Config/, .uproject) werden ueber Git synchronisiert.
-# Konvention ab 2026-07-25: NEUER eigener Content geht unter /Content/Camelot/ statt verstreuter
-# Unterordner - eine einzige Freigabe unten deckt alles Kuenftige ab, keine Jagd nach neuen
-# Ausnahmen pro Ordner mehr. Bestehender verstreuter Content (Characters/Paladin, Maps,
-# System/Experiences) bleibt vorerst dort (Umzug nur per In-Editor-"Move", sonst brechen
-# Asset-Referenzen) - bei Gelegenheit in der Terminal-Sitzung nach /Content/Camelot/ migrieren.
+# --- Third-Person-Template-Basis-Content nicht versioniert (GitHub-LFS-Kontingent, siehe COSTS.md) ---
+# Seit Architekturwechsel 2026-07-26 (README.md): Third Person Template statt Lyra.
+# Konvention: NEUER eigener Content geht unter /Content/Camelot/ - eine einzige Freigabe
+# deckt alles Kuenftige ab, keine Jagd nach neuen Ausnahmen pro Ordner mehr.
 /Content/*
 !/Content/Camelot/
-!/Content/Characters/
-/Content/Characters/*
-!/Content/Characters/TestKnights/
-!/Content/Characters/Paladin/
-!/Content/Maps/
-!/Content/System/
-/Content/System/*
-!/Content/System/Experiences/
 /Plugins/
 
 # --- IDE / Editor ---
