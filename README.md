@@ -22,7 +22,7 @@ Der Kern von DAOC, den dieses Projekt einfangen will: **kleine, taktische Kämpf
 ## Tech-Stack
 
 - **Engine:** Unreal Engine 5.8 (installiert unter `C:\Program Files\Epic Games\UE_5.8`)
-- **Basis/Referenz:** Epics Lyra Starter Game (Team-System, Multiplayer-Grundgerüst, Gameplay Ability System bereits eingerichtet)
+- **Basis/Referenz:** Epics **Third Person Template** (seit 2026-07-26, siehe "Architekturwechsel" unten) – Team-System/Multiplayer-Grundgerüst/GAS werden manuell nachgerüstet statt wie bei Lyra vorgefertigt übernommen
 - **Kampfsystem:** Gameplay Ability System (GAS) – Klassen, Fähigkeiten, Cooldowns, Buffs/Debuffs, netzwerk-repliziert
 - **Sprachen:** C++ für Kernsysteme, Blueprints/DataTables für Content & Balancing
 - **Netzwerkmodell (Prototyp):** Listen Server; Dedicated Server erst wenn nötig
@@ -142,13 +142,15 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 - `/inspect`-Exports (eigene Charakterdaten) als Kalibrierungsreferenz für Itemization-Wertebereiche, nicht zum Import
 - **Ashes of Creation** als Referenz für UE5 + Großschlachten-Netzwerkarchitektur (siehe Skalierung)
 
-## Rückfalloption, falls Lyra sich als Sackgasse erweist (nicht aktiv verfolgt)
+## Architekturwechsel (2026-07-26): Lyra → Third Person Template
 
-Bewusst als Absicherung dokumentiert (2026-07-25), nicht als aktueller Plan: Der Großteil der Reibung bisher kam aus Lyras fortgeschrittenem Experience-/PawnData-System (spielbarer Held als "echter" Lyra-Hero), nicht aus dem Kampfsystem selbst. Sollte das dauerhaft mehr kosten als bringen, wäre die einfachere Alternative Epics **Third Person Template** (kein Experience-System, kein GAS von Haus aus, dafür sofort funktionierende Bewegung/Animation/Kamera) plus manuell nachgerüstetes GAS – ein gut dokumentiertes Community-Muster (z. B. "Getting Started with GAS in Unreal Engine" Tutorials, oder Serien wie [TheDevRealm](https://www.youtube.com/@TheDevRealm)s MMO-Tutorial-Reihe, die genau darauf aufbaut).
+**Aktiv umgesetzt, nicht mehr nur Rückfalloption.** Grund: selbst der kleinstmögliche Testfall (1 leere Map, 1 spielerkontrollierter Paladin, keine Fähigkeiten, kein zweiter Akteur) zeigte in mehreren Runden trotz mehrfach "verifizierter" Fixes im echten Play-Test entweder komplett eingefrorene oder rein gleitende Bewegung ohne jede Animation (siehe Issue #14). Die Ursache lag wiederholt in Lyras fortgeschrittenem Experience-/PawnData-/LinkedAnimLayer-System, das für KI-gestütztes Debugging via Property-/Log-Checks strukturell schlecht zugänglich ist (verteilte Laufzeit-Verdrahtung statt direkt inspizierbarer Zustände).
 
-**Was dabei erhalten bliebe:** unser eigenes Kampf-/Rückenangriff-/Tod-Respawn-Design (SYSTEMS.md) ist generisches GAS-Wissen, nicht Lyra-spezifisch – der Umbau würde vor allem das Charakter-/Team-/Replikations-Grundgerüst betreffen, das Lyra uns bisher kostenlos liefert.
+**Neue Basis:** Epics **Third Person Template** (kein Experience-System, kein GAS von Haus aus, dafür sofort funktionierende Bewegung/Animation/Kamera) plus manuell nachgerüstetes GAS – ein gut dokumentiertes Community-Muster (z. B. "Getting Started with GAS in Unreal Engine" Tutorials, oder Serien wie [TheDevRealm](https://www.youtube.com/@TheDevRealm)s MMO-Tutorial-Reihe, die genau darauf aufbaut).
 
-**Nicht aktiv verfolgt**, solange sich die aktuellen Probleme (siehe SYSTEMS.md Referenzimplementierung v3) als lösbare Einzelfehler statt als grundsätzliche Sackgasse erweisen.
+**Was erhalten bleibt:** unser eigenes Kampf-/Rückenangriff-/Tod-Respawn-Design (SYSTEMS.md) ist generisches GAS-Wissen, nicht Lyra-spezifisch – der Umbau betrifft vor allem das Charakter-/Team-/Replikations-Grundgerüst, das Lyra bisher kostenlos mitgeliefert hat.
+
+**Vorgehen:** neues Projekt auf Basis Third Person Template, kleine leere Testmap (kein Standard-Grayboxing nötig) für den reinen Funktionstest (Bewegung + Animation zuerst, danach GAS-Kampf schrittweise wieder aufbauen).
 
 ## Nicht-jetzt-Liste
 
