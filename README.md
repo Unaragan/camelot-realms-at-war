@@ -142,6 +142,7 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 - `/inspect`-Exports (eigene Charakterdaten) als Kalibrierungsreferenz für Itemization-Wertebereiche, nicht zum Import
 - **Ashes of Creation** als Referenz für UE5 + Großschlachten-Netzwerkarchitektur (siehe Skalierung)
 - **AssetHub.io** (https://assethub.io/) – Bilder/Text → 3D-Meshes mit AI-Generierung, für schnelle Placeholder-Assets oder Basis-Modelle (direkt in UE5 importierbar). Nutzen für frühe Character-/Item-/Environment-Prototypen, bevor Custom-Art commissioned wird
+- **RPG System - All-In-One (Top-Down & Third-Person)** – Marketplace-Asset für späteren Referenz-Check, falls GAS-Setup erweitert werden soll; bietet sowohl Top-Down als auch Third-Person RPG-Systeme als Referenzmaterial (nicht für direkten Code-Import, nur als Architektur-Benchmark)
 
 ## Architekturwechsel (2026-07-26): Lyra → Third Person Template
 
