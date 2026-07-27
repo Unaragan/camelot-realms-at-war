@@ -20,16 +20,26 @@ Siehe CLASSES.md: jede Klasse hat **zwei Talent-Pfade** (defensiv/support vs. of
 **Endgame Phase (Lv 50+):**
 - **Skill-Progression setzt sich fort** (1 Punkt pro ~30-60 Min Spielzeit)
 - **Skill-Caps mit Titel-Rewards:**
-  - **Common:** 0-100 Skill (casual)
-  - **Uncommon:** 100-250 Skill
-  - **Rare:** 250-500 Skill
-  - **Epic:** 500-1000 Skill
-  - **Legendary:** 1000-1050 Skill (End-Game-Ziel)
+  - **Common:** 0-100 Skill (einfache Items craften, casual combat)
+  - **Uncommon:** 100-250 Skill (Standard-Crafting, Normal-Dungeons)
+  - **Rare:** 250-500 Skill (Bessere Items, schwierigere Dungeons)
+  - **Epic:** 500-1000 Skill (Epic-Items craften ODER Boss-Loot)
+  - **Legendary:** 1000-1050 Skill (End-Game-Ziel, nur Epic-Crafting!)
+
+**WICHTIG: Legendary (1000+) nur durch EPIC-CRAFTING erreichbar:**
+- ❌ Sub-Komponenten allein = max bis ~900 Skill
+- ❌ Common/Uncommon/Rare Crafting = max bis ~800 Skill
+- ✅ **Nur wer Epic-Items handwerkt, kann Legendary erreichen**
+  - Alchemist: Epic Tränke mit seltenen Zutaten
+  - Waffenschmied: Epic Waffen (Adamantite, Rune-touched)
+  - Rüstungsschmied: Epic Rüstung (Adamantite)
+  - etc.
 
 **Legendär-Reward bei 1050 Skill:**
-- ✅ Titel (z. B. "Paladin of the Light", "Master Berserker")
-- ✅ Visuelle Cosmetic (Item-Glow, Aura, oder spezielle Particle-Effect)
+- ✅ Titel (z. B. "Paladin of the Light", "Master Berserker", "Legendary Weaponsmith")
+- ✅ Visuelle Cosmetic (Item-Glow, Aura, spezielle Particle-Effect)
 - ✅ Small stat boost (+2-3% final stats)
+- ✅ Rare Crafting-Bonus: Epic-Items bekommen +5% extra Qualität
 - Später: **Neuspec/Respeck möglich** (Kosten-Option)
 
 ### 2. **Zwei Talent-Pfade pro Klasse**

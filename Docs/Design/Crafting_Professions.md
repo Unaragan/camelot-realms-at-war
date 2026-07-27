@@ -226,6 +226,44 @@ Für erste Implementation (später, nach Character/Chat/Skills):
 
 ---
 
+## Skill-Progression (Legendary Crafting)
+
+**Skill-Punkte pro Craft (abhängig von Item-Qualität):**
+
+| Item-Typ | Common | Uncommon | Rare | Epic |
+|---|---|---|---|---|
+| **Simple Items** (kein Sub-Crafting nötig) | +1 Skill | +2 Skill | +4 Skill | +8 Skill |
+| **Complex Items** (mit Sub-Komponenten) | +2 Skill | +4 Skill | +8 Skill | +16 Skill |
+
+**Beispiele:**
+```
+Alchemist craftet Common Health Potion:     +1 Skill
+Alchemist craftet Epic Mana Flask:          +8 Skill (simple)
+
+Waffenschmied craftet Uncommon Sword:       +2 Skill (keine Sub-Komponenten)
+Waffenschmied craftet Epic Greatsword:      +16 Skill (mit Grip + Pommel)
+```
+
+**Path to Legendary (1050 Skill):**
+- Nur Epic-Crafting gibt genug Skill-Punkte um 1000+ zu erreichen
+- Sub-Komponenten allein (Rare max +8) = bottleneck bei ~900 Skill
+- **Spieler muss sich spezialisieren:** "Ich craften nur Epic-Waffen"
+
+**Cooldown pro Craft:**
+- Common: 5 Min
+- Uncommon: 10 Min
+- Rare: 20 Min
+- Epic: **60 Min** (sehr zeitaufwendig, aber viel Skill!)
+
+**Beispiel Legendary-Progression:**
+```
+Day 1: 50 Epic-Crafts @ +16 Skill = 800 Skill (50 Min pro Craft = 50 Stunden gameplay)
+Day 2-3: weitere 50 Epic-Crafts = 1600 Skill (aber nur bis 1050 zählt)
+Final: 1050 Legendary Skill erreicht → Titel + Cosmetic
+```
+
+---
+
 ## Offene Punkte
 
 - **Beruf-Leveln:** Soll XP durchs Craften steigen oder durch NPC-Quests? (wahrscheinlich beides)
