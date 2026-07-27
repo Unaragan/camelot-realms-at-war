@@ -102,6 +102,76 @@ Resultat: Knight's Steel Longsword (Uncommon)
 
 ---
 
+## Vertikales Crafting (Sub-Komponenten)
+
+**Komplexe Items brauchen Komponenten von mehreren Berufen** — schafft Interdependenz & Economy.
+
+### Beispiele:
+
+**Knight's Steel Plate (Rüstungsschmied)**
+```
+Benötigte Komponenten:
+  - Steel Plate (Armorsmith craftet) = 10x Steel Ore
+  - Leather Undergarment (Leatherworker craftet) = 5x Leder
+  - Steel Fittings (Jeweler craftet) = 2x Steel Ore + Schnallen
+  
+Finales Item: Knight's Steel Plate (Uncommon, +10% Armor)
+  - Stärker weil gut zusammengestellt
+  - Braucht 3 verschiedene Handwerker!
+```
+
+**Greatsword (Waffenschmied)**
+```
+Benötigte Komponenten:
+  - Steel Blade (Weaponsmith craftet) = 8x Steel Ore
+  - Leather Grip (Leatherworker craftet) = 3x Leder
+  - Steel Pommel/Guard (Jeweler craftet) = 2x Steel Ore
+  
+Finales Item: Knight's Greatsword (Uncommon, +10% Damage)
+```
+
+**Mithril Robe (Tailor)**
+```
+Benötigte Komponenten:
+  - Mithril Cloth (Tailor selbst craftet) = 5x Mithril Cloth
+  - Mithril Bindings (Jeweler craftet) = 2x Mithril Ore + Schnallen
+  - Enchanted Threads (Alchemist craftet) = 2x Mana Crystal
+  
+Finales Item: Mithril Robe (Uncommon, +7% Mana Pool)
+```
+
+### Economy-Flow:
+
+```
+Spieler verdient Gold
+        ↓
+Kauft Rohmaterialien (Steel Ore, Leder, etc.) vom NPC-Vendor
+        ↓
+Verkauft an Spezialisten im AH:
+  - Weaponsmith: "Ich brauche Steel Blades" → kauft von Crafter
+  - Leatherworker: "Ich brauche Leather Grips" → kauft von Crafter
+  - Jeweler: "Ich brauche Steel Fittings" → kauft von Crafter
+        ↓
+Jeder spezialisierter Crafter kann diese Sub-Items im AH verkaufen
+        ↓
+Spieler kombiniert alles zu Final-Item (besser als nur Rohmaterialien)
+```
+
+### Vorteile:
+
+- ✅ **Berufe sind interdependent** — Alchemist braucht Leatherworker, etc.
+- ✅ **AH wird lebendiger** — Sub-Komponenten werden gekauft/verkauft
+- ✅ **Spezialisierte Crafter verdienen** — "Ich mache nur Leather Grips" ist legit
+- ✅ **Progression:** Simple Items (nur Rohmaterialien) → Komplexe Items (mehrere Komponenten)
+
+### Vertical Slice:
+
+- ✅ Einfache Sub-Komponenten: Leather Grip, Steel Fittings (nur 1-2 Levels)
+- ⏸ Tiefe Craft-Chains (später, wenn System stabil)
+- ⏸ Komponenten-Qualität (später: "Good Grip" vs. "Flawed Grip")
+
+---
+
 ## Material-Quellen (Kein Farming-RPG!)
 
 **Philosophie:** Crafting ist ein **Progression-System**, nicht ein **Farming-Grind-System**. Materialien sollten leicht verfügbar sein via Gold, nicht via stundenlange Farming-Sessions.
