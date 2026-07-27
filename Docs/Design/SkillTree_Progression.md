@@ -10,12 +10,27 @@ Siehe CLASSES.md: jede Klasse hat **zwei Talent-Pfade** (defensiv/support vs. of
 
 ## Progression-Mechaniken
 
-### 1. **Talent-Punkte (per Level)**
+### 1. **Skill-Punkte (Langzeit-Progression)**
 
-- Spieler bekommt **1 Talent-Punkt pro Level** (Level 1 → 50 = bis zu 50 Punkte)
+**Leveling Phase (Lv 1-50):**
+- Spieler bekommt **1 Skill-Punkt pro Level** (Level 1 → 50 = 50 Punkte)
 - Punkte investieren in **zwei Talent-Bäume** der Klasse
 - Maximal **25 Punkte pro Baum** (ausbalanciert)
-- Später: **Neuspec/Respeck möglich** (Kosten-Option für Endgame)
+
+**Endgame Phase (Lv 50+):**
+- **Skill-Progression setzt sich fort** (1 Punkt pro ~30-60 Min Spielzeit)
+- **Skill-Caps mit Titel-Rewards:**
+  - **Common:** 0-100 Skill (casual)
+  - **Uncommon:** 100-250 Skill
+  - **Rare:** 250-500 Skill
+  - **Epic:** 500-1000 Skill
+  - **Legendary:** 1000-1050 Skill (End-Game-Ziel)
+
+**Legendär-Reward bei 1050 Skill:**
+- ✅ Titel (z. B. "Paladin of the Light", "Master Berserker")
+- ✅ Visuelle Cosmetic (Item-Glow, Aura, oder spezielle Particle-Effect)
+- ✅ Small stat boost (+2-3% final stats)
+- Später: **Neuspec/Respeck möglich** (Kosten-Option)
 
 ### 2. **Zwei Talent-Pfade pro Klasse**
 
