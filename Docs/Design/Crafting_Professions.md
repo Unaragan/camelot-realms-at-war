@@ -65,18 +65,35 @@ Boss-Drops (Epic/Unique)
 
 ## Crafting-Mechanik
 
-### Rezepte lernen:
-- **Anfänger:** 3-5 Basis-Rezepte (mit Handwerk starten)
+### Rezepte lernen & Level-Requirements:
+- **Anfänger:** 3-5 Basis-Rezepte (mit Handwerk starten, Lv 1+)
 - **Leveln:** Jedes Level 1-2 neues Rezept freischalten
 - **Max Level (50):** ~20-25 Rezepte pro Beruf (viel Auswahl!)
 - **Rezepte sind **geteilt** — jeder kann sie sehen, aber Hauptberuf bekommt Boni**
-- **Beispiel Waffenschmied Lvl 1-50:**
-  - Lv 1: Wooden Dagger, Iron Sword
-  - Lv 5: Steel Sword, Steel Axe
-  - Lv 10: Mithril Longsword, Mithril Battle Axe
-  - Lv 20: Dragon Leather Armor Enhancements
-  - Lv 30: Rune-touched Greatsword
-  - Lv 50: Adamantite Weapons (best crafted)
+
+**Level-Requirements pro Rarity:**
+| Rarity | Min. Charakter-Level | Erfolgsrate bei Min-Level |
+|---|---|---|
+| **Common** | 1+ | 100% |
+| **Uncommon** | 10+ | 98% |
+| **Rare** | 25+ | 90% |
+| **Epic** | 40+ | 75% |
+
+- ❌ **Lv 5 Crafter kann NICHT Epic craften** (Level 40+ erforderlich!)
+- ❌ **Lv 15 versucht Epic** → 100% zerstört (zu unerfahren)
+- ✅ **Lv 40+ kann Epic versuchen** → 75-99% Erfolg (basierend auf Skill)
+
+**Beispiel Waffenschmied Lvl 1-50 (Rezepte-Progression):**
+  - Lv 1: Wooden Dagger (Common), Iron Sword (Common)
+  - Lv 5: Leather Grip (Sub, Uncommon), Oak Hilt (Sub, Common)
+  - Lv 10: Steel Sword (Uncommon), Steel Axe (Uncommon)
+  - Lv 15: Steel Blade (Sub, Uncommon)
+  - Lv 20: Mithril Longsword (Rare), Mithril Battle Axe (Rare)
+  - Lv 25: Mithril Fittings (Sub, Rare)
+  - Lv 30: Rune-touched Greatsword (Rare)
+  - Lv 40: Adamantite Sword (Epic), Adamantite Axe (Epic)
+  - Lv 45: Dragon Ore Blade (Sub, Epic, rare material)
+  - Lv 50: Adamantite Greatsword (Epic, max crafted)
 
 ### Beispiel-Crafting (Waffenschmied):
 ```
@@ -304,28 +321,61 @@ Waffenschmied craftet Epic Greatsword:      +16 Skill (mit Grip + Pommel)
 - Rare: 20 Min
 - Epic: **60 Min** (sehr zeitaufwendig, aber viel Skill!)
 
-**Erfolgsrate-Verbesserung durch Skill:**
-- **Jeder 50 Skill = +2% Erfolgsrate** (max 99%)
-- Lv1 Crafter mit Epic: 75% → 77% Erfolg (besser als 0%)
-- Lv50 Crafter mit Epic: 75% → 95% Erfolg (viel sicherer)
-- **Legendary Crafter (1050 Skill):** 75% + (1050÷50×2%) = 75% + 42% = **99% Erfolgsrate!**
-
-**Beispiel Legendary-Progression mit Risiko:**
+**Erfolgsrate-Formel:**
 ```
-Day 1: Anfänger versucht 10 Epic-Crafts
-  - 75% Erfolgsrate = ~7-8 erfolgreich
-  - ~2-3 Fehler = 650 Gold Verlust pro Fehler
-  - Netto: 8 erfolgreiche Crafts @ +16 Skill = 128 Skill (aber 1950 Gold Risiko!)
+Basis-Erfolgsrate (nach Rarity) + Skill-Bonus
+Basis:
+  - Common: 100%
+  - Uncommon: 98%
+  - Rare: 90%
+  - Epic: 75%
 
-Tag 10: Lv500 Crafter versucht 10 Epic-Crafts
-  - 95% Erfolgsrate = ~9-10 erfolgreich
-  - ~0-1 Fehler = sicherer
-  - Netto: 9 erfolgreiche Crafts @ +16 Skill = 144 Skill (nur ~200 Gold Risiko)
+Skill-Bonus:
+  - Jeder 50 Skill = +2% (max +42% bei 1050 Skill)
 
-Legendary Crafter (1050+):
-  - 99% Erfolgsrate = praktisch risk-free
-  - Kann Mass-Production fahren
+Level-Penalty (wenn unter Min-Level):
+  - Jedes Level unter Min-Requirement = -10% Erfolgsrate
+  - Wenn Erfolgsrate < 0% nach Berechnung = 0% (100% Fehler)
 ```
+
+**Beispiele:**
+
+```
+Scenario 1: Lv 35 Crafter, Skill 100, versucht Epic (benötigt Lv 40)
+  - Basis Epic: 75%
+  - Skill-Bonus: 100÷50×2% = +4%
+  - Level-Penalty: 5 Levels zu niedrig = -50%
+  - Final: 75% + 4% - 50% = 29% Erfolgsrate
+  - ⚠️ Sehr riskant!
+
+Scenario 2: Lv 40 Crafter, Skill 500, versucht Epic (genau Min-Level)
+  - Basis Epic: 75%
+  - Skill-Bonus: 500÷50×2% = +20%
+  - Level-Penalty: 0 (auf Min-Level)
+  - Final: 75% + 20% = 95% Erfolgsrate
+  - ✅ Sicher genug zum Craften
+
+Scenario 3: Lv 50 Legendary, Skill 1050, versucht Epic
+  - Basis Epic: 75%
+  - Skill-Bonus: 1050÷50×2% = +42%
+  - Level-Penalty: 0 (Lv 50 > Lv 40 requirement)
+  - Final: 75% + 42% = 99% Erfolgsrate
+  - ✅ Praktisch risk-free!
+
+Scenario 4: Lv 1 Crafter, Skill 0, versucht Epic (benötigt Lv 40)
+  - Basis Epic: 75%
+  - Skill-Bonus: 0%
+  - Level-Penalty: 39 Levels zu niedrig = -390% (aber min. 0%)
+  - Final: 0% (100% FEHLER — alles zerstört!)
+  - ❌ Keine Chance, auch zu jung
+```
+
+**Progression-Realität:**
+- **Lv 1-9:** Nur Common craften (100% Erfolg)
+- **Lv 10-24:** Uncommon craften (90-98% Erfolg)
+- **Lv 25-39:** Rare craften (80-90% Erfolg)
+- **Lv 40+:** Epic craften (75%+ bis 99%)
+- **Lv 50 + Skill 1050:** Praktisch 99% = can farm Epic reliably
 
 **Risiko-Reward:**
 - ✅ Anfänger: hohe Fehlerchance = teuer, aber machbar
