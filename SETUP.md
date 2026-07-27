@@ -1,6 +1,6 @@
 # Setup: Unreal MCP (Claude Code ↔ Unreal Editor)
 
-Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren, DataTables, UMG-Widgets, u. v. m. – ohne blindes GUI-Klicken). Basiert auf Epics offiziellem Plugin [`unreal-engine-skills-for-claude-code-plugin`](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin). Erfolgreich getestet: **41 Toolsets** registriert, inkl. aller GAS-Werkzeuge (GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, GameplayCueToolset).
+Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren, DataTables, UMG-Widgets, u. v. m. – ohne blindes GUI-Klicken). Basiert auf Epics offiziellem Plugin [`unreal-engine-skills-for-claude-code-plugin`](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin). Erfolgreich getestet: **53 Toolsets** registriert (Stand CamelotRAW_TP, 2026-07-27), inkl. aller GAS-Werkzeuge (GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, GameplayCueToolset).
 
 ## Wichtige Voraussetzung: richtiges Fenster benutzen
 
@@ -63,7 +63,7 @@ Danach `claude` neu starten. Zur Kontrolle `/mcp` eingeben → "List/manage MCP 
 
 > "Rufe das Werkzeug list_toolsets bei unreal-mcp auf und zeig mir alle registrierten Toolsets"
 
-Bei korrekter Einrichtung: 41 Toolsets, u. a. ActorTools, BlueprintTools, DataTableTools, MaterialTools, GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, UMGToolSet.
+Bei korrekter Einrichtung: 53 Toolsets, u. a. ActorTools, BlueprintTools, DataTableTools, MaterialTools, GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, UMGToolSet.
 
 ## Projekt-Basis: Third Person Template + Sync-Workflow
 
@@ -89,11 +89,11 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 | `/mcp` zeigt `unreal-mcp` gar nicht erst in der Serverliste | `claude mcp add` (Schritt 5) wurde nur fürs alte Projekt gemacht; die Registrierung ist **projektbezogen** (`.mcp.json`), nicht global – ein neu angelegtes Projekt hat sie nicht automatisch | Schritt 5 bei jedem neuen/umgezogenen Projekt erneut ausführen: `claude mcp add --transport http unreal-mcp http://localhost:8000/mcp` |
 | Plugin-Aktivierung wirkt nicht, obwohl Häkchen gesetzt | Experimentelle Plugins (z. B. "Unreal MCP") zeigen beim Aktivieren einen Bestätigungsdialog – Server-Start-Befehle *vor* dieser Bestätigung schlagen fehl, auch nach Neustart-Anschein | Bestätigungsdialog abnicken, **danach** Editor komplett neu starten, erst dann `ModelContextProtocol.StartServer` |
 | Build schlägt fehl: `Visual Studio is installed, but is out of date or missing a valid C++ toolchain` | Installierte MSVC-Buildtools-Version unter dem von UE 5.8 geforderten Minimum (v14.38.33130, bevorzugt v14.50.35717 = VS 17.8+) | Visual Studio Installer öffnen → "Ändern" → Workload "Desktopentwicklung mit C++" sicherstellen, unter "Einzelne Komponenten" neueste "MSVC v143 – VS 2022 C++ x64/x86-Buildtools" installieren/aktualisieren, ggf. auch die VS-IDE selbst aktualisieren |
-| `error CS0579: Doppeltes Attribut "AssemblyTitleAttribute"/"AssemblyVersionAttribute"` in `Lyra.Automation.AssemblyInfo.cs` beim AutomationTool-Build | Stale generierter .NET-Build-Cache unter `Build/Scripts/obj/` (entsteht v. a. nach Projekt-Verschiebungen) – ist bereits **zweimal** in dieser Session aufgetreten | `Build/Scripts/obj/`, `Build/Scripts/bin/` und `Build/Scripts/uatobj/` löschen (reine generierte Caches, ungefährlich), danach Build erneut anstoßen |
-| Live Coding: `Could not spawn process ...UnrealBuildAccelerator/x64/UbaCli.exe. Error: 267` bei **jedem** Modul, "Failed to link patch (0.000s)" | Der Live-Coding-Hot-Patch-Schritt (versucht, eine neu kompilierte DLL in eine **bereits laufende** Editor-Instanz zu spritzen) scheitert konsequent an diesem UBA-Hilfsprogramm – auch mit AV komplett deaktiviert und Pfad-Ausnahmen. Der eigentliche Compile/Link-Schritt selbst (voller Build, `Result: Succeeded`) ist davon nicht betroffen | Live Coding für dieses Projekt deaktivieren: Editor Preferences → General → Live Coding → "Enable Live Coding" abwählen. Nach C++-Änderungen stattdessen den Editor immer **komplett schließen und neu starten** (lädt die frische DLL direkt von der Platte, ohne den kaputten Patch-Pfad) – das war in jedem Testfall zuverlässig |
-| `scalability N`-Konsolenbefehl wirkt sofort, aber jede neue PIE-Session fällt zurück auf Quality-Level 3 (Epic) | Der reine Konsolenbefehl setzt nur die CVars für die laufende Sitzung, speichert aber **nicht** automatisch (anders als oft angenommen) – `Saved/Config/Windows/Scalability.ini` wird dabei nie geschrieben | `Saved/Config/Windows/Scalability.ini` manuell mit `[ScalabilityGroups]`-Sektion und den gewünschten `sg.*`-Werten (z. B. `sg.ViewDistanceQuality=1`) anlegen, danach Editor **komplett neu starten** (nicht nur PIE neu starten) |
+| `scalability N`-Konsolenbefehl wirkt sofort, aber jede neue PIE-Session fällt zurück auf Quality-Level 3 (Epic) | Der reine Konsolenbefehl setzt nur die CVars für die laufende Sitzung, speichert aber **nicht** automatisch (anders als oft angenommen) – `Saved/Config/Windows/Scalability.ini` wird dabei nie geschrieben | Projektweiter Fix in `Config/DefaultEngine.ini` unter `[SystemSettings]` (siehe README "Performance-Ziele") – gilt für jede Maschine, kein manueller Schritt pro Session nötig |
 | `PluginToolset.SetPluginEnabled` (MCP) meldet Erfolg, aber `.uproject` bleibt unverändert | MCP-Tool persistiert die Änderung in dieser UE-5.8-Version nicht auf die Platte, obwohl kein Fehler zurückkommt | `CamelotRAW_TP.uproject` direkt als JSON bearbeiten (die `"Enabled"`-Flags der betroffenen Plugin-Einträge auf `false`/`true` setzen) – identischer Effekt wie über den Plugin-Browser der Editor-UI |
+
+**Zwei Lyra-C++-Build-spezifische Stolperfallen (Automation-Build-Cache, Live-Coding/UBA-Fehler) entfallen mit dem reinen Blueprint-Projekt seit dem Architekturwechsel — archiviert in [Archive.md](Archive.md).**
 
 ## Status
 
-🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-18) – 41 Toolsets bestätigt verbunden. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
+🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-27, CamelotRAW_TP) – 53 Toolsets bestätigt verbunden. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
