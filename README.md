@@ -94,8 +94,8 @@ Realitätscheck zu DAOC selbst: auch die legendären Keep-Sieges waren nie wirkl
 **Phase 0 – UE5-Grundlagen** 🟡 *in Arbeit*
 Blueprint-Basics (Epics "Your First Hour"), danach gezielt Multiplayer/Replikation lernen, kleine Wegwerf-Projekte vor dem eigentlichen Projekt.
 
-**Phase 1 – Technische Basis**
-Lyra als Ausgangsbasis einrichten, Projektstruktur (C++/Blueprint-Aufteilung) festlegen, Rendering-Pipeline (siehe Performance-Ziele) konfigurieren.
+**Phase 1 – Technische Basis** 🟢 *abgeschlossen*
+Third Person Template als Ausgangsbasis einrichten, GAS (Gameplay Ability System) manuell per Blueprint nachgerüsten, Projektstruktur (C++/Blueprint-Aufteilung) festlegen, Rendering-Pipeline (siehe Performance-Ziele) konfigurieren. (Architekturwechsel von Lyra auf Third Person Template 2026-07-26, um Scope/LFS-Overhead zu reduzieren.)
 
 **Phase 2 – Vertical Slice: Battleground zuerst, Startgebiet später**
 
