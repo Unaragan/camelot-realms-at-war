@@ -97,6 +97,23 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 
 **Zwei Lyra-C++-Build-spezifische Stolperfallen (Automation-Build-Cache, Live-Coding/UBA-Fehler) betrafen den alten Lyra-Stand — archiviert in [Archive.md](Archive.md). Seit 2026-07-27 hat das Projekt trotz "Blueprint-first"-Grundsatz wieder ein (bewusst minimales) C++-Modul, s. o.**
 
+## Projekt-Zwei-Maschinen-Sync: Content via OneDrive (2026-07-27)
+
+**Situation:** `Content/` wird nicht versioniert (Git-LFS-Quota-Problem, siehe CLAUDE.md). Um Content zwischen ZBook und Powerrechner zu synchronisieren, wird **OneDrive-Symlink** genutzt.
+
+**Powerrechner-Setup (2026-07-27 durchgeführt):** Symlink erstellt:
+```powershell
+New-Item -ItemType Junction -Path "C:\Claude\camelot-realms-at-war\Content\Camelot" -Target "C:\Users\User\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
+```
+
+**Offener Punkt für ZBook:** Beim nächsten Sessin auf dem ZBook als **erstes** durchführen:
+```powershell
+# (Pfad anpassen an ZBooks OneDrive-Pfad, z. B. D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot oder ähnlich)
+New-Item -ItemType Junction -Path "D:\Claude\camelot-realms-at-war\Content\Camelot" -Target "D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
+```
+
+Danach wird OneDrive automatisch beide Machines synchronisieren. Editor nach Junction-Erstellung **neu starten**.
+
 ## Status
 
-🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-27, CamelotRAW_TP) – 53 Toolsets bestätigt verbunden. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
+🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-27, CamelotRAW_TP) – 53 Toolsets bestätigt verbunden. Content-Sync über OneDrive-Symlink auf Powerrechner aktiv. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
