@@ -34,6 +34,7 @@
 ```
 ┌─────────────────────────────────────────────────────┐
 │  [Name/Level] [Health Bar] [Mana Bar]   [Minimap]  │  ← Top
+│  [BG Players: 🔴 Albion: 12  🔵 Midgard: 15  🟢 Hibernia: 10]
 ├─────────────────────────────────────────────────────┤
 │                                                      │
 │                   3D-Game-Viewport                  │
@@ -43,6 +44,12 @@
 │              [Status Icons]      [Group]             │
 └─────────────────────────────────────────────────────┘
 ```
+
+**Battleground Player-Count (oben im HUD):**
+- Live-Anzeige: `[🔴 Albion: X]  [🔵 Midgard: Y]  [🟢 Hibernia: Z]`
+- Farbcodierung nach Realm
+- Nur die Zahlen, minimal (keine Namen)
+- Real-time Update (Server sendet Count-Changes zu allen Clients)
 
 **Elemente:**
 
@@ -98,6 +105,37 @@
 - **Gameplay:** Difficulty, Auto-Loot, Auto-Attack
 - **Keybinds:** Customizable (später)
 - Buttons: Apply, Cancel, Restore Defaults
+
+### 10. **Battleground Player-Count Panel** (Vertical Slice)
+
+**Live Player-Count (im HUD, oben rechts oder als Widget):**
+```
+┌──────────────────────────────────┐
+│  BATTLEGROUND PLAYERS             │
+│  🔴 Albion:     12 players        │
+│  🔵 Midgard:    15 players        │
+│  🟢 Hibernia:   10 players        │
+│                                  │
+│  [Show Realm Players]  [Close]   │
+└──────────────────────────────────┘
+```
+
+**Funktionalität:**
+- **Immer sichtbar:** Echtzahl aller aktiven Spieler pro Reich im BG
+- **Nur für eigenes Reich:** Button `[Show Realm Players]` → Liste der Spieler aus eigenem Reich mit Level/Klasse
+- **Server-Update:** Alle 5-10 Sekunden aktualisiert (bei Spawn/Death/DC)
+
+**Eigenes-Reich-Detail-Abfrage:**
+- Slash-Befehl: `/bgplayers` oder `/bg players` → zeigt alle Spieler aus eigenem Reich im BG
+- Format: `Name [Level Klasse] [HP-Status]`
+- Beispiel:
+  ```
+  Albion Players in Battleground (12):
+  • Paladin42 [45 Paladin] [Healthy]
+  • Cleric99 [44 Cleric] [Wounded]
+  • Wizard23 [46 Wizard] [Healthy]
+  ... (etc.)
+  ```
 
 ## Offene Punkte
 
