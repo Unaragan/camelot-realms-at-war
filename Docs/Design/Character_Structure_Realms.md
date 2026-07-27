@@ -66,6 +66,31 @@ Aus der Frontier-Vision ([OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Fronti
   - **Druid:** Fließendes Gewand, Natur-Totems, wenig Rüstung
   - **Ranger:** Leichte Rüstung, Bogen, Natur-Tarnkleidung, mobil
 
+## Blueprint-Vererbungs-Architektur (Master + Spezialisierungen)
+
+**Kern-Prinzip:** Ein Master-Character erbt alle gemeinsamen Eigenschaften (Bewegung, Animationen, GAS-Base, Replikation). Jede Klasse pro Reich erbt vom Master und spezialisiert nur die Fähigkeiten/Unterschiede.
+
+```
+BP_Character_Master
+├── Shared Locomotion (Walk, Run, Idle, Strafe, Jump)
+├── Shared Combat Animations (Block, Hit, Death)
+├── GAS-Ability-System-Base (ASC, AttributeSets, Abilities)
+├── Replication-Setup
+├── UI-Framework
+└── Mesh/Material-Variablen (austauschbar)
+
+   ↓ erbt
+   
+BP_Paladin_Albion
+├── Klassen-spezifische GAS-Abilities (HolyStrike, etc.)
+├── Paladin-Attribute-Set
+├── Palette-Override für Albion-Farben
+└── (Animations erben vom Master)
+
+BP_Cleric_Albion  → erbt vom Master
+BP_Wizard_Albion  → erbt vom Master
+```
+
 ## Ordner-Struktur (Blueprint-Assets)
 
 Nach dem Muster der **Content-Struktur**:
@@ -73,6 +98,8 @@ Nach dem Muster der **Content-Struktur**:
 ```
 Content/Camelot/Characters/
 ├── Shared/
+│   ├── BP_Character_Master           # ← MASTER-BLUEPRINT
+│   │   └── GAS-Setup, Bewegung, Replication
 │   ├── Animations/
 │   │   ├── Locomotion/              # Walk, Run, Idle, Strafe
 │   │   ├── Combat/                  # Attack, Block, Hit, Death
@@ -87,21 +114,21 @@ Content/Camelot/Characters/
 │
 ├── Albion/
 │   ├── Meshes/                       # (Placeholder: gemeinsam bis Endversion)
-│   ├── BP_Paladin_Albion
-│   │   ├── Abilities/                # GAS-Ability-Blueprints
-│   │   └── UI/                       # Klassen-spezifische UI-Widgets
+│   ├── BP_Paladin_Albion             # erbt von BP_Character_Master
+│   │   ├── Abilities/                # GAS-Ability-Blueprints (klassen-spezifisch)
+│   │   └── Attributes/               # AS_Paladin (spezialisiert)
 │   ├── BP_Cleric_Albion
 │   └── BP_Wizard_Albion
 │
 ├── Midgard/
 │   ├── Meshes/
-│   ├── BP_Berserker_Midgard
+│   ├── BP_Berserker_Midgard          # erbt von BP_Character_Master
 │   ├── BP_Shaman_Midgard
 │   └── BP_Hunter_Midgard
 │
 └── Hibernia/
     ├── Meshes/
-    ├── BP_Champion_Hibernia
+    ├── BP_Champion_Hibernia          # erbt von BP_Character_Master
     ├── BP_Druid_Hibernia
     └── BP_Ranger_Hibernia
 ```
