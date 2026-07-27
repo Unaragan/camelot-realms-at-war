@@ -135,12 +135,47 @@ Statt alles in einer Hauptstadt zu haben, sollten Material-Lieferanten **über d
 
 ---
 
+## Travel-System (Level-Independent Access)
+
+**Problem:** Lv1-9 Spieler können nicht zu Lv30+ Zonen laufen (zu gefährlich).
+**Lösung:** Transport-NPCs vor jeder Hauptstadt bieten Travel-Service.
+
+### Transport-Optionen:
+
+**1. Kutsche (Carriage)**
+- Langsam aber sicher
+- Geschützte Route (keine Monster-Kämpfe)
+- Spieler sitzt in Kutsche, kann nicht kämpfen
+
+**2. Reittier (Horse)**
+- Schneller als Kutsche
+- Spieler kann kämpfen, verliert aber Mount wenn angegriffen
+- Kosten: 1 Gold + eventuell Repair
+
+### Tarif-System (Destination-Based):
+
+**Ab Albion Hauptstadt (Aldenbury):**
+
+| Ziel | Distanz | Kutsche | Pferd | Zeit |
+|---|---|---|---|---|
+| Ashford Vale (Lv 10-19) | Nah | 5 Gold | 3 Gold | 30 sec |
+| Redmoor (Lv 10-19) | Nah | 5 Gold | 3 Gold | 30 sec |
+| Graywick Downs (Lv 30-39) | Mittel | 15 Gold | 8 Gold | 60 sec |
+| Hollowmere (Lv 30-39) | Mittel | 15 Gold | 8 Gold | 60 sec |
+| Ravensmoor March (Lv 47-50) | Weit | 40 Gold | 20 Gold | 120 sec |
+| Cinderreach (Lv 47-50) | Weit | 40 Gold | 20 Gold | 120 sec |
+
+**Äquivalent für Midgard & Hibernia**
+
+---
+
 ## Design-Prinzipien
 
-### Dezentralisierung:
+### Dezentralisierung + Zugänglichkeit:
 - ✅ Nicht alles in Hauptstadt (zu einfach)
 - ✅ Höherwertige Materialien in höher-Level Zonen
-- ✅ Spieler erkunden die Welt um Materialien zu finden
+- ✅ **Aber: Alle Zonen für Lv1+ erreichbar** (via Transport-NPC)
+- ✅ Gold-Trade: Spieler zahlen für Convenience (Travel) oder gehen zu Fuß mit Risiko
 
 ### Preis-Skalierung:
 - Lv 1-9: 1 Gold/Stack (cheap, accessible)
@@ -157,12 +192,39 @@ Statt alles in einer Hauptstadt zu haben, sollten Material-Lieferanten **über d
 
 ---
 
+### Travel-Economy-Balance:
+
+**Scenario 1: Lv1 Spieler braucht Mithril Ore (Lv30-39 Zone)**
+```
+Option A: Zu Fuß gehen
+  - Risiko: Sterben durch Monster
+  - Preis: 0 Gold
+  - Zeit: 5+ Minuten (gefährlich)
+  
+Option B: Kutsche nehmen
+  - Sicherheit: 100% (geschützt)
+  - Preis: 15 Gold
+  - Zeit: 60 Sekunden
+  
+Option C: Pferd nehmen
+  - Sicherheit: 70% (kann kämpfen, kann sterben)
+  - Preis: 8 Gold
+  - Zeit: 60 Sekunden
+```
+
+**Effekt:** Spieler wählen selbst Risk/Reward!
+
+---
+
 ## Vertical Slice Scope
 
 Für erste Implementation:
 - ✅ **Hauptstadt-Vendor** pro Realm (1 NPC mit allen Materialien, Lv1-9)
-- ✅ **Mid-Tier Vendor** (1 NPC pro Lv10-19 Zone)
+- ✅ **Transport-NPCs** vor Hauptstadt (Kutsche + Pferd, einfache Tarife)
+- ✅ **2-3 Remote Vendors** (Lv10-19 & Lv30-39 Zonen, schnell erreichbar)
 - ⏸ Spezialisierte Vendors pro Material-Typ (später, wenn Zeit)
+- ⏸ Kutsch-Animation/Transit (später, einfach Teleport im POC)
+- ⏸ Gefährliche Routen (später, für Hardcore-Spieler ohne Transport)
 - ⏸ NPC-Dialoge/Flavor-Text (später)
 - ⏸ Dynamic Pricing (später, wenn Gold-Economy stabil)
 
