@@ -89,10 +89,59 @@ Materialien:
 Handwerksstufe erforderlich: 20+
 Crafting-Zeit: 30 Sekunden
 Cooldown: 5 Min (für diese Waffe)
+Erfolgsrate: 98% (Uncommon)
 
 Resultat: Knight's Steel Longsword (Uncommon)
   - Damage: +10% vs. gefundene Steel Sword
   - Haltbarkeit: Vollständig
+
+FEHLER (2% Chance): Materialien gehen verloren
+  - Einfache Materialien (Ore, Holz) zerstört
+  - Sub-Komponenten (Leather Grip) zerstört
+  - Spieler verliert alles → muss neuen Craft versuchen
+```
+
+### Crafting Failure & Risiko-System
+
+**Erfolgsrate nach Item-Rarity:**
+
+| Rarity | Farbe | Erfolgsrate | Bei Fehler |
+|---|---|---|---|
+| **Common** | ⚪ Grau | 100% | Niemals Fehler |
+| **Uncommon** | 🟢 Grün | 98% | 2% Materialien zerstört |
+| **Rare** | 🔵 Blau | 90% | 10% Materialien + Sub-Komponenten zerstört |
+| **Epic** | 🟠 Orange | 75% | 25% Alle Materialien + Sub-Komponenten zerstört |
+
+**Beispiel Epic-Fehler:**
+```
+Waffenschmied versucht: Adamantite Greatsword (Epic, 60 Min Cooldown)
+Materialien:
+  - 15x Adamantite Ore (= 300 Gold vom Vendor)
+  - 8x Oak Wood (= 20 Gold)
+  - Steel Blade Sub-Komponente (= 150 Gold crafted)
+  - Leather Grip Sub-Komponente (= 80 Gold crafted)
+  - Steel Pommel Sub-Komponente (= 100 Gold crafted)
+  
+Total Material-Wert: 650 Gold
+
+Crafting startet... 25% Fehlerchance...
+FEHLER! ❌ (würfelglück Pech)
+  
+Resultat: ALLES ZERSTÖRT
+  - Adamantite Ore: weg
+  - Sub-Komponenten: weg
+  - Verlust: 650 Gold
+  - Nächster Versuch in 60 Min möglich
+```
+
+**Erfolgs-Feedback:**
+```
+✅ SUCCESS: Adamantite Greatsword craftet! (+16 Skill)
+
+❌ FAILURE: Crafting failed! Sub-components destroyed.
+   Lost Materials: 15x Adamantite Ore, Steel Blade, Leather Grip, Steel Pommel
+   Value Lost: ~650 Gold
+   Retry in: 60 Min
 ```
 
 ### Haltbarkeit & Reparatur:
@@ -255,12 +304,33 @@ Waffenschmied craftet Epic Greatsword:      +16 Skill (mit Grip + Pommel)
 - Rare: 20 Min
 - Epic: **60 Min** (sehr zeitaufwendig, aber viel Skill!)
 
-**Beispiel Legendary-Progression:**
+**Erfolgsrate-Verbesserung durch Skill:**
+- **Jeder 50 Skill = +2% Erfolgsrate** (max 99%)
+- Lv1 Crafter mit Epic: 75% → 77% Erfolg (besser als 0%)
+- Lv50 Crafter mit Epic: 75% → 95% Erfolg (viel sicherer)
+- **Legendary Crafter (1050 Skill):** 75% + (1050÷50×2%) = 75% + 42% = **99% Erfolgsrate!**
+
+**Beispiel Legendary-Progression mit Risiko:**
 ```
-Day 1: 50 Epic-Crafts @ +16 Skill = 800 Skill (50 Min pro Craft = 50 Stunden gameplay)
-Day 2-3: weitere 50 Epic-Crafts = 1600 Skill (aber nur bis 1050 zählt)
-Final: 1050 Legendary Skill erreicht → Titel + Cosmetic
+Day 1: Anfänger versucht 10 Epic-Crafts
+  - 75% Erfolgsrate = ~7-8 erfolgreich
+  - ~2-3 Fehler = 650 Gold Verlust pro Fehler
+  - Netto: 8 erfolgreiche Crafts @ +16 Skill = 128 Skill (aber 1950 Gold Risiko!)
+
+Tag 10: Lv500 Crafter versucht 10 Epic-Crafts
+  - 95% Erfolgsrate = ~9-10 erfolgreich
+  - ~0-1 Fehler = sicherer
+  - Netto: 9 erfolgreiche Crafts @ +16 Skill = 144 Skill (nur ~200 Gold Risiko)
+
+Legendary Crafter (1050+):
+  - 99% Erfolgsrate = praktisch risk-free
+  - Kann Mass-Production fahren
 ```
+
+**Risiko-Reward:**
+- ✅ Anfänger: hohe Fehlerchance = teuer, aber machbar
+- ✅ Fortgeschrittene: bessere Chancen = weniger Risiko
+- ✅ Legendary: fast garantiert = kann profitabel farmen
 
 ---
 
