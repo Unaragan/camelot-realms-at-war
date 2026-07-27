@@ -230,6 +230,48 @@ Für erste Implementation:
 
 ---
 
+## Visual References (Moodboards)
+
+Architectural Style Guides für Material-Supplier-POIs pro Typ:
+
+### 1. **Erzwerk** (Mining-Regionen)
+- Berganlage mit Schachteingang, Holzgerüsten, Minenbau-Infrastruktur
+- Saubere, strukturierte Arbeitsbereiche
+- Visual: Robust, industriell, Stein + Holz
+- Realm-Varianten: Albion (ordentlich), Midgard (rustikal), Hibernia (natürlich integriert)
+
+### 2. **Holzfäller-Zunft** (Wälder)
+- Waldlichtung mit gestapelten Baumstämmen, Sägeblöcken, Holzverarbeitungsplatz
+- Offene Werkstatt, Rauch/Handwerk sichtbar
+- Visual: Rustikal, natürlich, Holz-dominant
+- Realm-Anpassung: Albion (geordnete Forstwirtschaft), Midgard (Viking-Lagerholz), Hibernia (respektvoller Holzabbau)
+
+### 3. **Lederwerk** (Jagdgebiete)
+- Gerberei-Werkstatt mit Gerbfässern, hängenden Häuten zum Trocknen
+- Handwerk-Zentrum, Leder-Verarbeitung sichtbar
+- Visual: Funktional, Häute/Felle überall, Gerberduft-Feeling
+- Realm-Anpassung: Jäger-Lager mit Wildbeute
+
+### 4. **Alchemist Supply** (Magische Stätten)
+- Mystische Hütte/Grotte mit Kräuter-Gärten, Feuerstellen, Tränke-Brauerei
+- Magisches Licht (Feuerbälle, Will-o'-Wisps, Lichter)
+- Visual: Mysteriös, Natur-Magie, Kräuter/Reagenzien überall
+- Realm-Anpassung: Hibernia (Druidenkreis), Albion (magische Wiese), Midgard (Schamanenstätte)
+
+### 5. **Stall/Pelzmarkt** (Viehmarkthallen)
+- Tiermarkt mit Vieh-Gehegen, Fellen zum Trocknen/Lagern, offener Handelsplatz
+- Handelsaktivität sichtbar (NPCs mit Pelzen), Rauchzeichen
+- Visual: Lebendig, Tierwirtschaft, Rauh
+- Realm-Anpassung: Midgard (Viking Viehmarkt), Albion (organisiert), Hibernia (Wildtier-Bearbeitung)
+
+### 6. **Stoffweber** (Markthallen)
+- Textilwerkstatt mit Webstühlen, hängenden Stoffen/Fäden, Färbebottichen
+- Handwerkszentren sichtbar, bunte Stoffe überall
+- Visual: Farbenreich, kunsthandwerklich, ordentlich
+- Realm-Anpassung: Albion (formale Zunft), Hibernia (natürliche Farbstoffe), Midgard (rustikalere Tücher)
+
+---
+
 ## Offene Punkte
 
 - **Restock-Timer:** Verkaufen NPCs "Stocks" out? (wahrscheinlich unbegrenzt für POC)
