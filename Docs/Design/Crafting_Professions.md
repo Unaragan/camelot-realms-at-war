@@ -66,10 +66,17 @@ Boss-Drops (Epic/Unique)
 ## Crafting-Mechanik
 
 ### Rezepte lernen:
-- **Anfänger:** 3-4 Basis-Rezepte (mit Handwerk starten)
-- **Leveln:** Alle 5 Level neues Rezept freischalten
-- **Max Level (50):** ~10 Rezepte pro Beruf
+- **Anfänger:** 3-5 Basis-Rezepte (mit Handwerk starten)
+- **Leveln:** Jedes Level 1-2 neues Rezept freischalten
+- **Max Level (50):** ~20-25 Rezepte pro Beruf (viel Auswahl!)
 - **Rezepte sind **geteilt** — jeder kann sie sehen, aber Hauptberuf bekommt Boni**
+- **Beispiel Waffenschmied Lvl 1-50:**
+  - Lv 1: Wooden Dagger, Iron Sword
+  - Lv 5: Steel Sword, Steel Axe
+  - Lv 10: Mithril Longsword, Mithril Battle Axe
+  - Lv 20: Dragon Leather Armor Enhancements
+  - Lv 30: Rune-touched Greatsword
+  - Lv 50: Adamantite Weapons (best crafted)
 
 ### Beispiel-Crafting (Waffenschmied):
 ```
@@ -95,32 +102,57 @@ Resultat: Knight's Steel Longsword (Uncommon)
 
 ---
 
-## Material-Quellen
+## Material-Quellen (Kein Farming-RPG!)
 
-### Farmen:
-- **Erz:** Bergbau (Aktivität in der offenen Welt)
-- **Holz:** Forstwirtschaft (Bäume fällen)
-- **Leder:** Drops von Tieren (Jäger-Aktivität)
-- **Stoff:** Drops von Humanoids (Monster/NPCs)
-- **Kräuter:** Wild-Sammeln (offene Welt)
+**Philosophie:** Crafting ist ein **Progression-System**, nicht ein **Farming-Grind-System**. Materialien sollten leicht verfügbar sein via Gold, nicht via stundenlange Farming-Sessions.
 
-### Goldkauf:
-- Spieler können Materialien vom NPC-Vendor kaufen (teuer)
-- Z. B.: 10 Gold pro Steel Ore vs. 2-3 Gold wenn selbst gefarmt
+### Primär: NPC-Vendors (spezialisierte Werkstätten)
+
+Jeder Realm hat spezialisierte **Material-Werkstätten** mit NPCs:
+
+- **Erzwerk (Ore Merchant):** Verkauft Erz (Bronze, Steel, Mithril, Adamantite)
+- **Holzfäller-Zunft (Lumber Vendor):** Verkauft Holz
+- **Lederwerk (Leather Merchant):** Verkauft Leder
+- **Schneider-Zunft (Cloth Vendor):** Verkauft Stoffe, Faden
+- **Alchemist-Laden (Herb Vendor):** Verkauft Kräuter, Reagenzien
+
+**Preise:**
+- Bronze Ore: 1 Gold pro Stack (Lv 1-9)
+- Steel Ore: 3 Gold pro Stack (Lv 10-29)
+- Mithril Ore: 8 Gold pro Stack (Lv 30-49)
+- Adamantite Ore: 20 Gold pro Stack (Lv 50)
+
+**Verfügbarkeit:**
+- Material-Kauf sollte so einfach sein wie Potions kaufen
+- Kein Respawn-Timer, immer verfügbar
+- "Play the game" → verdiene Gold → kaufe Materialien → craft → bessere Items
+
+### Sekundär: Loot-Drops (optionale Ergänzung)
+
+Seltene Materialien können auch als **Boss-Drops** oder **spezielle Mob-Drops** vorkommen:
+- **Seltene Erze:** Dragon Ore, Obsidian (nur von Bosses)
+- **Kraftkräuter:** Mandrake Root (nur von Dungeon-Mobs)
+- Diese ermöglichen **spezielle Rezepte** (noch bessere Crafts)
+
+### Kein stündliches Grinding:
+- ❌ Nicht wie WoW: "Gehe 2 Stunden Ore farmen"
+- ✅ Stattdessen: "Quest spielen → Gold verdienen → Materialien kaufen → Crafting genießen"
 
 ---
 
 ## Vertical Slice Scope
 
 Für erste Implementation (später, nach Character/Chat/Skills):
-- ✅ **2 Hauptberufe:** Waffenschmied, Rüstungsschmied
-- ✅ **5-6 einfache Rezepte pro Beruf**
+- ✅ **2-3 Hauptberufe:** Waffenschmied, Rüstungsschmied, Alchemist
+- ✅ **~15-20 Rezepte pro Beruf** (Progression durch Levels, nicht 5-6!)
+- ✅ **Material-Vendor NPCs** (spezialisierte Werkstätten, simpel: einfach nur anklicken & kaufen)
 - ✅ **Material-Inventory** (separater Tab in Inventory)
-- ✅ **Crafting-UI:** Rezept wählen → Craft-Button → Items verschwinden, crafted Item erscheint
+- ✅ **Crafting-UI:** Rezept wählen → Materialien-Check → Craft-Button → Items verschwinden, crafted Item erscheint
+- ✅ **Gold als Materialien-Quelle:** Spieler verdienen Gold durchs Spielen → kaufen Materialien
+- ⏸ Seltene Boss-Drop Materialien (später)
 - ⏸ Haltbarkeit/Reparatur (später)
 - ⏸ Weitere Berufe (später)
-- ⏸ Komplexe Rezepte (mehrere Stufen)
-- ⏸ Beruf-Quests (Level-up via Story)
+- ⏸ Beruf-Leveln via XP (später, vorerst nur Rezepte per Charakter-Level freischalten)
 
 ---
 
