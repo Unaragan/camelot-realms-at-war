@@ -326,6 +326,30 @@ corner. Clean fantasy-map label style, no readable body text needed. Wide
 the existing concept series.
 ```
 
+## Settlement & POI Visual References
+
+Zusätzlich zu den großflächigen Realm-Moodboards: **Architectural Style Guides** für einzelne Siedlungen, Dörfer und Material-Lieferanten-POIs.
+
+**Albion** — Zivilisierte Stone + Timber-Architektur:
+- Zentralisierte Dörfer mit Steinmauern/Turmhäusern (rechteckig, ordentlich)
+- Material-Vendors: Steinerne Zunftshäuser mit roten Ziegeldächern
+- Beispiel-POI: **Erzwerk** (Lv30-39 Zone) = befestigte Berganlage mit Schachteingang, Holzgerüsten, sauberen Arbeitsbereichen
+- Visual: Europäische mittelalterliche Architektur (Late-Gothic, ordentlich)
+
+**Midgard** — Nordic/Viking Palisaden-Lager:
+- Holz-Palisaden-Walls, Langhaus-Zentren mit Holzkonstruktionen
+- Material-Vendors: Werkstätten mit freien Feuerstellen, rustikal
+- Beispiel-POI: **Stall/Pelzmarkt** = offenes Handelslager mit Vieh-Pferchen, Rauchzeichen
+- Visual: Viking-Siedlungen, natürlich gewachsen, verwittertes Holz, Rauch
+
+**Hibernia** — Druiden/Natur-Integration:
+- Runde Hütten (Roundhouses), Steinkreise, natürliche Integration in Wälder
+- Material-Vendors: Kräuter-Gärten, Alchemisten-Grotteneingang mit Moosüberwuchs
+- Beispiel-POI: **Holzfäller-Zunft** = Waldlichtung mit gestapeltem Holz, Naturschutz-Aspekt (respektvoller Abbau)
+- Visual: Keltische Architektur, mystisch, von Natur "umgeben" (nicht "erbaut")
+
+---
+
 ## Pacing: Monatelange Spielerbindung übers Leveln
 
 Frage vom Nutzer (2026-07-23): Reicht der Platz auf den Karten, um Spieler über Monate zu
