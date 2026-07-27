@@ -53,13 +53,19 @@ Boss-Drops (Epic/Unique)
 
 ## Item-Qualität-Tiers
 
-| Tier | Quelle | Beispiel | Stat-Wert |
-|---|---|---|---|
-| **Common** | Gefundene Drops (Normalfeinde) | Linen Tunic | Basis |
-| **Uncommon** | Crafted (Standard-Rezept) | Knight's Steel Plate (crafted) | Basis + 8-10% |
-| **Rare** | Schwerer zu craften, bessere Materialien | **Rune-touched Armor (crafted)** | Basis + 15% |
-| **Epic** | Boss-Drops nur | Adamantite Breastplate (boss loot) | Basis + 25% |
-| **Legendary** | Raid-Boss / Unique | (später, vielleicht Quest-Reward) | Basis + 40% |
+| Tier | Quelle | Beispiel | Stat-Wert | Min. Level |
+|---|---|---|---|---|
+| **Common** | Gefundene Drops | Linen Tunic | Basis | 1+ |
+| **Uncommon** | Crafted | Knight's Steel Plate | Basis + 8-10% | 10+ |
+| **Rare** | Crafted (besser) | Rune-touched Armor | Basis + 15% | 25+ |
+| **Epic** | Crafted (selten) ODER Boss-Drops | Adamantite Breastplate | Basis + 25% | 40+ |
+| **Legendary** | **Crafted (nur Experten!)** | Eternal Adamantite Greatsword | Basis + 40% | **48-50** |
+
+**Legendary Crafting:**
+- ⚠️ **Nur Level 48-50 Crafter können Legendary herstellen**
+- Benötigt super seltene Materialien (Boss-Drops only)
+- Höchste Erfolgsrate-Anforderung
+- Nur für Legendary Skill Crafter (1050+) realistische Chancen
 
 ---
 
@@ -72,12 +78,13 @@ Boss-Drops (Epic/Unique)
 - **Rezepte sind **geteilt** — jeder kann sie sehen, aber Hauptberuf bekommt Boni**
 
 **Level-Requirements pro Rarity:**
-| Rarity | Min. Charakter-Level | Erfolgsrate bei Min-Level |
-|---|---|---|
-| **Common** | 1+ | 100% |
-| **Uncommon** | 10+ | 98% |
-| **Rare** | 25+ | 90% |
-| **Epic** | 40+ | 75% |
+| Rarity | Min. Charakter-Level | Erfolgsrate bei Min-Level | Farbe |
+|---|---|---|---|
+| **Common** | 1+ | 100% | ⚪ Grau |
+| **Uncommon** | 10+ | 98% | 🟢 Grün |
+| **Rare** | 25+ | 90% | 🔵 Blau |
+| **Epic** | 40+ | 75% | 🟠 Orange |
+| **Legendary** | **48-50** | **50%** | 🔴 Rot |
 
 - ❌ **Lv 5 Crafter kann NICHT Epic craften** (Level 40+ erforderlich!)
 - ❌ **Lv 15 versucht Epic** → 100% zerstört (zu unerfahren)
@@ -93,7 +100,8 @@ Boss-Drops (Epic/Unique)
   - Lv 30: Rune-touched Greatsword (Rare)
   - Lv 40: Adamantite Sword (Epic), Adamantite Axe (Epic)
   - Lv 45: Dragon Ore Blade (Sub, Epic, rare material)
-  - Lv 50: Adamantite Greatsword (Epic, max crafted)
+  - Lv 48: **Eternal Adamantite Longsword (Legendary)** ← nur hier verfügbar!
+  - Lv 50: **Eternal Adamantite Greatsword (Legendary)** ← true endgame
 
 ### Beispiel-Crafting (Waffenschmied):
 ```
@@ -370,12 +378,17 @@ Scenario 4: Lv 1 Crafter, Skill 0, versucht Epic (benötigt Lv 40)
   - ❌ Keine Chance, auch zu jung
 ```
 
+**Skill-Bonus für Legendary:**
+- Jeder 50 Skill = +2% (same wie Epic)
+- Lv 48-50 mit Skill 0: 50% Erfolgsrate (sehr riskant)
+- Lv 50 mit Skill 1050: 50% + 42% = **92% Erfolgsrate** (akzeptabel)
+
 **Progression-Realität:**
 - **Lv 1-9:** Nur Common craften (100% Erfolg)
 - **Lv 10-24:** Uncommon craften (90-98% Erfolg)
 - **Lv 25-39:** Rare craften (80-90% Erfolg)
-- **Lv 40+:** Epic craften (75%+ bis 99%)
-- **Lv 50 + Skill 1050:** Praktisch 99% = can farm Epic reliably
+- **Lv 40-47:** Epic craften (75%+ bis 99%)
+- **Lv 48-50 + Skill 1050:** Legendary craften (92%+ risk, true endgame!) 👑
 
 **Risiko-Reward:**
 - ✅ Anfänger: hohe Fehlerchance = teuer, aber machbar
