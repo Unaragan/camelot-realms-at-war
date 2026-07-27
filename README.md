@@ -141,6 +141,7 @@ Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach beka
 - Eigene Spielerfahrung als primäre Design-Referenz für Klassenbalance und RvR-Gefühl
 - `/inspect`-Exports (eigene Charakterdaten) als Kalibrierungsreferenz für Itemization-Wertebereiche, nicht zum Import
 - **Ashes of Creation** als Referenz für UE5 + Großschlachten-Netzwerkarchitektur (siehe Skalierung)
+- **OpenAI Shap-E** (https://huggingface.co/spaces/openai/shap-e) – kostenlos, Text/Bild → 3D-Mesh, für schnelle Placeholder-Assets oder Basis-Modelle (exportiert `.obj`/`.glb`, direkt in UE5 importierbar). Nutzen für frühe Character-/Item-Prototypen, bevor Custom-Art commissioned wird
 
 ## Architekturwechsel (2026-07-26): Lyra → Third Person Template
 
