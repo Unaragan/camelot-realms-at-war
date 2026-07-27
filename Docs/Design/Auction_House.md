@@ -87,11 +87,61 @@ Sort by: [Price: Low-High] [Newest] [Ending Soon]
 [Search] [Clear]
 ```
 
-### Auktions-Limits:
+### Auktions-Limits (Typ- & Qualitäts-abhängig):
 
-- **Max 5 aktive Listings pro Spieler** (Vertical Slice)
-- **Max 10 später** (endgame)
-- Verhindert Markt-Manipulation durch einzelne Spieler
+**Consumables (Tränke, Potions) — Alchemist-speziell:**
+- Common/Uncommon: **Unbegrenzt** (schnell verbraucht)
+- Rare: **Max 50 Listings**
+- Epic: **Max 5 Listings**
+- *Grund: Alchemisten produzieren viele Tränke täglich*
+
+**Waffen & Rüstung:**
+- Common: **Max 10 Listings**
+- Uncommon: **Max 8 Listings**
+- Rare: **Max 5 Listings**
+- Epic: **Max 2 Listings** (sehr wertvoll)
+- *Grund: Crafted Items sollen selten bleiben, nicht überfluten*
+
+**Accessoires (Ringe, Amulette):**
+- Common: **Max 8 Listings**
+- Uncommon: **Max 6 Listings**
+- Rare: **Max 3 Listings**
+- Epic: **Max 1 Listing** (einzigartig)
+
+**Rohmaterialien (Erz, Leder, etc.) — Vendor-Alternativ:**
+- **Unbegrenzt** (sollten vom NPC verfügbar sein, nicht AH-geprägt)
+- *Grund: Spieler sollten Materials vom Vendor kaufen, nicht vom AH farmen*
+
+**Total pro Spieler:**
+- Vertical Slice: **Max 20 aktive Listings gesamt** (Mix aus allen Typen)
+- Endgame: **Max 40 aktive Listings gesamt**
+
+---
+
+## Beruf-Boni (Listing-Erweiterung)
+
+**Spieler mit passendem Hauptberuf erhalten höhere Listing-Limits:**
+
+- **Alchemist:** +50% Consumable-Listings (z. B. 50 Rare → 75 Rare)
+- **Waffenschmied:** +3 Weapon-Listings
+- **Rüstungsschmied:** +3 Heavy-Armor-Listings
+- **Lederer:** +3 Light/Medium-Armor-Listings
+- **Juwelier:** +2 Accessory-Listings
+- **Tailor:** +3 Cloth-Armor-Listings
+
+**Beispiel:**
+```
+Alchemist-Spieler:
+  Common Potions: Unbegrenzt → Unbegrenzt
+  Rare Potions: 50 → 75 Listings (+50%)
+  Epic Potions: 5 → 7 Listings (+50%)
+
+Waffenschmied-Spieler:
+  Uncommon Weapons: 8 → 11 Listings (+3)
+  Rare Weapons: 5 → 5 (keine Änderung)
+```
+
+**Grund:** Handwerker können ihre Spezialisierung monetarisieren!
 
 ---
 
