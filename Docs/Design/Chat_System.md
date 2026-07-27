@@ -4,16 +4,22 @@
 
 ## Chat-Kanäle (Hierarchie)
 
+**WICHTIG: Strikte Realm-Trennung** — Hibernia KANN NICHT mit Midgard oder Albion chatten. Nur eigenes Reich + Gesten (Emotes) zu anderen Reichen.
+
 ### Vertical Slice (MVP)
-1. **Say** — Lokaler Chat, ~50m Radius um Spieler
-2. **Group** — Nur aktuelle Gruppe (5 Spieler)
-3. **Realm** (später) — Alle Spieler eines Reichs
+1. **Say** — Lokaler Chat, ~50m Radius um Spieler **[REALM-ONLY]**
+2. **Group** — Nur aktuelle Gruppe (5 Spieler, nur aus eigenem Realm)
+3. **Realm-wide** (später) — Alle Spieler eines Reichs
 
 ### Post-Release (Später)
-4. **Guild** — Nur Gilden-Mitglieder
-5. **Alliance** — Mehrere Gilden koordiniert
-6. **Whisper/PM** — 1v1 privat
-7. **Trade** — Item-Handel (optional)
+4. **Guild** — Nur Gilden-Mitglieder (ein Realm)
+5. **Alliance** — Mehrere Gilden koordiniert (ein Realm)
+6. **Whisper/PM** — 1v1 privat **[REALM-ONLY]**
+
+### Cross-Realm Kommunikation (begrenzt)
+- **Gesten/Emotes:** `/bow`, `/wave`, `/cheer`, `/laugh` → Sichtbar für ALLE Reiche
+- **Ist non-verbal:** Einzige Möglichkeit, mit anderen Reichen zu "sprechen"
+- **RvR-Realismus:** Keine Chat-Kommunikation mit Feinden — nur Körpersprache
 
 ## Chat-Messages Format
 
@@ -57,6 +63,31 @@
 - **Sender-Name:** Klickbar → Profil/Whisper/Add-Friend
 - **[Realm-Icon]:** Zeigt Reich des Senders (nur Say relevant)
 - **Scrollbar:** Alte Messages browsen
+
+## Emotes/Gesten (Cross-Realm)
+
+**Sichtbar für ALLE Reiche** — einzige non-verbale Kommunikation zwischen Feinden.
+
+### Basis-Emotes (Vertical Slice)
+- `/bow` — Verbeugung
+- `/wave` — Winkend
+- `/cheer` — Jubeln
+- `/laugh` — Lachen
+- `/salute` — Militärischer Salut
+- `/point` — Zeigen
+- `/sit` — Setzen
+- `/kneel` — Knien
+
+### Animation-Display:
+```
+[14:35] Paladin42 bows respectfully.
+[14:35] Berserker99 waves at the enemy!
+[14:36] Druid54 laughs maniacally.
+```
+
+**Keine Text-Nachricht** — nur die Animation sichtbar, egal von welchem Realm.
+
+---
 
 ## Chat-Befehle (Slash-Commands)
 
@@ -144,12 +175,14 @@ Empfänger-Clients: Message in Chat-Window rendern
 ## Vertical Slice Scope (Minimal)
 
 Für erste Implementation:
-- ✅ Say Channel (lokale Messages)
-- ✅ Group Channel (nur Gruppe)
+- ✅ Say Channel (lokale Messages, **REALM-ONLY**)
+- ✅ Group Channel (nur Gruppe, **REALM-ONLY**)
+- ✅ **Emotes/Gesten** (Cross-Realm sichtbar)
 - ✅ Basic UI (Tabs, Input, Send)
-- ✅ Slash-Commands: /say, /group, /clear
+- ✅ Slash-Commands: /say, /group, /bow, /wave, /cheer, /clear
 - ✅ Server-Replication (alle Clients sehen neue Messages)
-- ⏸ Whisper (später)
+- ✅ **Realm-Filter:** Spieler können nur mit eigenem Realm chatten
+- ⏸ Whisper (später, REALM-ONLY wenn implementiert)
 - ⏸ Guild/Alliance (später, kein Guild-System im POC)
 - ⏸ Moderation (später, wenn nötig)
 - ⏸ Language-Filter (später)
