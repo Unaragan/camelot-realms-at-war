@@ -9,7 +9,7 @@ Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spaw
 ## Schritt 1: Toolset-Plugins im Unreal Editor aktivieren
 
 1. **Edit → Plugins** → nach **"Toolset"** suchen (nicht nur "MCP" – sonst tauchen die einzelnen Toolset-Plugins nicht auf!)
-2. Mindestens aktivieren: **All Toolsets** (Aggregator), **EditorToolset**, **GASToolsets** (für unser Gameplay Ability System). Optional: NiagaraToolsets, PhysicsToolsets, je nach Bedarf.
+2. Mindestens aktivieren: **All Toolsets** (Aggregator), **EditorToolset**, **GASToolsets** (für unser Gameplay Ability System). Optional: **Niagara Toolsets**, **Physics Toolsets**, je nach Bedarf.
 3. Zusätzlich nach **"MCP"** suchen und **ModelContextProtocol** aktivieren
 4. **Editor komplett neu starten** – newly aktivierte Plugins greifen sonst nicht, auch wenn der Server schon läuft. Das haben wir live erlebt: ohne Neustart wurde nur 1 statt 41 Toolsets registriert.
 
