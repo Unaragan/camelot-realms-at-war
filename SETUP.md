@@ -21,11 +21,37 @@ Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spaw
 
 ## Schritt 3: MCP-Server im Editor starten
 
+### Manual (jede Session):
 Im Output-Log-Eingabefeld:
 ```
 ModelContextProtocol.StartServer
 ```
 Läuft standardmäßig auf Port 8000, Pfad `/mcp`.
+
+### Automatisch beim Editor-Start:
+Damit der Server **immer beim Projektöffnen** automatisch startet, in `Config/DefaultEngine.ini` hinzufügen:
+
+```ini
+[/Script/Engine.Engine]
++SystemStartupScripts=/Game/Camelot/Startup/MCP_AutoStart
+```
+
+Dann Blueprint-Script `Content/Camelot/Startup/MCP_AutoStart` erstellen:
+- **Blueprint** mit **Macro Library** oder **Level Blueprint**
+- Im **Event BeginPlay** / **Macro BeginPlay**:
+  ```
+  Execute Console Command: ModelContextProtocol.StartServer
+  ```
+
+**Alternativ:** Autoexec-Befehl in `Config/DefaultEngine.ini`:
+```ini
+[Engine.Engine]
+ConsoleKeys=Tilde
+[Startup]
+ConsoleAutoStartCommand=ModelContextProtocol.StartServer
+```
+
+**Nach Änderung:** Editor neu starten — Server startet dann automatisch beim Projektöffnen.
 
 ## Schritt 4: Plugin/Skill in Claude Code installieren (im Terminal!)
 
