@@ -132,13 +132,38 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 New-Item -ItemType Junction -Path "C:\Claude\camelot-realms-at-war\Content\Camelot" -Target "C:\Users\User\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
 ```
 
-**Offener Punkt für ZBook:** Beim nächsten Sessin auf dem ZBook als **erstes** durchführen:
+**ZBook-Setup (TODO):** Beim nächsten Sessin auf dem ZBook als **erstes** durchführen:
 ```powershell
 # (Pfad anpassen an ZBooks OneDrive-Pfad, z. B. D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot oder ähnlich)
 New-Item -ItemType Junction -Path "D:\Claude\camelot-realms-at-war\Content\Camelot" -Target "D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
 ```
 
-Danach wird OneDrive automatisch beide Machines synchronisieren. Editor nach Junction-Erstellung **neu starten**.
+Danach wird OneDrive automatisch beide Machines synchronisieren.
+
+### Editor mit Auto-Sync starten (WICHTIG!)
+
+**Nicht direkt den Editor starten!** Stattdessen immer das Sync-Script verwenden:
+
+```powershell
+# PowerShell als Admin öffnen
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+& "C:\Claude\camelot-realms-at-war\tools\start-editor-with-sync.ps1"
+```
+
+**Was macht das Script:**
+1. **Vor Editor-Start:** OneDrive-Synchronisierung erzwingen (wartet max 30 Sekunden)
+2. **Editor starten** (UE5.8)
+3. **Nach Editor-Schließung:** OneDrive nochmal synchronisieren (5 Sekunden warten)
+4. **Fertig!** Content ist auf beiden Maschinen synchronized
+
+**Shortcut (optional):** Erstelle eine `.bat` oder `.lnk` im Tools-Ordner, die das Script aufruft:
+```batch
+@echo off
+powershell -ExecutionPolicy RemoteSigned -File "C:\Claude\camelot-realms-at-war\tools\start-editor-with-sync.ps1"
+pause
+```
+
+**Grund:** Ohne explizites Sync kann OneDrive im Hintergrund noch nicht fertig sein — die andere Maschine sieht dann veraltete Assets, oder es entstehen Merge-Konflikte.
 
 ## Status
 
