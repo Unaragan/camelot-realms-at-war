@@ -2,7 +2,7 @@
 # Startet den Unreal Editor mit automatischer OneDrive-Synchronisierung vor und nach dem Spielen
 
 param(
-    [string]$ProjectPath = "C:\Claude\camelot-realms-at-war\CamelotRAW_TP.uproject"
+    [string]$ProjectPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "CamelotRAW_TP.uproject")
 )
 
 # OneDrive-Sync erzwingen (Start)
