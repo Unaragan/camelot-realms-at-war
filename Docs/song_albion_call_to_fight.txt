@@ -1,0 +1,97 @@
+================================================================
+  ALBION — SUNO SONG FILE
+  Title   : Call to Fight (Albion)
+  Theme   : Three Realms at War · Albion
+  Persona : A lone herald-knight, calling scattered banners home
+  Style   : Arthurian War Anthem · Medieval Choir · Cinematic Epic
+================================================================
+
+── STYLE PROMPT (paste into Suno "Style" field) ─────────────
+
+Arthurian War Anthem, Medieval Epic, Cinematic Choir,
+male baritone lead — clear, commanding, herald-like delivery,
+building into a full mixed choir on the chorus,
+war horns and low brass fanfare, tenor drums, marching snare,
+plate armor clash percussion, distant cathedral bell,
+NO electric instruments, NO rap, purely orchestral/choral,
+harp arpeggios under the verses, strings swelling into the chorus,
+key of D minor rising to D major on the final chorus, 96 BPM,
+wide reverb, stone-hall acoustic space, noble and resolute,
+grows from a single voice to a full army singing together
+
+── SONG TITLE ────────────────────────────────────────────────
+
+Call to Fight (Albion)
+
+── LYRICS ────────────────────────────────────────────────────
+
+[Intro — solo war horn, distant bell, herald voice alone]
+
+(spoken, low and clear)
+The banners have waited long enough.
+
+[Verse 1 — baritone lead, harp underneath]
+
+By the white cliffs where the old king sleeps,
+the crimson standard still the border keeps,
+but the watch grows thin and the gate stands wide,
+and the realm is calling every sword that hid
+
+We laid our shields down when the peace held true,
+told the young ones the old wars were through,
+but Midgard's drums beat closer every night,
+and Hibernia's wolves are circling the light
+
+[Pre-Chorus — choir joins, low, building]
+
+Stand up, knight, the line remembers you,
+stone doesn't forget what crimson blood is due,
+the crown was never worn by one alone —
+it's carried home on every shoulder, every throne
+
+[Chorus — full choir, brass, drums]
+
+CALL TO FIGHT, call to fight,
+crimson banners rise into the light,
+we are Albion, unbroken and true,
+the realm still stands because of you
+
+CALL TO FIGHT, call to fight,
+every knight who left comes home tonight,
+the gate is open, the horn has blown,
+Albion was never yours alone
+
+[Verse 2 — baritone, strings entering]
+
+I saw a boy become a man in the mud,
+saw a banner dyed twice over in blood,
+and still they stood when the ranks grew thin —
+that's not a kingdom, that's kin against kin for kin
+
+So if you laid your armor by the door,
+if you told yourself you won't fight anymore,
+hear the horn, it isn't asking twice,
+Albion remembers, and Albion pays the price
+
+[Bridge — strings alone, quiet, building]
+
+(sung, softer)
+Not for the crown. Not for the gold.
+For the ones still standing when the story's told.
+
+[Final Chorus — full choir + orchestra, key change to D major]
+
+CALL TO FIGHT, call to fight,
+crimson banners rise into the light,
+we are Albion, unbroken and true,
+the realm still stands because of you
+
+CALL TO FIGHT, call to fight,
+every knight who left comes home tonight,
+the gate is open, the horn has blown,
+Albion was never yours alone
+
+[Outro — horn fades, single bell, silence]
+
+(spoken, final)
+Come home, knight. The line is waiting.
