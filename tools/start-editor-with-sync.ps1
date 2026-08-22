@@ -1,27 +1,20 @@
 # start-editor-with-sync.ps1
-# Startet den Unreal Editor mit automatischer OneDrive-Synchronisierung vor und nach dem Spielen
+# Startet den Unreal Editor mit Git als alleinigem Sync-Mechanismus (kein OneDrive mehr,
+# siehe SETUP.md-Stolperfallen-Tabelle - OneDrive lief unzuverlaessig parallel zu Git und
+# zeigte auf verschiedenen Rechnern unterschiedliche Staende).
 
 param(
-    [string]$ProjectPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "CamelotRAW_TP.uproject")
+    [string]$ProjectDir = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
+    [string]$ProjectPath = (Join-Path $ProjectDir "CamelotRAW_TP.uproject")
 )
 
-# OneDrive-Sync erzwingen (Start)
-Write-Host "=== OneDrive Sync (Start) ===" -ForegroundColor Cyan
-Start-Process "C:\Program Files\Microsoft OneDrive\OneDrive.exe" -ArgumentList "/update" -Wait -ErrorAction SilentlyContinue
-Start-Sleep -Seconds 3
+Set-Location $ProjectDir
 
-# Auf Sync warten (max 30 Sekunden)
-Write-Host "Warte auf OneDrive-Synchronisierung..." -ForegroundColor Yellow
-$timeout = 30
-$elapsed = 0
-while ($elapsed -lt $timeout) {
-    $syncStatus = Get-Process OneDrive -ErrorAction SilentlyContinue | Select-Object ProcessName
-    if ($syncStatus) {
-        Write-Host "OneDrive aktiv - starte Editor..." -ForegroundColor Green
-        break
-    }
-    Start-Sleep -Seconds 1
-    $elapsed++
+Write-Host "=== Git Pull (Start) ===" -ForegroundColor Cyan
+git pull origin master
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "FEHLER: git pull fehlgeschlagen - vor dem Editor-Start klaeren (Konflikte? Uncommitted changes?)." -ForegroundColor Red
+    Read-Host "Enter zum trotzdem fortfahren, Strg+C zum Abbrechen"
 }
 
 # Editor starten
@@ -33,11 +26,9 @@ if (Test-Path $ProjectPath) {
     exit 1
 }
 
-# Nach Editor-Schließung: OneDrive nochmal synchen (Exit)
-Write-Host "=== OneDrive Sync (Exit) ===" -ForegroundColor Cyan
-Write-Host "Editor wurde geschlossen - erzwinge finale OneDrive-Synchronisierung..." -ForegroundColor Yellow
-Start-Process "C:\Program Files\Microsoft OneDrive\OneDrive.exe" -ArgumentList "/update" -Wait -ErrorAction SilentlyContinue
-
-# Warte auf Sync completion
-Start-Sleep -Seconds 5
-Write-Host "OneDrive-Sync abgeschlossen. Bis morgen!" -ForegroundColor Green
+# Nach Editor-Schliessung: an Commit/Push erinnern, Stand zeigen
+Write-Host "=== Editor geschlossen ===" -ForegroundColor Cyan
+git status --short
+Write-Host ""
+Write-Host "Nicht vergessen: aenderungen committen und pushen (git add / git commit / git push origin master)," -ForegroundColor Yellow
+Write-Host "damit der naechste Rechner den aktuellen Stand per 'git pull' bekommt." -ForegroundColor Yellow
