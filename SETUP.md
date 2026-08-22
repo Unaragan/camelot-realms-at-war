@@ -100,7 +100,7 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 2. Danach `git clone`/`git pull` – synchronisiert nur `Config/`, `.uproject`, `Content/Camelot/` und eigene Doku, **nicht** den übrigen Template-Content
 3. Eigener Content entsteht ausschließlich unter `Content/Camelot/` (siehe `.gitignore`-Ausnahme `!Content/Camelot/`) und wird darüber synchronisiert
 
-**Rechner-übergreifender Abgleich läuft ausschließlich über Git/GitHub** (`origin`), nicht über OneDrive – OneDrive lief parallel dazu unzuverlässig (unterschiedliche Stände auf verschiedenen Rechnern, siehe Stolperfallen-Tabelle) und wurde entfernt. `tools/start-editor-with-sync.ps1` macht vor dem Editor-Start automatisch `git pull` und erinnert nach dem Schließen an `git add`/`commit`/`push`.
+**Rechner-übergreifender Abgleich läuft ausschließlich über Git/GitHub** (`origin`), nicht über OneDrive – OneDrive lief parallel dazu unzuverlässig (unterschiedliche Stände auf verschiedenen Rechnern, siehe Stolperfallen-Tabelle) und wurde entfernt. `tools/start-dev.ps1` macht vor dem Editor-Start automatisch `git pull` und erinnert nach dem Schließen an `git add`/`commit`/`push`.
 
 **Zusätzliches lokales Git-Remote (Backup, kein Live-Arbeitsort):** ein bare Repo liegt auf dem an der FritzBox angeschlossenen USB-Stick unter `\\Mkl-iw4\mkl-iw4\Claude\camelot-realms-at-war.git`, als Remote `nas` eingerichtet. **Wichtig:** Git LFS scheitert über den rohen UNC-Pfad (`chdir`-Fehler im `lfs-standalone-file`-Adapter) – der Pfad muss stattdessen auf einen Laufwerksbuchstaben gemappt sein (`net use Z: \\Mkl-iw4\mkl-iw4\Claude /persistent:yes`, Remote-URL dann `Z:\camelot-realms-at-war.git`). Nutzung: `git push nas master` als zusätzliches Backup neben GitHub, **nicht** als primärer Sync-Weg – der Editor arbeitet immer auf der lokalen Kopie, nie direkt auf dem Netzwerk-Share (Performance-/Korruptionsrisiko bei Unreal-Binärdateien über SMB).
 
@@ -120,7 +120,7 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 | Plugin-Aktivierung wirkt nicht, obwohl Häkchen gesetzt | Experimentelle Plugins (z. B. "Unreal MCP") zeigen beim Aktivieren einen Bestätigungsdialog – Server-Start-Befehle *vor* dieser Bestätigung schlagen fehl, auch nach Neustart-Anschein | Bestätigungsdialog abnicken, **danach** Editor komplett neu starten, erst dann `ModelContextProtocol.StartServer` |
 | Build schlägt fehl: `Visual Studio is installed, but is out of date or missing a valid C++ toolchain` | Installierte MSVC-Buildtools-Version unter dem von UE 5.8 geforderten Minimum (v14.38.33130, bevorzugt v14.50.35717 = VS 17.8+) | Visual Studio Installer öffnen → "Ändern" → Workload "Desktopentwicklung mit C++" sicherstellen, unter "Einzelne Komponenten" neueste "MSVC v143 – VS 2022 C++ x64/x86-Buildtools" installieren/aktualisieren, ggf. auch die VS-IDE selbst aktualisieren |
 | Nach Rechnerwechsel/Sync: Blueprint-Fehler `Cast has an invalid target type (was the class deleted without a redirect?)` an einer eigenen C++-Klasse (z. B. `AS_PaladinAttributes`/`CamelotAttributeSetBase`), obwohl Source/Content laut Git identisch sind | `Binaries/`, `Intermediate/` (gitignoriert, nicht synct) waren auf dem Zielrechner **veraltet** — die Haupt-DLL stammte vom allerersten Build, seither liefen nur Live-Coding-Hot-Patches oben drauf, die bei geänderten UCLASS-Layouts (neue/geänderte C++-Klasse) keine sauberen Klassen-Re-Instanzierungen garantieren | `Binaries/`, `Intermediate/Build/` und `DerivedDataCache/` löschen, Live Coding deaktivieren (Editor Preferences → General → Live Coding), Editor neu starten → sauberer Voll-Rebuild über den "Missing Modules"-Dialog. Nach jedem C++-Änderungs-Pull auf einem Zweitrechner vorsichtshalber denselben Weg gehen statt auf Live-Coding-Patches zu vertrauen |
-| Rechnerübergreifend über OneDrive synchronisierte Kopie zeigt auf verschiedenen Rechnern unterschiedliche Stände (Blueprint-Fehler, fehlende Animation/GUI trotz "synct") | OneDrive lief parallel zu Git als zweiter, unkoordinierter Sync-Mechanismus über denselben Ordner – kennt keine Git-Historie, überschreibt/verzögert unabhängig davon | OneDrive für diesen Ordner nicht mehr nutzen, ausschließlich Git/GitHub für den Rechner-Abgleich (siehe "Projekt-Basis"-Abschnitt oben, `tools/start-editor-with-sync.ps1` macht das jetzt automatisch) |
+| Rechnerübergreifend über OneDrive synchronisierte Kopie zeigt auf verschiedenen Rechnern unterschiedliche Stände (Blueprint-Fehler, fehlende Animation/GUI trotz "synct") | OneDrive lief parallel zu Git als zweiter, unkoordinierter Sync-Mechanismus über denselben Ordner – kennt keine Git-Historie, überschreibt/verzögert unabhängig davon | OneDrive für diesen Ordner nicht mehr nutzen, ausschließlich Git/GitHub für den Rechner-Abgleich (siehe "Projekt-Basis"-Abschnitt oben, `tools/start-dev.ps1` macht das jetzt automatisch) |
 | `git push` zu einem Remote auf einem Netzwerk-Share via UNC-Pfad (`\\Server\Share\...`) schlägt bei LFS-Objekten fehl: `error initializing custom adapter "lfs-standalone-file": chdir ...: The specified path is invalid` | Git LFS' `lfs-standalone-file`-Transfer-Adapter kommt mit rohen UNC-Pfaden nicht zurecht (Windows-spezifischer Bug) | UNC-Pfad auf einen Laufwerksbuchstaben mappen (`net use Z: \\Server\Share /persistent:yes`), Remote-URL auf den gemappten Pfad (`Z:\...`) setzen statt auf die UNC-Form |
 | `scalability N`-Konsolenbefehl wirkt sofort, aber jede neue PIE-Session fällt zurück auf Quality-Level 3 (Epic) | Der reine Konsolenbefehl setzt nur die CVars für die laufende Sitzung, speichert aber **nicht** automatisch (anders als oft angenommen) – `Saved/Config/Windows/Scalability.ini` wird dabei nie geschrieben | Projektweiter Fix in `Config/DefaultEngine.ini` unter `[SystemSettings]` (siehe README "Performance-Ziele") – gilt für jede Maschine, kein manueller Schritt pro Session nötig |
 | `PluginToolset.SetPluginEnabled` (MCP) meldet Erfolg, aber `.uproject` bleibt unverändert | MCP-Tool persistiert die Änderung in dieser UE-5.8-Version nicht auf die Platte, obwohl kein Fehler zurückkommt | `CamelotRAW_TP.uproject` direkt als JSON bearbeiten (die `"Enabled"`-Flags der betroffenen Plugin-Einträge auf `false`/`true` setzen) – identischer Effekt wie über den Plugin-Browser der Editor-UI |
@@ -130,48 +130,28 @@ Seit dem Architekturwechsel (2026-07-26, siehe README.md) basiert das Projekt au
 
 **Zwei Lyra-C++-Build-spezifische Stolperfallen (Automation-Build-Cache, Live-Coding/UBA-Fehler) betrafen den alten Lyra-Stand — archiviert in [Archive.md](Archive.md). Seit 2026-07-27 hat das Projekt trotz "Blueprint-first"-Grundsatz wieder ein (bewusst minimales) C++-Modul, s. o.**
 
-## Projekt-Zwei-Maschinen-Sync: Content via OneDrive (2026-07-27)
+## Rechner-Start: ein einziges Skript für alles (2026-08-22)
 
-**Situation:** `Content/` wird nicht versioniert (Git-LFS-Quota-Problem, siehe CLAUDE.md). Um Content zwischen ZBook und Powerrechner zu synchronisieren, wird **OneDrive-Symlink** genutzt.
+**Überholt/entfernt:** der vorherige OneDrive-Symlink-Ansatz (`Content/Camelot` per Windows-Junction in einen OneDrive-Ordner umgeleitet) — das leitete ausgerechnet unseren **git-versionierten** Ordner zusätzlich durch OneDrive um und war vermutlich Hauptursache der wiederholten "unterschiedliche Stände auf beiden Rechnern"-Probleme (Git und OneDrive stritten sich um dieselben Dateien). **Falls auf dem Power-Rechner noch aktiv:** Junction entfernen (`Remove-Item "C:\Claude\camelot-realms-at-war\Content\Camelot"` — löscht nur den Junction-Punkt, nicht die Zieldateien in OneDrive) und danach per `git pull` den normalen, git-verwalteten Ordner wiederherstellen lassen.
 
-**Powerrechner-Setup (2026-07-27 durchgeführt):** Symlink erstellt:
+**Aktueller Workflow:** `tools/start-dev.ps1` deckt den kompletten Start ab:
 ```powershell
-New-Item -ItemType Junction -Path "C:\Claude\camelot-realms-at-war\Content\Camelot" -Target "C:\Users\User\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
+& "D:\Claude\camelot-realms-at-war\tools\start-dev.ps1"
 ```
+1. `git pull origin master` — Code/Config/`Content/Camelot/`/Doku (Quelle der Wahrheit)
+2. Spiegelt `Z:\SharedAssets` (NAS-Stick, siehe unten) nach `SharedAssetsCache/` — für große, bewusst nicht versionierte Downloads (Fab/Paragon etc., siehe COSTS.md), nur NAS → lokal, nie automatisch zurück
+3. Startet den Unreal Editor — MCP-Server startet automatisch (`Config/DefaultEngine.ini` → `[Startup]` → `ConsoleAutoStartCommand`)
+4. Öffnet ein Claude-Code-Terminal im Projektordner (verbindet sich mit `unreal-mcp`)
 
-**ZBook-Setup (TODO):** Beim nächsten Sessin auf dem ZBook als **erstes** durchführen:
-```powershell
-# (Pfad anpassen an ZBooks OneDrive-Pfad, z. B. D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot oder ähnlich)
-New-Item -ItemType Junction -Path "D:\Claude\camelot-realms-at-war\Content\Camelot" -Target "D:\Users\[user]\OneDrive\Documents\CamelotRAWContent\Camelot" -Force
-```
+Root-Kurzstarter außerhalb des Repos (`D:\Claude\start-dev.ps1`) delegiert nur an dieses Skript, keine doppelte Logik.
 
-Danach wird OneDrive automatisch beide Machines synchronisieren.
+### Großer, nicht versionierter Content (Fab/Paragon etc.)
 
-### Editor mit Auto-Sync starten (WICHTIG!)
+Getrennt von `Content/Camelot/` (Git) und vom Third-Person-Template-Content (pro Rechner neu erzeugt, siehe oben): ein bare Git-Backup-Repo **und** ein reiner Datei-Ordner liegen auf dem an der FritzBox angeschlossenen USB-Stick.
 
-**Nicht direkt den Editor starten!** Stattdessen immer das Sync-Script verwenden:
-
-```powershell
-# PowerShell als Admin öffnen
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-& "C:\Claude\camelot-realms-at-war\tools\start-editor-with-sync.ps1"
-```
-
-**Was macht das Script:**
-1. **Vor Editor-Start:** OneDrive-Synchronisierung erzwingen (wartet max 30 Sekunden)
-2. **Editor starten** (UE5.8)
-3. **Nach Editor-Schließung:** OneDrive nochmal synchronisieren (5 Sekunden warten)
-4. **Fertig!** Content ist auf beiden Maschinen synchronized
-
-**Shortcut (optional):** Erstelle eine `.bat` oder `.lnk` im Tools-Ordner, die das Script aufruft:
-```batch
-@echo off
-powershell -ExecutionPolicy RemoteSigned -File "C:\Claude\camelot-realms-at-war\tools\start-editor-with-sync.ps1"
-pause
-```
-
-**Grund:** Ohne explizites Sync kann OneDrive im Hintergrund noch nicht fertig sein — die andere Maschine sieht dann veraltete Assets, oder es entstehen Merge-Konflikte.
+- **`Z:\SharedAssets`** (gemapptes Laufwerk, `net use Z: \\Mkl-iw4\mkl-iw4\Claude /persistent:yes`) — Ablageort für große Downloads, die nicht in Git sollen. Wird beim Start automatisch nach `SharedAssetsCache/` (lokal, gitignoriert) gespiegelt; von dort manuell im Content Browser importieren, wo gebraucht.
+- **`Z:\camelot-realms-at-war.git`** — bare Repo, zusätzliches Backup-Remote (`git remote nas`) neben GitHub, kein Live-Arbeitsort.
 
 ## Status
 
-🟢 Vollständig eingerichtet und getestet (Stand: 2026-07-27, CamelotRAW_TP) – 53 Toolsets bestätigt verbunden. Content-Sync über OneDrive-Symlink auf Powerrechner aktiv. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.
+🟢 Vollständig eingerichtet und getestet (Stand: 2026-08-22, CamelotRAW_TP) – 53 Toolsets bestätigt verbunden. Rechner-Abgleich ausschließlich über Git/GitHub, großer Nicht-Git-Content über NAS-Stick-Ordner. Nutzung erfolgt im Terminal-Fenster, nicht im GUI-Chat.

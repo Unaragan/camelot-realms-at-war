@@ -1,35 +1,60 @@
-# start-dev.ps1 - Startet Unreal Editor + Claude-Code-Terminal
+# start-dev.ps1 - Kompletter Projekt-Start: Git-Pull, Shared-Asset-Sync, Unreal Editor
+# (MCP-Server startet automatisch, siehe Config/DefaultEngine.ini [Startup]) + Claude-Code-Terminal
 # Camelot: Realms at War
-# Hinweis (2026-07-27): der -ExecCmds-Autostart des MCP-Servers ist unzuverlaessig (startet oft nicht).
-# Normaler Weg: nach dem Hochfahren im Output Log manuell "ModelContextProtocol.StartServer" eintippen.
+#
+# Ersetzt (2026-08-22) das bisherige zusaetzliche start-editor-with-sync.ps1 (OneDrive-Variante,
+# entfernt) - ein einziges Skript deckt jetzt den kompletten Start ab, siehe SETUP.md.
 
-# WICHTIG: Projekt liegt jetzt im Git-Repo selbst (nicht mehr unter Documents\Unreal Projects)
-# damit Editor-Arbeit und Versionierung nicht auseinanderlaufen. Siehe SETUP.md.
 $ProjectDir  = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $ProjectPath = Join-Path $ProjectDir "CamelotRAW_TP.uproject"
 $EnginePath  = "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe"
+$SharedAssetsNas   = "Z:\SharedAssets"
+$SharedAssetsLocal = Join-Path $ProjectDir "SharedAssetsCache"
 
+Set-Location $ProjectDir
+
+# --- 1. Git Pull (Quelle der Wahrheit fuer Code/Content/Camelot/Doku) ---
+Write-Host "=== Git Pull ===" -ForegroundColor Cyan
+git pull origin master
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "FEHLER: git pull fehlgeschlagen - vor dem Editor-Start klaeren (Konflikte? Uncommitted changes?)." -ForegroundColor Red
+    Read-Host "Enter zum trotzdem fortfahren, Strg+C zum Abbrechen"
+}
+
+# --- 2. Grosse, nicht-versionierte Assets vom NAS-Stick spiegeln (nur NAS -> lokal, nie umgekehrt) ---
+Write-Host "=== Shared-Assets-Sync (Z:\SharedAssets -> SharedAssetsCache) ===" -ForegroundColor Cyan
+if (Test-Path $SharedAssetsNas) {
+    if (-not (Test-Path $SharedAssetsLocal)) { New-Item -ItemType Directory -Force -Path $SharedAssetsLocal | Out-Null }
+    robocopy $SharedAssetsNas $SharedAssetsLocal /MIR /R:1 /W:1 /NFL /NDL /NJH | Out-Null
+    Write-Host "Fertig. Neue/aktualisierte Assets liegen in SharedAssetsCache/ - manuell im Content Browser importieren, wo gebraucht." -ForegroundColor Green
+} else {
+    Write-Host "NAS-Freigabe Z:\SharedAssets nicht erreichbar (Stick nicht verbunden/gemappt?) - Sync uebersprungen, weiter mit lokalem Stand." -ForegroundColor Yellow
+}
+
+# --- 3. Unreal Editor starten (MCP-Server startet automatisch ueber Config/DefaultEngine.ini [Startup]) ---
+Write-Host "=== Starte Unreal Editor (CamelotRAW_TP) ===" -ForegroundColor Cyan
 if (-not (Test-Path $EnginePath)) {
-    Write-Output "Unreal Editor nicht gefunden unter: $EnginePath"
+    Write-Host "FEHLER: Unreal Editor nicht gefunden unter: $EnginePath" -ForegroundColor Red
     Read-Host "Enter zum Beenden"
-    exit
+    exit 1
 }
 if (-not (Test-Path $ProjectPath)) {
-    Write-Output "Projekt nicht gefunden unter: $ProjectPath"
+    Write-Host "FEHLER: Projekt nicht gefunden unter: $ProjectPath" -ForegroundColor Red
     Read-Host "Enter zum Beenden"
-    exit
+    exit 1
 }
+Start-Process -FilePath $EnginePath -ArgumentList "`"$ProjectPath`""
 
-Write-Output "Starte Unreal Editor (CamelotRAW_TP)..."
-Start-Process -FilePath $EnginePath -ArgumentList "`"$ProjectPath`"", "-ExecCmds=`"ModelContextProtocol.StartServer`""
-
-Write-Output "Warte, bis der Editor hochgefahren ist (ca. 25 Sekunden)..."
+Write-Host "Warte, bis der Editor hochgefahren ist (ca. 25 Sekunden)..." -ForegroundColor Yellow
 Start-Sleep -Seconds 25
 
-Write-Output "Oeffne neues Terminal mit Claude Code (verbunden mit unreal-mcp)..."
+# --- 4. Claude-Code-Terminal oeffnen (verbindet sich mit unreal-mcp, siehe SETUP.md) ---
+Write-Host "=== Oeffne Claude-Code-Terminal ===" -ForegroundColor Cyan
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$ProjectDir'; claude"
 
-Write-Output ""
-Write-Output "Fertig. MCP-Server im Editor jetzt manuell starten:"
-Write-Output "  Im Output Log (Window - Output Log) eingeben: ModelContextProtocol.StartServer"
-Write-Output "Falls unreal-mcp im Terminal nicht als verbunden auftaucht: /mcp - List/manage MCP servers pruefen."
+Write-Host ""
+Write-Host "Fertig. MCP-Server sollte automatisch gestartet sein (Config/DefaultEngine.ini [Startup])." -ForegroundColor Green
+Write-Host "Falls nicht: im Output Log manuell 'ModelContextProtocol.StartServer' eintippen." -ForegroundColor Yellow
+Write-Host "Falls unreal-mcp im Terminal nicht als verbunden auftaucht: /mcp - List/manage MCP servers pruefen." -ForegroundColor Yellow
+Write-Host ""
+Write-Host "Am Ende der Sitzung nicht vergessen: git add/commit/push, damit der naechste Rechner den Stand bekommt." -ForegroundColor Yellow

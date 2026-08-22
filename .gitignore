@@ -15,6 +15,12 @@ Plugins/*/Intermediate/
 !/Content/Camelot/
 /Plugins/
 
+# --- Grosse, bewusst NICHT versionierte Downloads (Fab/Paragon etc., siehe COSTS.md) ---
+# Werden stattdessen ueber den NAS-Ordner Z:\SharedAssets synchronisiert (start-dev.ps1),
+# hier nur als lokaler Zwischenstopp vor manuellem Import in den Unreal Content Browser.
+/SharedAssetsCache/*
+!/SharedAssetsCache/.gitkeep
+
 # --- IDE / Editor ---
 .vs/
 .vscode/
