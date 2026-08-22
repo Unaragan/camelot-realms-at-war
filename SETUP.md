@@ -28,30 +28,11 @@ ModelContextProtocol.StartServer
 ```
 Läuft standardmäßig auf Port 8000, Pfad `/mcp`.
 
-### Automatisch beim Editor-Start:
-Damit der Server **immer beim Projektöffnen** automatisch startet, in `Config/DefaultEngine.ini` hinzufügen:
+### Automatisch beim Editor-Start (2026-08-22, per C++-Modul, korrigiert)
 
-```ini
-[/Script/Engine.Engine]
-+SystemStartupScripts=/Game/Camelot/Startup/MCP_AutoStart
-```
+Zwei frühere Ansätze waren **nachweislich wirkungslos** (kein Aufruf im Log, Port blieb zu) und wurden entfernt: `Config/DefaultEngine.ini` → `[Startup]` → `ConsoleAutoStartCommand` (vermutlich kein echter Ini-Schlüssel), sowie die nie tatsächlich angelegte `+SystemStartupScripts=/Game/Camelot/Startup/MCP_AutoStart`-Blueprint-Variante.
 
-Dann Blueprint-Script `Content/Camelot/Startup/MCP_AutoStart` erstellen:
-- **Blueprint** mit **Macro Library** oder **Level Blueprint**
-- Im **Event BeginPlay** / **Macro BeginPlay**:
-  ```
-  Execute Console Command: ModelContextProtocol.StartServer
-  ```
-
-**Alternativ:** Autoexec-Befehl in `Config/DefaultEngine.ini`:
-```ini
-[Engine.Engine]
-ConsoleKeys=Tilde
-[Startup]
-ConsoleAutoStartCommand=ModelContextProtocol.StartServer
-```
-
-**Nach Änderung:** Editor neu starten — Server startet dann automatisch beim Projektöffnen.
+**Funktionierender Ersatz:** `Source/CamelotRAW_TP/CamelotRAW_TP.cpp` registriert in `StartupModule()` einen Handler auf `FCoreDelegates::OnPostEngineInit` (nur `#if WITH_EDITOR`), der `ModelContextProtocol.StartServer` per `GEngine->Exec(...)` ausführt — feuert garantiert erst, nachdem die Engine (inkl. MCP-Plugin-HTTP-Server-Subsystem) vollständig initialisiert ist, anders als zeitlich unsichere Ini-/Kommandozeilen-Ansätze. Braucht nach dem Pull einen Rebuild (siehe "Missing Modules"-Dialog-Stolperfalle oben).
 
 ## Schritt 4: Plugin/Skill in Claude Code installieren (im Terminal!)
 

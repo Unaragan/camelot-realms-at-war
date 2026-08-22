@@ -1,5 +1,6 @@
-# start-dev.ps1 - Kompletter Projekt-Start: Git-Pull, Shared-Asset-Sync, Unreal Editor
-# (MCP-Server startet automatisch, siehe Config/DefaultEngine.ini [Startup]) + Claude-Code-Terminal
+# start-dev.ps1 - Kompletter Projekt-Start: Git-Pull, Shared-Asset-Sync, Unreal Editor + Claude-Code-Terminal
+# MCP-Server startet automatisch (CamelotRAW_TP.cpp, OnPostEngineInit-Handler) - falls nach einem
+# Rebuild noch nicht aktiv, siehe SETUP.md Schritt 3.
 # Camelot: Realms at War
 #
 # Ersetzt (2026-08-22) das bisherige zusaetzliche start-editor-with-sync.ps1 (OneDrive-Variante,
@@ -31,7 +32,7 @@ if (Test-Path $SharedAssetsNas) {
     Write-Host "NAS-Freigabe Z:\SharedAssets nicht erreichbar (Stick nicht verbunden/gemappt?) - Sync uebersprungen, weiter mit lokalem Stand." -ForegroundColor Yellow
 }
 
-# --- 3. Unreal Editor starten (MCP-Server startet automatisch ueber Config/DefaultEngine.ini [Startup]) ---
+# --- 3. Unreal Editor starten (MCP-Server startet automatisch, siehe CamelotRAW_TP.cpp) ---
 Write-Host "=== Starte Unreal Editor (CamelotRAW_TP) ===" -ForegroundColor Cyan
 if (-not (Test-Path $EnginePath)) {
     Write-Host "FEHLER: Unreal Editor nicht gefunden unter: $EnginePath" -ForegroundColor Red
@@ -53,8 +54,8 @@ Write-Host "=== Oeffne Claude-Code-Terminal ===" -ForegroundColor Cyan
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$ProjectDir'; claude"
 
 Write-Host ""
-Write-Host "Fertig. MCP-Server sollte automatisch gestartet sein (Config/DefaultEngine.ini [Startup])." -ForegroundColor Green
-Write-Host "Falls nicht: im Output Log manuell 'ModelContextProtocol.StartServer' eintippen." -ForegroundColor Yellow
-Write-Host "Falls unreal-mcp im Terminal nicht als verbunden auftaucht: /mcp - List/manage MCP servers pruefen." -ForegroundColor Yellow
+Write-Host "MCP-Server sollte automatisch gestartet sein (CamelotRAW_TP.cpp, OnPostEngineInit)." -ForegroundColor Green
+Write-Host "Falls unreal-mcp im Terminal nicht als verbunden auftaucht: /mcp - List/manage MCP servers pruefen," -ForegroundColor Yellow
+Write-Host "sonst manuell im Output Log: ModelContextProtocol.StartServer" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "Am Ende der Sitzung nicht vergessen: git add/commit/push, damit der naechste Rechner den Stand bekommt." -ForegroundColor Yellow
