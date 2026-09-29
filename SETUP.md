@@ -1,3 +1,11 @@
+> **Aktueller Startablauf (2026-09-29): Codex Desktop statt Claude-Terminal.**
+> Siehe AGENTS.md. tools/start-dev.ps1 startet den Editor, prüft MCP per Handshake
+> und öffnet Codex. Der direkte .uproject-Start öffnet nach neuem Modul-Build ebenfalls
+> Codex und startet MCP, führt aber keinen Git-Pull aus. Ältere Claude-spezifische
+> Anleitungen unten sind nur noch für die frühere Client-Installation relevant.
+> Ein frisch eingetragener MCP-Server kann einen Codex-Neustart benötigen.
+> Die Map-Sicherung über Git ist wegen ignorierter externer Actor-Dateien noch unvollständig.
+
 # Setup: Unreal MCP (Claude Code ↔ Unreal Editor)
 
 Anleitung, um Claude Code direkt mit dem Unreal Editor zu verbinden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren, DataTables, UMG-Widgets, u. v. m. – ohne blindes GUI-Klicken). Basiert auf Epics offiziellem Plugin [`unreal-engine-skills-for-claude-code-plugin`](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin). Erfolgreich getestet: **53 Toolsets** registriert (Stand CamelotRAW_TP, 2026-07-27), inkl. aller GAS-Werkzeuge (GameplayTagsToolset, AttributeSetToolset, AbilitySystemInspectorToolset, GameplayCueToolset).

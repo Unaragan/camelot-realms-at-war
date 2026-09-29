@@ -2,11 +2,13 @@
 
 Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Character-Struktur pro Reich: [Docs/Design/Character_Structure_Realms.md](Docs/Design/Character_Structure_Realms.md). Rüstungs- & Waffen-Naming: [Docs/Design/Armor_Weapons_Naming.md](Docs/Design/Armor_Weapons_Naming.md). GUI/UI-Design: [Docs/Design/GUI_UI_Design.md](Docs/Design/GUI_UI_Design.md). Skill Tree & Talent-Progression: [Docs/Design/SkillTree_Progression.md](Docs/Design/SkillTree_Progression.md). Chat-System: [Docs/Design/Chat_System.md](Docs/Design/Chat_System.md). Crafting & Professions: [Docs/Design/Crafting_Professions.md](Docs/Design/Crafting_Professions.md). Material-Lieferanten (POIs): [Docs/Design/Material_Suppliers_POI.md](Docs/Design/Material_Suppliers_POI.md). Spirituelle Stätten (POIs): [Docs/Design/Spiritual_Sites_POI.md](Docs/Design/Spiritual_Sites_POI.md). Auktionshaus (Realm-Marktplatz): [Docs/Design/Auction_House.md](Docs/Design/Auction_House.md). Item-Level-Requirements & Penalties: [Docs/Design/Item_Requirements_Penalties.md](Docs/Design/Item_Requirements_Penalties.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Überholte/archivierte Inhalte (v. a. Lyra-Implementierungsdetails vor dem Architekturwechsel): [Archive.md](Archive.md). Unreal-MCP-Setup: [SETUP.md](SETUP.md). Wiederverwendbare Terminal-Prompts: [PROMPTS.md](PROMPTS.md). NPC-Namenspools: [NPC_NAMES.md](NPC_NAMES.md). Frontier-NPCs & Questline-Backlog: [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md). Epic-Questlines (Lv 1–50) je Reich: [Albion](Docs/Design/Albion_Epic_Questline.md), [Midgard](Docs/Design/Midgard_Epic_Questline.md), [Hibernia](Docs/Design/Hibernia_Epic_Questline.md). Quest-Content & Umsetzungsstand (zentraler Tracker): [Docs/Design/Quests.md](Docs/Design/Quests.md).
 
-## Wichtig: zwei getrennte Arbeitsumgebungen
+## Arbeitsumgebung: Codex und Unreal
 
-- **GUI-Chat** (diese Art von Session): Planung, Recherche, GitHub/Repo-Arbeit, Dokumentation. Kein Zugriff auf Unreal-MCP-Werkzeuge, kein `/plugin`-Befehl verfügbar.
-- **Terminal mit laufender `claude`-Sitzung**: einzige Umgebung, in der Unreal-MCP-Werkzeuge (direkte Editor-Steuerung) funktionieren. Siehe SETUP.md. Fortschritt: [GitHub Project Board](https://github.com/users/Unaragan/projects/1).
-- **Beide Sitzungen committen/pushen eigenständig ins selbe Repo.** Deshalb: vor Beginn neuer Arbeit immer erst `git pull`, um nicht auf einem veralteten Stand aufzusetzen oder Commits der jeweils anderen Sitzung zu übersehen.
+Seit 2026-09-29 ist Codex Desktop der aktive Assistent. Unreal-MCP kann direkt im
+Codex-Chat verwendet werden; eine separate Claude-Terminal-Sitzung ist nicht erforderlich.
+Konfiguration, Startablauf und bekannte Synchronisationsgrenzen: **AGENTS.md**.
+Vor neuer Arbeit Git-Stand prüfen und nur bei sauberem Arbeitsbaum fast-forward pullen.
+Spieltests bleiben durch den Nutzer zu bestätigen.
 
 ## Definition of Done (Editor-Arbeit)
 
