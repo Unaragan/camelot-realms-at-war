@@ -1,5 +1,7 @@
 # Camelot: Realms at War
 
+- [Game Design Document](Docs/Game_Design_Document.md) covers the game vision, world, combat, progression, and prototype milestones.
+
 A tactical Unreal Engine multiplayer prototype built around Realm versus Realm combat between Albion, Midgard, and Hibernia. The current milestone is a small battleground that proves class roles, positioning, and group play with two factions before adding the third.
 
 ## Start here
