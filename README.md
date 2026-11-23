@@ -1,177 +1,160 @@
 # Camelot: Realms at War
 
-Spiritual Successor zu *Dark Age of Camelot* – ein taktisches Drei-Fraktionen-RvR-Spiel, entwickelt in Unreal Engine 5.
+A spiritual successor to *Dark Age of Camelot* (DAoC), built in Unreal Engine 5 around tactical Realm versus Realm (RvR) combat between three factions.
 
-Dieses Repository ist **privat** und dient als Startpunkt/Projektgedächtnis für die Entwicklung. Kein Bezug zu, keine Assets aus dem Originalspiel.
+This private repository serves as the development starting point and project record. The project is independent of the original game and uses none of its assets.
 
 ## Vision
 
-Der Kern von DAOC, den dieses Projekt einfangen will: **kleine, taktische Kämpfe zwischen drei asymmetrischen Fraktionen**, getragen von Klassenvielfalt und Gruppenspiel – nicht Open-World-MMO-Umfang, nicht Crafting/Housing (zumindest nicht am Anfang).
+The project aims to capture the core of DAoC: **small, tactical fights between three asymmetric factions**, with distinct classes and an emphasis on group play. The initial scope excludes an open-world MMO, crafting, and housing.
 
-## Rahmenbedingungen
+## Development Context
 
-- **Team:** Solo-Entwicklung mit KI-Unterstützung (Claude Code/Fable) als Force-Multiplier für Code/Backend/Dokumentation; ggf. später punktuelle Unterstützung für Kunst/Sound (siehe Team & Mitstreiter)
-- **UE5-Erfahrung:** Einsteiger – Lernkurve ist Teil des Plans, nicht ignoriert
-- **Hintergrund:** IT/Netzwerke/Authentifizierung – Stärke liegt auf der Server-/Backend-Seite, nicht im Client/Rendering
-- **Zielumfang (aktuell):** kleiner Multiplayer-Prototyp, kein persistentes Voll-MMO
+- **Team** — Solo development with help from Claude Code/Fable for code, backend work, and documentation. Targeted art and audio support may follow. See [Team and Contributors](#team-and-contributors).
+- **UE5 experience** — The plan includes time to learn the engine.
+- **Background** — IT, networking, and authentication, with most experience on the server and backend side.
+- **Current scope** — A small multiplayer prototype.
 
-## Namenswahl
+## Name
 
-"Camelot" ist als Begriff aus der Artus-Sage gemeinfrei. Geschützt ist die konkrete Marke "Dark Age of Camelot" (EA/Broadsword). Präzedenzfall: Mark Jacobs (Original-DAOC-Creator) nutzte für seinen eigenen Spiritual Successor ebenfalls "Camelot" im Titel (*Camelot Unchained*). Der Name hier bleibt bewusst auf Distanz zur Originalmarke.
+The name “Camelot” comes from Arthurian legend. *Dark Age of Camelot* is a distinct EA/Broadsword brand. Mark Jacobs, the creator of the original game, also used “Camelot” in the title of his spiritual successor, *Camelot Unchained*. This project's title is intended to keep a clear distance from the original brand.
 
-## Tech-Stack
+## Tech Stack
 
-- **Engine:** Unreal Engine 5.8 (installiert unter `C:\Program Files\Epic Games\UE_5.8`)
-- **Basis/Referenz:** Epics **Third Person Template** (seit 2026-07-26, siehe "Architekturwechsel" unten) – Team-System/Multiplayer-Grundgerüst/GAS werden manuell nachgerüstet statt wie bei Lyra vorgefertigt übernommen
-- **Kampfsystem:** Gameplay Ability System (GAS) – Klassen, Fähigkeiten, Cooldowns, Buffs/Debuffs, netzwerk-repliziert
-- **Sprachen:** C++ für Kernsysteme, Blueprints/DataTables für Content & Balancing
-- **Netzwerkmodell (Prototyp):** Listen Server; Dedicated Server erst wenn nötig
-- **Auth/Persistenz:** bewusst zurückgestellt bis der Kampf-Loop steht (siehe Nicht-jetzt-Liste). Wenn nötig: separater Web-Service (Login/Token) außerhalb der Engine, UE-Server validiert beim Connect – passt zum eigenen Netzwerk-/Auth-Hintergrund.
+- **Engine** — Unreal Engine 5.8, installed under `C:\Program Files\Epic Games\UE_5.8`.
+- **Foundation** — Epic's **Third Person Template** since July 26, 2026. The team system, multiplayer foundation, and GAS integration are built on top of the template. See [Architecture Change](#architecture-change-lyra-to-third-person-template).
+- **Combat** — The Gameplay Ability System (GAS) handles network-replicated classes, abilities, cooldowns, buffs, and debuffs.
+- **Languages and tools** — C++ for core systems, Blueprints and DataTables for content and balance.
+- **Prototype networking** — Listen server first, with a dedicated server when needed.
+- **Authentication and persistence** — Deferred until the combat loop works. If needed, a separate web service can handle login and tokens, with the UE server validating tokens on connection. This fits the project's networking and authentication experience.
 
-## Lokalisierung (Multi-Language von Anfang an: DE, EN, FR, ES)
+## Localization
 
-Bewusste Architekturentscheidung von Tag 1, nicht nachträglich: **jeder spieler-sichtbare Text als `FText`**, nie als rohes `FString`/hartcodierter String – in C++ über `LOCTEXT`/`NSLOCTEXT`, in Blueprints als `Text`-Typ, in DataTables (Klassen-/Item-/Fähigkeitsnamen) als `FText`-Spalten statt `FString`. Größere/wiederkehrende Textblöcke über String Tables.
+English is the source language. German, French, and Spanish are target languages from the start. Represent all player-facing text as **`FText`**. Use `LOCTEXT` or `NSLOCTEXT` in C++, `Text` in Blueprints, and `FText` columns in DataTables for class, item, and ability names. Use String Tables for larger or recurring blocks of text.
 
-**Workflow:** UE5s eingebautes Localization Dashboard – Zielsprachen `en` (Quelle), `de`, `fr`, `es` konfigurieren → Gather Text → Export `.po` → Übersetzung → Import → Kompilierung zu `.locres`, Sprache zur Laufzeit umschaltbar.
+In the UE5 Localization Dashboard, configure `en` as the source and `de`, `fr`, and `es` as targets. Gather text, export `.po` files, translate them, import the translations, and compile them to `.locres` files. Players can switch languages at runtime.
 
-**Jetzt vs. später:** Infrastruktur (FText-Disziplin, Zielsprachen konfiguriert) von Anfang an. Tatsächliche Übersetzungsinhalte für DE/FR/ES kommen inkrementell, sobald es stabilen Content gibt – kein Blocker für den Vertical Slice.
+Set up the localization infrastructure from the beginning. Add German, French, and Spanish translations incrementally as the content stabilizes. Those translations are outside the vertical slice's completion criteria.
 
-## Art-Stil: Comic/Toon als bewusste Platzhalter- und Zielstrategie
+## Art Direction
 
-Grafiken werden zunächst im **Comic-/Toon-Stil** angelegt (Cel-Shading Post-Process + Outline-Effekt) und später nach Grundfunktion ersetzt bzw. verfeinert. Gründe:
+Start with a **comic or toon style**, using cel-shading post-processing and outlines. Refine or replace assets once the core gameplay works.
 
-- Günstiger zu produzieren/beschaffen als Photorealismus, Marketplace/Fab-Assets kombinieren sich leichter
-- Bessere Lesbarkeit im RvR-Chaos (Fraktionsfarben Karminrot/Blaugrün/Waldgrün kommen im flachen Shading klarer raus)
-- Deckt sich mit den Performance-Zielen (siehe unten) – flache Materialien sind von Natur aus günstiger
+- Stylized assets are cheaper to make or source than photorealistic assets and easier to combine with Marketplace or Fab content.
+- Flat shading helps players distinguish crimson, teal, and forest-green faction colors during RvR fights.
+- Simpler materials help meet the performance targets.
 
-**Technische Trennung für spätere Austauschbarkeit:** Gameplay-Klassen referenzieren Mesh/Material als austauschbare Variable/Data Asset, nicht hart verdrahtet. Standard-Mannequin-Skeleton für Animations-Retargeting, damit spätere hochwertigere Meshes dieselben Animationen nutzen können.
+Gameplay classes reference meshes and materials through replaceable variables or Data Assets. Use the standard mannequin skeleton for animation retargeting so later meshes can reuse the same animations.
 
-## Performance-Ziele
+## Performance Targets
 
-Ausdrücklicher Designgrundsatz: **Es darf nicht passieren, dass man nur mit High-End-Hardware spielen kann.** Orientierung an DAOC selbst, das von Anfang an für schwache Hardware ausgelegt war (niedrige Polygonzahlen, statisches/gebackenes Licht, einfache Shader, aggressives LOD/Culling) statt nachträglich runterskaliert zu werden.
+**The game must run on modest hardware.** DAoC designed for low-end hardware from the start with low polygon counts, baked or static lighting, simple shaders, and aggressive LOD and culling.
 
-Konkrete Entscheidungen für UE5:
+- Disable **Lumen** and use baked lighting through **Lightmass**.
+- Keep **Nanite** off for characters and use it sparingly for environments.
+- Evaluate **forward rendering** as an option for scenes with many characters, where it may cost less than deferred rendering.
+- Test UE5 scalability settings from Low through Epic on multiple machines from the beginning.
+- Pick a performance target around a five-year-old midrange GPU and test against it regularly.
 
-- **Lumen deaktiviert** – klassisches gebackenes Licht (Lightmass) statt dynamischer globaler Beleuchtung
-- **Nanite nicht für Charaktere** (ohnehin kaum für Skeletal Meshes nutzbar), bei Umgebung sparsam
-- **Forward-Renderer prüfen** statt Deferred – günstiger bei vielen gleichzeitigen Charakteren
-- UE5-Skalierungsstufen (Low–Epic) von Anfang an mittesten, nicht nur auf dem eigenen Entwicklerrechner
-- Ziel-Hardware bewusst festlegen (Mittelklasse-GPU, ca. 5 Jahre alt) und regelmäßig dagegen testen
+## Servers and Test Hardware
 
-## Server & Test-Hardware
+Existing test hardware covers both ends of the performance range for task #10 without new purchases.
 
-**Test-Hardware bereits vorhanden (kein Neukauf nötig):**
-- **HP ZBook** (mobile Workstation, NVIDIA G100/Einstiegsklasse professionelle Grafik) – dient als unteres Performance-Ziel, da mobile Workstation-GPUs für Echtzeit-Rendering/Gaming schwächer sind als vergleichbare Gaming-Laptops
-- **Desktop-PC mit AMD Ryzen 9 + NVIDIA RTX 40er-Serie** – dient als High-End-Referenz
-- **Altes Notebook mit Linux** – dient als kostenloser LAN-Dedicated-Server-Testrechner (siehe Server-Tabelle unten). Für einen Dedicated Server zählt CPU/RAM mehr als GPU, schwache Hardware genügt, da kein Rendering nötig ist.
+- **HP ZBook** — Mobile workstation with entry-level NVIDIA G100 professional graphics. This is the lower-end rendering reference.
+- **AMD Ryzen 9 desktop with an NVIDIA RTX 40-series GPU** — High-end reference.
+- **Older Linux laptop** — LAN dedicated-server test machine. A headless server primarily needs CPU and RAM.
 
-Damit ist Task #10 (Performance-Budget) von Anfang an gegen beide Enden des Spektrums testbar, ohne zusätzliche Anschaffung.
-
-**Server-Bedarf entlang der Roadmap:**
-
-| Phase | Bedarf | Kosten |
+| Phase | Server needs | Cost |
 |---|---|---|
-| Phase 0-1 (Lernen/Lyra-Setup) | Kein Server – Tests via "Play in Editor" mit mehreren lokalen Client-Instanzen | 0 € |
-| Phase 2, Netzwerk-Grundgerüst (Task #5) | Listen Server + Epic Online Services (EOS, fest in UE5 integriert, kostenlose Free-Tier, übernimmt NAT-Traversal/Sessions) | 0 € |
-| LAN-Dedicated-Server-Test (Task #5) | **Vorhandenes altes Linux-Notebook** – UE5 Linux-Dedicated-Server-Build (Cross-Compile-Toolchain nötig), headless betrieben, andere Rechner verbinden per LAN-IP | 0 € |
-| Übergang zu echtem Internet-/24-7-Server – erst falls über das Heimnetz hinaus getestet werden soll oder ein Server ohne eigene laufende Hardware gebraucht wird | Kleiner VPS für headless Dedicated-Server-Build (CPU-Kerne wichtiger als GPU). Aktuelles Beispiel: Contabo Cloud VPS 4 (4 vCPU, 8 GB RAM, 100 GB SSD) | ~5,50 €/Monat (24-Monats-Vertragspreis, kürzere Laufzeit teurer; Preise zum Entscheidungszeitpunkt neu prüfen) |
-| Falls Projekt wächst – breiterer Alpha/Beta-Test mit mehr gleichzeitigen Spielern | Größerer VPS, z. B. Contabo Cloud VPS 8 (8 vCPU, 24 GB RAM) oder vergleichbar | ~14 €/Monat aufwärts, je nach Spielerzahl |
+| Phases 0–1, learning and original Lyra setup | Use Play in Editor with several local clients | €0 |
+| Phase 2, networking foundation (task #5) | Listen server with the UE5 integration for Epic Online Services (EOS). The free tier covers NAT traversal and sessions. | €0 |
+| LAN dedicated-server test (task #5) | Use the existing Linux laptop. Cross-compile a UE5 Linux dedicated-server build, run it headless, and connect over the LAN IP. | €0 |
+| Internet or 24/7 hosting, once testing extends beyond the home network or needs an always-on machine | Small VPS for a headless server build. Prioritize CPU cores. Example: Contabo Cloud VPS 4, with 4 vCPUs, 8 GB RAM, and a 100 GB SSD. | About €5.50/month in the original 24-month pricing research. Shorter terms cost more. |
+| Larger alpha or beta tests if the project grows | Larger VPS such as Contabo Cloud VPS 8, with 8 vCPUs and 24 GB RAM, or equivalent. | About €14/month and up in the original estimate, depending on player count. |
 
-Hinweis: Hetzner-Preise sind laut Recherche seit 15.06.2026 stark gestiegen (teils 2,5–3x) – Contabo ist aktuell die günstigere, verifizierte Alternative; Anbieter zum jeweiligen Entscheidungszeitpunkt neu vergleichen.
+The project's June 2026 research recorded significant Hetzner price increases from June 15, in some cases 2.5–3×, and identified Contabo as the cheaper option at the time. Recheck providers and prices when making a decision.
 
-**Betriebssystem:** Linux (nicht Windows Server) – keine zusätzlichen OS-Lizenzkosten, UE5 Dedicated Server unterstützt Linux nativ.
+Use **Linux** for dedicated servers. UE5 supports it natively and it avoids additional OS licensing costs. See [COSTS.md](COSTS.md) for ongoing costs, planned expenses, and free tools.
 
-**Vollständige Kosten-Tracking-Tabelle (laufend, geplant, Freeware-Tools):** siehe [COSTS.md](COSTS.md).
+## Scaling and MMO Scope
 
-## Skalierung: MMO-Realität einordnen
+UE5's standard replication is built for action multiplayer on the order of dozens to around a hundred players. *Ashes of Creation* is a UE5 reference project aiming for sieges of roughly 250–500 players. Its approach requires extensive networking work, including interest management, server meshing, and Iris replication. That scale takes years of engineering and a team.
 
-UE5s Standard-Replikation ist für Action-Multiplayer ausgelegt (Dutzende bis ~100 Spieler), nicht für Tausende. Referenzprojekt: *Ashes of Creation* wird mit UE5 gebaut und zielt auf große Belagerungsschlachten (~250–500 Spieler), benötigt dafür aber massiv angepasste Netzwerkschicht (Interest-Management, Server-Meshing, Iris-Replikation) – ein mehrjähriges Engineering-Projekt, kein Solo-Feature.
-
-Realitätscheck zu DAOC selbst: auch die legendären Keep-Sieges waren nie wirklich 1000 gleichzeitig im Nahkampf-Radius – Serverpopulation groß, tatsächliche Kampfgröße pro Zone eher Dutzende bis ~150 pro Seite. Das DAOC-Gefühl ist auch mit deutlich kleineren Zahlen erreichbar. Große Netzwerk-Skalierung ist eine "falls das Projekt wächst und ein Team dazukommt"-Frage, keine Tag-1-Architekturentscheidung – die Netzwerkschicht lässt sich später austauschen, ohne Kampfsystem/Klassen (GAS) neu zu bauen.
+DAoC accommodated large server populations, but even its famous keep sieges involved far fewer players within melee range at any one time. Zone battles were closer to dozens to roughly 150 per side. Smaller fights can capture the same feel. Revisit large-scale networking if the project grows and a team forms. The networking layer can be replaced later without rebuilding the GAS combat and class systems.
 
 ## Roadmap
 
-**Phase 0 – UE5-Grundlagen** 🟡 *in Arbeit*
-Blueprint-Basics (Epics "Your First Hour"), danach gezielt Multiplayer/Replikation lernen, kleine Wegwerf-Projekte vor dem eigentlichen Projekt.
+**Phase 0 — UE5 fundamentals** 🟡 *In progress*  
+Learn Blueprint basics with Epic's “Your First Hour,” then study multiplayer and replication through small throwaway projects.
 
-**Phase 1 – Technische Basis** 🟢 *abgeschlossen*
-Third Person Template als Ausgangsbasis einrichten, GAS (Gameplay Ability System) manuell per Blueprint nachgerüsten, Projektstruktur (C++/Blueprint-Aufteilung) festlegen, Rendering-Pipeline (siehe Performance-Ziele) konfigurieren. (Architekturwechsel von Lyra auf Third Person Template 2026-07-26, um Scope/LFS-Overhead zu reduzieren.)
+**Phase 1 — Technical foundation** 🟢 *Complete*  
+Set up the Third Person Template, add GAS manually through Blueprints, define what belongs in C++ and Blueprints, and configure the rendering pipeline. The July 26, 2026 switch from Lyra reduced project scope and Git LFS overhead.
 
-**Phase 2 – Vertical Slice: Battleground zuerst, Startgebiet später**
+**Phase 2 — Vertical slice: battleground first**
 
-Priorität liegt auf dem Beweis, dass der Kampf-Kern Spaß macht – nicht auf Spieler-Onboarding, das erst relevant wird, sobald Außenstehende getestet werden.
+First prove that the core combat is fun. Player onboarding becomes relevant when outside testers join.
 
-1. Zwei Spieler verbunden, synchron sichtbar (Netzwerk-Grundgerüst steht)
-2. Eine Klasse, Auto-Attack + 1-2 Fähigkeiten via GAS, Health/Tod/Respawn repliziert
-3. Zweite Klasse (2 Fraktionen zum Start, reduziert Setup-Aufwand) – testet asymmetrisches Klassengefühl
-4. **Battleground-Map**: klein, symmetrisch, ein zentrales Ziel (Flagge/Node), Grayboxing im Toon-Look reicht – Vorbild: DAOCs eigene kleine RvR-Zonen (Thidranki, Braemar), nicht die große Frontier-Welt
-5. Playtest mit Freunden, Fähigkeiten nachjustieren
-6. Dritte Fraktion/Klasse ergänzen, sobald der Zwei-Fraktionen-Kampf schon überzeugt
+1. Connect two players and make sure each sees the other move in sync.
+2. Implement one class with auto-attacks and one or two GAS abilities. Replicate health, death, and respawning.
+3. Add a second class for a second faction to test asymmetric play with a manageable setup.
+4. Build a small, symmetrical **battleground** with one central objective, such as a flag or capture node. A toon-style graybox is sufficient. DAoC's Thidranki and Braemar are the reference for scale.
+5. Playtest with friends and tune the abilities.
+6. Add a third faction and class once combat between two factions works well.
 
-**Startgebiet (Tutorial-Zone):** bewusst zurückgestellt bis nach dem Vertical Slice – lohnt sich erst, wenn Playtester/Mitstreiter eingebunden werden, die das Projekt nicht schon "von innen" kennen. Dann pro Fraktion ein kleines Startgebiet (Vorbild: DAOCs Cotswold etc.) mit Übergang ins Battleground.
+**Starting area and tutorial** — After the vertical slice, build a small starting area for each faction once playtesters or contributors unfamiliar with the project join. Use DAoC zones such as Cotswold as a reference and connect each area to the battleground.
 
-**Danach:** Entscheidung, ob/wie Richtung größerer Welt oder Persistenz erweitert wird – erst wenn der Kern nachweislich Spaß macht.
+**Afterward** — Consider a larger world or persistence once playtesting shows that the core gameplay is fun.
 
-## Team & Mitstreiter
+## Team and Contributors
 
-Frühere DAOC-Nachfolgeprojekte aus der Community sind wiederholt im Sand verlaufen. Wiederkehrende Ursachen: Vision-Dokumente statt spielbarem Prototyp, reine Freiwilligen-Teams ohne Verbindlichkeit, zu großer Scope von Tag 1, Design-by-Committee, IP-Angst.
+Earlier community-led DAoC successor projects repeatedly stalled. Common causes included relying on design documents without a playable prototype, volunteer teams without clear commitments, oversized scope, design by committee, and IP concerns.
 
-**Strategie diesmal: erst zeigen, dann rekrutieren.** Nicht mit einer Idee Leute suchen, sondern mit dem spielbaren Vertical Slice (Phase 2) – das ist der Unterschied zu "noch ein totes Fanprojekt".
+Recruit around a playable vertical slice. Claude Code/Fable helps with some systems and backend programming, historically a major bottleneck for community projects. Original 3D art, animation, playtesting judgment, and work that can proceed in parallel still need people.
 
-- KI-Unterstützung (Claude Code/Fable) federt einen Teil der Systems-/Backend-Programmierung ab – historisch die größte Ausfallursache bei Community-Projekten
-- Nicht ersetzbar: 3D-Art/Animation von Grund auf, menschliches Playtesting-Urteil, echte Teammitglieder für parallelisierbare Arbeit
-- Wenn Rekrutierung ansteht: DAOC-Community (Subreddit/Discords) für Nostalgie-getriebene Mitstreiter, Unreal-Slackers-Discord/r/unrealengine für Skill, itch.io/IndieDB-Devlogs für organisches Anziehen durch sichtbaren Fortschritt
-- Für einzelne Assets eher bezahlte Auftragsarbeit als offene Freiwilligen-Suche erwägen – verbindlicher, kein Team-Management nötig
+When recruitment begins, look to DAoC subreddits and Discords for players who know the genre, and Unreal Slackers or r/unrealengine for technical skills. Show progress through itch.io or IndieDB devlogs. For individual assets, consider paid commissions with clear deliverables and limited team-management overhead.
 
-## Unreal MCP: Claude Code direkt im Editor
+## Unreal MCP in the Editor
 
-Über Epics offizielles Plugin kann Claude Code direkt mit dem Unreal Editor verbunden werden (Actors spawnen, Blueprints/Materialien bearbeiten, GAS-Fähigkeiten konfigurieren) – ohne unzuverlässiges GUI-Klicken über Screenshots. Funktioniert nur in einer echten Terminal-Sitzung, nicht in GUI-Chat-Oberflächen. Vollständige Einrichtung inkl. gelöster Stolperfallen: [SETUP.md](SETUP.md).
+Epic's official plugin connects Claude Code directly to the Unreal Editor from a terminal session. It can spawn actors, edit Blueprints and materials, and configure GAS abilities through editor tools. See [SETUP.md](SETUP.md) for the full setup and troubleshooting notes.
 
-## Werkzeug-Aufteilung: Copilot vs. Claude
+## GitHub Copilot and Claude Code
 
-Für einfache, in sich geschlossene Code-Aufgaben (einzelne C++-Klasse nach bekanntem Muster, DataTable-Struct, Utility-Funktion, Testgerüst) wird **GitHub Copilot** (kostenlos verfügbar) direkt im Editor genutzt – schnell, kein Projektkontext nötig. Für alles, was Projektkontext über mehrere Dateien, Architekturentscheidungen oder Planung braucht, bleibt **Claude Code** der Ansprechpartner.
+Use GitHub Copilot in the editor for self-contained work that follows a known pattern, such as a C++ class, DataTable struct, utility function, or test scaffold. Use Claude Code for work that depends on context across files, architecture decisions, or planning.
 
-**Faustregel:** "Erstelle X nach folgendem Muster" → Copilot. "Wie sollten wir X strukturieren" / "was hat das für Auswirkungen auf Y" → Claude.
+For moodboards and visual references, the project preferred Copilot's image generation after comparing battleground concepts with Claude's SVG sketches. See the [Frontier vision document](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
 
-**Auch für Bild-/Konzept-Art:** Copilot (bzw. dessen Bildgenerierung) für Moodboards/Referenzbilder nutzen, nicht Claudes SVG-Zeichnungen – im direkten Vergleich (Battleground-Moodboards) war Copilot spürbar besser, siehe [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
+## References and Research
 
-## Referenzen & Recherche
+- **Dawn of Light (DOL)** — A GPL-licensed DAoC server emulator. Consult it to understand combat and RvR formulas. Respect its license and avoid copying code directly.
+- Firsthand play experience is the primary reference for class balance and the feel of RvR.
+- Use `/inspect` exports of the developer's characters to calibrate itemization ranges.
+- **Ashes of Creation** — Reference for UE5 networking at siege scale.
+- [AssetHub.io](https://assethub.io/) — Generates 3D meshes from images or text. Useful for quick placeholders or base meshes in early character, item, and environment prototypes before commissioning custom art.
+- **RPG System - All-In-One (Top-Down & Third-Person)** — Marketplace reference for evaluating potential GAS extensions. Use its top-down and third-person RPG systems as an architecture benchmark.
 
-- **Dawn of Light (DOL):** Open-Source-Server-Emulator (GPL) für DAOC – wertvolle Referenz zum *Verstehen* von Kampf-/RvR-Formeln, nicht zum direkten Übernehmen von Code (Lizenz beachten)
-- Eigene Spielerfahrung als primäre Design-Referenz für Klassenbalance und RvR-Gefühl
-- `/inspect`-Exports (eigene Charakterdaten) als Kalibrierungsreferenz für Itemization-Wertebereiche, nicht zum Import
-- **Ashes of Creation** als Referenz für UE5 + Großschlachten-Netzwerkarchitektur (siehe Skalierung)
-- **AssetHub.io** (https://assethub.io/) – Bilder/Text → 3D-Meshes mit AI-Generierung, für schnelle Placeholder-Assets oder Basis-Modelle (direkt in UE5 importierbar). Nutzen für frühe Character-/Item-/Environment-Prototypen, bevor Custom-Art commissioned wird
-- **RPG System - All-In-One (Top-Down & Third-Person)** – Marketplace-Asset für späteren Referenz-Check, falls GAS-Setup erweitert werden soll; bietet sowohl Top-Down als auch Third-Person RPG-Systeme als Referenzmaterial (nicht für direkten Code-Import, nur als Architektur-Benchmark)
+## Architecture Change: Lyra to Third Person Template
 
-## Architekturwechsel (2026-07-26): Lyra → Third Person Template
+The project switched on **July 26, 2026**. Even the smallest Lyra test case, with an empty map, one player-controlled paladin, and no abilities or second actor, repeatedly produced frozen movement or sliding without animation in live playtests after fixes had been reported as verified. See [issue #14](../../issues/14).
 
-**Aktiv umgesetzt, nicht mehr nur Rückfalloption.** Grund: selbst der kleinstmögliche Testfall (1 leere Map, 1 spielerkontrollierter Paladin, keine Fähigkeiten, kein zweiter Akteur) zeigte in mehreren Runden trotz mehrfach "verifizierter" Fixes im echten Play-Test entweder komplett eingefrorene oder rein gleitende Bewegung ohne jede Animation (siehe Issue #14). Die Ursache lag wiederholt in Lyras fortgeschrittenem Experience-/PawnData-/LinkedAnimLayer-System, das für KI-gestütztes Debugging via Property-/Log-Checks strukturell schlecht zugänglich ist (verteilte Laufzeit-Verdrahtung statt direkt inspizierbarer Zustände).
+The recurring problem was difficult to trace through Lyra's Experience, PawnData, and LinkedAnimLayer systems. Its runtime wiring spans several systems, limiting what property inspection and logs can establish.
 
-**Neue Basis:** Epics **Third Person Template** (kein Experience-System, kein GAS von Haus aus, dafür sofort funktionierende Bewegung/Animation/Kamera) plus manuell nachgerüstetes GAS – ein gut dokumentiertes Community-Muster (z. B. "Getting Started with GAS in Unreal Engine" Tutorials, oder Serien wie [TheDevRealm](https://www.youtube.com/@TheDevRealm)s MMO-Tutorial-Reihe, die genau darauf aufbaut).
+Epic's **Third Person Template** provides working movement, animation, and camera behavior out of the box. GAS is added manually. This follows a documented community pattern, including “Getting Started with GAS in Unreal Engine” tutorials and [TheDevRealm's](https://www.youtube.com/@TheDevRealm) MMO series.
 
-**Was erhalten bleibt:** unser eigenes Kampf-/Rückenangriff-/Tod-Respawn-Design (SYSTEMS.md) ist generisches GAS-Wissen, nicht Lyra-spezifisch – der Umbau betrifft vor allem das Charakter-/Team-/Replikations-Grundgerüst, das Lyra bisher kostenlos mitgeliefert hat.
+The existing [combat, rear-attack, death, and respawn design](SYSTEMS.md) carries over because it uses general GAS concepts. The change primarily rebuilds the character, team, and replication foundation that Lyra previously supplied.
 
-**Vorgehen:** neues Projekt auf Basis Third Person Template, kleine leere Testmap (kein Standard-Grayboxing nötig) für den reinen Funktionstest (Bewegung + Animation zuerst, danach GAS-Kampf schrittweise wieder aufbauen).
+Use a small, empty test map to verify movement and animation first, then rebuild GAS combat incrementally.
 
-## Nicht-jetzt-Liste
+## Deferred Scope
 
-Bewusst zurückgestellt, um Scope-Explosion zu vermeiden:
-
-- Crafting — für die Release-Version vorgesehen (Materialien per Kauf gegen
-  Ingame-Currency oder per Farmen), siehe
-  [Docs/Design/OpenWorld_HomeRealms_Vision.md](Docs/Design/OpenWorld_HomeRealms_Vision.md)
-  → "Pacing"
-- Housing — als Addon nach Release vorgesehen, siehe selbe Quelle
-- Offene, persistente Welt
-- Login-/Account-Server, Datenbank-Persistenz
-- Tiefe Itemization/Loot-Systeme
-- Mehr als 3 Klassen pro Fraktion
-- Startgebiet/Tutorial-Zone (bis nach dem Vertical Slice) — Konzeptidee für die spätere
-  Heimatreich-Open-World bereits skizziert, siehe
-  [Docs/Design/OpenWorld_HomeRealms_Vision.md](Docs/Design/OpenWorld_HomeRealms_Vision.md)
-- Große Netzwerk-Skalierung (100+ vs. 100+) – erst falls/wenn das Projekt wächst
+- **Crafting** — Planned for release. Materials can be purchased with in-game currency or gathered. See the pacing section of the [Home Realms vision](Docs/Design/OpenWorld_HomeRealms_Vision.md).
+- **Housing** — Planned as a post-release add-on. See the same vision document.
+- An open, persistent world.
+- Account and login servers, and database persistence.
+- Deep itemization and loot systems.
+- More than three classes per faction.
+- Starting areas and tutorials until after the vertical slice. The [Home Realms vision](Docs/Design/OpenWorld_HomeRealms_Vision.md) sketches the longer-term concept.
+- Networking for fights of 100+ versus 100+ players, to revisit if the project grows.
 
 ## Status
 
-🟢 Unreal Engine 5.8 installiert, Testprojekt läuft. Aktuell in Phase 0 (UE5-Grundlagen lernen).
+🟢 Unreal Engine 5.8 is installed and the test project runs. The README records the project as being in Phase 0, learning UE5 fundamentals.
