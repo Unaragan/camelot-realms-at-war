@@ -1,96 +1,96 @@
-# Rüstungs- & Waffen-Naming-Konvention
+# Arms and Weapons Naming Convention
 
-Kurz, klar, realm-spezifisch. Keine ultra-langen Namen — Recognition ist wichtiger als Fantasy-Detailfülle.
+Short, clear, realm-specific. No ultra-long names — Recognition is more important than fantasy detail.
 
-## Material-Tiers (Universal, alle Reiche gleich)
+## Material-Tiers (Universal, all the kingdoms equal)
 
-Progression von einfach → episch. **Format: `[Material]-[Tier]`** oder Tier-Name allein.
+Progression from simple → epic. **Format: `[Material]-[Tier]`** Or animal name alone.
 
-| Tier | Material | Beispiel | Level |
+| Animals | Material | Example | Level level |
 |---|---|---|---|
-| 1 (Starter) | Linen, Cloth, Ragged Leather | Linen Tunic, Ragged Hide | 1-9 |
+| 1 (starter) | Linen, Cloth, Ragged Leather | Linen Tunic, Ragged Hide | 1-9 |
 | 2 (Early) | Wool, Hardened Leather | Wool Coat, Leather Jerkin | 10-19 |
 | 3 (Mid) | Linen-Reinforced, Studded Leather, Bronze | Studded Jerkin, Bronze Plate | 20-29 |
 | 4 (High) | Steel, Dragon Leather | Steel Breastplate, Dragon Leather | 30-39 |
 | 5 (Late) | Mithril, Enchanted Leather | Mithril Plate, Enchanted Hide | 40-49 |
 | 6 (Endgame) | Adamantite, Rune-Touched | Adamantite Armor, Rune Leather | 50 |
 
-## Realm-spezifische Präfixe
+## Realm-specific prefixes
 
-Jedes Reich hat seinen eigenen **Klasse/Handwerk-Präfix**, damit Items reich-typisch wirken:
+Each kingdom has its own **Class/craft prefix**, so that items seem rich-typical:
 
-### **Albion** — Ritterlich, heilig, ordentlich
-- **Präfixe:** Knight's, Paladin's, Holy, Royal, Crusader's, Templar's
-- **Beispiele:**
+### **Albion** — chivalry, holy, orderly
+- **Prefixes:** Knight's, Paladin's, Holy, Royal, Crusader's, Templar's
+- **Examples:**
   - Knight's Steel Plate
   - Holy Mithril Breastplate
   - Crusader's Adamantite Armor
-  - Royal Sword (Waffe)
+  - Royal Sword (weapon)
 
-### **Midgard** — Nordisch, wild, runisch
-- **Präfixe:** Northman's, Raider's, Berserker's, Rune-, Frostbite
-- **Beispiele:**
+### **Midgard** — Nordic, wild, runic
+- **Prefixes:** Northman's, Raider's, Berserker's, Rune-, Frostbite
+- **Examples:**
   - Northman's Studded Leather
   - Berserker's Steel Axe
   - Rune-Touched Plate
   - Frostbite Mithril Armor
 
-### **Hibernia** — Keltisch, mystisch, natürlich
-- **Präfixe:** Druid's, Fae-, Wildheart, Stone-, Treebark
-- **Beispiele:**
+### **Hibernia** Celtic, mystical, natural
+- **Prefixes:** Druid's, Fae-, Wildheart, Stone-, Treebark
+- **Examples:**
   - Druid's Enchanted Leather
   - Fae-Warded Plate
   - Wildheart Dragon Leather
   - Treebark Armor
 
-## Rüstungs-Typen (nach Körperteil/Gewicht)
+## Armor types (by body part/weight)
 
 **Format:** `[Realm-Präfix] [Material-Tier] [Type]`
 
-### Leichte Rüstung (Stoff/Leder)
+### Light armour (substance/leather)
 - Tunic, Coat, Jerkin, Vest, Doublet, Robe
 - Bracers, Greaves, Boots
-- **Beispiel:** Knight's Wool Tunic, Druid's Enchanted Vest
+- **Example:** Knight's Wool Tunic, Druid's Enchanted Vest
 
-### Mittlere Rüstung (Studded Leather/Bronze)
+### Intermediate Armor (Studded Leather/Bronze)
 - Leather Jerkin, Studded Armor, Brigandine
 - Pauldrons, Gauntlets, Leg Armor
-- **Beispiel:** Berserker's Studded Jerkin, Fae-Warded Pauldrons
+- **Example:** Berserker's Studded Jerkin, Fae-Warded Pauldrons
 
-### Schwere Rüstung (Plate)
+### Heavy armor (plate)
 - Breastplate, Full Plate, Cuirass, Hauberk
 - Gorget, Spaulders, Tassets, Sabatons
-- **Beispiel:** Knight's Steel Breastplate, Northman's Adamantite Plate
+- **Example:** Knight's Steel Breastplate, Northman's Adamantite Plate
 
-## Waffen-Naming
+## Weapons naming
 
 **Format:** `[Realm-Präfix] [Material-Tier] [Weapon-Type]`
 
-### Nahkampf
-- **Einhand:** Sword, Axe, Mace, Falchion, Cleaver
-- **Zweihand:** Greatsword, Battle Axe, Warhammer, Pike, Halberd
-- **Spezial:** Dagger, Short Sword, Hand Axe
+### Close combat
+- **One-handed:** Sword, Axe, Mace, Falchion, Cleaver
+- **Two-handed:** Greatsword, Battle Axe, Warhammer, Pike, Halberd
+- **Special:** Dagger, Short Sword, Hand Axe
 
-### Fernkampf
-- **Bogen:** Shortbow, Longbow, Recurve Bow, Compound Bow
-- **Armbrust:** Light Crossbow, Heavy Crossbow, Repeating Crossbow
-- **Wurfwaffen:** Throwing Knife, Spear, Javelin
+### Distance combat
+- **Sheets:** Shortbow, Longbow, Recurve Bow, Compound Bow
+- **Crossbow:** Light Crossbow, Heavy Crossbow, Repeating Crossbow
+- **Throwing weapons:** Throwing Knife, Spear, Javelin
 
-### Magische Fokusobjekte (Caster)
-- **Stäbe:** Staff, Quarterstaff, Mage Staff, Runestave
-- **Zepter:** Scepter, Focus Rod, Wand, Crystal Rod
-- **Schilde (Magier):** Buckler, Talisman
+### Magic Focus Objects (Caster)
+- **Bars:** Staff, Quarterstaff, Mage Staff, Runestave
+- **Scepter:** Scepter, Focus Rod, Wall, Crystal Rod
+- **Signs (magicians):** Buckler, talisman
 
-### Beispiele
+### Examples
 - Knight's Steel Longsword
 - Northman's Adamantite Battle Axe
 - Druid's Fae-Warded Staff
 - Raider's Mithril Dagger
 - Berserker's Rune-Touched Greatsword
 
-## Inventar-Listen-Display
+## Inventory List Display
 
-Wie Items in UI angezeigt werden (gekürzte Versionen):
+How items are displayed in UI (abbreviated versions):
 
 ```
 Helm-Slot:      [Knight's Steel Helm]
@@ -102,10 +102,10 @@ Main-Hand:      [Knight's Longsword]
 Off-Hand:       [Royal Shield]
 ```
 
-Keine Stufen-Nummern im Namen — die stehen im Tooltip/Properties (Level 34, Armor: 45, etc.).
+No level numbers in the name — they are in the tooltip/properties (Level 34, Armor: 45, etc.).
 
-## Offene Punkte
+## Open points
 
-- **Spezial-Items:** Sollten seltene/legendäre Items andere Naming-Patterns haben? (z. B. "Sword of xyz" statt "Knight's Sword"?) → offen für später
-- **Farb-Varianten:** Sollten Material-Tier auch Farb-Bezeichnungen bekommen? (z. B. "Steel-Blue" vs. "Steel-Red") → wahrscheinlich nur in Mesh/Material, nicht im Namen
-- **Unique-Items:** Wie werden Named-Items (Boss-Drops, Quest-Rewards) benannt? → später als eigene Kategorie
+- **Special items:** Should rare/legendary items have other naming patterns? (e.g. "Sword of xyz" instead of "Knight's Sword"?) → open for later
+- **Colour variants:** Should material animal also get color names? (e.g. "steel-blue" vs. "steel-red") → probably only in mesh/material, not in the name
+- **Unique Items:** How are Named Items (Boss-Drops, Quest-Rewards) named? → later as its own category

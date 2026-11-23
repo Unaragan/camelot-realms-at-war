@@ -1,226 +1,226 @@
-# Open-World-Heimatreiche: Level-Gebiete (Design-Idee, nicht final)
+# Open-world home empires: Level areas (design idea, not final)
 
-> **Status:** Frühe Design-Idee, **nicht** der aktuelle Vertical-Slice-Auftrag — genau wie
-> [OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) steht auch
-> dies auf der Nicht-jetzt-Liste ([README.md](../../README.md) → "Nicht-jetzt-Liste":
-> "Offene, persistente Welt", "Startgebiet/Tutorial-Zone (bis nach dem Vertical Slice)").
-> Festgehalten, damit die Idee nicht verloren geht, bevor entschieden ist, ob/wann sie
-> umgesetzt wird.
+> **Status:** Early design idea, **not** the current vertical slice order — just like
+> [OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) is also
+> This is on the not-now list ()[README.md](../../README.md) "Not-now-list":
+> "Open, persistent world", "Start area/tutorial zone (until after the vertical slice)").
+> Hold on, so that the idea is not lost before it is decided if/when it
+> is being implemented.
 
-## Einordnung: Heimatreich vs. Frontier vs. Battleground
+## Home Kingdom vs. Frontier vs. Battleground
 
-Drei separate, unterschiedlich terminierte Features, nicht Stufen derselben Sache:
+Three separate, differently terminated features, not stages of the same thing:
 
-1. **Battleground(s)** — klein, symmetrisch, aktueller Auftrag (README.md Phase 2).
-2. **Frontier** (3 Reiche gemeinsam, Zentralburg) —
-   [OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md), späteres
-   RvR-Feature.
-3. **Heimatreich-Open-World** (dieses Dokument) — pro Reich eine eigene, **PvE-ruhige**
-   Levelwelt rund um die Hauptstadt, in der die schon geschriebenen Epic-Questlines
+1. **Battleground(s)** — small, symmetrical, current order (README.md Phase 2).
+2. **Frontier** (3 Reichs in common, Zentralburg) —
+   [OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md), later
+   RvR feature.
+3. **Heimatreich-Open-World** (this document) — one of their own per kingdom, **PvE stillness**
+   Level world around the capital, where the already written epic questlines
    ([Albion](Albion_Epic_Questline.md)/[Midgard](Midgard_Epic_Questline.md)/
-   [Hibernia](Hibernia_Epic_Questline.md), je Lv 1–50, 26 Stufen) tatsächlich einen Ort
-   zum Spielen haben. Vergleichbar mit DAOCs eigenen Reichsgebieten (z. B. Albion:
+   [Hibernia](Hibernia_Epic_Questline.md), per Lv 1–50, 26 steps) actually a place
+   Comparable to DAOC's own territories (e.g. Albion):
    Camelot + Cotswold, Prydwen Keep, Salisbury Plains, Avalon Marsh, Black Mountains …),
-   nicht mit dem Frontier.
+   Not with the frontier.
 
-Die drei Features verbinden sich am Rand: das äußerste Heimatreich-Gebiet grenzt an die
-Gebirgszüge der Frontier-Karte — Leveln führt so organisch in die dort schon designte
-RvR-Zone, statt dass beide Kartensysteme unverbunden nebeneinanderstehen.
+The three features connect at the edge: the outermost home empire area borders on the
+Mountain ranges of the Frontier map — Leveling leads so organically into the already designed
+RvR zone, instead of the two card systems standing side by side unconnected.
 
-## Grundidee
+## Basic idea
 
-- **Hauptstadt zentral** pro Reich (Rückzugsort, Trainer, Auktionshaus/Handel, Questgeber-
-  Hub, Startpunkt nach Charaktererstellung).
-- **Mindestens 7 Regionen** ringförmig/sektorartig um die Hauptstadt verteilt, je einer
-  eigenen Levelspanne zugeordnet.
-- Regionen sind **nicht rein geografisch beliebig**, sondern an die bereits
-  ausformulierten Quest-Meilensteine aus [Quests.md](Quests.md) angelehnt — so hat jedes
-  Gebiet von Anfang an passenden Content, statt einer leeren Karte, die erst noch befüllt
-  werden muss.
+- **Central capital** per realm (retreat, coach, auction house/trade, quest giver-)
+  Hub, starting point by character creation.
+- **At least 7 regions** ring-shaped/sector-like distributed around the capital, one each
+  assigned to their own level range.
+- Regions are: **Not purely geographically arbitrary**but to those who are already
+  Formulated quest milestones from [Quests.md](Quests.md) Then, it is like every one of them.
+  Area from the beginning matching content, instead of an empty map that is still filled
+  It has to be.
 
-## Regionsvorschlag (7 Level-Bänder, je Reich identisch strukturiert)
+## Region proposal (7 level bands, identically structured per realm)
 
-Levelspannen an den bestehenden AEQ/MEQ/HEQ-Meilensteinen und den beiden BG-Debüts
-(Lv 20, Lv 30 — siehe [Quests.md](Quests.md) Instanzen-Übersicht) ausgerichtet. Namen
-bewusst **nicht** identisch mit echten DAOC-Zonennamen (siehe CLAUDE.md → "Kein
-Original-DAOC-Content"), aber wo sinnvoll an bereits etablierte eigene Lore-Begriffe aus
-den Epic-Questlines angeknüpft (z. B. "Hollow", "Ironbrood", "Rootbound/Withered").
+Level ranges at the existing AEQ/MEQ/HEQ milestones and the two BG debuts
+(Lv 20, Lv 30 — see [Quests.md](Quests.md) Instance overview) aligned. Names
+Conscious **not** identical to real DAOC zone names (see CLAUDE.md → "No")
+Original DAOC content"), but where useful to already established own lore terms
+Epic questlines (e.g. "Hollow", "Ironbrood", "Rootbound/Withered").
 
-| # | Lv-Band | Albion | Midgard | Hibernia | Bezug zu bestehendem Content |
+| # | Lv band | Albion | Midgard | Hibernia | Relation to existing content |
 |---|---|---|---|---|---|
-| Hauptstadt | – | **Aldenbury** | **Skaldheim** | **Dun Kerath** | Start nach Charaktererstellung |
-| 1 | 1–9 | Ashford Vale | Vinterdal | Glenmara | AEQ/MEQ/HEQ -01 bis -06 |
-| 2 | 9–16 | Redmoor | Wolfsmark | Witherwood Edge | führt zur 1. Gruppen-Instanz (Osric/Erik/Eamon); Wolfsmark ↔ "Wolves Among Wolves" (MEQ-02), Witherwood Edge ↔ "The Withering Circle"/Eamon the Withered |
-| 3 | 16–23 | Thornfield | Ashenfjord | Cairnholt | nach Instanz #1, Übergang zum BG-Debüt Lv 20 |
-| 4 | 23–30 | Graywick Downs | Stormcrag Heights | Sceal Ridge | BG-Debüt #2 (Lv 30), Instanz #2 (Leofric/Ingvar/Tadhg) |
-| 5 | 30–39 | Hollowmere | Ironbrood Hold | Rootbound Hollow | Instanz #3; direkter Bezug zu "Into the Hollow"/"Into the Ironbrood's Hold" (MEQ-21)/"Into the Rootbound Hollow" |
-| 6 | 39–47 | Cinderreach | Grimfrost Barrens | Brambleward March | Eskalation Richtung Finale |
-| 7 | 47–50 | Ravensmoor March | Ravensfjord March | Duskthorn Reach | letzte Solo-Quests, grenzt an die Frontier-Gebirgszüge |
+| Capital | – | **Aldenbury** | **Skaldheim** | **Dun Kerath** | Start by Character Creation |
+| 1 | 1–9 | Ashford Vale | Vinterdal’ | Glenmara | AEQ/MEQ/HEQ -01 to -06 |
+| 2 | 9–16 | Redmoor | Wolf’s marrow | Witherwood Edge | Leads to the 1st group instance (Osric/Erik/Eamon); Wolfsmark ↔ "Wolves Among Wolves" (MEQ-02), Witherwood Edge ↔ "The Withering Circle"/Eamon the Withered |
+| 3 | 16–23 | Thornfield | Ashenfjord | Cairnholt | by instance #1, transition to BG debut Lv 20 |
+| 4 | 23–30 | Graywick Downs | Stormcrag Heights | Sceal Ridge | BG debut #2 (Lv 30), instance #2 (Leofric/Ingvar/Tadhg) |
+| 5 | 30–39 | Hollowmers | Ironbrood Hold | Rootbound Hollow | Instanz #3; direkter Bezug zu "Into the Hollow"/"Into the Ironbrood's Hold" (MEQ-21)/"Into the Rootbound Hollow" |
+| 6 | 39–47 | Cinderreach’ | Grimfrost barrens | Brambleward March | Escalation towards the final |
+| 7 | 47–50 | Ravensmoor March | Ravensfjord March | Duskthorn Reach | final solo quests, bordering the Frontier mountain ranges |
 
-Jedes Reich behält seine bereits etablierte Reichsidentität aus der Frontier-Vision:
+Each empire retains its already established empire identity from the Frontier vision:
 Albion (Ritterburgen, offene Felder, Nebel), Midgard (Fjorde, Schnee, Felsklippen),
-Hibernia (riesige Eichen, Dolmen, mystische Wälder).
+Hibernia (huge oaks, dolmens, mystical forests).
 
-## Layout-Alternative: Nabe-und-Speichen statt reiner Ringe
+## Layout alternative: hub-and-spoke instead of pure rings
 
-Strikt konzentrische Ringe wirken schnell wie gleich große "Tortenstücke". Bessere Lesart:
+Strictly concentric rings quickly look like the same sized "cake pieces".
 
-- **Hauptstraßen** strahlen von der Hauptstadt zu jeder der 7 Regionen (Speichen).
-- **Unerschlossene Wildnis/Nebenpfade** zwischen den Speichen — Raum für optionale
-  Erkundung, Geheimnisse, spätere Housing-/Crafting-Gebiete (beide selbst Nicht-jetzt,
-  aber Fläche dafür freihalten schadet nicht).
-- **Regionsgrößen dürfen asymmetrisch sein**: Region 1 klein und sicher (Tutorial-Gefühl),
-  Region 7 groß und gefährlich (letzter Levelabschnitt vor der Frontier) — wirkt
-  natürlicher als sieben gleich große Kuchenstücke.
+- **Main roads** radiate from the capital to each of the 7 regions (spokes).
+- **Untapped wilderness/side paths** between spokes — space for optional
+  exploration, secrets, later housing/crafting areas (both themselves not-now,
+  But keeping space for it does not hurt.
+- **Region sizes may be asymmetrical**: Region 1 small and safe (tutorial feeling),
+  Region 7 large and dangerous (last level section in front of the frontier) — affects
+  more natural than seven pieces of cake of the same size.
 
-## Kartenform: länglich statt kreisförmig (Empfehlung)
+## Card shape: elongated instead of circular (recommendation)
 
-Offene Frage vom Nutzer: kreisförmige Welt (Hauptstadt geometrisch zentral, Regionen
-gleichmäßig ringförmig drumherum) oder eher länglich, wie ein echtes Land (z. B. England)?
+Open question from the user: circular world (capital geometrically central, regions)
+evenly annular around it) or rather elongated, like a real country (e.g. England)?
 
-**Empfehlung: länglich, als "Spine"-Form statt echtem Kreis.** Gründe:
+**Recommendation: elongated, as a "spin" form instead of a real circle.** Reasons:
 
-- **Passt zum Content:** Die Epic-Questlines (AEQ/MEQ/HEQ) sind strikt lineare
-  26-Stufen-Geschichten, kein verzweigtes "geh in beliebige Richtung"-Design. Eine
-  längliche Karte mit der Hauptstadt am ruhigen Ende und Region 7 am gefährlichen,
-  Frontier-zugewandten Ende bildet diese lineare Erzählstruktur direkt im Raum ab —
-  bei einem echten Kreis könnten Spieler rein geografisch aus mehreren Richtungen
-  gleichzeitig "Endgame-nahe" Gebiete erreichen, was der linearen Story widerspricht.
-- **Wirkt weniger künstlich:** Ein perfekter Kreis mit exakt 7 gleich großen
-  Tortenstücken liest sich schnell als Spielbrett statt als Ort. Ein längliches,
-  unregelmäßiges Territorium (wie reale Länder) erlaubt Buchten, Halbinseln, engere und
-  weitere Abschnitte — deckt sich mit der bereits vorgeschlagenen
-  [Nabe-und-Speichen-Idee](#layout-alternative-nabe-und-speichen-statt-reiner-ringe) oben.
-- **Unterscheidet die drei Reiche stärker:** Bei drei Kreisen sehen sich Albion, Midgard
-  und Hibernia auf der Übersichtskarte zwangsläufig ähnlich (nur Textur/Farbe anders).
-  Länglich erlaubt reichseigene Silhouetten, die zur Identität passen — z. B. Midgard als
-  gestreckte Fjordküste, Hibernia als verschlungene Waldfläche, Albion als sanft
-  gewellter Landstreifen.
-- **Bleibt an den Frontier-Übergang anschlussfähig:** Region 7 (Bastions-Vorland/
-  Ravensmoor March/Ravensfjord March/Duskthorn Reach) liegt dann konsequent am äußersten
-  Ende des Streifens, direkt an den Gebirgszügen der Frontier-Karte — genau der
-  Übergang, der oben schon als Ziel beschrieben ist.
+- **Applies to the content:** The epic questlines (AEQ/MEQ/HEQ) are strictly linear
+  26-step stories, not a branched "go in any direction" design.
+  elongated map with the capital at the quiet end and region 7 most dangerous,
+  The frontier-facing end represents this linear narrative structure right in space.
+  In a real circle, players could be geographically diverse from several directions.
+  simultaneously reach "endgame-near" areas, which contradicts the linear story.
+- **Less artificial:** A perfect circle with exactly 7 equal sizes
+  Pieces of cake reads quickly as a game board instead of a place.
+  Irregular territory (such as real countries) allows bays, peninsulas, narrower and
+  other sections — coincides with the already proposed
+  [Idea of hub and spoke](#layout-alternative-hub-and-spoke-instead-of-pure-rings) above.
+- **Differentiate the three kingdoms more strongly:** Three circles see Albion, Midgard
+  and Hibernia on the overview map inevitably similar (only texture/color different).
+  Elongately allows rich-owned silhouettes that fit the identity – e.g. Midgard as
+  stretched fjord coast, Hibernia as a winding forest area, Albion as gentle
+  corrugated strip of land.
+- **Remains connectable to the frontier transition:** Region 7 (Bastions Vorland/)
+  Ravensmoor March/Ravensfjord March/Duskthorn Reach is then consistently at the extreme
+  End of the strip, right on the mountain ranges of the Frontier map — exactly the
+  Transition, which is already described as a goal above.
 
-**Praktisch heißt das:** Hauptstadt bleibt "zentral" im Sinne von *zentraler
-Ausgangspunkt der Progression* (näher am sicheren Ende als am gefährlichen), nicht
-geometrisch mittig im Territorium. Die 7 Regionen reihen sich entlang der Länge
-auf, mit Seitenästen/Nebenwegen quer dazu (Nabe-und-Speichen bleibt für die lokale
-Erschließung *innerhalb* der länglichen Form gültig, nur nicht mehr radial-symmetrisch
-um einen Mittelpunkt).
+**In practice, this means:** The capital remains "central" in the sense of *Central
+Starting point of progression* (closer to the safe end than the dangerous one), not
+The 7 regions line up along the length
+on, with side branches/sidewalks across (hub-and-spoke remains for the local)
+Opening up *Inside* valid for the elongated form, but no longer radially symmetrical
+around a centre point.
 
-## BG-Eingänge in den Regionen
+## BG-receipts in the regions
 
-Die Portale zu den bestehenden Battlegrounds (siehe
+The portals to the existing battlegrounds (see)
 [OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) →
-"Battlegrounds (Plural)") liegen konsequent in der Region mit passendem Levelband, nicht
-irgendwo verstreut:
+"Battlegrounds (Plural)") are consistently located in the region with a suitable levelband, not
+Scattered somewhere:
 
-- **Lv 20 "Grenzland-Scharmützel"** → Region 3 (Thornfield/Ashenfjord/Cairnholt)
-- **Lv 30 "Umkämpftes Hochland"** → Region 4 (Graywick Downs/Stormcrag Heights/Sceal
-  Ridge) — der BG-Name ist hier sogar identisch mit dem Arbeitstitel des Levelbands, passt
-  also schon jetzt zusammen
-- **Lv 50 "Bastion der Kill-Zone"** → Region 7 (Ravensmoor March/Ravensfjord March/
-  Duskthorn Reach), zugleich der Übergang zur Frontier-Zentralburg
+- **Lv 20 "Borderland skirmish"** → Region 3 (Thornfield/Ashenfjord/Cairnholt)
+- **Lv 30 "Contested Highlands"** Region 4 (Graywick Downs/Stormcrag Heights/Sceal)
+  Ridge) — the BG name is here even identical to the working title of the levelband, fits
+  Already together
+- **Lv 50 "Bastion of the Kill Zone"** → Region 7 (Ravensmoor March/Ravensfjord March/)
+  Duskthorn Reach, at the same time the transition to the Frontier Zentralburg
 
-## Geteilte Instanz-Konzepte jenseits der Haupt-Questline (DF- und POC-Vorbild)
+## Shared instance concepts beyond the main questline (DF and POC model)
 
-Zusätzlich zu den 4 Haupt-Instanzen pro Reich (siehe [Quests.md](Quests.md)) zwei weitere,
-spätere Instanz-Ideen, angelehnt an DAOCs Darkness Falls (DF) bzw. an "Passage of
-Conflict" (POC, Eden-Freeshard-Begriff) — beide unter neuen, eigenen Namen (kein
-Original-DAOC-Content):
+In addition to the 4 main instances per kingdom (see below) [Quests.md](Quests.md)) two more,
+later instance ideas, based on DAOC's Darkness Falls (DF) or "Passage of"
+"Conflict" (POC, Eden Freeshard term) - both under new, own names (no
+Original DAOC content:
 
-| | **"Emberdeep"** (DF-Vorbild) | **"The Cinder Gate"** (POC-Vorbild) |
+| | **"Emberdeep"** (DF model) | **"The Cinder Gate"** (POC model) |
 |---|---|---|
-| Mindestlevel | ~30 | 50 |
-| Zugang | Eingang in **Region 4** jedes Reichs (Graywick Downs/Stormcrag Heights/Sceal Ridge) | Nur über die Frontier erreichbar, an RvR-Teilnahme/-Erfolg gekoppelt |
-| Content-Typ | Gemischt PvE/PvP, geteilte Zone | Zweistufig — s. u. |
-| Bewohner | Noch offen | "Anhänger der Hölle"/Dämonen |
-| Reichs-Zugang | Alle 3 Reiche, unabhängig voneinander, **immer offen** | **Immer offen**, kein Population-/Keep-Gating (s. u.) |
+| Minimum level | ~30 | 50 |
+| Accessibility | Entrance to **Region 4** Graywick Downs/Stormcrag Heights/Sceal Ridge | Only accessible via the Frontier, linked to RvR participation/success |
+| Content type | Mixed PvE/PvP, divided zone | Two-stage — see below |
+| Residents | Still open | "Participants of Hell" / Demons |
+| Reich access | All 3 realms, independent of each other, **Always open** | **Always open**, no population/keep gating (see below) |
 
-### The Cinder Gate: zweistufiger Aufbau (Eden-Vorbild, Nutzer 2026-07-23)
+### The Cinder Gate: two-stage structure (Eden model, user 2026-07-23)
 
-Analog zu Edens POC-Umsetzung zwei verschachtelte Instanzen statt einer:
+Similar to Eden’s POC implementation, two nested instances instead of one:
 
-1. **Erste Instanz — reichseigen.** Für jedes Reich eine eigene Variante (3 unabhängige
-   Versionen, eigenes Layout/Thema pro Reich möglich), normale **Gruppengröße** (5
-   Spieler), reines PvE. Führt am Ende zum Eingang der zweiten Instanz. Mit einer
-   einzelnen Gruppe zu bewältigen.
-2. **Zweite Instanz — gemeinsame Boss-Instanz.** Für alle 3 Reiche **identisch**,
-   erfordert **BG-Formation** (größere, RvR-fähige Gruppe statt einzelner 5er-Gruppe).
-   Hier treffen die Reiche aufeinander — reguläres RvR, kein gemeinsamer Kampf gegen die
-   Dämonen (siehe Klarstellung unten). Bossmechanik BG-artig (mehrstufige Ziele/Wellen
-   statt Tank&Spank).
+1. **First instance — riches.** For each empire its own variant (3 independent)
+   Versions, own layout/theme per kingdom possible), normal **Group size** (5
+   Player), pure PvE. Leads at the end to the entrance of the second instance.
+   to deal with individual groups.
+2. **Second instance — common boss instance.** For all 3 rich people **identical**,
+   Required **BG formation** (larger, RvR-capable group instead of a single group of 5).
+   Here the rich meet — regular RvR, not a common struggle against the
+   Devils (see clarification below) Boss mechanics BG-like (multi-level targets/waves)
+   Instead of Tank & Spank.
 
-Damit ist der Ablauf klar gestaffelt: kleine Gruppe → reichseigene Vorinstanz → BG-Gruppe
-→ gemeinsame Endinstanz mit RvR gegen die anderen Reiche.
+So the process is clearly staggered: small group → rich-owned lower court → BG-group
+→ joint final instance with RvR against the other empires.
 
-**Ergänzung (Nutzer, 2026-07-23):** Da die große Frontier-Zone ohnehin für alle 3 Reiche
-zugänglich ist, sind auch **alle drei Eingänge zur ersten Instanz für jedes Reich nutzbar**
-— nicht auf den Eingang des eigenen Reichs beschränkt. Die "reichseigene" Vorinstanz ist
-also eher **thematisch** je Reich unterschiedlich (3 Varianten), nicht
-zugangs-beschränkt nach Spieler-Reich. Praktisch heißt das: eine Albion-Gruppe könnte
-z. B. auch durch den Midgard- oder Hibernia-Eingang gehen, wenn sie sich dorthin
-durchkämpft. Das macht die drei Eingangspunkte selbst zu zusätzlichen
-umkämpften Orten innerhalb der Frontier — passt zum "erzwungener Kontakt"-Prinzip aus
-[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) (gemeinsame/
-geteilte Zwischenziele statt streng reichseigener Korridore).
+**Supplement (User, 2026-07-23):** Since the large frontier zone anyway for all 3 kingdoms
+They are accessible, too. **all three inputs to the first instance usable for each kingdom**
+— not limited to the entrance of one's own kingdom.
+So rather **Thematically** Different per kingdom (3 variants), not
+In practice, this means that an Albion group could
+For example, go through the Midgard or Hibernia entrance when you go there
+This makes the three entry points themselves additional.
+Contested locations within the frontier — fits the "forced contact" principle
+[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) (joint/)
+shared intermediate goals instead of strictly imperial corridors.
 
-**Narrative Klammer (Vorschlag):** Statt eines gemeinsamen Portals bekommt jedes Reich
-**seinen eigenen, unabhängig entdeckten Zugang** zu Emberdeep — das löst die Frage "warum
-ist der Zugang in allen drei Reichen verfügbar" ohne dass die Reiche sich dafür
-abstimmen müssten. Idee: **derselbe unterirdische Riss** reagiert auf den eskalierenden
-Krieg zwischen den Reichen (Kampf/Blutvergießen schwächt ein altes Siegel) und bricht ab
-Lv~30 zeitgleich, aber an drei unabhängigen Stellen in den Grenzländern aller drei Reiche
-auf — jedes Reich hält es zunächst für einen eigenen, lokalen Fund. Bei Lv 50 bricht das
-Siegel an seiner eigentlichen Quelle vollständig auf — direkt unter/bei der
-Zentralburg der Frontier (siehe
-[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md)) —, das ist
-The Cinder Gate. Damit hängen beide Instanzen an **einem** Bedrohungs-Thread
-("der endlose Krieg reißt etwas Altes und Hungriges auf"), ohne die bestehenden
-Realm-eigenen Bösewichte der Haupt-Questlines (Osric/Erik/Eamon, Hollow Sentinel/Iron
-Wolf/Bramble Warden, Sir Alaric/Ragnar Half-Sworn/Fintan the Rootbound) zu verändern —
-ein zusätzlicher, späterer Endgame-Thread, kein Ersatz.
+**Narrative parenthesis (suggestion):** Instead of a common portal, every kingdom gets
+**its own independently discovered access** to Emberdeep - this solves the question "why"
+Access is available in all three realms" without the rich being able to do so."
+Idea: I would have to vote. **The same underground crack** Responding to the escalating
+War between the rich (fight/bloodshed weakens an old seal) and breaks off
+Lv~30 at the same time, but in three independent places in the border countries of all three empires
+Each empire first considers it to be its own local find.
+Seal at its actual source completely on — directly below/at the
+Central castle of the Frontier (see
+[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md)) — this is
+The Cinder Gate, so both instances are attached **one of the following:** Threat thread
+("the endless war tears open something old and hungry"), without the existing
+Realm's own villains of the main questlines (Osric/Erik/Eamon, Hollow Sentinel/Iron)
+Wolf/Bramble Warden, Sir Alaric/Ragnar Half-Sworn/Fintan the Rootbound,
+an additional, later endgame thread, not a replacement.
 
-**Klarstellung (Nutzer, 2026-07-23):** Die zweite Instanz von The Cinder Gate ist explizit
-**auf RvR ausgelegt** — treffen BG-Gruppen verschiedener Reiche aufeinander, kämpfen sie
-gegeneinander (kein gemeinsamer Kampf gegen die Dämonen). Die Dämonen/Bossmechanik läuft
-parallel dazu, ersetzt das RvR aber nicht.
+**Clarification (user, 2026-07-23):** The second instance of The Cinder Gate is explicit
+**Designed for RvR** — meet BG groups of different realms, fight them
+The demons/boss mechanics are running against each other (no common battle against the demons).
+parallel to this, but does not replace the RvR.
 
-**Entscheidung (Nutzer, 2026-07-23): Zugang zu beiden — Emberdeep (ab Lv 30) und The
-Cinder Gate (Lv 50) — ist immer offen für alle 3 Reiche**, **nicht** an Keep-Kontrolle
-oder Populationsstärke gekoppelt. Begründung aus DAOC-Erfahrung: Wenn Zugang (wie bei
-DAOCs echtem Darkness Falls) daran hängt, welches Reich mehr Keeps erobert hat, bekommt
-praktisch immer das ohnehin überpopulierte/dominante Reich den Zugang — verstärkt
-bestehende Ungleichgewichte statt sie auszugleichen, hat auf Live-DAOC zu Frust geführt.
-Der Eden-Freeshard hat das für POC korrigiert, indem der Zugang durchgehend für alle
-offen ist (inkl. des zweistufigen Instanz-Aufbaus oben) — dieses Projekt übernimmt den
-Eden-Ansatz für beide Zonen. Wichtig: das ist ein **anderer Mechanismus** als die
-Populations-Ungleichgewicht-Idee aus der Frontier-Vision (dort bekommt das
-**unterlegene** Reich einen Vorteil, verstärkt also nicht den Vorsprung des führenden
-Reichs) — kein Widerspruch, nur zwei getrennte Systeme, die beide denselben Fehler
-vermeiden sollen.
-- Technisch: Emberdeep als echte geteilte Zone (alle Reiche gleichzeitig drin) setzt
-  vermutlich mehr Netzwerk-Robustheit voraus als das aktuelle Listen-Server-Modell
-  (README.md) hergibt — eher ein Punkt für die Dedicated-Server-Phase.
+**Decision (user, 2026-07-23): Access to both — Emberdeep (from Lv 30) and The
+Cinder Gate (Lv 50) — is always open to all 3 realms**, **not** on keep-check
+Justification from DAOC experience: When accessed (as in the case of
+DAOC's real Darkness Falls) depends on which empire has conquered more Keeps, gets
+practically always the already overpopulated/dominant realm the access — reinforced
+Existing imbalances instead of balancing them has led to frustration on Live-DAOC.
+The Eden Freeshard has corrected this for POC by ensuring that access is consistently available to all.
+is open (including the two-stage instance structure above) — this project takes over the
+Eden approach for both zones. **Other mechanism** as the
+Population Imbalance Idea from the Frontier Vision (there gets the
+**Inferior** Rich an advantage, so do not strengthen the lead of the leading
+Reichs) — no contradiction, only two separate systems, both of which have the same error
+Avoid them.
+- Technically: Emberdeep as a real divided zone (all the realms in it at the same time)
+  probably more network robustness ahead than the current list server model
+  (README.md) is a point for the dedicated server phase.
 
-## Moodboard-Referenzen pro Heimatreich
+## Moodboard references per home kingdom
 
-Copilot-Konzeptbilder, gleicher Bildstil-Ansatz wie die BG-/Frontier-Moodboards in
-[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md). Prompts
-hier archiviert, damit sie nicht nur im Chat-Verlauf existieren (siehe dortiger
-Praxis-Hinweis zu KI-generiertem Text in Bildern — ohne Text generieren, danach selbst
-beschriften).
+Copilot concept images, same image style approach as the BG/Frontier moodboards in
+[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md) Prompts
+archived here so that they do not only exist in the chat history (see there)
+Practice note on AI-generated text in images — generate without text, then self-generate
+labels.
 
-**Albion** — bereits generiert:
+**Albion** — already generated:
 [`References/homerealm_albion_moodref.jpg`](References/homerealm_albion_moodref.jpg) —
-trifft die Regionenfolge sehr genau: grüne Felder um Aldenbury (Ashford Vale) → rötliches
-Heideland (Redmoor) → dorniges Gestrüpp mit Wachturm (Thornfield) → windgepeitschte
-Hochebene mit Lager/Banner (Graywick Downs) → nebliger Hain mit knorrigen Bäumen
-(Hollowmere) → verbranntes Kriegsgebiet mit Glutresten (Cinderreach) → toter Rabenmarsch
-(Ravensmoor March), gerahmt von Gebirge, das nach Süden schroffer/schneebedeckter wird —
-passender Übergang zur Frontier.
+meets the region sequence very precisely: green fields around Aldenbury (Ashford Vale) → reddish
+Heideland (Redmoor) → thorny scrub with watchtower (Thornfield) → windswept
+Plain with camp/banner (Graywick Downs) → misty grove with gnarled trees
+(Hollowmere) → Burned war zone with Glutresten (Cinderreach) → dead raven march
+(Ravensmoor March), framed by mountains becoming more rugged/snow-covered to the south,
+Appropriate transition to the frontier.
 
-Ursprünglicher Prompt:
+Original prompt:
 
 ```text
 Aerial oblique fantasy map illustration, painterly digital art style, muted
@@ -244,19 +244,19 @@ aspect ratio, top-down strategic game map look, same visual family as the
 existing battleground concept series.
 ```
 
-**Feedback (Nutzer, 2026-07-23) zum Albion-Ergebnis:** Als erste Iteration akzeptiert,
-aber für alle künftigen Moodboards (Midgard/Hibernia unten, spätere Überarbeitungen)
-gilt: **mehr Wege/Nebenpfade, mehr Flüsse/Nebenflüsse und generell mehr visuelle
-Vielfalt** ("mehr fürs Auge") statt nur eines einzelnen Hauptwegs/-flusses — bereits in
-den folgenden Prompts berücksichtigt.
+**Feedback (user, 2026-07-23) on the Albion result:** As a first iteration accepted,
+but for all future moodboards (Midgard/Hibernia below, later revisions)
+The following applies: **more paths/side-paths, more rivers/side-flows and generally more visual
+Diversity** ("more for the eye") instead of just a single main path/river - already in
+The following prompts are taken into account.
 
-**Midgard** — bereits generiert:
+**Midgard** — already generated:
 [`References/homerealm_midgard_moodref.jpg`](References/homerealm_midgard_moodref.jpg) —
-Skaldheim am Fjordkopf mit Langhaus/Wachtürmen und Fischerbooten → Kiefernwald mit Lager
-(Wolfsmark) → zwei parallele Stationen auf gleicher Höhe: befestigtes Lager links
-(Stormcrag Heights) und dunkler Höhleneingang rechts (Ironbrood Hold) → Frostbarrens mit
-Eisschollen und gestrandetem Wrackschiff ganz unten (Ravensfjord March). Deutlich mehr
-Nebenpfade/-flüsse als beim ersten Albion-Bild — Feedback umgesetzt.
+Skaldheim am fjordkopf with longhouse/watchtowers and fishing boats → pine forest with camp
+(Wolfsmark) → two parallel stations at the same height: fortified bearing on the left
+(Stormcrag Heights) and dark cave entrance to the right (Ironbrood Hold) → Frost bars with
+Ice floe and stranded wreckage at the bottom (Ravensfjord March).
+Side paths/flows as in the first Albion image — feedback implemented.
 
 Prompt:
 
@@ -287,13 +287,13 @@ style, no readable body text needed. Wide 3:2 aspect ratio, top-down
 strategic game map look, same visual family as the existing concept series.
 ```
 
-**Hibernia** — bereits generiert:
+**Hibernia** — already generated:
 [`References/homerealm_hibernia_moodref.jpg`](References/homerealm_hibernia_moodref.jpg)
-— Dun Kerath mit Steinkreis unter der großen Eiche oben → absterbende bleiche Bäume links
-(Witherwood Edge) → Grabhügel/Dolmen im Zentrum (Cairnholt) → hochaufragende Menhire
-rechts (Sceal Ridge) → Wurzeltunnel durch knorrige Eichen unten links (Rootbound Hollow)
-→ dornig-dunkles Dickicht unten an den Nebelbergen (Brambleward March/Duskthorn Reach).
-Will-o'-Wisp-Lichter, mehrere Brücken/Bäche/Wasserfälle.
+— Dun Kerath with stone circle under the big oak above → dying pale trees left
+(Witherwood Edge) → Tomb Mounds/Dolmen in the Center (Cairnholt) → towering Menhire
+right (Sceal Ridge) → Root tunnel through gnarled oaks bottom left (Rootbound Hollow)
+→ thorny-dark thickets at the fog mountains (Brambleward March/Duskthorn Reach).
+Will-o'-Wisp lights, several bridges/rivers/waterfalls.
 
 Prompt:
 
@@ -326,113 +326,113 @@ corner. Clean fantasy-map label style, no readable body text needed. Wide
 the existing concept series.
 ```
 
-## Settlement & POI Visual References
+## Settlement and POI Visual References
 
-Zusätzlich zu den großflächigen Realm-Moodboards: **Architectural Style Guides** für einzelne Siedlungen, Dörfer und Material-Lieferanten-POIs.
+In addition to the large-scale Realm-Moodboards: **Architectural Style Guides** for individual settlements, villages and material supplier POIs.
 
-**Albion** — Zivilisierte Stone + Timber-Architektur:
-- Zentralisierte Dörfer mit Steinmauern/Turmhäusern (rechteckig, ordentlich)
-- Material-Vendors: Steinerne Zunftshäuser mit roten Ziegeldächern
-- Beispiel-POI: **Erzwerk** (Lv30-39 Zone) = befestigte Berganlage mit Schachteingang, Holzgerüsten, sauberen Arbeitsbereichen
-- Visual: Europäische mittelalterliche Architektur (Late-Gothic, ordentlich)
+**Albion** — Civilized Stone + Timber Architecture:
+- Centralized villages with stone walls/tower houses (rectangular, orderly)
+- Material vendors: stone guild houses with red tiled roofs
+- Example POI: **Orework** (Lv30-39 Zone) = fortified mountain complex with shaft entrance, wooden scaffolding, clean working areas
+- Visual: European Medieval Architecture (Late-Gothic, neat)
 
-**Midgard** — Nordic/Viking Palisaden-Lager:
-- Holz-Palisaden-Walls, Langhaus-Zentren mit Holzkonstruktionen
-- Material-Vendors: Werkstätten mit freien Feuerstellen, rustikal
-- Beispiel-POI: **Stall/Pelzmarkt** = offenes Handelslager mit Vieh-Pferchen, Rauchzeichen
-- Visual: Viking-Siedlungen, natürlich gewachsen, verwittertes Holz, Rauch
+**Midgard** — Nordic/Viking Palisadeen Lager:
+- Wooden palisade walls, longhouse centres with wooden structures
+- Material vendors: workshops with open fireplaces, rustic
+- Example POI: **House/fur market** = open commercial warehouse with livestock horses, smoke signs
+- Visual: Viking settlements, naturally grown, weathered wood, smoke
 
-**Hibernia** — Druiden/Natur-Integration:
-- Runde Hütten (Roundhouses), Steinkreise, natürliche Integration in Wälder
-- Material-Vendors: Kräuter-Gärten, Alchemisten-Grotteneingang mit Moosüberwuchs
-- Beispiel-POI: **Holzfäller-Zunft** = Waldlichtung mit gestapeltem Holz, Naturschutz-Aspekt (respektvoller Abbau)
-- Visual: Keltische Architektur, mystisch, von Natur "umgeben" (nicht "erbaut")
+**Hibernia** Druid/nature integration:
+- Roundhouses, stone circles, natural integration into forests
+- Material vendors: herbal gardens, alchemist grotto entrance with moss overgrowth
+- Example POI: **Woodcutter guild** = Forest clearing with stacked wood, nature conservation aspect (respectful degradation)
+- Visual: Celtic architecture, mystical, "surrounded" by nature (not "built")
 
 ---
 
-## Pacing: Monatelange Spielerbindung übers Leveln
+## Pacing: Months of player retention over leveling
 
-Frage vom Nutzer (2026-07-23): Reicht der Platz auf den Karten, um Spieler über Monate zu
-fesseln — Hauptziel bleiben die großen Schlachten, aber auch das Leveln soll ausreichend
-lange dauern (nicht in 2 Tagen durch).
+Question from the user (2026-07-23): Is the space on the cards enough to accommodate players for months?
+captivating – the main goal remains the big battles, but also the leveling should be sufficient
+take long (not in 2 days through).
 
-**Einschätzung:** Kartengröße ist dafür **nicht** der entscheidende Faktor — 7 Regionen
-pro Reich sind reichlich Raum. Die 26 linearen Story-Stufen je Reich (AEQ/MEQ/HEQ) sind
-vom Umfang her eher wie die Hauptstory eines Solo-RPGs; ein motivierter Spieler kann das
-an einem langen Wochenende durchspielen, unabhängig von der Kartengröße, solange
-Quest-XP die einzige Levelquelle ist. Die eigentliche Stellschraube ist die
-**XP-Kurve/Grind-Dichte** (SYSTEMS.md, noch nicht ausgearbeitet) — im echten DAOC waren
-Quests nur ein Bruchteil der nötigen XP, der Großteil kam aus Mob-Grinden, das war der
-eigentliche Zeitfresser über Wochen/Monate. Zusätzliches Risiko: da RvR das erklärte
-Hauptziel ist, werden engagierte Spieler erfahrungsgemäß zu den BG-Eingängen (Lv 20/30/50)
-**rushen** statt durch alle Regionen zu bummeln — bekanntes MMO-Muster, kein
-Kartengrößen-Problem.
+**Assessment:** Card size is for this **not** Decisive factor — 7 regions
+The 26 linear story levels per kingdom (AEQ/MEQ/HEQ) are
+more like the main story of a solo RPG in terms of scope; a motivated player can
+play through on a long weekend, regardless of card size, as long as
+Quest XP is the only level source.
+**XP curve/Grind density** (SYSTEMS.md, not yet elaborated) — were in the real DAOC
+Quests only a fraction of the necessary XP, the majority came from mob grinds, that was the
+It's actually time-consuming for weeks/months. Additional risk: because RvR explained that
+The main goal is to become dedicated players according to experience to the BG inputs (Lv 20/30/50)
+**Rushing** instead of strolling through all regions — known MMO pattern, no
+Card size problem.
 
-**Entscheidungen (Nutzer, 2026-07-23):**
+**Decisions (User, 2026-07-23):**
 
-- **XP-Kurve steigt an** — pro Level wird mehr XP benötigt als im Level davor (Standard-
-  eskalierende Kurve statt linear/flach). Genaue Werte erst mit SYSTEMS.md/Zahlendesign.
-- **Crafting kommt für die Release-Version** (aktuell weiterhin Nicht-jetzt für den
-  Vertical Slice, siehe README.md). Zwei Materialquellen vorgesehen: **Kauf gegen
-  Ingame-Currency** oder **Farmen/Sammeln** — beides als spätere Zeitbindungs-/
-  Wirtschafts-Mechanik geplant, nicht nur einer der beiden Wege.
-- **Housing-Zone kommt als Addon** nach Release (nicht Teil des Hauptspiels beim Launch).
+- **XP curve increases** — more XP is needed per level than in the previous level (standard)
+  Escalating curve instead of linear/flat. Exact values only with SYSTEMS.md/number design.
+- **Crafting is coming to the release version** (currently still not-now for the
+  Vertical Slice, see README.md. Two material sources are provided: **Purchase against
+  In-game currency** or **Farms/collections** — both as later time-tied/
+  Economic mechanics planned, not just one of the two ways.
+- **Housing Zone Comes as an Addon** after release (not part of the main game at launch).
 
-Damit ist die eigentliche Monate-Bindung planerisch klar verortet: nicht die
-Heimatreich-Kartengröße, sondern XP-Kurve (früh im Systemdesign) plus Crafting/Housing
-(nach Release) — dieses Dokument bleibt für die reine Geografie/Regionsstruktur
-zuständig, die Zahlen-/Wirtschaftsseite gehört in SYSTEMS.md, sobald sie dran ist.
+Thus, the actual monthly commitment is clearly located in planning terms: not the
+Home Kingdom card size, but XP curve (early in system design) plus crafting/housing
+(after release) — this document remains for pure geography/regional structure
+The number/business page belongs in SYSTEMS.md as soon as it is on.
 
-## Werkzeug-Kandidat: UE5.8 "Mesh Terrain" (Nutzer-Fund, 2026-07-23)
+## Tool candidate: UE5.8 "Mesh Terrain" (User Fund, 2026-07-23)
 
-Video-Hinweis vom Nutzer: ["NEW Mesh Terrain is Just Insane! (FULL Tutorial) | Unreal
-Engine 5.8"](https://www.youtube.com/watch?v=1mZkBLuvTCs) (Kanal Proj Prod). Kein
-Volltranskript ausgewertet, nur Videobeschreibung/Kapitelliste — Einschätzung entsprechend
-mit Vorbehalt.
+Video note from the user: ["NEW Mesh Terrain is Just Insane!" (FULL Tutorial) | Unreal
+Engine 5.8](https://www.youtube.com/watch?v=1mZkBLuvTCs) (Channel Proj Prod).
+Full transcript evaluated, video description/chapter list only — estimate accordingly
+with reservation.
 
-**Was es ist:** Neues UE5.8-System zur Terrain-Erstellung, echtes Mesh statt klassischer
-Heightmap-Landscape. Laut Kapitelliste enthalten: boolesche Modifikatoren (Höhlen/
+**What it is:** New UE5.8 system for terrain creation, real mesh instead of classic
+Heightmap Landscape. According to the chapter list included: Boolean modifiers (caves/)
 Overhangs), Spline-Modifikator (Seen/Flussufer), Textur-Patch-/Remesh-/Noise-/
-Sculpt-Modifikatoren, mehrschichtiges Material-Painting, Mesh-Partitionierung/
-World-Partition-Integration — laut verlinktem Talk explizit für "große komplexe Welten"
-gebaut.
+Sculpt modifiers, multilayer material painting, mesh partitioning/
+World partition integration — according to linked talk explicitly for "large complex worlds"
+built.
 
-**Warum relevant für dieses Dokument:**
-- Boolesche Höhlen-Operationen passen direkt zu **Ironbrood Hold** (Höhleneingang) und
-  **Rootbound Hollow** (Wurzeltunnel) — damit könnten das echte begehbare Höhlen werden
-  statt aufgesetzter Deko-Meshes.
-- Spline-basierte Flüsse/Seen passen zum Feedback "mehr Flüsse" aus den
-  Moodboard-Prompts oben.
-- Für-große-Welten-Auslegung passt zur länglichen Mehrfach-Regionen-Struktur dieses
-  Dokuments.
+**Why relevant for this document:**
+- Boolean cave operations fit directly **Ironbrood Hold** (cave entrance) and
+  **Rootbound Hollow** (root tunnel) — so that could become the real walk-in caves
+  instead of set-up decorative meshes.
+- Spline-based rivers/lakes match the feedback "more rivers" from the
+  Moodboard prompts above.
+- For-large-world design fits the elongated multiple-region structure of this
+  Documents.
 
-**Offene Prüffrage vor jeder Festlegung:** Mesh-Terrain-Systeme dieser Art laufen in der
-Praxis oft am besten mit **Nanite fürs Terrain-Mesh** und Höhlen-Innenräume werden in
-solchen Tutorials häufig mit **Lumen** ausgeleuchtet (gebackenes Licht ist bei
-prozedural veränderbarer Höhlengeometrie schwer zu pflegen). [CLAUDE.md](../../CLAUDE.md)
-verbietet Lumen fürs POC vollständig und Nanite explizit nur für Charaktere — Nanite
-speziell fürs Terrain wäre also vermutlich nicht automatisch ausgeschlossen, aber die
-Lumen-Frage bei Höhlen ist ungeklärt und wurde nicht am Volltranskript verifiziert. Vor
-Einsatz: im Editor testen, ob Mesh Terrain mit Lightmass/ohne Lumen sinnvoll nutzbar ist.
+**Open audit question before each determination:** Mesh terrain systems of this type run in the
+Practice is often best with **Nanite for Terrain Mesh** and cave interiors will be in
+Such tutorials often with **Lumens** illuminated (baked light is at
+procedurally modifiable cave geometry difficult to maintain. [CLAUDE.md](../../CLAUDE.md)
+Bans Lumen for POC completely and Nanite explicitly for characters only — Nanite
+especially for the terrain would probably not be automatically excluded, but the
+Lumen question for caves is unresolved and has not been verified on the full transcript.
+Use: In the editor, test whether Mesh Terrain can be used meaningfully with Lightmass/without Lumen.
 
-**Einordnung:** Werkzeug-Kandidat für die spätere Open-World-Phase (Heimatreiche/
-Frontier), nicht für den aktuellen Battleground-Vertical-Slice. Tatsächliche Erprobung
-gehört in die Terminal-Session mit Unreal-MCP-Zugriff (siehe CLAUDE.md → "zwei getrennte
-Arbeitsumgebungen").
+**Classification:** Tool candidate for the later open-world phase (home-rich/)
+Frontier, not for the current battleground vertical slice.
+belongs in the terminal session with Unreal MCP access (see CLAUDE.md → "two separate
+"Working environments".
 
-## Offene Fragen
+## Open questions
 
-- Wie viele Regionen brauchen einen eigenen Gruppen-Content-Hub (Instanz-Eingang, Rastplatz)
-  vs. reine Solo-Quest-Fläche? (Ansatz oben: Instanz-Regionen sind 2, 4, 5 — Osric/Erik/
+- How many regions need their own group content hub (instance input, rest area)
+  vs. pure solo quest area? (approach above: instance regions are 2, 4, 5 — Osric/Erik/)
   Eamon, Leofric/Ingvar/Tadhg, Hollow Sentinel/Iron Wolf/Bramble Warden.)
-- Reisesystem zwischen Hauptstadt und weit entfernten Regionen (z. B. Region 6/7) —
-  Pferde/Portale/schnelles Reisen, oder bewusst Fußweg als Zeitsenke wie im klassischen
+- Travel system between capital and distant regions (e.g. region 6/7) —
+  Horses/portals/fast travel, or deliberately walking as a time sink as in the classical
   DAOC?
-- Wie hart ist die Levelgrenze zwischen Bändern (harte Mob-Level-Wand vs. weicher
-  Übergang)? Hängt vom noch nicht existierenden Level-/Progressionssystem ab (siehe
+- How hard is the level line between bands (hard mob level wall vs. softer)
+  Transition)? Depends on the not-yet-existing level/progression system (see
   [SYSTEMS.md](../../SYSTEMS.md)).
-- Übergang Region 7 → Frontier-Zone: eigener Ladebereich/Portal, oder nahtlos begehbar?
-  Beeinflusst, ob die Frontier-Karte technisch ein eigenes Level bleibt oder ins
-  Heimatreich-Level hineinwächst.
-- Kartenmaßstab/Laufzeiten — analog zur offenen Frage in der Frontier-Vision, noch nicht
-  festgelegt.
+- Transition Region 7 → Frontier zone: own charging area/portal, or seamlessly accessible?
+  Influences whether the frontier card technically remains its own level or enters
+  Heimatreich level grows into it.
+- Map scale/runtimes — analogous to the open question in the frontier vision, not yet
+  established.

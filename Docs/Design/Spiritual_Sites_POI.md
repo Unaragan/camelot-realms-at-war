@@ -1,85 +1,85 @@
-# Spirituelle Stätten - Points of Interest (POI)
+# Spiritual Sites - Points of Interest (POI)
 
-> **Status:** Design-Konzept. Referenz für Quest-Hooks, Lore-Texte und POI-Platzierung — reale Stättentypen als Archetypen, keine 1:1-Kopien konkreter Bauwerke (siehe CLASSES.md-Prinzip: Archetypen ja, unverwechselbare Fremdnamen nein).
+> **Status:** Design concept. Reference for quest hooks, lore texts and POI placement — real site types as archetypes, not 1:1 copies of concrete buildings (see CLASSES.md principle: archetypes yes, distinctive foreign names no).
 
-## Philosophie
+## Philosophy
 
-Jedes Reich bekommt eine eigene, kulturell konsistente Bandbreite an spirituellen Stättentypen — nicht generische "Ruinen", sondern Orte mit eigener mythologischer Logik pro Reich. Nützlich für:
-- **Quest-Hooks:** Segen/Fluch-Mechaniken, Ritual-Ketten, Ahnen-/Geister-Quests, Fraktions-Lore-Vertiefung
-- **Levelgestaltung:** POI-Dichte analog zu [Material_Suppliers_POI.md](Material_Suppliers_POI.md) — auch spirituelle Stätten über die Levelzonen verteilen, nicht nur in der Hauptstadt konzentrieren
-- **Später:** RvR-Relevanz denkbar (z. B. ein Reich kontrolliert eine heilige Stätte im Grenzgebiet für einen Buff — nicht jetzt, nur als offener Gedanke vermerkt)
-
----
-
-## Albion (arthurianisch/britannisch)
-
-**Kulturelle Grundlage:** vorchristliche Steinkreis-/Druiden-Tradition, überlagert von Artus-Sage und später christlicher Klosterkultur — Albion darf beide Schichten zeigen (ältere heidnische Stätten, jüngere Kloster-Ruinen).
-
-| Stättentyp | Beispiel-Motiv | Nutzung |
-|---|---|---|
-| Steinkreis | Stonehenge-Archetyp | Ritual-Quests, astronomische/kalendarische Ereignisse (Sonnwende-Event-Hook) |
-| Grabhügel (Barrow) | Langhügel-Gräber | Ahnen-/Geister-Quests, Grabräuber-Gegner, Relikt-Bergung |
-| Heilige Quelle | Holy Well | Segen-/Heilungsmechanik, Pilger-NPCs |
-| Alter Eichenhain | Druiden-Hain | Vor-arthurianische Lore, Naturgeister |
-| Menhir-Reihe | Steinreihen/Ley-Linien-Motiv | Navigations-/Rätsel-Content, "folge der Linie"-Quest |
-| Kreidefigur im Hügel | White-Horse-Motiv | Landmarke, Fraktions-Symbolik |
-| Heilige Insel | Avalon-Motiv | Spätgame-/Epic-Questline-Ziel, schwer erreichbar |
-| Kloster-Ruine | Verlassenes Kloster | Christliche Überlagerungsschicht, Bibliotheks-/Lore-Fundort |
-
-**Vorgeschlagene Verortung** (dieselben Zonen wie Material_Suppliers_POI.md, konsistent halten):
-- Aldenbury (Hauptstadt) — Kloster-Ruine im Umland
-- Ashford Vale — heilige Quelle
-- Graywick Downs — Steinkreis
-- Ravensmoor March (Grenze) — Grabhügel-Feld (Grenzland = alte Schlachtfelder)
+Each empire gets its own culturally consistent range of spiritual sites — not generic "ruins," but places with their own mythological logic per realm.
+- **Quest hooks:** Segen/Fluch-Mechaniken, Ritual-Ketten, Ahnen-/Geister-Quests, Fraktions-Lore-Vertiefung
+- **Level design:** POI density analogous to [Material_Suppliers_POI.md](Material_Suppliers_POI.md) — also distribute spiritual sites across the level zones, not only focus in the capital
+- **Later:** RvR relevance conceivable (e.g., an empire controls a sacred site in the border area for a buff — not now, just noted as open thought)
 
 ---
 
-## Midgard (nordisch)
+## Albion (Arthurian/British)
 
-**Kulturelle Grundlage:** altnordische Religion — Ahnenkult, Opfergaben, Things (Versammlungsstätten mit ritueller Doppelfunktion).
+**Cultural basis:** Pre-Christian stone circle / Druid tradition, superimposed by Arthur legend and later Christian monastic culture - Albion is allowed to show both layers (older pagan sites, younger monastic ruins).
 
-| Stättentyp | Beispiel-Motiv | Nutzung |
+| Site type | Example motif | Utilisation |
 |---|---|---|
-| Grabhügel (Haugr) | Häuptlings-/Königsgrab | Ahnen-Quests, Draugr-/Untoten-Gegner (nordische Grabwächter-Tradition) |
-| Runenstein | Gedenk-/Bannstein | Lore-Fragmente, Sprach-/Rätsel-Content |
-| Heiliger Hain (Vé/Lundr) | Opferhain | Opfergaben-Mechanik, Naturgeister |
-| Opferaltar (Hörgr) | Freiluft-Altar | Segen-/Buff-Ritual, Fraktions-Zeremonie |
-| Tempelhalle (Hof) | Kult-Versammlungshaus | NPC-Kult-Fraktion, Priester-Quests |
-| Schiffsgrab | Ship Burial | Seefahrer-Helden-Lore, Bergungs-Quest |
-| Opfermoor | Bog Offering (vgl. Moorleichen) | Düstere Quest-Reihe, verborgene Relikte |
-| Thing-Platz | Versammlungs-/Rechtsstätte | Fraktionspolitik-Quests, Urteils-/Entscheidungs-Content |
+| Stone circle | Stonehenge archetype | Ritual quests, astronomical/calendrical events (solstice event hook) |
+| Burial mounds (Barrow) | Long hill graves | Ancestral/ghost quests, tomb robbers, relic salvage |
+| Sacred Source | Holy Well | Blessing/Healing Mechanics, Pilgrim NPCs |
+| Old oak grove | Druid groves | Pre-Arthurian lore, nature spirits |
+| Menhir series | Stone rows/ley lines motif | Navigation/puzzle content, "follow the line" quest |
+| Chalk figure in the hill | White-horse motif | Landmark, fractional symbolism |
+| Sacred Island | Avalon motif | Late game/epic questline target, difficult to reach |
+| Monastery ruins | Abandoned Monastery | Christian superimposition layer, library/lore site |
 
-**Vorgeschlagene Verortung:**
-- Skaldheim (Hauptstadt) — Tempelhalle
-- Vinterdal — Runenstein-Feld
-- Stormcrag Heights — Thing-Platz (Festung = politisches Zentrum)
-- Ravensfjord March (Nordgrenze) — Opfermoor
+**Proposed location** (dieselben Zonen wie Material_Suppliers_POI.md, konsistent halten):
+- Aldenbury (capital) — Monastery ruins in the surrounding area
+- Ashford Vale - Sacred Source
+- Graywick Downs - Stone Circle
+- Ravensmoor March (border) — Burial mound field (borderland = ancient battlefields)
 
 ---
 
-## Hibernia (keltisch/irisch)
+## Midgard (Nordic)
 
-**Kulturelle Grundlage:** irische/keltische Mythologie — Feenglaube (Sídhe), Druidentum, Ahnenkult über Ganggräber.
+**Cultural basis:** Old Norse religion — Ancestral cult, offerings, things (meetings with ritual dual function).
 
-| Stättentyp | Beispiel-Motiv | Nutzung |
+| Site type | Example motif | Utilisation |
 |---|---|---|
-| Ganggrab (Passage Tomb) | Newgrange-Archetyp | Ahnen-/Licht-Ritual-Quest (Sonnenlicht-Ausrichtung als Rätselmechanik) |
-| Feenhügel (Sídhe) | Elfenhügel | Feen-/Anderswelt-Quests, Portal-Mechanik |
-| Heilige Quelle | Holy Well | Wunsch-/Segen-Mechanik, Pilger-NPCs |
-| Ogham-Stein | Beschrifteter Standstein | Lore-Fragmente, Übersetzungs-Rätsel |
-| Heiliger Hain (Nemeton) | Druiden-Hain | Druiden-Fraktion, Naturmagie-Quests |
-| Hochkreuz | High Cross | Spätere christliche Überlagerungsschicht (analog Albion-Kloster) |
-| Königs-/Ritualhügel | Tara-Motiv | Politisches/rituelles Zentrum, Krönungs-Lore |
-| Portalgrab (Dolmen) | Dolmen | Kleinere Wegpunkt-Stätten, Umgebungsdetail + Mini-Quests |
+| Burial mounds (Haugr) | Chief's/King's Tomb | Ancestral quests, Draugr/Undead opponents (Nordic grave guard tradition) |
+| Runestone | Memorial/Bannstein | Lore fragments, language/puzzle content |
+| Sacred Grove (Vé/Lundr) | Sacrifice sharks | Sacrifice Mechanics, Nature Spirits |
+| altar of sacrifice (Hörgr) | Open-air altar | Blessing/Buff Ritual, Faction Ceremony |
+| Temple Hall (Hof) | House of Cult Assembly | NPC cult faction, priest quests |
+| Vessel's grave | Ship Burial | Seafarer-hero-Lore, salvage quest |
+| Victim bog | Bog Offering (cf. Moorleichen) | Dark quest series, hidden relics |
+| Thing Square | Meeting/place of justice | Group policy quests, judgement/decision content |
 
-**Vorgeschlagene Verortung:**
-- Dun Kerath (Hauptstadt) — Königs-/Ritualhügel (passt zum bereits dokumentierten Druiden-Kreis-Marktplatz)
-- Glenmara — heilige Quelle
-- Sceal Ridge — Ganggrab
-- Duskthorn Reach (Waldgrenze) — Feenhügel
+**Proposed location:**
+- Skaldheim (capital) — Tempelhalle
+- Vinterdal — Runenstein field
+- Stormcrag Heights — Thing Square (Fortress = political centre)
+- Ravensfjord March (North border) — Victim moor
+
+---
+
+## Hibernia (Celtic/Irish)
+
+**Cultural basis:** Irish/Celtic mythology — fairy faith (Sídhe), druidism, ancestral cult about passage graves.
+
+| Site type | Example motif | Utilisation |
+|---|---|---|
+| Passage Tomb | Newgrange archetype | Ancestral/Light Ritual Quest (Sunlight Alignment as Mystery Mechanics) |
+| Fairy Mound (Sídhe) | Elf hills | Fairy/Otherworld quests, portal mechanics |
+| Sacred Source | Holy Well | Wish/Blessing Mechanics, Pilgrim NPCs |
+| Ogham stone | Inscribed standing stone | Lore fragments, translation puzzles |
+| Sacred Grove (Nemeton) | Druid groves | Druid faction, nature magic quests |
+| High cross | High cross | Later Christian superimposition layer (analogous Albion Monastery) |
+| King’s/Ritual Mound | Tara motif | Political/ritual centre, coronation lore |
+| Portal Tomb (Dolmen) | Dolphins | Smaller waypoint locations, environmental detail + mini-quests |
+
+**Proposed location:**
+- Dun Kerath (capital) – Royal/Ritual Hill (fits the already documented Druid District Market Square)
+- Glenmara - Sacred Source
+- Sceal Ridge - Ganggrab
+- Duskthorn Reach (forest boundary)
 
 ---
 
 ## Status
 
-🟡 Design-Konzept, noch keine Implementierung. Referenz für künftige Quest-Ausarbeitung (siehe [Docs/Design/Quests.md](Quests.md)) und Levelgestaltung.
+🟡 Design concept, not yet implemented. Reference for future quest development (see [Docs/Design/Quests.md](Quests.md)) and level design.

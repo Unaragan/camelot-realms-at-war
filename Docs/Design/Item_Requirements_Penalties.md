@@ -1,20 +1,20 @@
 # Item Level Requirements & Usage Penalties
 
-> **Status:** Design-Konzept. Level-basierte Item-Nutzung mit Malus-System.
+> **Status:** Design concept. Level-based item usage with Malus system.
 
-## Kern-Idee
+## Core idea
 
-**Spieler können Items unter ihrem Level-Requirement tragen**, aber mit **Stat-Malus**:
-- ✅ Lv5 trägt Lv20 Schwert (möglich, aber schwach)
-- ❌ Lv50 trägt Lv1 Schwert (möglich, aber sinnlos)
+**Players can wear items under their level requirement**but with **Stat-Malus**:
+- ✅ Lv5 carries Lv20 sword (possible but weak)
+- ❌ Lv50 carries Lv1 sword (possible, but senseless)
 
 ---
 
-## Item-Level-Requirements nach Rarity
+## Item Level Requirements by Rarity
 
-| Rarity | Typical Min Level | Beispiel |
+| Rarity | Typical Min Level | Example |
 |---|---|---|
-| **Common** | Level 1+ | Linen Tunic (Lv1) |
+| **Common Commons** | Level 1+ | Linen Tunic (Lv1) |
 | **Uncommon** | Level 10+ | Steel Sword (Lv10) |
 | **Rare** | Level 25+ | Mithril Plate (Lv25) |
 | **Epic** | Level 40+ | Adamantite Axe (Lv40) |
@@ -22,7 +22,7 @@
 
 ---
 
-## Malus-Formel (wenn unter Level-Requirement)
+## Malus formula (if under level requirement)
 
 ```
 Level-Difference = Item-Level - Character-Level
@@ -33,7 +33,7 @@ Else:
   Keine Malus (über Requirement)
 ```
 
-**Beispiele:**
+**Examples:**
 
 ```
 Scenario 1: Lv10 trägt Lv20 Schwert (10 Levels zu niedrig)
@@ -48,7 +48,7 @@ Scenario 2: Lv15 trägt Lv20 Schwert (5 Levels zu niedrig)
   Malus = 5 × 5% = 25%
   Schwert Stats: 100 Damage
   Final Damage: 100 × (1 - 0.25) = 75 Damage (75% Effektivität)
-  ⚠️ Akzeptabel für Übergang
+  ⚠️ Acceptable as an interim measure
 
 Scenario 3: Lv20 trägt Lv20 Schwert (genau Requirement)
   Level-Difference = 0
@@ -65,9 +65,9 @@ Scenario 4: Lv25 trägt Lv20 Schwert (5 Levels über Requirement)
 
 ---
 
-## Alternative: Bonused Stats bei Überleveln (Optional)
+## Alternative: Bonused Stats at Overlevels (Optional)
 
-**Wenn Spieler ÜBER Level-Requirement:**
+**If Players ABOVE Level Requirement:**
 
 ```
 Bonus % = (Character-Level - Item-Level) × 2%
@@ -82,15 +82,15 @@ Beispiel:
 
 ---
 
-## Rüstung & Andere Items
+## Armor & Other Items
 
-**Gleiche Formel für alle Items:**
-- Rüstung: Armor-Value mit Malus
-- Accessories: Spell-Damage/Crit-Chance mit Malus
-- Waffen: Damage/DPS mit Malus
-- Tränke: Healing/Mana-Restore mit Malus
+**Same formula for all items:**
+- Armor: Armor Value with Malus
+- Accessories: Spell-Damage/Crit-Chance with Malus
+- Weapons: Damage/DPS with Malus
+- Drinks: Healing/Mana-Restore with Malus
 
-**Beispiel Rüstung:**
+**Example of armaments:**
 ```
 Lv15 trägt Lv25 Plate Armor (10 Levels zu niedrig)
   Base Armor: 50
@@ -103,7 +103,7 @@ Lv15 trägt Lv25 Plate Armor (10 Levels zu niedrig)
 
 ## UI Display
 
-**Im Inventory/Character Screen:**
+**Inventory/Character Screen:**
 
 ```
 [Adamantite Plate Armor]
@@ -118,7 +118,7 @@ Lv15 trägt Lv25 Plate Armor (10 Levels zu niedrig)
   [Equip] [Drop]
 ```
 
-**Tooltip beim Hover:**
+**Tooltip at Hover:**
 ```
 Adamantite Plate Armor
 Armor: 50 (25 with penalty)
@@ -131,13 +131,13 @@ Penalty: -50% stats
 
 ---
 
-## Equipment-Restrictions
+## Equipment Restrictions
 
 **Absolute Restrictions (CANNOT wear):**
-- ❌ **More than 20 Levels below requirement** = Cannot equip at all
+- ❌ **More than 20 levels below requirement** Cannot equip at all
 - ✅ Any level below that = Can equip with malus
 
-**Beispiel:**
+**Example:**
 ```
 Lv1 Player cannot wear Lv50 Epic (49 levels difference > 20 limit)
   → "Level too low to equip this item" message
@@ -150,23 +150,23 @@ Lv35 Player CAN wear Lv50 Epic (15 levels difference < 20 limit)
 
 ---
 
-## Vertical Slice Scope
+## Vertical slice scope
 
-Für erste Implementation:
-- ✅ **Level-Requirement pro Item** (in Item-Daten)
-- ✅ **Malus-Formel** (5% pro Level-Differenz)
+For first implementation:
+- ✅ **Level Requirement per Item** (in item data)
+- ✅ **Malus formula** (5% per level difference)
 - ✅ **UI Display** (in Character/Inventory Screen)
-- ✅ **Hard Cap** (>20 Levels unter Requirement = keine Nutzung)
-- ⏸ Bonus für Überleveln (optional, später)
-- ⏸ Ausnahmen für bestimmte Items (später)
-- ⏸ Special-Class-Requirements (z. B. "Nur für Paladine")
+- ✅ **Hard cap** (>20 levels under Requirement = no use)
+- ⏸ Bonus for overleveling (optional, later)
+- ⏸ Exceptions for certain items (later)
+- ⏸ Special-Class-Requirements (e.g. "for paladins only")
 
 ---
 
-## Offene Punkte
+## Open points
 
-- **Stat-Typ Unterschiede:** Sollte Armor-Malus anders sein als Damage-Malus? (wahrscheinlich gleich für Einfachheit)
-- **Hard-Cap-Wert:** 20 Levels? Oder dynamisch (z. B. 50% Malus Hard-Cap)?
-- **Tränke-Malus:** Sollen Potions auch Malus haben? (wahrscheinlich nein, einfach zu verwenden)
-- **Enchantment-Scaling:** Sollten verzauberte Stats auch skalieren? (ja, logisch)
-- **Über-Level Bonus:** +2% pro Level oder lieber keine Bonus? (später balancen)
+- **Stat type Differences:** Should Armor-Malus be different from Damage-Malus? (probably the same for simplicity)
+- **Hard cap value:** 20 levels? Or dynamic (e.g. 50% malus hard cap)?
+- **Potato malus:** Should potions also have malus? (probably no, easy to use)
+- **Enchantment scaling:** Should enchanted stats also scale? (yes, logically)
+- **Over-level bonus:** +2% per level or rather no bonus? (later balance)

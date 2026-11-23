@@ -1,28 +1,28 @@
 # Auction House System
 
-> **Status:** Design-Konzept, keine Implementation. Zentraler Item-Marktplatz für Realm.
+> **Status:** Design concept, no implementation. Central item marketplace for realm.
 
-## Grund: Kein Private Housing
+## Reason: No private housing
 
-Da **Private Housing** (pers. Häuser mit NPC-Vendors) nicht geplant ist, brauchen wir einen **zentralen Marktplatz** für Spieler, um Crafted Items + Loot zu verkaufen/kaufen.
+Da **Private Housing** (pers. houses with NPC vendors) is not planned, we need a **Central Marketplace** for players to sell/buy Crafted Items + Loot.
 
 ---
 
-## Kern-Features
+## Core features
 
-### 1. **Auktionhaus-Standort pro Realm**
+### 1. **Auction House Location Per Realm**
 
-- **Albion:** Aldenbury (Hauptstadt) — Taverne oder Marktplatz
-- **Midgard:** Skaldheim (Hauptstadt) — Schankhalle oder Marktplatz
-- **Hibernia:** Dun Kerath (Hauptstadt) — Druiden-Kreis oder Marktplatz
+- **Albion:** Aldenbury (Capital) — Tavern or Market Square
+- **Midgard:** Skaldheim (capital) — Schankhalle or Marktplatz
+- **Hibernia:** Dun Kerath (capital) — Druid district or market square
 
-**Zugang:**
-- NPC "Auctioneer" im Zentrum jeder Hauptstadt
-- Spieler besuchen NPC → "Open Auction House" → UI öffnet sich
+**Access:**
+- NPC "Auctioneer" in the center of each capital
+- Players visit NPC → "Open Auction House" → UI opens
 
-### 2. **Auktion-Listings**
+### 2. **Auction listings**
 
-Spieler können Items zur Auktion stellen:
+Players can put items at auction:
 
 ```
 ┌──────────────────────────────────────────┐
@@ -42,39 +42,39 @@ Spieler können Items zur Auktion stellen:
 └──────────────────────────────────────────┘
 ```
 
-**Item-Info beim Hover:**
+**Item info at the hover:**
 - Name, Rarity (Common/Uncommon/Rare/Epic)
-- Stats, Level-Requirement
-- Durability (falls relevant)
-- Seller-Name, Listing-Date
+- stats, level requirements
+- Durability (if relevant)
+- Seller name, listing date
 
-### 3. **Auktion-Aktionen**
+### 3. **Auction promotions**
 
-**Auktion erstellen:**
-- Spieler wählt Item aus Inventory
-- Setzt Startpreis + Auktionsdauer (12h, 24h, 48h)
-- Listing-Fee: 5% des Startpreises
-- Item wird aus Inventory entfernt (reserviert für Auktion)
+**Create an auction:**
+- Player Selects Item from Inventory
+- Sets starting price + auction duration (12h, 24h, 48h)
+- Listing fee: 5% of the starting price
+- Item is removed from Inventory (reserved for auction)
 
-**Gebot abgeben:**
-- Spieler bietet auf Item
-- Kann nachgeboten werden (anderer Spieler bietet höher)
-- Letzte Stunde: Auktion kann noch bis 5 Min vor Ende erneuert werden (Sniping-Schutz)
+**Make a bid:**
+- Player offers on Item
+- Can be bid (other player offers higher)
+- Last hour: Auction can be renewed up to 5 minutes before the end (sniping protection)
 
-**Direkt kaufen (Buy-Out):**
-- Seller kann "Buy-Out-Preis" setzen (z. B. 100 Gold)
-- Spieler kann direkt kaufen statt zu bieten
+**Buy directly (buy-out):**
+- Seller can set "buy-out price" (e.g. 100 gold)
+- Players can buy directly instead of bidding
 
-**Nach Auktion:**
-- Gewinner: Item ins Inventory + Nachricht "Sie haben gewonnen!"
-- Seller: Gold ins Konto + Nachricht "Auktion beendet"
-- Ablauf ohne Gebot: Item zurück zu Seller (kostenloses Relisting)
+**After auction:**
+- Winner: Item to Inventory + Message "You have won!"
+- Seller: Gold to the account + message "Auction ended"
+- Expiration without bid: Item back to Seller (free relisting)
 
 ---
 
-## Listings & Suche
+## Listings and Search
 
-### Search-Filter:
+### Search filters:
 
 ```
 Item Name: [Search____]
@@ -87,77 +87,77 @@ Sort by: [Price: Low-High] [Newest] [Ending Soon]
 [Search] [Clear]
 ```
 
-### Auktions-Limits (Typ- & Qualitäts-abhängig):
+### Auction Limits (Type & Quality Dependent):
 
-**Consumables (Tränke, Potions) — Alchemist-speziell:**
-- Common/Uncommon: **Unbegrenzt** (schnell verbraucht)
-- Rare: **Max 50 Listings**
-- Epic: **Max 5 Listings**
-- *Grund: Alchemisten produzieren viele Tränke täglich*
+**Consumables (drinks, potions) — Alchemist-specific:**
+- Common/Uncommon: **Unlimited** (quickly consumed)
+- Rare: **Max 50 listings**
+- Epic: **Max 5 listings**
+- *Reason: Alchemists produce many potions daily*
 
-**Waffen & Rüstung:**
-- Common: **Max 10 Listings**
-- Uncommon: **Max 8 Listings**
-- Rare: **Max 5 Listings**
-- Epic: **Max 2 Listings** (sehr wertvoll)
-- *Grund: Crafted Items sollen selten bleiben, nicht überfluten*
+**Weapons & Armaments:**
+- Common: **Max 10 listings**
+- Uncommon: **Max 8 listings**
+- Rare: **Max 5 listings**
+- Epic: **Max 2 listings** (very valuable)
+- *Reason: Crafted items should remain rare, not flooded*
 
-**Accessoires (Ringe, Amulette):**
-- Common: **Max 8 Listings**
-- Uncommon: **Max 6 Listings**
-- Rare: **Max 3 Listings**
-- Epic: **Max 1 Listing** (einzigartig)
+**Accessories (rings, amulets):**
+- Common: **Max 8 listings**
+- Uncommon: **Max 6 listings**
+- Rare: **Max 3 listings**
+- Epic: **Max 1 Listing** (unique)
 
-**Rohmaterialien (Erz, Leder, etc.) — Vendor-Alternativ:**
-- **Unbegrenzt** (sollten vom NPC verfügbar sein, nicht AH-geprägt)
-- *Grund: Spieler sollten Materials vom Vendor kaufen, nicht vom AH farmen*
+**Raw materials (ore, leather, etc.) — Vendor alternative:**
+- **Unlimited** (should be available from the NPC, not AH-imprinted)
+- *Reason: Players should buy materials from the vendor, not farm from the AH*
 
-**Total pro Spieler:**
-- Vertical Slice: **Max 20 aktive Listings gesamt** (Mix aus allen Typen)
-- Endgame: **Max 40 aktive Listings gesamt**
+**Total per player:**
+- Vertical slice: **Max 20 active listings total** (mix of all types)
+- Endgame: **Max 40 active listings total**
 
 ---
 
-## Beruf-Boni (Listing-Erweiterung)
+## Occupational bonuses (listing extension)
 
-**Spieler mit passendem Hauptberuf erhalten höhere Listing-Limits:**
+**Players with suitable main professions will receive higher listing limits:**
 
-- **Alchemist:** +50% Consumable-Listings (z. B. 50 Rare → 75 Rare)
-- **Waffenschmied:** +3 Weapon-Listings
-- **Rüstungsschmied:** +3 Heavy-Armor-Listings
-- **Lederer:** +3 Light/Medium-Armor-Listings
-- **Juwelier:** +2 Accessory-Listings
-- **Tailor:** +3 Cloth-Armor-Listings
+- **Alchemist:** +50% Consumable listings (e.g. 50 Rare → 75 Rare)
+- **Gunsmiths:** +3 Weapon listings
+- **Armsmith:** +3 Heavy Armor Listings
+- **Leather:** +3 Light/Medium Armor Listings
+- **Jewellery:** +2 Accessory listings
+- **Tailor:** +3 Cloth-Armor listings
 
-**Beispiel:**
+**Example:**
 ```
-Alchemist-Spieler:
+Alchemist player:
   Common Potions: Unbegrenzt → Unbegrenzt
   Rare Potions: 50 → 75 Listings (+50%)
   Epic Potions: 5 → 7 Listings (+50%)
 
-Waffenschmied-Spieler:
+Weaponsmith player:
   Uncommon Weapons: 8 → 11 Listings (+3)
   Rare Weapons: 5 → 5 (keine Änderung)
 ```
 
-**Grund:** Handwerker können ihre Spezialisierung monetarisieren!
+**Reason:** Craftsmen can monetize their specialization!
 
 ---
 
-## Gebühren & Gold-Sinks
+## Fees and Gold-Sinks
 
-### Listing-Fee (Verkäufer):
-- 5% des Startpreises → Gold wird vom Verkäufer sofort abgezogen
-- Z. B. Startpreis 100 Gold → 5 Gold Gebühr
+### Listing fee (seller):
+- 5% of the starting price → Gold is immediately deducted by the seller
+- E.g. starting price 100 gold → 5 gold fee
 
-### Sales-Fee (bei Verkauf):
-- Zusätzlich 2% des Endpreises an die "Gilde" / Realm (Gold-Sink)
-- Z. B. Finales Gebot 150 Gold → 3 Gold Tax
+### Sales fee (for sale):
+- In addition, 2% of the final price to the "guild" / realm (gold sink)
+- E.g. Final bid 150 Gold → 3 Gold Tax
 
-**Grund:** Gold-Sinks verhindern Inflation
+**Reason:** Gold sinks prevent inflation
 
-### Beispiel:
+### Example:
 ```
 Verkäufer listet: Knight's Steel Sword
   Startpreis: 100 Gold
@@ -171,37 +171,37 @@ Käufer bietet: 150 Gold
 
 ---
 
-## Realm-Trennung
+## Realm separation
 
-**WICHTIG:** Auktionshäuser sind **REALM-ONLY**:
-- Albion-Spieler sehen nur Albion-Listings
-- Midgard-Spieler sehen nur Midgard-Listings
-- Hibernia-Spieler sehen nur Hibernia-Listings
-- ❌ Kein Cross-Realm-Handel
+**IMPORTANT:** Auction houses are: **REALM-ONLY**:
+- Albion players only see Albion listings
+- Midgard players only see Midgard listings
+- Hibernia players only see Hibernia listings
+- No cross-realm trade
 
-**Grund:** Realm-Separation (wie Chat) — Feinde handeln nicht miteinander!
+**Reason:** Realm separation (like chat) — enemies don’t trade with each other!
 
 ---
 
-## Vertical Slice Scope
+## Vertical slice scope
 
-Für erste Implementation (später, nach Crafting):
+For first implementation (later, after crafting):
 - ✅ **Auction House UI** (Search, Browse, Bid, Buy-Out)
-- ✅ **Create Listing** (Spieler stellt Item zur Auktion)
-- ✅ **Basic Search Filter** (Name, Rarity, Price)
-- ✅ **Bidding System** (Gebot abgeben, gewinnen, Gold transferieren)
-- ✅ **Realm-Only Listings** (Keine Cross-Realm)
-- ⏸ Listing-Fee + Sales-Fee (später, später balancen)
-- ⏸ Advanced Filters (Item-Stats, Level-Requirement filtern)
-- ⏸ Watchlist (Items merken für später)
-- ⏸ Seller-Reputation / Blacklist (später)
+- ✅ **Create Listing** (Player puts Item up for auction)
+- ✅ **Basic search filters** (Name, Rarity, Price)
+- ✅ **Bidding system** (Bid, win, transfer gold)
+- ✅ **Realm-only listings** (No cross-realm)
+- ⏸ Listing fee + Sales fee (later, later balance)
+- Advanced Filters (Item-Stats, Level-Requirement filtering)
+- ⏸ Watchlist (remember items for later)
+- ⏸ Seller reputation / Blacklist (later)
 
 ---
 
-## Offene Punkte
+## Open points
 
-- **Auktions-Dauer:** 12h, 24h, 48h? Oder flexibel? (später balancen)
-- **Sniping-Schutz:** 5 Min vor Ende = auto-extend? Oder nur 1x? (später)
-- **Bot-Protection:** Sollen Bots automatische Gebote machen? (später, wenn nötig)
-- **Stuck Items:** Was passiert mit Items, wenn Spieler sich logout? (Auto-return nach 30 Tagen)
-- **Scam-Protection:** Können Seller Preis nach Verkauf ändern? (nein, fixiert sobald Gebot kommt)
+- **Auction duration:** 12h, 24h, 48h? Or flexible? (later balance)
+- **Sniping protection:** 5 min before end = auto-extend? or just 1x? (later)
+- **Bot protection:** Should bots make automatic bids? (later, if necessary)
+- **Stuck Items:** What happens to items when players logout? (auto-return after 30 days)
+- **Scam protection:** Can sellers change price after sale? (no, fixed as soon as bid comes)

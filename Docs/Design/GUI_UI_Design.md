@@ -1,36 +1,36 @@
-# GUI/UI Design-Konzept
+# GUI/UI design concept
 
-> **Status:** Frühe Design-Idee, keine Implementation. Screens, Layout, Informationen — nicht vollständig, später verfeinerbar.
+> **Status:** Early design idea, no implementation. Screens, layout, information — not complete, later refineable.
 
-## Kern-Prinzipien
+## Core principles
 
-- **RvR-lesbar:** UI muss im Kampf-Chaos noch lesbar sein (große Icons, klare Kontraste, Farb-Coding nach Realm)
-- **Minimal:** Nur das Nötigste auf dem HUD — Details in separaten Screens
-- **Toon-konsistent:** UI-Design passt zum Toon-Look (keine ultra-realistische Paneloptik)
-- **Realm-Farben:** Albion (Rot/Gold), Midgard (Blau/Weiß), Hibernia (Grün/Braun)
+- **RvR readable:** UI must still be legible in the combat chaos (large icons, clear contrasts, color coding according to realm)
+- **Minimum:** Only the Necessary on the HUD — Details in Separate Screens
+- **Toon-consistent:** UI design matches the toon look (no ultra-realistic panel optics)
+- **Realm colours:** Albion (red/gold), Midgard (blue/white), Hibernia (green/brown)
 
-## Main Screens (von oben nach unten)
+## Main Screens (from top to bottom)
 
-### 1. **Main Menu** (Start des Spiels)
-- Title Screen mit atmosphärischem Hintergrund (Realm-spezifisch je nach ausgewähltem Realm)
+### 1. **Main Menu** (Start of the game)
+- Title Screen with atmospheric background (realm-specific depending on the selected realm)
 - Buttons: Play, Create Character, Settings, Exit
-- Server-Status-Anzeige (optional für später)
+- Server status display (optional for later)
 
-### 2. **Character Creation Screen**
-- **Wahl:** Realm (Albion/Midgard/Hibernia)
-- **Wahl:** Klasse (3 Klassen pro Realm zur Vertical Slice)
-- **Eingabe:** Charakter-Name (Validierung: 3-20 Zeichen, keine Sonderzeichen)
-- **Preview:** 3D-Modell des erstellten Characters (dreht sich, verschiedene Posen)
+### 2. **Character creation screen**
+- **Election:** Realm (Albion/Midgard/Hibernia)
+- **Election:** Class (3 classes per realm to vertical slice)
+- **Entry:** Character name (validation: 3-20 characters, no special characters)
+- **Preview:** 3D model of the created character (turns, different poses)
 - Button: Create, Cancel
 
-### 3. **Character Select Screen** (wenn mehrere Chars vorhanden)
-- Liste der verfügbaren Charaktere
+### 3. **Character Select Screen** (if there are several chars)
+- List of available characters
 - Jeder Eintrag zeigt: Name, Realm-Flagge, Klasse-Icon, Level, Last Played
-- Buttons: Play, Delete, Create New
+- Play, Delete, Create New
 
-### 4. **In-Game HUD** (Während des Spiels)
+### 4. **In-game HUD** (During the game)
 
-**Layout (konzeptuell):**
+**Layout (conceptual):**
 ```
 ┌─────────────────────────────────────────────────────┐
 │  [Name/Level] [Health Bar] [Mana Bar]   [Minimap]  │  ← Top
@@ -45,70 +45,70 @@
 └─────────────────────────────────────────────────────┘
 ```
 
-**Battleground Player-Count (oben im HUD):**
-- Live-Anzeige: `[🔴 Albion: X]  [🔵 Midgard: Y]  [🟢 Hibernia: Z]`
-- Farbcodierung nach Realm
-- Nur die Zahlen, minimal (keine Namen)
+**Battleground Player Count (top of HUD):**
+- Live display: `[🔴 Albion: X]  [🔵 Midgard: Y]  [🟢 Hibernia: Z]`
+- Realm colour coding
+- Only the numbers, minimal (no names)
 - Real-time Update (Server sendet Count-Changes zu allen Clients)
 
-**Elemente:**
+**Elements:**
 
-| Element | Info | Update-Rate |
+| Element | Info | Update rate |
 |---|---|---|
-| **Health Bar** | Spieler HP (Zahl + Balken) | Real-time |
-| **Mana/Resource Bar** | Ressource für Fähigkeiten | Real-time |
-| **Ability Bar** | 4-6 hotkeys (1-4, Q, E, etc.) | Static |
+| **Health bar** | Player HP (number + bars) | Real-time |
+| **Mana/Resource Bar** | Resource for skills | Real-time |
+| **Ability bar** | 4-6 hotkeys (1-4, Q, E, etc.) | Static |
 | **Buff/Debuff Icons** | Active buffs/debuffs, stacked | Real-time |
-| **Minimap** | Top-right corner, 3D-Overhead-View | Real-time |
-| **Enemy Nameplate** | Gegner-Name, HP-Bar, Realm-Icon über Head | Mouseover |
+| **Minimap** | Top-right corner, 3D overhead view | Real-time |
+| **Enemy Nameplate** | Enemy Name, HP Bar, Realm Icon via Head | Mouseover |
 | **Chat Window** | Say, Group, Realm Chat | Real-time |
-| **Status Icons** | Crowd Control (stun, slow, etc.) Indikatoren | Real-time |
+| **Status icons** | Crowd control (stun, slow, etc.) indicators | Real-time |
 
-### 5. **Character Screen** (Press 'C')
+### 5. **Character screen** (Press 'C')
 - **Left Panel:**
-  - Portrait (großes 3D-Modell oder Bild)
-  - Name, Level, Realm, Klasse
+  - Portrait (large 3D model or image)
+  - Name, Level, Realm, Class
   - Experience Bar (Lv X → Lv X+1)
-  - Attribute-Punkte verfügbar: [X]
+  - Attribute points available: [X]
 
 - **Center Panel:**
   - Tabbed: Stats, Attributes, Skills
   - **Stats Tab:** Health, Mana, Armor, Damage, etc.
-  - **Attributes Tab:** Strength, Intellect, Constitution, Dexterity (mit Punkte-Zuweisung)
-  - **Skills Tab:** Aktuell aktive Fähigkeiten, Upgrade-Status
+  - **Attributes Tab:** Strength, Intellect, Constitution, Dexterity (with points allocation)
+  - **Skills Tab:** Current Active Abilities, Upgrade Status
 
 - **Right Panel:**
-  - Ausrüstungs-Slots (Paperdoll-View)
+  - Equipment Slots (Paperdoll View)
   - Head, Chest, Legs, Hands, Feet, Main-Hand, Off-Hand
-  - Doppelklick zum Öffnen von Details
+  - Double Click to Open Details
 
-### 6. **Inventory Screen** (Press 'I')
-- **Left:** Inventory Bag (Grid-View, 20-30 Slots für Vertical Slice)
+### 6. **Inventory screen** (Press 'I')
+- **Left:** Inventory Bag (Grid-View, 20-30 slots for Vertical Slice)
 - **Right:** Equipment Slots (Paperdoll)
-- **Drag & Drop:** Items zwischen Bag und Equipment
-- **Info Panel:** Selected Item zeigt: Name, Beschreibung, Stats, Level-Requirement
+- **Drag & Drop:** Items between bag and equipment
+- **Info Panel:** Selected Item Shows: Name, Description, Stats, Level Requirement
 
-### 7. **Quest Log** (Press 'L')
-- **Active Quests:** Titel, Objectives (Fortschritt), NPC-Geber
-- **Completed Quests:** Archive (optional für später)
-- **Doppelklick:** Quest-Details öffnen (NPCs, Reward Preview)
+### 7. **Quest logo** (Press 'L')
+- **Active Quests:** Title, Objectives (Progress), NPC-giver
+- **Completed Quests:** Archives (optional for later)
+- **Double-click:** Open quest details (NPCs, Reward Preview)
 
-### 8. **Group Panel** (Press 'G' oder automatisch wenn Gruppe beitritt)
-- Liste der Gruppen-Mitglieder
-- Je Spieler: Name, Class-Icon, Level, Health-Bar, Mana-Bar
+### 8. **Group Panel** (Press 'G' or automatically when group joins)
+- List of group members
+- Per player: Name, Class-Icon, Level, Health-Bar, Mana-Bar
 - Buttons: Invite, Remove, Leave Group
-- (PvP-Realm-Info: Realm-Flag für jeden)
+- (PvP-Realm-Info: Realm-Flag for everyone)
 
 ### 9. **Options/Settings Screen**
 - **Graphics:** Resolution, Brightness, Effects Quality (Low/Medium/High)
 - **Audio:** Master Volume, Music Volume, SFX Volume
-- **Gameplay:** Difficulty, Auto-Loot, Auto-Attack
-- **Keybinds:** Customizable (später)
+- **Gameplay:** Difficulty, car loot, car attack
+- **Keybinds:** Customizable (later)
 - Buttons: Apply, Cancel, Restore Defaults
 
-### 10. **Battleground Player-Count Panel** (Vertical Slice)
+### 10. **Battleground Player-Count Panel** (Vertical slice)
 
-**Live Player-Count (im HUD, oben rechts oder als Widget):**
+**Live Player Count (in the HUD, top right or as a widget):**
 ```
 ┌──────────────────────────────────┐
 │  BATTLEGROUND PLAYERS             │
@@ -120,15 +120,15 @@
 └──────────────────────────────────┘
 ```
 
-**Funktionalität:**
-- **Immer sichtbar:** Echtzahl aller aktiven Spieler pro Reich im BG
-- **Nur für eigenes Reich:** Button `[Show Realm Players]` → Liste der Spieler aus eigenem Reich mit Level/Klasse
-- **Server-Update:** Alle 5-10 Sekunden aktualisiert (bei Spawn/Death/DC)
+**Functionality:**
+- **Always visible:** Real number of all active players per kingdom in the BG
+- **Only for your own kingdom:** Button `[Show Realm Players]` → List of players from their own empire with level/class
+- **Server Update:** Updated every 5-10 seconds (on Spawn/Death/DC)
 
-**Eigenes-Reich-Detail-Abfrage:**
-- Slash-Befehl: `/bgplayers` oder `/bg players` → zeigt alle Spieler aus eigenem Reich im BG
+**Own-Reich-Detail-Question:**
+- Slash command: `/bgplayers` or `/bg players` → shows all players from their own kingdom in the BG
 - Format: `Name [Level Klasse] [HP-Status]`
-- Beispiel:
+- Example:
   ```
   Albion Players in Battleground (12):
   • Paladin42 [45 Paladin] [Healthy]
@@ -137,9 +137,9 @@
   ... (etc.)
   ```
 
-## Offene Punkte
+## Open points
 
-- **Paperdoll-Style:** Sind die Item-Icons klein/grid oder großes Modell? (später als UI-Test)
-- **Chat-Räume:** Mehrere Channels (Say, Group, Realm, Guild später)? (für Vertical Slice: nur Say)
-- **Targeting-UI:** Soll ein Ziel-Frame neben dem Player-Frame sein? (optional, später)
-- **Mobile/Responsive:** Ist Console-Support geplant? (nein für POC)
+- **Paperdoll style:** Are the item icons small/grid or large model? (later than UI test)
+- **Chat rooms:** Multiple channels (Say, Group, Realm, Guild later)? (for Vertical Slice: Say only)
+- **Targeting UI:** Should a target frame be next to the player frame? (optional, later)
+- **Mobile/Responsive:** Is Console Support Planned? (no for POC)

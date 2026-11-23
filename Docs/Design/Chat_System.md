@@ -1,31 +1,31 @@
-# Chat-System-Design
+# Chat system design
 
-> **Status:** Design-Konzept, keine Implementation. Chat-Kanäle, UI, Architektur.
+> **Status:** Design concept, no implementation. Chat channels, UI, architecture.
 
-## Chat-Kanäle (Hierarchie)
+## Chat channels (hierarchy)
 
-**WICHTIG: Strikte Realm-Trennung** — Hibernia KANN NICHT mit Midgard oder Albion chatten. Nur eigenes Reich + Gesten (Emotes) zu anderen Reichen.
+**IMPORTANT: Strict realm separation** — Hibernia CANNOT chat with Midgard or Albion.Only own realm + gestures (emotes) to other realms.
 
-### Vertical Slice (MVP)
-1. **Say** — Lokaler Chat, ~50m Radius um Spieler **[REALM-ONLY]**
-2. **Group** — Nur aktuelle Gruppe (5 Spieler, nur aus eigenem Realm)
-3. **Realm-wide** (später) — Alle Spieler eines Reichs
+### Vertical slice (MVP)
+1. **Say:** - Local chat, ~50m radius around players **[REALM-ONLY]**
+2. **Group** — Only current group (5 players, only from their own realm)
+3. **Realm-wide** (later) — All players of an empire
 
-### Post-Release (Später)
-4. **Guild** — Nur Gilden-Mitglieder (ein Realm)
-5. **Alliance** — Mehrere Gilden koordiniert (ein Realm)
-6. **Whisper/PM** — 1v1 privat **[REALM-ONLY]**
+### Post-release (later)
+4. **Guild** — Only guild members (one realm)
+5. **Alliance** - Multiple guilds coordinated (one realm)
+6. **Whisper/PM** 1v1 private **[REALM-ONLY]**
 
-### Cross-Realm Kommunikation (begrenzt)
-- **Gesten/Emotes:** `/bow`, `/wave`, `/cheer`, `/laugh` → Sichtbar für ALLE Reiche
-- **Ist non-verbal:** Einzige Möglichkeit, mit anderen Reichen zu "sprechen"
-- **RvR-Realismus:** Keine Chat-Kommunikation mit Feinden — nur Körpersprache
+### Cross-Realm Communication (limited)
+- **Gestures/Emotes:** `/bow`, `/wave`, `/cheer`, `/laugh` Visible to all the rich
+- **Is non-verbal:** Only way to "talk" to other rich people
+- **RvR Realism:** No chat communication with enemies — only body language
 
-## Chat-Messages Format
+## Chat message format
 
-**Struktur:** `[Timestamp] [ChannelIcon] [PlayerName] [Realm-Icon]: Message`
+**Structure:** `[Timestamp] [ChannelIcon] [PlayerName] [Realm-Icon]: Message`
 
-### Beispiele:
+### Examples:
 
 ```
 [14:32] [💬] Player123 [A]: Looking for group for Dungeon XYZ
@@ -34,10 +34,10 @@
 [14:35] [🔱] Berserker99 [M]: We counter-attack at north gate!
 ```
 
-**Farb-Coding nach Realm:**
-- Albion: Rot/Gold
-- Midgard: Blau/Weiß
-- Hibernia: Grün/Braun
+**Realm color coding:**
+- Albion: red/gold
+- Midgard: Blue and White
+- Hibernia: green/brown
 
 ## Chat UI (In-Game Window)
 
@@ -57,59 +57,59 @@
 ```
 
 **Features:**
-- **Tab-Switch:** Kanäle nach Bedarf wechseln
-- **Auto-Scroll:** Neue Messages scrollen nach oben
-- **Timestamp:** Jede Message mit HH:MM
-- **Sender-Name:** Klickbar → Profil/Whisper/Add-Friend
-- **[Realm-Icon]:** Zeigt Reich des Senders (nur Say relevant)
-- **Scrollbar:** Alte Messages browsen
+- **Tab switch:** Switching Channels as Needed
+- **Auto-Scroll:** New messages scroll up
+- **Timestamp:** Any message with HH:MM
+- **Transmitter name:** Clickable Profile/Whisper/Add-Friend
+- **[Realm icon]:** Shows realm of the transmitter (only Say relevant)
+- **Scrollable:** Old messages browsing
 
-## Emotes/Gesten (Cross-Realm)
+## Emotes/gestures (cross-realm)
 
-**Sichtbar für ALLE Reiche** — einzige non-verbale Kommunikation zwischen Feinden.
+**Visible to all the rich** — only non-verbal communication between enemies.
 
-### Basis-Emotes (Vertical Slice)
-- `/bow` — Verbeugung
-- `/wave` — Winkend
-- `/cheer` — Jubeln
-- `/laugh` — Lachen
-- `/salute` — Militärischer Salut
-- `/point` — Zeigen
-- `/sit` — Setzen
-- `/kneel` — Knien
+### Vertical Slice (Vertical Slice)
+- `/bow` — Bow
+- `/wave` —Winking
+- `/cheer` — Cheering
+- `/laugh` — Laughter
+- `/salute` - Military Salute
+- `/point` — Show
+- `/sit` — Sitting
+- `/kneel` — Knees
 
-### Animation-Display:
+### Animation display:
 ```
 [14:35] Paladin42 bows respectfully.
 [14:35] Berserker99 waves at the enemy!
 [14:36] Druid54 laughs maniacally.
 ```
 
-**Keine Text-Nachricht** — nur die Animation sichtbar, egal von welchem Realm.
+**No text message** — only the animation visible, no matter from which realm.
 
 ---
 
-## Chat-Befehle (Slash-Commands)
+## Chat commands (slash commands)
 
-### Basis (Vertical Slice)
-- `/say <message>` — Send in Say-Channel (default)
-- `/group <message>` oder `/g <message>` — Group-Chat
-- `/reply <message>` oder `/r <message>` — Letzten Whisper antworten (später)
-- `/ignore <playername>` — Spieler-Messages blocken
-- `/clear` — Chat-Fenster leeren
+### Vertical Slice (Vertical Slice)
+- `/say <message>` Send in Say-Channel (default)
+- `/group <message>` or `/g <message>` — Group chat
+- `/reply <message>` or `/r <message>` — Last whispers answer (later)
+- `/ignore <playername>` – Blocking player messages
+- `/clear` - Chat windows empty
 
-### Später (Post-Release)
-- `/whisper <playername> <message>` oder `/w` — Private Message
-- `/guild <message>` oder `/guild message` — Guild-Chat
-- `/alliance <message>` — Alliance-Chat
+### Later (post-release)
+- `/whisper <playername> <message>` or `/w` Private Message
+- `/guild <message>` or `/guild message` — Guild Chat
+- `/alliance <message>` — Alliance Chat
 - `/report <playername> <reason>` — Moderation
-- `/mute <playername>` — Stummschalten (ohne Blocken)
+- `/mute <playername>` — Silencing (without blocking)
 
-## Technische Architektur (Konzeptuell)
+## Technical architecture (conceptual)
 
-### Chat-Flow:
+### Chat flow:
 ```
-Spieler tippt Message
+Player types a message
       ↓
 [Chat Input Handler]
       ↓
@@ -120,70 +120,70 @@ Validierung: (Length < 256, No Spam-Flood, Language Filter?)
 [Server-Chat-Manager] empfängt
       ↓
 Bestimme Recipient-List nach Channel:
-   - Say: Alle Spieler im 50m Radius
+   - Say: All players within 50 m
    - Group: Nur Gruppe-Members
-   - Realm: Alle Spieler des Reichs (später)
+   - Realm: All players in the realm (later)
       ↓
 [Server-Replicate] → Send zu allen Recipients
       ↓
 Empfänger-Clients: Message in Chat-Window rendern
 ```
 
-### Server-Side Logging (Später)
-- **Persistenz:** Messages in Datenbank speichern (für Moderation, später archivieren)
-- **Moderation:** Flagged-Messages für Admin-Review
-- **Anti-Spam:** Flood-Detection (z. B. >5 Messages in 10 Sekunden)
+### Server-side logging (later)
+- **Persistence** Save messages in database (for moderation, later archive)
+- **Moderation:** Flagged messages for admin review
+- **Anti-spam:** Flood detection (e.g. >5 messages in 10 seconds)
 
-## Moderation & Safety
+## Moderation and Safety
 
-### Spieler-Kontroll-Features
-- **Ignore List:** Max 50 Namen, Ignore-Player sehen deine Messages nicht
-- **Mute:** Wie Ignore, aber kein Moderation-Flagging
-- **Block:** (später) Whisper/Friend-Requests blockieren
+### Player control features
+- **Ignore List:** Max 50 Names, Ignore Players Don't See Your Messages
+- **Mute:** Like Ignore, but No Moderation Flagging
+- **Block:** (later) block whisper/friend requests
 
-### Admin-Features (später)
-- **/mod-mute <playername> <duration>** — Spieler temporär stummschalten
-- **/mod-kick <playername>` — Spieler offline-Force
-- **/mod-ban <playername>** — Permaban (+ Appeal-Kanal)
-- **Message-Review:** Admin-Panel für flagged Messages
+### Admin features (later)
+- **/mod-mute <playername> <duration>** — Temporarily mute players
+- **/mod-kick <playername>` — Player offline force
+- **/mod-ban <playername>** — Permaban (+ Appeal channel)
+- **Message review:** Admin panel for flagged messages
 
-### Language Filter (später, optional)
-- Automatisches Flagging von Slurs/Racism
-- Nicht Auto-Censure (sichtbar bleiben, aber markiert)
-- Manual Review für False-Positives
+### Language filter (later, optional)
+- Automatic Flagging by Slurs/Racism
+- Not auto-censure (remain visible but marked)
+- Manual Review for False Positives
 
-## Chat-Privacy & Logging
+## Chat Privacy and Logging
 
-**Was wird geloggt:**
-- Sender, Recipient-List, Timestamp, Message-Text (gekürzt auf 255 chars)
-- **Gelöschte Messages:** Soft-Delete (Spieler sieht [deleted], Admin sieht noch Original)
+**What is logged:**
+- Sender, Recipient-List, Timestamp, Message-Text (abbreviated to 255 chars)
+- **Deleted messages:** Soft-Delete (player sees) [deleted]Admin still sees original
 
-**Retention:**
-- Say/Group: 7 Tage (gering Speicher)
-- Guild/Alliance: 30 Tage
-- Whisper (später): 30 Tage
-- Ban-Appeals: 90 Tage
+**Retention**
+- Say/Group: 7 days (low storage)
+- Guild/Alliance: 30 days
+- Whisper (later): 30 days
+- Ban-Appeals: 90 days
 
-## Offene Punkte
+## Open points
 
-- **Spam-Schutz:** Rate-Limiting per Spieler? (z. B. max 1 Message/sec)
-- **Language-Filter:** Aktivieren für Launch oder später?
-- **Chat-History:** Können alte Messages scrollt werden? (limitiert auf lokalen Client oder vom Server?)
-- **Bot-Detection:** Sollte Auto-Spam erkannt werden? (später, wenn nötig)
-- **Whisper in Vertical Slice:** Jetzt oder später? (wahrscheinlich später, nur Say+Group für POC)
+- **Spam protection:** Rate-Limiting per player? (e.g. max 1 Message/sec)
+- **Language filters:** Activate for launch or later?
+- **Chat history:** Can old messages be scrolled? (limited to local client or from server?)
+- **Bot detection:** Should Auto-Spam be detected? (later, if necessary)
+- **Whisper in Vertical Slice:** Now or later? (probably later, only Say+Group for POC)
 
-## Vertical Slice Scope (Minimal)
+## Vertical Slice Scope (Minimum)
 
-Für erste Implementation:
-- ✅ Say Channel (lokale Messages, **REALM-ONLY**)
-- ✅ Group Channel (nur Gruppe, **REALM-ONLY**)
-- ✅ **Emotes/Gesten** (Cross-Realm sichtbar)
-- ✅ Basic UI (Tabs, Input, Send)
-- ✅ Slash-Commands: /say, /group, /bow, /wave, /cheer, /clear
-- ✅ Server-Replication (alle Clients sehen neue Messages)
-- ✅ **Realm-Filter:** Spieler können nur mit eigenem Realm chatten
-- ⏸ Whisper (später, REALM-ONLY wenn implementiert)
-- ⏸ Guild/Alliance (später, kein Guild-System im POC)
-- ⏸ Moderation (später, wenn nötig)
-- ⏸ Language-Filter (später)
+For first implementation:
+- Say Channel (local messages), **REALM-ONLY**)
+- ✅ Group Channel (group only), **REALM-ONLY**)
+- ✅ **Emotes/gestures** (Cross-Realm visible)
+- Basic UI (Tabs, Input, Send)
+- Slash Commands: /say, /group, /bow, /wave, /cheer, /clear
+- ✅ Server replication (all clients see new messages)
+- ✅ **Realm filter:** Players can only chat with their own realm
+- ⏸ Whisper (later, REALM-ONLY if implemented)
+- ⏸ Guild/Alliance (later, no Guild system in the POC)
+- Moderation (later, if necessary)
+- ⏸ Language filter (later)
 

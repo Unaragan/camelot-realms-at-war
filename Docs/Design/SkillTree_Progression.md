@@ -1,64 +1,64 @@
-# Skill Tree & Talent Progression-System
+# Skill Tree & Talent Progression System
 
-> **Status:** Early Design, keine Implementation. Struktur für wie Spieler Fähigkeiten upgraden/spezialisieren.
+> **Status:** Early design, not implementation. structure for how players upgrade/specialize skills.
 
-## Kern-Idee
+## Core idea
 
-**"Lean Talent System"** — nicht WoW-artig mit 100 Optionen, sondern **2-3 Spezialisierungs-Pfade pro Klasse** (Defense vs. Offense, oder Heal-AoE vs. Heal-Single), die den Spieler klar unterscheidbar machen.
+**"Lean Talent System"** — not WoW-like with 100 options, but **2-3 specialization paths per class** (Defense vs. Offense, or Heal-AoE vs. Heal-Single), which make the player clearly distinguishable.
 
-Siehe CLASSES.md: jede Klasse hat **zwei Talent-Pfade** (defensiv/support vs. offensiv).
+See CLASSES.md: each class has **Two Talent Paths** (defensive/support vs. offensive).
 
-## Progression-Mechaniken
+## Progression mechanics
 
-### 1. **Skill-Punkte (Langzeit-Progression)**
+### 1. **Skill points (long-term progression)**
 
-**Leveling Phase (Lv 1-50):**
-- Spieler bekommt **1 Skill-Punkt pro Level** (Level 1 → 50 = 50 Punkte)
-- Punkte investieren in **zwei Talent-Bäume** der Klasse
-- Maximal **25 Punkte pro Baum** (ausbalanciert)
+**Leveling phase (Lv 1-50):**
+- Players get **1 skill point per level** (Level 1 → 50 = 50 points)
+- Investing Points in **Two talent trees** Class
+- Maximum **25 points per tree** (balanced)
 
-**Endgame Phase (Lv 50+):**
-- **Skill-Progression setzt sich fort** (1 Punkt pro ~30-60 Min Spielzeit)
-- **Skill-Caps mit Titel-Rewards:**
-  - **Common:** 0-100 Skill (einfache Items craften, casual combat)
-  - **Uncommon:** 100-250 Skill (Standard-Crafting, Normal-Dungeons)
-  - **Rare:** 250-500 Skill (Bessere Items, schwierigere Dungeons)
-  - **Epic:** 500-1000 Skill (Epic-Items craften ODER Boss-Loot)
-  - **Legendary:** 1000-1050 Skill (End-Game-Ziel, nur Epic-Crafting!)
+**Endgame phase (Lv 50+):**
+- **Skill progression continues** (1 point per ~30-60 minutes of play)
+- **Skill caps with title rewards:**
+  - **Common:** 0-100 Skill (simple items craften, casual combat)
+  - **Uncommon:** 100-250 skill (standard crafting, normal dungeons)
+  - **Rare:** 250-500 Skill (Better Items, More Dungeons)
+  - **Epic:** 500-1000 Skill (Epic-Items craften OR Boss-Loot)
+  - **Legendary:** 1000-1050 Skill (End-Game Goal, Epic-Crafting only!)
 
-**WICHTIG: Legendary (1000+) nur durch EPIC-CRAFTING erreichbar:**
-- ❌ Sub-Komponenten allein = max bis ~900 Skill
-- ❌ Common/Uncommon/Rare Crafting = max bis ~800 Skill
-- ✅ **Nur wer Epic-Items handwerkt, kann Legendary erreichen**
-  - Alchemist: Epic Tränke mit seltenen Zutaten
-  - Waffenschmied: Epic Waffen (Adamantite, Rune-touched)
-  - Rüstungsschmied: Epic Rüstung (Adamantite)
+**IMPORTANT: Legendary (1000+) accessible only through EPIC-CRAFTING:**
+- ❌ Sub-components alone = max up to ~900 Skill
+- Common/Uncommon/Rare Crafting = max up to ~800 Skill
+- ✅ **Only those who craft epic items can reach Legendary**
+  - Alchemist: Epic potions with rare ingredients
+  - Gunsmith: Epic Weapons (Adamantite, Rune-touched)
+  - Armormaker: Epic Armor (Adamantite)
   - etc.
 
-**Legendär-Reward bei 1050 Skill:**
-- ✅ Titel (z. B. "Paladin of the Light", "Master Berserker", "Legendary Weaponsmith")
-- ✅ Visuelle Cosmetic (Item-Glow, Aura, spezielle Particle-Effect)
+**Legendary Reward at 1050 Skill:**
+- ✅ Titel (e.g. "Paladin of the Light", "Master Berserker", "Legendary Weaponsmith")
+- ✅ Visual Cosmetic (item glow, aura, special particle effect)
 - ✅ Small stat boost (+2-3% final stats)
-- ✅ Rare Crafting-Bonus: Epic-Items bekommen +5% extra Qualität
-- Später: **Neuspec/Respeck möglich** (Kosten-Option)
+- Rare crafting bonus: Epic items get +5% extra quality
+- Later: **Neuspec/Respeck possible** (cost option)
 
-### 2. **Zwei Talent-Pfade pro Klasse**
+### 2. **Two talent paths per class**
 
-Jede Klasse hat **exakt zwei Tabs**, nicht mehr:
+Each class has: **Exactly two tabs**, no more:
 
-| Klasse | Path A (Defensive) | Path B (Offensive) |
+| Category | Path A (defensive) | Path B (offensive) |
 |---|---|---|
-| **Paladin** | Holy Defense (Tank-Buffs, Shields) | Crusade (Damage Buffs, Aggro-Debuff) |
+| **paladine** | Holy Defense (tank buffs, shields) | Crusade (Damage Buffs, Aggro-Debuff) |
 | **Cleric** | Divine Heal (AoE Heal, Buffs) | Smite (Heal + Damage Hybrid) |
-| **Wizard** | Arcane Control (Crowd Control, Defense) | Inferno (Burst Damage, AoE) |
-| **Berserker** | Battle Fury (Damage + Self-Buff) | Unbreakable (Tank-like Defense) |
+| **Wizard** | Arcane Control (Crowd Control, Defense) | Burst Damage (AoE) |
+| **Berserkers** | Battle Fury (Damage + Self-Buff) | Unbreakable (tank-like defense) |
 | **Shaman** | Restore (AoE Heal, Group Support) | Curse (Debuffs, Offensive Buffs) |
-| **Hunter** | Precision (Single-Target Damage) | Swiftness (Mobility, Kiting) |
+| **Hunters** | Precision (Single-Target Damage) | Swiftness (mobility, kiting) |
 | (etc.) | (etc.) | (etc.) |
 
-## Talent-Baum-Layout (Konzeptuell)
+## Talent tree layout (conceptual)
 
-**Nicht linear:** Nicht unbedingt "Baum" sondern eher **3x5 oder 3x7 Grid** mit Abhängigkeiten (Tier-basiert).
+**Non linear:** Not necessarily "tree" but rather **3x5 or 3x7 grid** with dependencies (animal-based).
 
 ```
 Tier 1 (Lv 1-5):      [Talent A]  [Talent B]  [Talent C]
@@ -68,54 +68,54 @@ Tier 2 (Lv 6-15):     [T.D]  [T.E]--[T.F]  [T.G]
 Tier 3 (Lv 16-25):    [T.H]  [T.I]  [T.J]  [T.K]--[T.L]
 ```
 
-- **Tier 1:** Basis-Talents (3 Optionen, wähle 2 aus = 2 Punkte nötig)
-- **Tier 2:** Spezialisierungs-Talents (abhängig von Tier 1 Wahl)
-- **Tier 3:** Capstone (End-Talents, Finales Ability pro Path)
+- **Category 1:** Basic Talents (3 options, select 2 = 2 points required)
+- **Tier 2:** Specialization Talents (depending on Tier 1 Choice)
+- **Tier 3:** Capstone (End-Talents, Final Ability per Path)
 
-## Talent-Typen
+## Types of talent
 
-### A. **Passive Talents** (Stat-Boosts)
+### A. **Passive talents** (Stat boosts)
 - +5% Health
 - +10% Damage
 - +3 Armor
 - +Mana Regeneration
-- *Kosten: 1 Punkt*
+- *Cost: 1 point*
 
-### B. **Ability Enhancement Talents** (Fähigkeits-Modifikation)
+### B. **Ability enhancement talents** (capability modification)
 - "Holy Strike deals +20% damage to undead"
 - "Heal over Time: extends duration by 2 seconds"
 - "Crowd Control: stun chance +25%"
-- *Kosten: 1-2 Punkte*
+- *Cost: 1-2 points*
 
-### C. **Capstone Talents** (Eindeutige Abilities)
+### C. **Capstone Talents** (unequivocal Abilities)
 - "Paladin's Holy Light: instant heal, 30 sec cooldown"
 - "Wizard's Inferno: AoE damage burst, high mana cost"
-- *Kosten: 2-3 Punkte* (sind die "großen" Fähigkeiten)
+- *Cost: 2-3 points* (are the "great" abilities)
 
-## Vertical Slice Scope (einfach halten)
+## Vertical Slice Scope (Simple Keep)
 
-Für die erste Implementierung:
-- **3 Klassen** (Paladin, Berserker, Champion)
-- **Jede hat 2 Talent-Pfade**
-- **Je Pfad ~10-15 Talents** (keine 100er-Bäume)
-- **Per-Level: 1 Punkt**
-- **UI:** Ein einfaches Tree-View-Widget (Klick = Punkt investieren)
+For the first implementation:
+- **3 Classes** (Paladin, Berserker, Champion)
+- **Each has 2 talent paths**
+- **Per Path ~10-15 Talents** (no 100 trees)
+- **Per-level: 1 point**
+- **UI:** A simple Tree View widget (click = point invest)
 
-## Später: Spezialisierungs-Items
+## Later: Specialization Items
 
-(Post-Release Idee, nicht für POC)
-- **Rune Stones** oder **Talent Runes:** Items, die zusätzliche Talent-Modifier geben (z. B. +1 Punkt in speziellem Talent)
-- **Class-specific Runes:** z. B. "Paladin's Rune of Holy Wrath" adds bonus effect to Holy Strike
-- Dadurch etwas mehr Komplexität ohne den Baum zu verändern
+(Post-release idea, not for POC)
+- **Rune Stones** or **Talent Runes:** Items that give additional talent modifiers (e.g. +1 point in special talent)
+- **Class-specific runes:** e.g. "Paladin's Rune of Holy Wrath" adds bonus effect to Holy Strike
+- Doing a little more complexity without changing the tree
 
-## Offene Punkte
+## Open points
 
-- **Respeck-Kosten:** Gold? Spezial-Item? Kostenlos in Towns? (später balancen)
-- **Tier-Lockout:** Muss man Tier 1 vollständig spielen bevor Tier 2 freischaltet? (wahrscheinlich ja für Einfachheit)
-- **Pvp-Balance:** Sollte der Talent-Baum zwischen PvE und PvP unterschiedlich sein? (nein, einfacher für POC)
-- **Macro-Support:** Sollte es Save-Builds geben ("Talent Preset 1 / 2")? (später, wenn Zeit)
+- **Respeck costs:** Gold? Special item? Free in Towns? (later balance)
+- **Animal lockout:** Do you have to play Tier 1 fully before Tier 2 unlocks? (probably yes for simplicity)
+- **Pvp balance:** Should the talent tree between PvE and PvP be different? (no, easier for POC)
+- **Macro Support:** Should there be save builds ("Talent Preset 1/2")? (later if time)
 
-## UI für Talent-Zuordnung
+## UI for Talent Assignment
 
 ```
 [Character Screen] → Tab: Skills/Talents

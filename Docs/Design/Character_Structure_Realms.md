@@ -1,10 +1,10 @@
-# Character-Struktur pro Reich (Design-Vorbereitung)
+# Character structure per kingdom (design preparation)
 
-> **Status:** Design-Skelett für späteren Ausbau. Nicht implementiert, nur Dokumentation für die Vorbereitung der Ordnerstruktur und Asset-Naming pro Reich, damit später die Klassen/Charaktere konsistent erweitert werden können.
+> **Status:** Design skeleton for later expansion. Not implemented, only documentation for folder structure preparation and asset naming per realm so that later classes/characters can be extended consistently.
 
-## Einordnung: Vertical Slice vs. Endversion
+## Vertical Slice vs. Final Version
 
-**Vertical Slice (jetzt):** Drei Klassen pro Fraktion, alle als Blueprints, vorläufig auf **gemeinsamen Placeholder-Meshes/Materialien** (Mannequin-Skeleton, Toon-Look). Struktur:
+**Vertical Slice (now):** Three classes per faction, all as blueprints, provisionally on **Common placeholder meshes/materials** (Mannequin skeleton, toon look). Structure:
 ```
 Content/Camelot/Characters/
   Shared/              # Gemeinsam genutzt über alle Reiche
@@ -24,51 +24,51 @@ Content/Camelot/Characters/
     BP_Ranger_Hibernia
 ```
 
-**Endversion (nach Release, nicht jetzt):** Jedes Reich bekommt **reichseigene Meshes/Materialien** statt Placeholders. Struktur bleibt, aber Meshes werden ausgetauscht (siehe CLAUDE.md → Gameplay-Klassen referenzieren Mesh/Material als austauschbare Variable).
+**Final version (after release, not now):** Every empire gets **rich meshes/materials** Structure remains, but meshes are exchanged (see CLAUDE.md → Gameplay classes reference mesh/material as interchangeable variable).
 
-## Reich-Identität: Art Direction pro Fraktion
+## Realm Identity: Art Direction per group
 
-Aus der Frontier-Vision ([OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md)) abgeleitet:
+From the Frontier Vision ()[OpenWorld_Frontier_3Realms_Vision.md](OpenWorld_Frontier_3Realms_Vision.md)) derived from:
 
-### **Albion** — Ritterlich, schwere Rüstung, mittelalterlich-englisch
+### **Albion** — Chivalry, heavy armor, medieval English
 
-- **Silhouette:** Volle Plattenrüstung, lange Schwerter, Schilde, oft gehörnte Helme
-- **Farben:** Rot, Silber, Gold (Edelsteine, Adel)
-- **Material:** Stahl, Leder, Brokat, Samt
-- **Bewegung:** Schwer, würdevoll, gemessene Schritte, defensiv
-- **Waffen-Stil:** Zwei-Händer, Schild+Schwert, Stäbe für Zauber
-- **Klassen-Unterschiede:**
-  - **Paladin:** Vollplatte, Großschild, rituell
-  - **Cleric:** Gewand über Rüstung, religiöse Symbole, Stab
-  - **Wizard:** Lange Robe, wenig Rüstung, Fokus-Objekt (Stab/Kristall)
+- **Silhouette:** Full plate armor, long swords, shields, often horned helmets
+- **Colours:** Red, silver, gold (precious stones, nobility)
+- **Material:** Steel, leather, brocade, velvet
+- **Movement:** Hard, dignified, measured steps, defensive
+- **Weapons style:** Two-handed, shield+sword, rods for magic
+- **Class differences:**
+  - **Paladin:** Full plate, large plate, ritual
+  - **Cleric:** Clothes over armor, religious symbols, staff
+  - **Wizard:** Long robe, little armor, focus object (rod/crystal)
 
-### **Midgard** — Nordisch, Fellwerk/Fell, Wikingermetalwork
+### **Midgard** — Nordic, Fellwerk/Fell, Viking Metalwork
 
-- **Silhouette:** Weniger Platte, mehr Leder + Fellmantel, Axt/Hammer, asymmetrisch
-- **Farben:** Blau, Weiß, Braun, Grau (Eis, Schnee, Eisen)
-- **Material:** Eisen, Bronze, Leder, Fell, Knochen
-- **Bewegung:** Aggressiv, schnell, weit ausholend, offensiv
-- **Waffen-Stil:** Zwei-Händer (Axt), Dual Wield, Schilde mit Runenmuster
-- **Klassen-Unterschiede:**
-  - **Berserker:** Minimalistische Rüstung, Fellmantel, aggressive Pose
-  - **Shaman:** Leder, Fellmantel, Schamanische Totems, rituell
-  - **Hunter:** Leichte Rüstung, Bogen, Beweglich, Jagdausrüstung
+- **Silhouette:** Less plate, more leather + fur coat, axe/hammer asymmetric
+- **Colours:** Blue, white, brown, grey (ice, snow, iron)
+- **Material:** Iron, bronze, leather, fur, bones
+- **Movement:** Aggressive, fast, wide-ranging, offensive
+- **Weapons style:** Two-handed (Ax), Dual Wield, shields with rune patterns
+- **Class differences:**
+  - **Berserkers:** Minimalist armor, fur coat, aggressive pose
+  - **Shaman:** Leather, fur coat, shamanic totems, ritual
+  - **Hunters:** Light armor, bow, mobile, hunting equipment
 
-### **Hibernia** — Keltisch, Natur, mystisch
+### **Hibernia** Celtic, nature, mystical
 
-- **Silhouette:** Fließende Gewänder, Natur-Elemente (Ranken, Blätter), organische Asymmetrie
-- **Farben:** Grün, Gold, Braun, Weiß (Eiche, Wald, Stein)
-- **Material:** Leder, Leinen, Holz, Stein, Kristall
-- **Bewegung:** Fließend, zugleich fest verwurzelt, mystisch
-- **Waffen-Stil:** Dualwield, Stäbe (für Druiden), Nahkampf mit Natur-Fokus
-- **Klassen-Unterschiede:**
-  - **Champion:** Schwere Lederrüstung, Natur-Symbole, kraftvoll
-  - **Druid:** Fließendes Gewand, Natur-Totems, wenig Rüstung
-  - **Ranger:** Leichte Rüstung, Bogen, Natur-Tarnkleidung, mobil
+- **Silhouette:** Flowing garments, natural elements ( tendrils, leaves), organic asymmetry
+- **Colours:** Green, gold, brown, white (oak, forest, stone)
+- **Material:** Leather, linen, wood, stone, crystal
+- **Movement:** Flowing, yet firmly rooted, mystical
+- **Weapons style:** Dualwield, staffs (for Druids), close combat with nature focus
+- **Class differences:**
+  - **Champion:** Heavy leather armor, nature symbols, powerful
+  - **Druid:** Flowing robe, nature totems, little armor
+  - **Ranger:** Light armor, bow, nature camouflage clothing, mobile
 
-## Blueprint-Vererbungs-Architektur (Master + Spezialisierungen)
+## Blueprint Inheritance Architecture (Master + Specializations)
 
-**Kern-Prinzip:** Ein Master-Character erbt alle gemeinsamen Eigenschaften (Bewegung, Animationen, GAS-Base, Replikation). Jede Klasse pro Reich erbt vom Master und spezialisiert nur die Fähigkeiten/Unterschiede.
+**Core principle:** A master character inherits all the common characteristics (movement, animations, GAS base, replication), and each class per realm inherits from the master and specializes only in skills/differences.
 
 ```
 BP_Character_Master
@@ -84,16 +84,16 @@ BP_Character_Master
 BP_Paladin_Albion
 ├── Klassen-spezifische GAS-Abilities (HolyStrike, etc.)
 ├── Paladin-Attribute-Set
-├── Palette-Override für Albion-Farben
+├── Palette override for Albion colors
 └── (Animations erben vom Master)
 
 BP_Cleric_Albion  → erbt vom Master
 BP_Wizard_Albion  → erbt vom Master
 ```
 
-## Ordner-Struktur (Blueprint-Assets)
+## Blueprint assets (blueprint assets)
 
-Nach dem Muster der **Content-Struktur**:
+According to the model of **Content structure**:
 
 ```
 Content/Camelot/Characters/
@@ -133,36 +133,36 @@ Content/Camelot/Characters/
     └── BP_Ranger_Hibernia
 ```
 
-## Blueprint-Naming-Konvention
+## Blueprint naming convention
 
 Format: `BP_[ClassName]_[RealmName]`
 
-**Beispiele:**
+**Examples:**
 - `BP_Paladin_Albion`
 - `BP_Berserker_Midgard`
 - `BP_Champion_Hibernia`
 
-**Ability-Blueprints (GAS):** `GA_[ClassName]_[AbilityName]`
+**Ability Blueprints (GAS):** `GA_[ClassName]_[AbilityName]`
 - `GA_Paladin_HolyStrike`
 - `GA_Berserker_RageAttack`
 - `GA_Druid_Heal`
 
-**Attribute-Sets:** `AS_[ClassName]`
+**Attribute sets:** `AS_[ClassName]`
 - `AS_Paladin`
 - `AS_Berserker`
 
-## Umsetzungs-Roadmap
+## Implementation Roadmap
 
-| Phase | Was | Scope |
+| Phase phase | What | Scope |
 |---|---|---|
-| Vertical Slice (jetzt) | 3 Klassen (eine pro Realm), alle mit Placeholder-Meshes | Paladin, Berserker, Champion auf Mannequin |
-| Nach Vertical Slice | +3 Klassen (je eine pro Realm) | Cleric, Shaman, Druid |
-| Nach RvR-Core-Proof | +3 Klassen (finale Vertical Slice Suite) | Wizard, Hunter, Ranger |
-| Endversion (später) | +5 Klassen (Spezialisierungen) + reichseigene Meshes | Rogue, Minstrel, Raider, Skald, Duelist + Custom-Meshes pro Realm |
+| Vertical Slice (now) | 3 classes (one per realm), all with placeholder meshes | Paladin, Berserker, Champion on Mannequin |
+| by Vertical Slice | +3 classes (one per realm) | Cleric, Shaman, Druid |
+| RvR-Core-Proof | +3 classes (final vertical slice suite) | Wizard, Hunter, Ranger |
+| Final version (later) | +5 classes (specializations) + rich meshes | Rogue, Minstrel, Raider, Skald, Duelist + Custom meshes per realm |
 
-## Offene Punkte
+## Open points
 
-- **Mesh-Quellen für Endversion:** Epic Paragon-Assets (kostenlos, 76 GB, nicht versioniert), Marketplace, oder Custom-Art? (siehe CLAUDE.md/README.md)
-- **Animation-Retargeting:** Mannequin-Skeleton für POC; bei eigenständigen Meshes ggf. andere Skeletons nötig (gilt für später)
-- **UI-Branding pro Klasse:** Sollten Klassen-UI-Widgets (Ability-Icons, Buffs) visual unterscheidbar sein, oder einheitlich? (offen, wahrscheinlich später nach ersten Playtests)
-- **Rüstungs-Varianten:** Sollten Klassen sichtbare Armor-Teile als swappable Meshes haben, oder nur Material-Überschreibung? (offen für Endversion)
+- **Mesh sources for final version:** Epic Paragon assets (free, 76 GB, non-versioned), Marketplace, or Custom-Art? (see CLAUDE.md/README.md)
+- **Animation retargeting:** Mannequin skeleton for POC; for independent meshes, other skeletons may be required (applies to later)
+- **UI branding per class:** Should class UI widgets (ability icons, buffs) be visually distinguishable, or uniform? (open, probably later after initial playtests)
+- **Armor variants:** Should classes have visible Armor parts as swappable meshes, or just material override? (open for final version)

@@ -1,200 +1,200 @@
 # Material Suppliers - Points of Interest (POI)
 
-> **Status:** Design-Konzept. Wo Spieler Rohmaterialien kaufen können (NPC-Vendor Standorte).
+> **Status:** Where players can buy raw materials (NPC vendor locations).
 
-## Philosophie: Dezentrale Material-Quellen
+## Philosophy: Decentralized Material Sources
 
-Statt alles in einer Hauptstadt zu haben, sollten Material-Lieferanten **über die Realm verteilt** sein:
-- **Hauptstadt (Level 1-9):** Basis-Materialien
-- **Mid-Tier Zonen (Lv 10-29):** Bessere Qualität
-- **High-Tier Zonen (Lv 30-50):** Rare Materials
-
----
-
-## Material-Typ & NPC-Standorte
-
-### 1. **Erzwerk (Ore Merchant)**
-**Verkauft:** Bronze Ore, Steel Ore, Mithril Ore, Adamantite Ore
-
-**Standorte pro Realm:**
-
-| Realm | Lv Zone | Ort | Bietet | Preis |
-|---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Hauptstadt, Marktplatz) | Bronze Ore | 1 Gold/Stack |
-| | 10-19 | Ashford Vale (Dorf) | Steel Ore | 3 Gold/Stack |
-| | 30-39 | Graywick Downs (Außenposten) | Mithril Ore | 8 Gold/Stack |
-| | 47-50 | Ravensmoor March (Grenze) | Adamantite Ore | 20 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Hauptstadt, Kneipe) | Bronze Ore | 1 Gold/Stack |
-| | 10-19 | Vinterdal (Dorf) | Steel Ore | 3 Gold/Stack |
-| | 30-39 | Stormcrag Heights (Festung) | Mithril Ore | 8 Gold/Stack |
-| | 47-50 | Ravensfjord March (Nordgrenze) | Adamantite Ore | 20 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Hauptstadt, Druiden-Kreis) | Bronze Ore | 1 Gold/Stack |
-| | 10-19 | Glenmara (Dorf) | Steel Ore | 3 Gold/Stack |
-| | 30-39 | Sceal Ridge (Gebirgszug) | Mithril Ore | 8 Gold/Stack |
-| | 47-50 | Duskthorn Reach (Waldgrenze) | Adamantite Ore | 20 Gold/Stack |
+Instead of having everything in one capital, material suppliers should **distributed over the realm** be:
+- **Capital (Level 1-9):** Basic materials
+- **Mid-Tier Zones (Lv 10-29):** Better quality
+- **High-Tier Zones (Lv 30-50):** Rare materials
 
 ---
 
-### 2. **Holzfäller-Zunft (Lumber Vendor)**
-**Verkauft:** Oak Wood, Pine Wood, Ash Wood, Elder Wood
+## Material type & NPC locations
 
-| Realm | Lv Zone | Ort | Bietet | Preis |
+### 1. **Ore (Ore Merchant)**
+**Sold:** Bronze Ore, Steel Ore, Mithril Ore, Adamantite Ore
+
+**Locations per realm:**
+
+| Realm | Lv Zone | Location | Provides | Price |
 |---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Wald-Randgebiet) | Oak Wood | 1 Gold/Stack |
-| | 10-19 | Redmoor (Wald) | Pine Wood | 2 Gold/Stack |
-| | 30-39 | Hollowmere (Alter Wald) | Ash Wood | 5 Gold/Stack |
-| | 47-50 | Cinderreach (Verbrannter Wald) | Elder Wood | 15 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Forstlager) | Oak Wood | 1 Gold/Stack |
-| | 10-19 | Wolfsmark (Wald) | Pine Wood | 2 Gold/Stack |
-| | 30-39 | Ashenfjord (Alter Wald) | Ash Wood | 5 Gold/Stack |
-| | 47-50 | Grimfrost Barrens (Frostwald) | Elder Wood | 15 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Waldrand) | Oak Wood | 1 Gold/Stack |
+| **Albion** | 1-9 | Aldenbury (capital, marketplace) | Bronze Ore | 1 gold/stack |
+| | 10-19 | Ashford Vale (village) | Steel Ore | 3 Gold/Stack |
+| | 30-39 | Graywick Downs (outpost) | Mithril Ore | 8 Gold/Stack |
+| | 47-50 | Ravensmoor March (border) | Adamantite Ore | 20 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (capital, pub) | Bronze Ore | 1 gold/stack |
+| | 10-19 | Vinterdal (village) | Steel Ore | 3 Gold/Stack |
+| | 30-39 | Stormcrag Heights (fortress) | Mithril Ore | 8 Gold/Stack |
+| | 47-50 | Ravensfjord March (North border) | Adamantite Ore | 20 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (capital, Druid district) | Bronze Ore | 1 gold/stack |
+| | 10-19 | Glenmara (village) | Steel Ore | 3 Gold/Stack |
+| | 30-39 | Sceal Ridge (mountain train) | Mithril Ore | 8 Gold/Stack |
+| | 47-50 | Duskthorn Reach (forest border) | Adamantite Ore | 20 Gold/Stack |
+
+---
+
+### 2. **Woodcutter guild (Lumber Vendor)**
+**Sold:** Oak Wood, Pine Wood, Ash Wood, Elder Wood
+
+| Realm | Lv Zone | Location | Provides | Price |
+|---|---|---|---|---|
+| **Albion** | 1-9 | Aldenbury (forest edge area) | Oak Wood | 1 gold/stack |
+| | 10-19 | Redmoor (forest) | Pine Wood | 2 Gold/Stack |
+| | 30-39 | Hollowmere (Old Forest) | Ash Wood | 5 Gold/Stack |
+| | 47-50 | Cinderreach (Burned Forest) | Elder Wood | 15 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (Forestlager) | Oak Wood | 1 gold/stack |
+| | 10-19 | Wolfsmark (forest) | Pine Wood | 2 Gold/Stack |
+| | 30-39 | Ashenfjord (Old Forest) | Ash Wood | 5 Gold/Stack |
+| | 47-50 | Grimfrost Barrens (frost forest) | Elder Wood | 15 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (forest rim) | Oak Wood | 1 gold/stack |
 | | 10-19 | Witherwood Edge (Urwald) | Pine Wood | 2 Gold/Stack |
-| | 30-39 | Rootbound Hollow (Alter Wald) | Ash Wood | 5 Gold/Stack |
-| | 47-50 | Brambleward March (Waldgrenze) | Elder Wood | 15 Gold/Stack |
+| | 30-39 | Rootbound Hollow (Old Forest) | Ash Wood | 5 Gold/Stack |
+| | 47-50 | Brambleward March (forest border) | Elder Wood | 15 Gold/Stack |
 
 ---
 
-### 3. **Lederwerkstatt (Leather Merchant)**
-**Verkauft:** Ragged Leather, Hardened Leather, Dragon Leather, Enchanted Leather
+### 3. **Leather Workshop (Leather Merchant)**
+**Sold:** Ragged Leather, Hardened Leather, Dragon Leather, Enchanted Leather
 
-| Realm | Lv Zone | Ort | Bietet | Preis |
+| Realm | Lv Zone | Location | Provides | Price |
 |---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Handwerksviertel) | Ragged Leather | 1 Gold/Stack |
-| | 10-19 | Thornfield (Jagdgebiet) | Hardened Leather | 3 Gold/Stack |
-| | 30-39 | Graywick Downs (Jagdlager) | Dragon Leather | 7 Gold/Stack |
-| | 47-50 | Ravensmoor March (Drachen-Gebiet) | Enchanted Leather | 18 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Handwerk) | Ragged Leather | 1 Gold/Stack |
-| | 10-19 | Wolfsmark (Jagdgebiet) | Hardened Leather | 3 Gold/Stack |
-| | 30-39 | Ironbrood Hold (Jäger-Basis) | Dragon Leather | 7 Gold/Stack |
-| | 47-50 | Ravensfjord March (Drachen-Wald) | Enchanted Leather | 18 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Handwerk) | Ragged Leather | 1 Gold/Stack |
-| | 10-19 | Cairnholt (Jagdgebiet) | Hardened Leather | 3 Gold/Stack |
-| | 30-39 | Rootbound Hollow (Jäger-Lager) | Dragon Leather | 7 Gold/Stack |
-| | 47-50 | Duskthorn Reach (Mystischer Wald) | Enchanted Leather | 18 Gold/Stack |
+| **Albion** | 1-9 | Aldenbury (artisan district) | Ragged Leather | 1 gold/stack |
+| | 10-19 | Thornfield (hunting area) | Hardened Leather | 3 Gold/Stack |
+| | 30-39 | Graywick Downs (Hunting Camp) | Dragon Leather | 7 Gold/Stack |
+| | 47-50 | Ravensmoor March (Dragon Territory) | Enchanted Leather | 18 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (crafts) | Ragged Leather | 1 gold/stack |
+| | 10-19 | Wolfsmark (hunting area) | Hardened Leather | 3 Gold/Stack |
+| | 30-39 | Ironbrood Hold (Hunter Base) | Dragon Leather | 7 Gold/Stack |
+| | 47-50 | Ravensfjord March (Dragon Forest) | Enchanted Leather | 18 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (Crafts) | Ragged Leather | 1 gold/stack |
+| | 10-19 | Cairnholt (hunting area) | Hardened Leather | 3 Gold/Stack |
+| | 30-39 | Rootbound Hollow (Hunter Camp) | Dragon Leather | 7 Gold/Stack |
+| | 47-50 | Duskthorn Reach (Mystical Forest) | Enchanted Leather | 18 Gold/Stack |
 
 ---
 
-### 4. **Kräuter-Sammler (Herb Vendor / Alchemist Supply)**
-**Verkauft:** Common Herbs, Quality Herbs, Rare Herbs, Essence Herbs (für Alchemisten)
+### 4. **Herb collectors (Herb Vendor / Alchemist Supply)**
+**Sold:** Common Herbs, Quality Herbs, Rare Herbs, Essence Herbs (for alchemists)
 
-| Realm | Lv Zone | Ort | Bietet | Preis |
+| Realm | Lv Zone | Location | Provides | Price |
 |---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Markt) | Common Herbs | 1 Gold/Stack |
-| | 10-19 | Ashford Vale (Garten) | Quality Herbs | 2 Gold/Stack |
-| | 30-39 | Thornfield (Magische Wiese) | Rare Herbs | 6 Gold/Stack |
-| | 47-50 | Cinderreach (Alchemisten-Grotte) | Essence Herbs | 16 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Markt) | Common Herbs | 1 Gold/Stack |
-| | 10-19 | Vinterdal (Garten) | Quality Herbs | 2 Gold/Stack |
-| | 30-39 | Stormcrag Heights (Magische Stätte) | Rare Herbs | 6 Gold/Stack |
-| | 47-50 | Grimfrost Barrens (Schamanenstätte) | Essence Herbs | 16 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Druiden-Kreis) | Common Herbs | 1 Gold/Stack |
-| | 10-19 | Glenmara (Heiliger Garten) | Quality Herbs | 2 Gold/Stack |
-| | 30-39 | Sceal Ridge (Geheimnis Höhle) | Rare Herbs | 6 Gold/Stack |
-| | 47-50 | Brambleward March (Urwald-Altar) | Essence Herbs | 16 Gold/Stack |
+| **Albion** | 1-9 | Aldenbury (Market) | Common herbs | 1 gold/stack |
+| | 10-19 | Ashford Vale (garden) | Quality herbs | 2 Gold/Stack |
+| | 30-39 | Thornfield (magical meadow) | Rare herbs | 6 Gold/Stack |
+| | 47-50 | Cinderreach (Alchemist Grotto) | Essence herbs | 16 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (Market) | Common herbs | 1 gold/stack |
+| | 10-19 | Vinterdal (garden) | Quality herbs | 2 Gold/Stack |
+| | 30-39 | Stormcrag Heights (Magical Site) | Rare herbs | 6 Gold/Stack |
+| | 47-50 | Grimfrost Barrens (shaman's site) | Essence herbs | 16 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (Druiden circle) | Common herbs | 1 gold/stack |
+| | 10-19 | Glenmara (Sacred Garden) | Quality herbs | 2 Gold/Stack |
+| | 30-39 | Sceal Ridge (Secret Cave) | Rare herbs | 6 Gold/Stack |
+| | 47-50 | Brambleward March (Urwald-Altar) | Essence herbs | 16 Gold/Stack |
 
 ---
 
 ### 5. **Stall / Tiermarkthalle (Fur & Hide Trader)**
-**Verkauft:** Raw Hides, Treated Hides, Fur, Specialty Furs (manchmal von Tieren)
+**Sold:** Raw Hides, Treated Hides, Fur, Specialty Furs (sometimes from animals)
 
-| Realm | Lv Zone | Ort | Bietet | Preis |
+| Realm | Lv Zone | Location | Provides | Price |
 |---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Handwerksviertel) | Raw Hide | 1 Gold/Stack |
-| | 10-19 | Ashford Vale (Viehmarkt) | Treated Hide | 2 Gold/Stack |
-| | 30-39 | Graywick Downs (Jagd-Dorf) | Rare Fur | 5 Gold/Stack |
-| | 47-50 | Ravensmoor March (Raubtier-Gebiet) | Exotic Fur | 14 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Jagdhaus) | Raw Hide | 1 Gold/Stack |
-| | 10-19 | Wolfsmark (Pelzmarkt) | Treated Hide | 2 Gold/Stack |
-| | 30-39 | Ironbrood Hold (Raubtier-Lager) | Rare Fur | 5 Gold/Stack |
-| | 47-50 | Ravensfjord March (Wolf-Revier) | Exotic Fur | 14 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Tiermarkt) | Raw Hide | 1 Gold/Stack |
-| | 10-19 | Cairnholt (Pelz-Händler) | Treated Hide | 2 Gold/Stack |
-| | 30-39 | Rootbound Hollow (Waldtier-Lager) | Rare Fur | 5 Gold/Stack |
-| | 47-50 | Duskthorn Reach (Mystische Tiere) | Exotic Fur | 14 Gold/Stack |
+| **Albion** | 1-9 | Aldenbury (artisan district) | Raw Hide | 1 gold/stack |
+| | 10-19 | Ashford Vale (Cattle Market) | Treated Hide | 2 Gold/Stack |
+| | 30-39 | Graywick Downs (Hunting Village) | Rare Fur | 5 Gold/Stack |
+| | 47-50 | Ravensmoor March (predator area) | Exotic fur | 14 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (hunting house) | Raw Hide | 1 gold/stack |
+| | 10-19 | Wolfsmark (fur market) | Treated Hide | 2 Gold/Stack |
+| | 30-39 | Ironbrood Hold (predatory warehouse) | Rare Fur | 5 Gold/Stack |
+| | 47-50 | Ravensfjord March (Wolf territory) | Exotic fur | 14 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (Animal Market) | Raw Hide | 1 gold/stack |
+| | 10-19 | Cairnholt (fur dealer) | Treated Hide | 2 Gold/Stack |
+| | 30-39 | Rootbound Hollow (forest stock) | Rare Fur | 5 Gold/Stack |
+| | 47-50 | Duskthorn Reach (Mystical Animals) | Exotic fur | 14 Gold/Stack |
 
 ---
 
-### 6. **Stoffweber (Cloth Vendor)**
-**Verkauft:** Linen Cloth, Wool Cloth, Silk Cloth, Enchanted Cloth
+### 6. **Cloth Vendor (Cloth Vendor)**
+**Sold:** Linen Cloth, Wool Cloth, Silk Cloth, Enchanted Cloth
 
-| Realm | Lv Zone | Ort | Bietet | Preis |
+| Realm | Lv Zone | Location | Provides | Price |
 |---|---|---|---|---|
-| **Albion** | 1-9 | Aldenbury (Markthalle) | Linen Cloth | 1 Gold/Stack |
-| | 10-19 | Ashford Vale (Weberei) | Wool Cloth | 2 Gold/Stack |
-| | 30-39 | Hollowmere (Seidenbau) | Silk Cloth | 5 Gold/Stack |
-| | 47-50 | Cinderreach (Magische Weber) | Enchanted Cloth | 15 Gold/Stack |
-| **Midgard** | 1-9 | Skaldheim (Markthalle) | Linen Cloth | 1 Gold/Stack |
-| | 10-19 | Vinterdal (Weberei) | Wool Cloth | 2 Gold/Stack |
-| | 30-39 | Stormcrag Heights (Seidenbau) | Silk Cloth | 5 Gold/Stack |
+| **Albion** | 1-9 | Aldenbury (market) | Linen Cloth | 1 gold/stack |
+| | 10-19 | Ashford Vale (Weaving) | Wool Cloth | 2 Gold/Stack |
+| | 30-39 | Hollowmere (silk construction) | Silk Cloth | 5 Gold/Stack |
+| | 47-50 | Cinderreach (Magic Weber) | Enchanted Cloth | 15 Gold/Stack |
+| **Midgard** | 1-9 | Skaldheim (market hall) | Linen Cloth | 1 gold/stack |
+| | 10-19 | Vinterdal (weaving company) | Wool Cloth | 2 Gold/Stack |
+| | 30-39 | Stormcrag Heights (Silk Building) | Silk Cloth | 5 Gold/Stack |
 | | 47-50 | Ravensfjord March (Runen-Weber) | Enchanted Cloth | 15 Gold/Stack |
-| **Hibernia** | 1-9 | Dun Kerath (Markt) | Linen Cloth | 1 Gold/Stack |
-| | 10-19 | Glenmara (Weberei) | Wool Cloth | 2 Gold/Stack |
-| | 30-39 | Cairnholt (Seidenbau) | Silk Cloth | 5 Gold/Stack |
+| **Hibernia** | 1-9 | Dun Kerath (Market) | Linen Cloth | 1 gold/stack |
+| | 10-19 | Glenmara (weaving) | Wool Cloth | 2 Gold/Stack |
+| | 30-39 | Cairnholt (Silk Construction) | Silk Cloth | 5 Gold/Stack |
 | | 47-50 | Brambleward March (Fae-Weber) | Enchanted Cloth | 15 Gold/Stack |
 
 ---
 
-## Travel-System (Level-Independent Access)
+## Travel System (Level-Independent Access)
 
-**Problem:** Lv1-9 Spieler können nicht zu Lv30+ Zonen laufen (zu gefährlich).
-**Lösung:** Transport-NPCs vor jeder Hauptstadt bieten Travel-Service.
+**Problem:** Lv1-9 players cannot run to Lv30+ zones (too dangerous).
+**Solution:** Transport NPCs in front of each capital offer travel service.
 
-### Transport-Optionen:
+### Transport options:
 
-**1. Kutsche (Carriage)**
-- Langsam aber sicher
-- Geschützte Route (keine Monster-Kämpfe)
-- Spieler sitzt in Kutsche, kann nicht kämpfen
+**Carriage (Carriage)**
+- Slow but sure
+- Protected route (no monster fights)
+- Player sitting in carriage, can not fight
 
-**2. Reittier (Horse)**
-- Schneller als Kutsche
-- Spieler kann kämpfen, verliert aber Mount wenn angegriffen
-- Kosten: 1 Gold + eventuell Repair
+**2. mount (horse)**
+- Faster than carriage
+- Player can fight but loses mount when attacked
+- Cost: 1 gold + possibly repair
 
-### Tarif-System (Destination-Based):
+### Tariff system (Destination-Based):
 
-**Ab Albion Hauptstadt (Aldenbury):**
+**From Albion Capital (Aldenbury):**
 
-| Ziel | Distanz | Kutsche | Pferd | Zeit |
+| Objective | Distance | carriages | Horse horse | Time |
 |---|---|---|---|---|
-| Ashford Vale (Lv 10-19) | Nah | 5 Gold | 3 Gold | 30 sec |
-| Redmoor (Lv 10-19) | Nah | 5 Gold | 3 Gold | 30 sec |
-| Graywick Downs (Lv 30-39) | Mittel | 15 Gold | 8 Gold | 60 sec |
-| Hollowmere (Lv 30-39) | Mittel | 15 Gold | 8 Gold | 60 sec |
-| Ravensmoor March (Lv 47-50) | Weit | 40 Gold | 20 Gold | 120 sec |
-| Cinderreach (Lv 47-50) | Weit | 40 Gold | 20 Gold | 120 sec |
+| Ashford Vale (Lv 10-19) | Near | 5 Gold | 3 Gold | 30 sec. |
+| Redmoor (Lv 10-19) | Near | 5 Gold | 3 Gold | 30 sec. |
+| Graywick Downs (Lv 30-39) | Resources | 15 Gold | 8 Gold | 60 sec. |
+| Hollowmere (Lv 30-39) | Resources | 15 Gold | 8 Gold | 60 sec. |
+| Ravensmoor March (Lv 47-50) | Wide | 40 Gold | 20 Gold | 120 sec. |
+| Cinderreach (Lv 47-50) | Wide | 40 Gold | 20 Gold | 120 sec. |
 
-**Äquivalent für Midgard & Hibernia**
+**Equivalent for Midgard & Hibernia**
 
 ---
 
-## Design-Prinzipien
+## Design principles
 
-### Dezentralisierung + Zugänglichkeit:
-- ✅ Nicht alles in Hauptstadt (zu einfach)
-- ✅ Höherwertige Materialien in höher-Level Zonen
-- ✅ **Aber: Alle Zonen für Lv1+ erreichbar** (via Transport-NPC)
-- ✅ Gold-Trade: Spieler zahlen für Convenience (Travel) oder gehen zu Fuß mit Risiko
+### Decentralization + Accessibility:
+- ✅ Not everything in the capital (too easy)
+- ✅ Higher quality materials in higher level zones
+- ✅ **But: All zones accessible for Lv1+** (via Transport-NPC)
+- Gold trade: Players pay for convenience (travel) or walk with risk
 
-### Preis-Skalierung:
+### Price scaling:
 - Lv 1-9: 1 Gold/Stack (cheap, accessible)
-- Lv 10-19: 2-3 Gold/Stack
-- Lv 30-39: 5-8 Gold/Stack
-- Lv 47-50: 14-20 Gold/Stack (teuer, aber nötig für Crafting)
+- Lv 10-19: 2-3 gold/stack
+- Lv 30-39: 5-8 gold/stack
+- Lv 47-50: 14-20 gold/stack (expensive but necessary for crafting)
 
 ### Immersion:
-- **Erzwerk** = in Mining-Regionen
-- **Holzfäller** = in Wäldern
-- **Lederwerk** = bei Jagdgebieten
-- **Kräuter** = bei Alchemisten/Druiden-Stätten
-- **Stall** = bei Viehmarkthallen
+- **Orework** = in mining regions
+- **Woodcutters** = in forests
+- **Leatherworks** = for hunting areas
+- **Herbs** = for alchemists/druid sites
+- **Households** = for livestock market halls
 
 ---
 
-### Travel-Economy-Balance:
+### Travel economy balance:
 
-**Scenario 1: Lv1 Spieler braucht Mithril Ore (Lv30-39 Zone)**
+**Scenario 1: Lv1 player needs Mithril Ore (Lv30-39 zone)**
 ```
 Option A: Zu Fuß gehen
   - Risiko: Sterben durch Monster
@@ -212,69 +212,69 @@ Option C: Pferd nehmen
   - Zeit: 60 Sekunden
 ```
 
-**Effekt:** Spieler wählen selbst Risk/Reward!
+**Effect:** Players choose Risk/Reward themselves!
 
 ---
 
-## Vertical Slice Scope
+## Vertical slice scope
 
-Für erste Implementation:
-- ✅ **Hauptstadt-Vendor** pro Realm (1 NPC mit allen Materialien, Lv1-9)
-- ✅ **Transport-NPCs** vor Hauptstadt (Kutsche + Pferd, einfache Tarife)
-- ✅ **2-3 Remote Vendors** (Lv10-19 & Lv30-39 Zonen, schnell erreichbar)
-- ⏸ Spezialisierte Vendors pro Material-Typ (später, wenn Zeit)
-- ⏸ Kutsch-Animation/Transit (später, einfach Teleport im POC)
-- ⏸ Gefährliche Routen (später, für Hardcore-Spieler ohne Transport)
-- ⏸ NPC-Dialoge/Flavor-Text (später)
-- ⏸ Dynamic Pricing (später, wenn Gold-Economy stabil)
+For first implementation:
+- ✅ **Capital vendor** per realm (1 NPC with all materials, Lv1-9)
+- ✅ **Transport NPCs** in front of the capital (carriage + horse, simple tariffs)
+- ✅ **2-3 Remote Vendors** (Lv10-19 & Lv30-39 zones, quickly accessible)
+- ⏸ Specialized vendors per material type (later, if time)
+- ⏸ Carriage animation/transit (later, simply teleport in the POC)
+- Dangerous routes (later, for hardcore players without transport)
+- ⏸ NPC-Dialogues/Flavor-Text (later)
+- Dynamic Pricing (later, when the gold economy is stable)
 
 ---
 
 ## Visual References (Moodboards)
 
-Architectural Style Guides für Material-Supplier-POIs pro Typ:
+Architectural Style Guides for Material Supplier POIs per type:
 
-### 1. **Erzwerk** (Mining-Regionen)
-- Berganlage mit Schachteingang, Holzgerüsten, Minenbau-Infrastruktur
-- Saubere, strukturierte Arbeitsbereiche
-- Visual: Robust, industriell, Stein + Holz
-- Realm-Varianten: Albion (ordentlich), Midgard (rustikal), Hibernia (natürlich integriert)
+### 1. **Orework** (Mining regions)
+- Mine construction with shaft entrance, wooden scaffolding, mining infrastructure
+- Clean, structured workspaces
+- Visual: Robust, industrial, stone + wood
+- Realm variants: Albion (orderly), Midgard (rustic), Hibernia (of course integrated)
 
-### 2. **Holzfäller-Zunft** (Wälder)
-- Waldlichtung mit gestapelten Baumstämmen, Sägeblöcken, Holzverarbeitungsplatz
-- Offene Werkstatt, Rauch/Handwerk sichtbar
-- Visual: Rustikal, natürlich, Holz-dominant
+### 2. **Woodcutter guild** (forests)
+- Forest clearing with stacked logs, saw blocks, wood processing site
+- Open workshop, smoke/craft visible
+- Visual: Rustic, natural, wood dominant
 - Realm-Anpassung: Albion (geordnete Forstwirtschaft), Midgard (Viking-Lagerholz), Hibernia (respektvoller Holzabbau)
 
-### 3. **Lederwerk** (Jagdgebiete)
-- Gerberei-Werkstatt mit Gerbfässern, hängenden Häuten zum Trocknen
-- Handwerk-Zentrum, Leder-Verarbeitung sichtbar
-- Visual: Funktional, Häute/Felle überall, Gerberduft-Feeling
-- Realm-Anpassung: Jäger-Lager mit Wildbeute
+### 3. **Leatherworks** (hunting areas)
+- Tanning workshop with tanning barrels, hanging hides for drying
+- Craft centre, leather processing visible
+- Visual: Functional, hides/skins everywhere, Gerber fragrance feeling
+- Realm Adaptation: Hunter Camp with Wild Prey
 
-### 4. **Alchemist Supply** (Magische Stätten)
-- Mystische Hütte/Grotte mit Kräuter-Gärten, Feuerstellen, Tränke-Brauerei
-- Magisches Licht (Feuerbälle, Will-o'-Wisps, Lichter)
-- Visual: Mysteriös, Natur-Magie, Kräuter/Reagenzien überall
-- Realm-Anpassung: Hibernia (Druidenkreis), Albion (magische Wiese), Midgard (Schamanenstätte)
+### 4. **Alchemist Supply** (Magical Sites)
+- Mystical cottage/grot with herbal gardens, fireplaces, potion brewery
+- Magic Light (Fireballs, Will-o'-Wisps, Lights)
+- Visual: Mysterious, nature magic, herbs/reagents everywhere
+- Realm adaptation: Hibernia (Druid circle), Albion (magical meadow), Midgard (shaman site)
 
-### 5. **Stall/Pelzmarkt** (Viehmarkthallen)
-- Tiermarkt mit Vieh-Gehegen, Fellen zum Trocknen/Lagern, offener Handelsplatz
-- Handelsaktivität sichtbar (NPCs mit Pelzen), Rauchzeichen
-- Visual: Lebendig, Tierwirtschaft, Rauh
+### 5. **House/fur market** (Cattle market halls)
+- Livestock market with livestock enclosures, skins for drying/storage, open trading centre
+- Trade activity visible (NPCs with furs), smoke signs
+- Visual: Live, Livestock, Rough
 - Realm-Anpassung: Midgard (Viking Viehmarkt), Albion (organisiert), Hibernia (Wildtier-Bearbeitung)
 
-### 6. **Stoffweber** (Markthallen)
-- Textilwerkstatt mit Webstühlen, hängenden Stoffen/Fäden, Färbebottichen
-- Handwerkszentren sichtbar, bunte Stoffe überall
-- Visual: Farbenreich, kunsthandwerklich, ordentlich
-- Realm-Anpassung: Albion (formale Zunft), Hibernia (natürliche Farbstoffe), Midgard (rustikalere Tücher)
+### 6. **Fabric weavers** (Market halls)
+- Textile workshop with looms, suspended fabrics/threads, dyeing vats
+- Craft centers visible, colorful fabrics everywhere
+- Visual: Colorful, artisanal, neat
+- Realm adaptation: Albion (formal guild), Hibernia (natural dyes), Midgard (more rustic wipes)
 
 ---
 
-## Offene Punkte
+## Open points
 
-- **Restock-Timer:** Verkaufen NPCs "Stocks" out? (wahrscheinlich unbegrenzt für POC)
-- **NPC-Namen:** Sollen sie lore-basiert sein oder generic? (later)
-- **Sekundäre Drops:** Können Spieler auch Materialien als Loot von Mobs bekommen? (ja, aber teuer via NPC)
-- **Guild-Discounts:** Sollten Gilden-Spieler Rabatte bekommen? (später)
+- **Restock timers:** Sell NPCs "Stocks" out? (probably unlimited for POC)
+- **NPC names:** Should they be lore-based or generic? (later)
+- **Secondary drops:** Can players also get materials as a loot from mobs? (yes, but expensive via NPC)
+- **Guild discounts:** Should guild players get discounts? (later)

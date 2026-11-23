@@ -1,12 +1,12 @@
-# Crafting & Professions System
+# Crafting and Professions System
 
-> **Status:** Design-Konzept, keine Implementation. Berufe, Item-Qualität, Herstellung.
+> **Status:** Design concept, not implementation. Occupations, item quality, manufacturing.
 
-## Kern-Idee
+## Core idea
 
-**1 Hauptberuf pro Charakter** — spezialisiert, aber nicht ausschließlich (kannst du dennoch andere Rezepte sehen/erlernen, nur passive Boni für Hauptberuf).
+**1 main occupation per character** - specialized, but not exclusively (you can still see/learn other recipes, only passive bonuses for main job).
 
-**Item-Qualität-Hierarchie:**
+**Item Quality Hierarchy:**
 ```
 Gefundene Items (Loot)
     ↓ (schlechter)
@@ -17,80 +17,80 @@ Boss-Drops (Epic/Unique)
 
 ---
 
-## Hauptberufe (One per Character)
+## Main occupations (one per character)
 
-### 1. **Waffenschmied** (Weaponsmith)
-- **Stellt her:** Melee-Waffen (Schwerter, Äxte, Maces), Zweihand-Waffen
-- **Materialien:** Erz, Holz (für Griffe), Leder (für Wicklungen)
-- **Spezialisierung:** Waffen bekommen +10% Damage-Bonus (vs. gefundene)
+### 1. **Gunsmiths** (Weaponsmith)
+- **Manufactured:** Melee weapons (swords, axes, maces), two-handed weapons
+- **Materials:** Ore, wood (for handles), leather (for windings)
+- **Specialisation:** Weapons get +10% damage bonus (vs. found)
 
-### 2. **Rüstungsschmied** (Armorsmith)
-- **Stellt her:** Schwere Rüstung (Plate, Breastplate, Gorget)
-- **Materialien:** Erz (Haupt), Leder (für Gelenke)
-- **Spezialisierung:** Rüstung +5% Armor-Wert (vs. gefundene)
+### 2. **Armsmith** (Armorsmith)
+- **Manufactured:** Heavy Armor (Plate, Breastplate, Gorget)
+- **Materials:** Ore (main), leather (for joints)
+- **Specialisation:** Armor +5% Armor value (vs. found)
 
-### 3. **Lederer** (Leatherworker)
-- **Stellt her:** Leichte/Mittlere Rüstung (Tunic, Jerkin, Studded Armor)
-- **Materialien:** Leder (Haupt), Faden, Schnallen
-- **Spezialisierung:** Leichte Rüstung +8% Armor + Movement Speed +5%
+### 3. **Leather** (Leatherworker)
+- **Manufactured:** Light/Medium Armor (Tunic, Jerkin, Studded Armor)
+- **Materials:** Leather (main), thread, buckles
+- **Specialisation:** Light armor +8% Armor + Movement Speed +5%
 
-### 4. **Schneider** (Tailor)
-- **Stellt her:** Stoff-Rüstung (Roben, Tuniken, Jacken)
-- **Materialien:** Stoff, Faden, Schnallen
-- **Spezialisierung:** Stoff-Rüstung +7% Mana-Pool
+### 4. **Cutters** (tailor)
+- **Manufactured:** Fabric armor (robes, tunics, jackets)
+- **Materials:** Substance, thread, buckles
+- **Specialisation:** Fabric armor +7% mana pool
 
-### 5. **Juwelier** (Jeweler)
-- **Stellt her:** Accessoires (Ringe, Amulette, Verschlüsse)
-- **Materialien:** Edelsteine, Erz, Leder (für Halterungen)
-- **Spezialisierung:** +10% zusätzliche Effekte (z. B. Ring gibt +2% kritisch)
+### 5. **Jewellery** (Jeweler)
+- **Manufactured:** Accessories (rings, amulets, caps)
+- **Materials:** Precious stones, ore, leather (for brackets)
+- **Specialisation:** +10% additional effects (e.g. ring gives +2% critical)
 
 ### 6. **Alchemist**
-- **Stellt her:** Tränke, Buffs (Health Potions, Mana Potions, Buff-Flasks)
-- **Materialien:** Kräuter, Reagenzien (Pilze, Mineralien)
-- **Spezialisierung:** Tränke +15% stärker (längere Duration oder höhere Heilung)
+- **Manufactured:** Potions, buffs (Health Potions, Mana Potions, Buff-Flasks)
+- **Materials:** Herbs, reagents (mushrooms, minerals)
+- **Specialisation:** Drinks +15% stronger (longer duration or higher healing)
 
 ---
 
-## Item-Qualität-Tiers
+## Item quality tiers
 
-| Tier | Quelle | Beispiel | Stat-Wert | Min. Level |
+| Animals | Source | Example | Stat value | Min. Level |
 |---|---|---|---|---|
-| **Common** | Gefundene Drops | Linen Tunic | Basis | 1+ |
-| **Uncommon** | Crafted | Knight's Steel Plate | Basis + 8-10% | 10+ |
-| **Rare** | Crafted (besser) | Rune-touched Armor | Basis + 15% | 25+ |
-| **Epic** | Crafted (selten) ODER Boss-Drops | Adamantite Breastplate | Basis + 25% | 40+ |
-| **Legendary** | **Crafted (nur Experten!)** | Eternal Adamantite Greatsword | Basis + 40% | **48-50** |
+| **Common Commons** | Found drops | Linen tunic | Base base | 1+ |
+| **Uncommon** | Crafted | Knight's Steel Plate | Base + 8-10% | 10+ |
+| **Rare** | Crafted (better) | Rune-touched armor | Base + 15% | 25+ |
+| **Epic** | Crafted (rare) OR Boss Drops | Adamantite Breastplate | Base + 25% | 40+ |
+| **Legendary** | **Crafted (only experts!)** | Eternal Adamantite Greatsword | Base + 40% | **48-50** |
 
 **Legendary Crafting:**
-- ⚠️ **Nur Level 48-50 Crafter können Legendary herstellen**
-- Benötigt super seltene Materialien (Boss-Drops only)
-- Höchste Erfolgsrate-Anforderung
-- Nur für Legendary Skill Crafter (1050+) realistische Chancen
+- ⚠️ **Only Level 48-50 Crafters can make Legendary**
+- Requires super rare materials (Boss-Drops only)
+- Highest success rate requirement
+- Only for Legendary Skill Crafter (1050+) realistic chances
 
 ---
 
-## Crafting-Mechanik
+## Crafting mechanics
 
-### Rezepte lernen & Level-Requirements:
-- **Anfänger:** 3-5 Basis-Rezepte (mit Handwerk starten, Lv 1+)
-- **Leveln:** Jedes Level 1-2 neues Rezept freischalten
-- **Max Level (50):** ~20-25 Rezepte pro Beruf (viel Auswahl!)
-- **Rezepte sind **geteilt** — jeder kann sie sehen, aber Hauptberuf bekommt Boni**
+### Learning Recipes & Level Requirements:
+- **Beginners:** 3-5 basic recipes (start with craft, Lv 1+)
+- **Levels:** Unlock each Level 1-2 new recipe
+- **Max Level (50):** ~20-25 recipes per profession (lots of choice!)
+- **Recipes are: **Shared** - anyone can see them, but main profession gets bonuses**
 
-**Level-Requirements pro Rarity:**
-| Rarity | Min. Charakter-Level | Erfolgsrate bei Min-Level | Farbe |
+**Level requirements per Rarity:**
+| Rarity | Min. Character Level | Success rate at min-level | Colour |
 |---|---|---|---|
-| **Common** | 1+ | 100% | ⚪ Grau |
-| **Uncommon** | 10+ | 98% | 🟢 Grün |
-| **Rare** | 25+ | 90% | 🔵 Blau |
-| **Epic** | 40+ | 75% | 🟠 Orange |
-| **Legendary** | **48-50** | **50%** | 🔴 Rot |
+| **Common Commons** | 1+ | 100% | ⚪ Grey |
+| **Uncommon** | 10+ | 98% | 😆 Green |
+| **Rare** | 25+ | 90% | 🔵 Blue |
+| **Epic** | 40+ | 75% | 😆 Orange |
+| **Legendary** | **48-50** | **50%** | 🔴 Red |
 
-- ❌ **Lv 5 Crafter kann NICHT Epic craften** (Level 40+ erforderlich!)
-- ❌ **Lv 15 versucht Epic** → 100% zerstört (zu unerfahren)
-- ✅ **Lv 40+ kann Epic versuchen** → 75-99% Erfolg (basierend auf Skill)
+- ❌ **Lv 5 Crafter Can't Craft Epic** (Level 40+ required!)
+- ❌ **Lv 15 tries Epic** 100% destroyed (too inexperienced)
+- ✅ **Lv 40+ can try Epic** 75-99% Success (based on Skill)
 
-**Beispiel Waffenschmied Lvl 1-50 (Rezepte-Progression):**
+**Example of weaponsmith Lvl 1-50 (recipe progression):**
   - Lv 1: Wooden Dagger (Common), Iron Sword (Common)
   - Lv 5: Leather Grip (Sub, Uncommon), Oak Hilt (Sub, Common)
   - Lv 10: Steel Sword (Uncommon), Steel Axe (Uncommon)
@@ -100,10 +100,10 @@ Boss-Drops (Epic/Unique)
   - Lv 30: Rune-touched Greatsword (Rare)
   - Lv 40: Adamantite Sword (Epic), Adamantite Axe (Epic)
   - Lv 45: Dragon Ore Blade (Sub, Epic, rare material)
-  - Lv 48: **Eternal Adamantite Longsword (Legendary)** ← nur hier verfügbar!
-  - Lv 50: **Eternal Adamantite Greatsword (Legendary)** ← true endgame
+  - Lv 48: **Eternal Adamantite Longsword (Legendary)** ← Only available here!
+  - Lv 50: **Eternal Adamantite Greatsword (Legendary)** ← The True Endgame
 
-### Beispiel-Crafting (Waffenschmied):
+### Example crafting (weaponsmith):
 ```
 Rezept: Knight's Steel Longsword
 Materialien:
@@ -113,7 +113,7 @@ Materialien:
   
 Handwerksstufe erforderlich: 20+
 Crafting-Zeit: 30 Sekunden
-Cooldown: 5 Min (für diese Waffe)
+Cooldown: 5 minutes for this weapon
 Erfolgsrate: 98% (Uncommon)
 
 Resultat: Knight's Steel Longsword (Uncommon)
@@ -123,21 +123,21 @@ Resultat: Knight's Steel Longsword (Uncommon)
 FEHLER (2% Chance): Materialien gehen verloren
   - Einfache Materialien (Ore, Holz) zerstört
   - Sub-Komponenten (Leather Grip) zerstört
-  - Spieler verliert alles → muss neuen Craft versuchen
+  - The player loses the materials and must try crafting again
 ```
 
-### Crafting Failure & Risiko-System
+### Crafting Failure & Risk System
 
-**Erfolgsrate nach Item-Rarity:**
+**Success rate according to Item-Rarity:**
 
-| Rarity | Farbe | Erfolgsrate | Bei Fehler |
+| Rarity | Colour | Success rate | In case of errors |
 |---|---|---|---|
-| **Common** | ⚪ Grau | 100% | Niemals Fehler |
-| **Uncommon** | 🟢 Grün | 98% | 2% Materialien zerstört |
-| **Rare** | 🔵 Blau | 90% | 10% Materialien + Sub-Komponenten zerstört |
-| **Epic** | 🟠 Orange | 75% | 25% Alle Materialien + Sub-Komponenten zerstört |
+| **Common Commons** | ⚪ Grey | 100% | Never make mistakes |
+| **Uncommon** | 😆 Green | 98% | 2% materials destroyed |
+| **Rare** | 🔵 Blue | 90% | 10% materials + sub-components destroyed |
+| **Epic** | 😆 Orange | 75% | 25% All materials + sub-components destroyed |
 
-**Beispiel Epic-Fehler:**
+**Example of Epic error:**
 ```
 Waffenschmied versucht: Adamantite Greatsword (Epic, 60 Min Cooldown)
 Materialien:
@@ -159,7 +159,7 @@ Resultat: ALLES ZERSTÖRT
   - Nächster Versuch in 60 Min möglich
 ```
 
-**Erfolgs-Feedback:**
+**Success feedback:**
 ```
 ✅ SUCCESS: Adamantite Greatsword craftet! (+16 Skill)
 
@@ -169,20 +169,20 @@ Resultat: ALLES ZERSTÖRT
    Retry in: 60 Min
 ```
 
-### Haltbarkeit & Reparatur:
-- Handgefertigte Items: Full Durability am Start
-- Reparatur: Handwerker können Items wieder herstellen (kostet 50% der Original-Materialien)
-- Gefundene Items können **nicht** repariert werden (abgelaufen nach ~50 Kämpfen)
+### Durability & Repair:
+- Handcrafted Items: Full Durability at the Start
+- Repair: craftsmen can restore items (costs 50% of the original materials)
+- Finding items can **not** be repaired (expired after ~50 fights)
 
 ---
 
-## Vertikales Crafting (Sub-Komponenten)
+## Vertical crafting (sub-components)
 
-**Komplexe Items brauchen Komponenten von mehreren Berufen** — schafft Interdependenz & Economy.
+**Complex items need components from multiple professions** — creates interdependence & economy.
 
-### Beispiele:
+### Examples:
 
-**Knight's Steel Plate (Rüstungsschmied)**
+**Knight's Steel Plate (Armsmith)**
 ```
 Benötigte Komponenten:
   - Steel Plate (Armorsmith craftet) = 10x Steel Ore
@@ -194,7 +194,7 @@ Finales Item: Knight's Steel Plate (Uncommon, +10% Armor)
   - Braucht 3 verschiedene Handwerker!
 ```
 
-**Greatsword (Waffenschmied)**
+**Greatsword (weaponsmith)**
 ```
 Benötigte Komponenten:
   - Steel Blade (Weaponsmith craftet) = 8x Steel Ore
@@ -204,7 +204,7 @@ Benötigte Komponenten:
 Finales Item: Knight's Greatsword (Uncommon, +10% Damage)
 ```
 
-**Mithril Robe (Tailor)**
+**Mithril Robe (tailor)**
 ```
 Benötigte Komponenten:
   - Mithril Cloth (Tailor selbst craftet) = 5x Mithril Cloth
@@ -214,10 +214,10 @@ Benötigte Komponenten:
 Finales Item: Mithril Robe (Uncommon, +7% Mana Pool)
 ```
 
-### Economy-Flow:
+### Economy flow:
 
 ```
-Spieler verdient Gold
+The player earns gold
         ↓
 Kauft Rohmaterialien (Steel Ore, Leder, etc.) vom NPC-Vendor
         ↓
@@ -228,88 +228,88 @@ Verkauft an Spezialisten im AH:
         ↓
 Jeder spezialisierter Crafter kann diese Sub-Items im AH verkaufen
         ↓
-Spieler kombiniert alles zu Final-Item (besser als nur Rohmaterialien)
+The player assembles the final item, which is worth more than the raw materials
 ```
 
-### Vorteile:
+### Advantages:
 
-- ✅ **Berufe sind interdependent** — Alchemist braucht Leatherworker, etc.
-- ✅ **AH wird lebendiger** — Sub-Komponenten werden gekauft/verkauft
-- ✅ **Spezialisierte Crafter verdienen** — "Ich mache nur Leather Grips" ist legit
-- ✅ **Progression:** Simple Items (nur Rohmaterialien) → Komplexe Items (mehrere Komponenten)
+- ✅ **Professions are interdependent** — Alchemist needs Leatherworker, etc.
+- ✅ **AH becomes more alive** — Sub-components are bought/sold
+- ✅ **Specialist Crafters Earn** — "I just do Leather Grips" is legit
+- ✅ **Progression:** Simple Items (Raw Materials Only) → Complex Items (Multiple Components)
 
-### Vertical Slice:
+### Vertical slice:
 
-- ✅ Einfache Sub-Komponenten: Leather Grip, Steel Fittings (nur 1-2 Levels)
-- ⏸ Tiefe Craft-Chains (später, wenn System stabil)
-- ⏸ Komponenten-Qualität (später: "Good Grip" vs. "Flawed Grip")
+- Simple sub-components: Leather Grip, Steel Fittings (only 1-2 levels)
+- ⏸ Deep craft chains (later, if system stable)
+- ⏸ Component quality (later: "Good Grip" vs. "Flawed Grip")
 
 ---
 
-## Material-Quellen (Kein Farming-RPG!)
+## Material Sources (No Farming RPG!)
 
-**Philosophie:** Crafting ist ein **Progression-System**, nicht ein **Farming-Grind-System**. Materialien sollten leicht verfügbar sein via Gold, nicht via stundenlange Farming-Sessions.
+**Philosophy:** Crafting is a **Progression system**, not a **Farming grind system**Materials should be readily available through gold, not through hour-long farming sessions.
 
-### Primär: NPC-Vendors (spezialisierte Werkstätten)
+### Primary: NPC vendors (specialised workshops)
 
-Jeder Realm hat spezialisierte **Material-Werkstätten** mit NPCs:
+Each realm has specialized **Material workshops** with NPCs:
 
-- **Erzwerk (Ore Merchant):** Verkauft Erz (Bronze, Steel, Mithril, Adamantite)
-- **Holzfäller-Zunft (Lumber Vendor):** Verkauft Holz
-- **Lederwerk (Leather Merchant):** Verkauft Leder
-- **Schneider-Zunft (Cloth Vendor):** Verkauft Stoffe, Faden
-- **Alchemist-Laden (Herb Vendor):** Verkauft Kräuter, Reagenzien
+- **Ore (Ore Merchant):** Sold Ore (Bronze, Steel, Mithril, Adamantite)
+- **Woodcutter guild (Lumber Vendor):** Sold wood
+- **Leather Works (Leather Merchant):** Sold leather
+- **Schneider guild (Cloth Vendor):** Sold fabrics, thread
+- **Alchemist shops (Herb Vendor):** Sold herbs, reagents
 
-**Preise:**
-- Bronze Ore: 1 Gold pro Stack (Lv 1-9)
-- Steel Ore: 3 Gold pro Stack (Lv 10-29)
-- Mithril Ore: 8 Gold pro Stack (Lv 30-49)
-- Adamantite Ore: 20 Gold pro Stack (Lv 50)
+**Prices:**
+- Bronze Ore: 1 gold per stack (Lv 1-9)
+- Steel Ore: 3 gold per stack (Lv 10-29)
+- Mithril Ore: 8 gold per stack (Lv 30-49)
+- Adamantite Ore: 20 gold per stack (Lv 50)
 
-**Verfügbarkeit:**
-- Material-Kauf sollte so einfach sein wie Potions kaufen
-- Kein Respawn-Timer, immer verfügbar
+**Availability:**
+- Purchasing material should be as easy as buying Potions
+- No respawn timer, always available
 - "Play the game" → verdiene Gold → kaufe Materialien → craft → bessere Items
 
-### Sekundär: Loot-Drops (optionale Ergänzung)
+### Secondary: Loot-Drops (optional addition)
 
-Seltene Materialien können auch als **Boss-Drops** oder **spezielle Mob-Drops** vorkommen:
-- **Seltene Erze:** Dragon Ore, Obsidian (nur von Bosses)
-- **Kraftkräuter:** Mandrake Root (nur von Dungeon-Mobs)
-- Diese ermöglichen **spezielle Rezepte** (noch bessere Crafts)
+Rare materials can also be **Boss drops** or **Special Mob Drops** where:
+- **Rare ores:** Dragon Ore, Obsidian (only from Bosses)
+- **Power herbs:** Mandrake Root (from dungeon mobs only)
+- They shall enable: **Special recipes** (even better crafts)
 
-### Kein stündliches Grinding:
-- ❌ Nicht wie WoW: "Gehe 2 Stunden Ore farmen"
-- ✅ Stattdessen: "Quest spielen → Gold verdienen → Materialien kaufen → Crafting genießen"
-
----
-
-## Vertical Slice Scope
-
-Für erste Implementation (später, nach Character/Chat/Skills):
-- ✅ **2-3 Hauptberufe:** Waffenschmied, Rüstungsschmied, Alchemist
-- ✅ **~15-20 Rezepte pro Beruf** (Progression durch Levels, nicht 5-6!)
-- ✅ **Material-Vendor NPCs** (spezialisierte Werkstätten, simpel: einfach nur anklicken & kaufen)
-- ✅ **Material-Inventory** (separater Tab in Inventory)
-- ✅ **Crafting-UI:** Rezept wählen → Materialien-Check → Craft-Button → Items verschwinden, crafted Item erscheint
-- ✅ **Gold als Materialien-Quelle:** Spieler verdienen Gold durchs Spielen → kaufen Materialien
-- ⏸ Seltene Boss-Drop Materialien (später)
-- ⏸ Haltbarkeit/Reparatur (später)
-- ⏸ Weitere Berufe (später)
-- ⏸ Beruf-Leveln via XP (später, vorerst nur Rezepte per Charakter-Level freischalten)
+### No hourly grinding:
+- ❌ Not like WoW: "Go 2 hours ore farming"
+- ✅ Instead: "Play Quest → Earn Gold → Buy Materials → Enjoy Crafting"
 
 ---
 
-## Skill-Progression (Legendary Crafting)
+## Vertical slice scope
 
-**Skill-Punkte pro Craft (abhängig von Item-Qualität):**
+For first implementation (later, after Character/Chat/Skills):
+- ✅ **2-3 main occupations:** Gunsmith, armorer, alchemist
+- ✅ **~15-20 recipes per profession** (Progression through levels, not 5-6!)
+- ✅ **Material vendor NPCs** (specialized workshops, simple: just click & buy)
+- ✅ **Material inventory** (separate tab in inventory)
+- ✅ **Crafting UI:** Choose recipe → Materials Check → Craft Button → Items disappear, crafted item appears
+- ✅ **Gold as a source of materials:** Players Earn Gold by Playing → Buying Materials
+- Rare Boss-Drop Materials (later)
+- ⏸ Durability/repair (later)
+- ⏸ Other professions (later)
+- ⏸ Professional levels via XP (later, for the time being only unlock recipes via character level)
 
-| Item-Typ | Common | Uncommon | Rare | Epic |
+---
+
+## Skill progression (Legendary Crafting)
+
+**Skill points per craft (depending on item quality):**
+
+| Item type | Common Commons | Uncommon | Rare | Epic |
 |---|---|---|---|---|
-| **Simple Items** (kein Sub-Crafting nötig) | +1 Skill | +2 Skill | +4 Skill | +8 Skill |
-| **Complex Items** (mit Sub-Komponenten) | +2 Skill | +4 Skill | +8 Skill | +16 Skill |
+| **Simple items** (no sub-crafting required) | +1 Skill | +2 Skill | +4 Skill | +8 skill |
+| **Complex Items** (with subcomponents) | +2 Skill | +4 Skill | +8 skill | +16 Skill |
 
-**Beispiele:**
+**Examples:**
 ```
 Alchemist craftet Common Health Potion:     +1 Skill
 Alchemist craftet Epic Mana Flask:          +8 Skill (simple)
@@ -319,17 +319,17 @@ Waffenschmied craftet Epic Greatsword:      +16 Skill (mit Grip + Pommel)
 ```
 
 **Path to Legendary (1050 Skill):**
-- Nur Epic-Crafting gibt genug Skill-Punkte um 1000+ zu erreichen
-- Sub-Komponenten allein (Rare max +8) = bottleneck bei ~900 Skill
-- **Spieler muss sich spezialisieren:** "Ich craften nur Epic-Waffen"
+- Only Epic-Crafting Gives Enough Skill Points to Reach 1000+
+- Sub-components alone (Rare max +8) = bottleneck at ~900 Skill
+- **Players must specialize:** "I'm just crafting epic weapons"
 
-**Cooldown pro Craft:**
-- Common: 5 Min
-- Uncommon: 10 Min
-- Rare: 20 Min
-- Epic: **60 Min** (sehr zeitaufwendig, aber viel Skill!)
+**Cooldown per Craft:**
+- Common: 5 min
+- Uncommon: 10 minutes
+- Rare: 20 min
+- Epic: **60 min.** (Very time-consuming, but a lot of skill!)
 
-**Erfolgsrate-Formel:**
+**Success rate formula:**
 ```
 Basis-Erfolgsrate (nach Rarity) + Skill-Bonus
 Basis:
@@ -346,7 +346,7 @@ Level-Penalty (wenn unter Min-Level):
   - Wenn Erfolgsrate < 0% nach Berechnung = 0% (100% Fehler)
 ```
 
-**Beispiele:**
+**Examples:**
 
 ```
 Scenario 1: Lv 35 Crafter, Skill 100, versucht Epic (benötigt Lv 40)
@@ -378,29 +378,29 @@ Scenario 4: Lv 1 Crafter, Skill 0, versucht Epic (benötigt Lv 40)
   - ❌ Keine Chance, auch zu jung
 ```
 
-**Skill-Bonus für Legendary:**
-- Jeder 50 Skill = +2% (same wie Epic)
-- Lv 48-50 mit Skill 0: 50% Erfolgsrate (sehr riskant)
-- Lv 50 mit Skill 1050: 50% + 42% = **92% Erfolgsrate** (akzeptabel)
+**Skill Bonus for Legendary:**
+- Each 50 Skill = +2% (same as Epic)
+- Lv 48-50 with skill 0: 50% success rate (very risky)
+- Lv 50 with Skill 1050: 50% + 42% = **92% success rate** (acceptable)
 
-**Progression-Realität:**
-- **Lv 1-9:** Nur Common craften (100% Erfolg)
-- **Lv 10-24:** Uncommon craften (90-98% Erfolg)
-- **Lv 25-39:** Rare craften (80-90% Erfolg)
-- **Lv 40-47:** Epic craften (75%+ bis 99%)
-- **Lv 48-50 + Skill 1050:** Legendary craften (92%+ risk, true endgame!) 👑
+**Progression Reality:**
+- **Lv 1-9:** Only common crafting (100% success)
+- **Lv 10-24:** Uncommon craften (90-98% success)
+- **Lv 25-39:** Rare craften (80-90% success)
+- **Lv 40-47:** Epic craften (75%+ to 99%)
+- **Lv 48-50 + Skill 1050** Legendary craften (92%+ risk, true endgame!)
 
-**Risiko-Reward:**
-- ✅ Anfänger: hohe Fehlerchance = teuer, aber machbar
-- ✅ Fortgeschrittene: bessere Chancen = weniger Risiko
-- ✅ Legendary: fast garantiert = kann profitabel farmen
+**Risk Reward:**
+- ✅ Beginners: high chance of error = expensive, but feasible
+- ✅ Advanced: better opportunities = less risk
+- ✅ Legendary: almost guaranteed = can farm profitably
 
 ---
 
-## Offene Punkte
+## Open points
 
-- **Beruf-Leveln:** Soll XP durchs Craften steigen oder durch NPC-Quests? (wahrscheinlich beides)
-- **Item-Bindung:** Sind handgefertigte Items tradeable oder Account-gebunden? (offen)
-- **Storage:** Wo lagern Spieler Materialien? (Bank später, für POC: Inventory)
-- **Verkaufen:** Können Spieler handgefertigte Items an andere verkaufen? (ja, aber nicht Epic-Drops)
-- **Spezialisierungs-Items:** Sollen bestimmte seltene Materialien nur der Hauptberuf craften? (später)
+- **Occupational levels:** Should XP go through crafting or through NPC quests? (probably both)
+- **Item binding:** Are handcrafted items tradeable or account-bound? (open)
+- **Storage:** Where do players store materials? (Bank later, for POC: Inventory)
+- **Sell:** Can Players Sell Handcrafted Items to Others? (Yes, but Not Epic Drops)
+- **Specialization items:** Should certain rare materials only craft the main profession? (later)
