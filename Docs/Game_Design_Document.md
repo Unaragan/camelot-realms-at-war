@@ -123,3 +123,7 @@ The [Project Handbook](Project_Documentation_and_Ideas.md) covers setup, collabo
 | Expansion decision | Use playtest findings to prioritize progression, keeps, or world content. |
 
 **Open decisions.** Pick the first capture rule and reset condition. Decide which class pairs expose the most useful asymmetry. Establish the route-time and frame-time targets after measuring a baseline. Decide which Caledonia routes or locations to bring into the first multiplayer test. Defer account persistence, large-scale hosting, and a full economy until tests justify them.
+
+## Network relevance from the DAoC review
+
+Prototype per-connection interest management after the two-client replication baseline. The server selects relevant actors using spatial proximity and explicit rules for combat, parties, objectives, and private state. Measure how the approach behaves when players converge at the same keep gate. See [Multiplayer Scaling and Network Relevance](Technical/Multiplayer_Scaling.md) for the DOLSharp finding, replication policy, and test plan.
