@@ -1,5 +1,7 @@
 # Project Handbook
 
+For the game vision, mechanics, and milestones, see the [Game Design Document](Game_Design_Document.md).
+
 ## Project direction
 
 Camelot: Realms at War is a tactical Realm versus Realm (RvR) multiplayer prototype. Albion draws on Arthurian traditions, Midgard on Norse traditions, and Hibernia on Celtic traditions. The prototype tests whether distinct faction roles, positioning, and group coordination make small fights worth replaying.
