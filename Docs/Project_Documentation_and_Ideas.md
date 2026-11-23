@@ -46,6 +46,14 @@ A practical first task is to open the repository prototype, run a two-client ses
 - The combat design proposes reusable rear attacks. Test the angle on the server when the ability activates and apply the proposed damage multiplier only to damage, including when an ability also heals. Validate damage, defeat, and respawn with two clients before layering on more combat systems.
 - Keep initial performance testing practical. Measure on the lower-end laptop and the desktop reference, using the same route and scalability settings when comparing changes.
 
+## Rendering, localization, and hosting
+
+The prototype uses a toon-style rendering direction for readable faction colors and a manageable performance budget. The original performance plan calls for baked lighting through Lightmass, evaluating forward rendering, and testing Low through Epic scalability settings. Use the active Caledonia Nanite standard above for new meshes. Keep frame-rate results tied to the hardware, route, and settings used.
+
+Use the Unreal Localization Dashboard to gather English source text, export PO files, and import and compile translations for German, French, and Spanish as content stabilizes. Preserve runtime language switching as the localization pipeline develops.
+
+Use local Play in Editor sessions first. The server plan progresses from a listen server to a headless Linux LAN test when needed, with hosted infrastructure deferred until external testing calls for it. See [cost planning](../COSTS.md) and [network scaling](Technical/Multiplayer_Scaling.md) for background estimates and alternatives.
+
 ## Caledonia 5.9 map and assets
 
 **Caledonia 5.9 is the active map project.** The main level is `/Game/Maps/Caledonia_Biesenthal`. The [release](https://github.com/Unaragan/camelot-realms-at-war/releases/tag/caledonia-katalog-2026-11-23) contains the current level file and the asset gallery. A complete level load requires the matching project assets.
