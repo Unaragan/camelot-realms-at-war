@@ -38,3 +38,7 @@ The Biesenthal download contains the level file. Ask the maintainer for the matc
 Use **ChatGPT/Codex** for project planning, documentation, cross-file work, and Unreal Editor tasks through Unreal MCP when connected. Use **GitHub Copilot** for focused implementation and IDE completions. Record the engine version, verification steps, and known limitations in each pull request.
 
 The repository is private. The project is independent of *Dark Age of Camelot* and uses none of that game's assets.
+
+## Documentation index
+
+[Browse all project documents](Docs/Documentation_Index.md), including current setup, original design proposals, and archived material.
