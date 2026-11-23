@@ -1,3 +1,5 @@
+> **Historical design draft.** The July 2026 roster, roadmap, monetization, and business figures are earlier proposals. Use the [current Game Design Document](Docs/Game_Design_Document.md) for prototype scope.
+
 Camelot Realms at War - Game Design Document
 
 **Version:** 1.0  
