@@ -11,6 +11,19 @@ A tactical Unreal Engine multiplayer prototype built around Realm versus Realm c
 - [Collaboration and asset handoff](Docs/Project_Documentation_and_Ideas.md#collaboration-and-asset-handoff) covers pull requests, Unreal binaries, and map dependencies.
 - [Caledonia release](https://github.com/Unaragan/camelot-realms-at-war/releases/tag/caledonia-katalog-2026-11-23) contains the Biesenthal level file, inline asset gallery, and downloads.
 
+## Caledonia map and asset downloads
+
+[![Preview of 18 Caledonia asset families](https://github.com/user-attachments/assets/c0adff41-981b-4e2a-a269-7c8966ec58a6)](https://github.com/Unaragan/camelot-realms-at-war/releases/tag/caledonia-katalog-2026-11-23)
+
+| Download | Contents |
+|---|---|
+| [Biesenthal map for UE 5.9](https://github.com/Unaragan/camelot-realms-at-war/releases/download/caledonia-katalog-2026-11-23/Caledonia_Biesenthal.umap) | Unreal level file. Requires the matching Caledonia 5.9 project assets. |
+| [Asset catalog (PDF)](https://github.com/Unaragan/camelot-realms-at-war/releases/download/caledonia-katalog-2026-11-23/Caledonia-Assetbibliothek.pdf) | Preview images for 18 asset families. |
+| [Asset gallery (ZIP)](https://github.com/Unaragan/camelot-realms-at-war/releases/download/caledonia-katalog-2026-11-23/Caledonia-Assetbibliothek-Galerie.zip) | 18 JPGs, the PDF, and a gallery README. |
+| [Original architecture models (ZIP)](https://github.com/Unaragan/camelot-realms-at-war/releases/download/caledonia-katalog-2026-11-23/Caledonia-Eigenassets-Architektur.zip) | 14 untextured OBJ models. |
+
+Access requires signing in with a GitHub account that can view this private repository. The 18-family catalog is a visual preview of the asset library. The downloadable model package covers 14 original architecture models.
+
 ## Workspaces
 
 | Workspace | Engine | Purpose |
