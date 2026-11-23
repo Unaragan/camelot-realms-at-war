@@ -46,12 +46,16 @@ Start with a **comic or toon style**, using cel-shading post-processing and outl
 
 Gameplay classes reference meshes and materials through replaceable variables or Data Assets. Use the standard mannequin skeleton for animation retargeting so later meshes can reuse the same animations.
 
+## Asset Production Standard
+
+**Caledonia 5.9 is the active project. All new Caledonia mesh assets are authored for Nanite.** Enable Nanite on import and verify the result in Unreal Engine 5.9 before treating the asset as ready. For asset types that do not support Nanite, document the limitation and the rendering path used.
+
 ## Performance Targets
 
 **The game must run on modest hardware.** DAoC designed for low-end hardware from the start with low polygon counts, baked or static lighting, simple shaders, and aggressive LOD and culling.
 
 - Disable **Lumen** and use baked lighting through **Lightmass**.
-- Keep **Nanite** off for characters and use it sparingly for environments.
+- Use **Nanite** for new Caledonia mesh assets. See [Asset Production Standard](#asset-production-standard).
 - Evaluate **forward rendering** as an option for scenes with many characters, where it may cost less than deferred rendering.
 - Test UE5 scalability settings from Low through Epic on multiple machines from the beginning.
 - Pick a performance target around a five-year-old midrange GPU and test against it regularly.
