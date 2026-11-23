@@ -99,3 +99,17 @@ This handbook is the current starting point for contributors. The linked design 
 - [Talent progression](Design/SkillTree_Progression.md), [crafting professions](Design/Crafting_Professions.md), and [auction house](Design/Auction_House.md)
 - [Spiritual sites](Design/Spiritual_Sites_POI.md), [material suppliers](Design/Material_Suppliers_POI.md), and [frontier NPCs and questlines](Design/Frontier_NPCs_and_Questlines.md)
 - Epic questlines for [Albion](Design/Albion_Epic_Questline.md), [Midgard](Design/Midgard_Epic_Questline.md), and [Hibernia](Design/Hibernia_Epic_Questline.md)
+
+## Development workstation
+
+Desktop used for local Unreal Engine development and higher-end performance comparisons. Hardware recorded on November 23, 2026.
+
+| Component | Specification |
+|---|---|
+| CPU | AMD Ryzen 9 7900X, 12 cores |
+| Discrete GPU | AMD Radeon RX 9070 XT, 16 GB VRAM |
+| System memory | 31.1 GiB usable, as reported by Windows |
+| Motherboard | Gigabyte B840M DS3H WIFI6 |
+| Operating system | Windows 11 Pro, version 26H2, build 26300 |
+
+For Unreal performance reports, record the exact engine version, graphics API, resolution, scalability preset, and test scene alongside the results.
