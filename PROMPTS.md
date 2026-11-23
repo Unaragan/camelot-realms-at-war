@@ -1,3 +1,5 @@
+> **Archived prompt examples.** These prompts assume older tools and project structures. Use [AGENTS.md](AGENTS.md) and [Developer Setup](SETUP.md) for the current workflow.
+
 # Prompt-Vorlagen
 
 Wiederverwendbare Prompts – zwei Kategorien: **Terminal-Claude-Code** (MCP-verbunden mit dem Unreal Editor, für Editor-Aktionen) und **Copilot** (Content-Generierung wie Quest-/Dialogtexte, kein Editor-Zugriff nötig). Nicht jede Kleinanweisung – nur Muster, die wiederholt gebraucht werden, damit sie nicht bei jeder Nutzung neu erfunden werden müssen.
