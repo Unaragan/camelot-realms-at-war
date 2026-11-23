@@ -1,3 +1,5 @@
+> **Archived research snapshot from July 2026.** Verify technical assumptions against the current engine and project before applying these notes. See the [Project Handbook](Project_Documentation_and_Ideas.md).
+
 # UE5.7/5.8 Recherche-Notizen: GAS auf Third Person Template (Solo + KI-Team)
 
 Stand: 2026-07-27. Recherche-Snapshot aus öffentlich verfügbaren Quellen (YouTube, Epic-Doku, Community). Kein Ersatz für eigenes Ausprobieren im Projekt — Engine-Version und Community-Content ändern sich schnell, insbesondere für 5.8 (sehr frisch).
