@@ -1,5 +1,7 @@
 # Camelot: Realms at War
 
+[Project documentation and design ideas](Docs/Project_Documentation_and_Ideas.md)
+
 A spiritual successor to *Dark Age of Camelot* (DAoC), built in Unreal Engine 5 around tactical Realm versus Realm (RvR) combat between three factions.
 
 This private repository serves as the development starting point and project record. The project is independent of the original game and uses none of its assets.
