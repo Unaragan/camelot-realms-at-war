@@ -1,94 +1,94 @@
-# Archiv: überholte Inhalte
+# Archive: Refurbished content
 
-Ausgelagert aus SYSTEMS.md/SETUP.md im Zuge des Architekturwechsels (2026-07-26/27, siehe README.md "Architekturwechsel" und CLAUDE.md). Enthält Lyra-spezifische Implementierungsdetails und C++/Lyra-Build-Stolperfallen, die mit dem Wechsel auf das Third Person Template + manuell nachgerüstetes GAS nicht mehr direkt anwendbar sind, aber als Referenz nützlich bleiben könnten (z. B. falls Teile des GAS-Musters 1:1 wiederverwendet werden, oder falls doch einmal wieder ein C++-Modul dazukommt).
+Outsourced from SYSTEMS.md/SETUP.md in the course of the architecture change (2026-07-26/27, see README.md "Architecture change" and CLAUDE.md). Contains Lyra-specific implementation details and C++/Lyra build stumbling blocks that are no longer directly applicable with the change to the third person template + manually retrofitted GAS, but could remain useful as a reference (e.g. if parts of the GAS pattern are reused 1:1, or if a C++ module is added again).
 
-**Nicht mehr aktualisieren** – neue Erkenntnisse gehören in SYSTEMS.md/SETUP.md, nicht hierher.
-
----
-
-## Aus SYSTEMS.md
-
-### 2d. Bekannte Einschränkung: reines Blueprint-Projekt (kein C++-Modul) — historisch, vor Lyra-Umstieg
-
-Galt für den ersten, verworfenen Prototyp (vor Lyra): das Projekt lief als reines Blueprint-Projekt ohne eigenes C++-Modul. Praktische Konsequenz war: `InitAbilityActorInfo` war nicht aufrufbar (nicht BlueprintCallable ohne C++-Modul). Workaround: Ziel-/Eigentümer-Actor über `GetOuterObject → CastToActor` statt `GetAvatarActorFromActorInfo`.
-
-Während der Lyra-Phase überholt (Lyra selbst war ein C++-Projekt). Mit dem Wechsel auf das Third Person Template (Blueprint-Variante, kein `Source/`-Ordner) ist das Projekt wieder ein reines Blueprint-Projekt — diese Einschränkung könnte also erneut relevant werden, falls `InitAbilityActorInfo` o. ä. gebraucht wird.
-
-**Erste konkrete Nutzung der C++-Ausnahmeregel während der Lyra-Phase (2026-07-21):** `RealmTeamStatics` – ein schlanker Blueprint-Funktionsbibliotheks-Wrapper um `ULyraTeamSubsystem::ChangeTeamForActor`. Lyra-spezifisch, entfällt mit dem Wechsel.
-
-### 2e. Tod & Respawn-Handling — Lyra-spezifische Implementierung
-
-**Ursprünglicher Grundsatz (bleibt gültig, siehe SYSTEMS.md):** kein neuer eigener Code wo vermeidbar, vorhandene Engine-/Framework-Bausteine wiederverwenden.
-
-**Lyra-spezifische Bausteine, die genutzt wurden (nicht mehr verfügbar nach dem Wechsel):**
-- `LyraHealthSet` mit `OnOutOfHealth`-Delegate
-- `ULyraHealthComponent` – orchestrierte die komplette Tod-Sequenz (`StartDeath()`/`FinishDeath()`, State-Tags `Lyra.Death.Dying`/`Lyra.Death.Dead`)
-- `GA_Hero_Death` – vorgefertigte GameplayAbility für Ragdoll/Deaktivierung
-- `ULyraPlayerSpawningManagerComponent` – Respawn-Timing/Spawnpunkt-Auswahl
-
-**Ergebnis (2026-07-21, mit BP_TestKnight umgesetzt und per PIE verifiziert):**
-- HealthComponent war über `LyraCharacterWithAbilities → LyraCharacter` bereits vorhanden, aber nie initialisiert (`ALyraCharacterWithAbilities` setzt das ASC direkt statt über den `PawnExtensionComponent`, wodurch `HealthComponent->InitializeWithAbilitySystem()` nie lief). Behoben durch expliziten Aufruf in `EventBeginPlay`.
-- Respawn-System: `OriginalTransform` in `BeginPlay` gecacht, `RespawnDelaySeconds` instanz-editierbar (Default 5s), `OnDeathStarted` stoppt Auto-Attack-Timer und plant Respawn auf dem überlebenden Gegner. Frische Instanz spawnt nach Ablauf des Timers an der Original-Position.
-- Ziel-Findung beim Respawn musste manuell nachgezogen werden (`SetOpponentActor` beidseitig setzen), da ein kurzes Überlappungsfenster (Leiche noch nicht zerstört) zur falschen Zielerfassung führte.
-- Gefundener Bug: `RespawnDelaySeconds=0` bei beiden platzierten Instanzen, weil der Klassen-Default erst gesetzt wurde, nachdem sie schon platziert waren (UE friert übernommene Werte pro Instanz ein).
-
-**PIE-Testergebnis:** vollständiges Duell bis zum Tod beobachtet, Respawn nach 5s mit voller Health und frisch gewährten Fähigkeiten funktionierte zuverlässig.
-
-**Bekannte Einschränkung:** bei nahezu zeitgleichem beidseitigem Tod hängt jede Seite vom Überleben der anderen ab, um den Respawn zu planen — architekturell nicht abgesichert, aber für das damalige 2-Akteure-Testsetup unkritisch.
-
-### Referenzimplementierung v2: Ritter-Prototyp auf Lyra-Basis (2026-07-21)
-
-Unter `/Game/Characters/TestKnights/` (nicht mehr im Projekt vorhanden):
-- **`BP_TestKnight`** – GAS-Testcharakter-Basis mit `LyraAbilitySystemComponent`, `LyraHealthSet`, `LyraCombatSet`. BeginPlay (serverseitig): Health/MaxHealth auf 250, gewährt beide Angriffs-Fähigkeiten, findet automatisch den anderen platzierten Ritter als Ziel.
-- **`GA_TestKnight_MeleeBase`** – Basis-Ability (Unterklasse von `LyraGameplayAbility`, ServerOnly) mit `ApplyMeleeAttack` (Schaden + Winkel-Check) und `ApplyMeleeHeal` (Heilung).
-- **`GA_Attack1`/`GA_Attack2`** – Attack1 = 25 Schaden, Attack2 = 15 Schaden + 15 Selbstheilung.
-- Nutzten Lyras vorhandene modulare SetByCaller-GameplayEffects (`GE_Damage_Basic_SetByCaller`/`GE_Heal_SetByCaller`, basierend auf `LyraDamageExecution`/`LyraHealExecution`).
-- Rücken-Check: `Transformation|GetHorizontalDotProductTo`, bei ≤ -0,5 (120°-Rückenkegel) verdoppelt sich nur der Schadensanteil.
-
-**PIE-Testergebnisse** (Level `/ShooterTests/Maps/L_ShooterTest_Basic`): Frontal exakt 25/15 Schaden, im Rückenkegel verdoppelt (50/30), Heilung unverändert bei 15.
-
-### Referenzimplementierung v3: Paladin als echte, spielbare Lyra-Experience (2026-07-22 bis 2026-07-24)
-
-Umbenennung zu `BP_Paladin`, vollständige Einbindung ins Lyra-Experience-System. Unter `/Game/Characters/Paladin/`, Level `/Game/Maps/L_PaladinTest`, Experience `B_Experience_PaladinTest` (alles nicht mehr im Projekt vorhanden).
-
-- **Eigene Experience/PawnData-Kette:** `PawnData_Paladin`, `AbilitySet_Paladin`, `InputData_Paladin`. Zwei Content-Validierungsfehler gefunden: `AbilitySet_Paladin` referenzierte illegal `/ShooterCore/Game/Respawn/GA_SpawnEffect`, `InputData_Paladin` illegal `/ShooterCore/Input/Actions/IA_Melee` – Lyra erlaubt projekteigenem Content keine Querverweise auf GameFeature-Plugin-Content. Ersetzt durch eigene `GA_Paladin_SpawnEffect`/`IA_Paladin_Strike` plus eigenen `IMC_Paladin`.
-- **ShooterCore-Plugin-Familie komplett deaktiviert** (`ShooterCore`, `ShooterMaps`, `TopDownArena`, `ShooterExplorer`, `ShooterTests`) – das alte Testlevel `L_ShooterTest_Basic` gehörte zu `ShooterTests` und brachte eine fremde Default-Experience mit.
-- **Wichtiger Fund – doppelte GAS-Initialisierung zwischen Duell-Dummy und Spieler-Pawn:** `BP_Paladin`s `BeginPlay` hatte eigene manuelle Init-Logik für die Duell-Dummies, kollidierte mit Lyras automatischer Initialisierung des tatsächlich besessenen Spieler-Pawns über `AbilitySet_Paladin` + `HeroComponent` (Fehler: "Health component ... has already been initialized with an ability system").
-  - Naheliegender, aber fehlerhafter erster Versuch: manuelle Logik mit `IsPlayerControlled()` gaten — funktionierte nicht zuverlässig, da Possession bei `BeginPlay` noch nicht abgeschlossen ist.
-  - Funktionierender Fix: `DelayUntilNextTick` vor den `IsPlayerControlled()`-Check.
-- **Mesh/Animation:** Lyras Standard-Mannequin-Mesh plus `ABP_Mannequin_Base` zugewiesen. **Funktionierte am Ende nicht** (siehe Nachtrag unten und Issue #14) – letztlich einer der Hauptauslöser für den Architekturwechsel.
-
-#### Nachtrag (2026-07-26): Eingefrorene Animation — Diagnose bei `ABP_Mannequin_Base`
-
-Live per MCP diagnostiziert (Symptom: alle Paladin-Instanzen im Standalone-PIE-Fenster in identischer, eingefrorener Referenzpose). Ausführliche Analyse in [GitHub Issue #14](https://github.com/Unaragan/camelot-realms-at-war/issues/14) (mittlerweile geschlossen, überholt durch Architekturwechsel).
-
-- **Diagnostizierte Ursache:** `ABP_Mannequin_Base`s Locomotion-States liefern ihre Pose über `LinkedAnimLayer`-Nodes (Interface `ALI_ItemAnimLayers`), gedacht für ein Waffen-Equip-System (ShooterCore, deaktiviert), das zur Laufzeit per `LinkAnimClassLayers()` verlinkt. Ohne dieses System war `instanceClass` auf allen Nodes `None`, Fallback auf eine komplett leere Selbstimplementierung. Zusätzlich hartcodierte `BS_MM_Rifle_Jog_Leans`-Blend-Space in `Start`/`Cycle`/`Pivot`.
-- **Versuchter Fix:** `instanceClass` aller 10 `LinkedAnimLayer`-Nodes auf `ABP_UnarmedAnimLayers` gesetzt, Blend-Space auf `BS_MM_Unarmed_Jog_Walk` umgebogen. Zunächst als "verifiziert" gemeldet (Motion-Blur-Screenshot), hielt aber **nicht** stand: mehrere direkte Nutzer-Tests zeigten weiterhin komplett eingefrorene oder rein gleitende Bewegung ohne Animation.
-- **Letztendliche Einschätzung:** Lyras Experience-/PawnData-/LinkedAnimLayer-System ist über MCP-Property-/Log-Checks strukturell schwer zuverlässig zu verifizieren (verteilte Laufzeit-Verdrahtung statt direkt inspizierbarer Zustände) – das war der ausschlaggebende Grund für den Architekturwechsel auf das Third Person Template.
-- **Nahkampf-Animation für `GA_Paladin_Strike`:** `AN_Melee` war nur ein `AnimNotify`-Marker, keine Animation. Als Platzhalter wurde `AM_MM_Rifle_Melee` (Gewehrkolben-Schwung) per `PlayMontageAndWait` eingebaut — grober Platzhalter, hinfällig mit dem Wechsel.
-
-### Erste Referenzimplementierung (Ritter-Prototyp, verworfen — vor Lyra-Umstieg)
-
-Erfolgreich umgesetzt und per PIE verifiziert (Stand 2026-07-19), unter `/Game/Knights/` (nicht mehr im Projekt vorhanden):
-- `BP_KnightAttributeSet` – Health/MaxHealth je 250
-- `GE_MeleeDamageHeal` – wiederverwendbarer GameplayEffect mit zwei Set-by-Caller-Magnitudes ("Damage", "Healing")
-- `BP_KnightAttackAbilityBase` (ServerOnly) mit serverseitigem 120°-Rücken-Winkel-Check per Dot-Product
-- `GA_KnightAttack1` (25 Schaden), `GA_KnightAttack2` (15 Schaden + 15 Selbstheilung, Heilungsanteil verdoppelt sich bei Rückenangriff bewusst NICHT)
-- `BP_Sword` (Platzhalter-Waffe, ChildActorComponent am hand_r-Socket), `BP_Knight` (Character mit ASC, Primitiv-Körper, Team-Farben)
-
-Bestätigte Testresultate: Frontalangriff 1 = −25 HP, Frontalangriff 2 = Ziel −15 HP/Angreifer +15 HP, Rückenangriff 1 = −50 HP (verdoppelt), Rückenangriff 2 = Ziel −30 HP (verdoppelt) + Heilung weiterhin +15 HP (unverändert).
+**No longer updating** – new findings belong in SYSTEMS.md/SETUP.md, not here.
 
 ---
 
-## Aus SETUP.md
+## From SYSTEMS.md
 
-### Lyra-C++-Build-Stolperfallen (entfallen mit Third-Person-Template, reines Blueprint-Projekt)
+### 2d. known limitation: pure blueprint project (no C++ module) — historical, before Lyra switch
 
-| Fehler | Ursache | Lösung |
+Applied to the first, discarded prototype (before Lyra): the project ran as a pure blueprint project without its own C++ module. `InitAbilityActorInfo` was unavailable (not BlueprintCallable without C++ module). `GetOuterObject → CastToActor` instead of `GetAvatarActorFromActorInfo`.
+
+During the Lyra phase (Lyra herself was a C++ project) overtaken with the switch to the third person template (blueprint variant, no `Source/`-folder) the project is again a pure blueprint project – so this restriction could become relevant again, if `InitAbilityActorInfo` Or something like that is needed.
+
+**First concrete use of the C++ exception rule during the Lyra phase (2026-07-21):** `RealmTeamStatics` – A slim blueprint function library wrapper `ULyraTeamSubsystem::ChangeTeamForActor`Lyra-specific, omitted with the change.
+
+### Death & Respawn-Handling — Lyra-specific implementation
+
+**Original principle (remains valid, see SYSTEMS.md):** no new own code where avoidable, existing engine/framework building blocks reuse.
+
+**Lyra-specific building blocks that have been used (no longer available after switching):**
+- `LyraHealthSet` with `OnOutOfHealth`-Delegates
+- `ULyraHealthComponent` - orchestrated the complete death sequence ()`StartDeath()`/`FinishDeath()`, State tags `Lyra.Death.Dying`/`Lyra.Death.Dead`)
+- `GA_Hero_Death` – Pre-built GameplayAbility for Ragdoll/Deactivation
+- `ULyraPlayerSpawningManagerComponent` – Respawn timing/spawn point selection
+
+**Result (2026-07-21, implemented with BP_TestKnight and verified by PIE):**
+- HealthComponent was about `LyraCharacterWithAbilities → LyraCharacter` already existing, but never initialized ()`ALyraCharacterWithAbilities` sets the ASC directly instead of over the `PawnExtensionComponent`, whereby `HealthComponent->InitializeWithAbilitySystem()` never ran. fixed by explicit appeal in `EventBeginPlay`.
+- Respawn system: `OriginalTransform` in `BeginPlay` cached, `RespawnDelaySeconds` instance-editable (default 5 s), `OnDeathStarted` Stop auto-attack timer and plan respawn on the surviving opponent.fresh instance spawns at the original position after the timer expires.
+- Target finding during respawn had to be retracted manually ()`SetOpponentActor` set on both sides), because a short overlap window (corpse not yet destroyed) led to the wrong target detection.
+- Found bug: `RespawnDelaySeconds=0` for both instances placed, because the class default was set only after they were already placed (UE freezes adopted values per instance).
+
+**PIE test result:** Observed complete duel to death, Respawn after 5s with full health and freshly granted skills worked reliably.
+
+**Known limitation:** In the case of near-simultaneous two-way deaths, each side depends on the survival of the others to plan the respawn — not architecturally secured, but uncritical for the 2-player test setup at that time.
+
+### Reference implementation v2: Knight prototype on Lyra basis (2026-07-21)
+
+Underneath `/Game/Characters/TestKnights/` (no longer present in the project):
+- **`BP_TestKnight`** – GAS test character base with `LyraAbilitySystemComponent`, `LyraHealthSet`, `LyraCombatSet`BeginPlay (server-side): Health/MaxHealth on 250, grants both attack capabilities, automatically finds the other placed knight as the target.
+- **`GA_TestKnight_MeleeBase`** – Basic Ability (subclass of `LyraGameplayAbility`ServerOnly with `ApplyMeleeAttack` (damage + angle check) and `ApplyMeleeHeal` (Healing).
+- **`GA_Attack1`/`GA_Attack2`** Attack1 = 25 damage, Attack2 = 15 damage + 15 self-healing.
+- Used Lyra’s existing modular SetByCaller GameplayEffects`GE_Damage_Basic_SetByCaller`/`GE_Heal_SetByCaller`, based on `LyraDamageExecution`/`LyraHealExecution`).
+- Back check: `Transformation|GetHorizontalDotProductTo`, at ≤ -0.5 (120° back cone) only the damage portion doubles.
+
+**PIE test results** (Level) `/ShooterTests/Maps/L_ShooterTest_Basic`): Frontal exactly 25/15 damage, doubled in the back cone (50/30), healing unchanged at 15.
+
+### Reference implementation v3: Paladin as a real, playable Lyra Experience (2026-07-22 to 2026-07-24)
+
+To be renamed `BP_Paladin`, full integration into the Lyra Experience system. `/Game/Characters/Paladin/`, Level `/Game/Maps/L_PaladinTest`, Experience `B_Experience_PaladinTest` (Everything is no longer present in the project).
+
+- **Own Experience/PawnData chain:** `PawnData_Paladin`, `AbilitySet_Paladin`, `InputData_Paladin`Two content validation errors found: `AbilitySet_Paladin` Referenced illegally `/ShooterCore/Game/Respawn/GA_SpawnEffect`, `InputData_Paladin` illegal `/ShooterCore/Input/Actions/IA_Melee` Lyra does not allow project-owned content to cross-reference to GameFeature plugin content. `GA_Paladin_SpawnEffect`/`IA_Paladin_Strike` plus their own `IMC_Paladin`.
+- **ShooterCore plugin family completely deactivated** (`ShooterCore`, `ShooterMaps`, `TopDownArena`, `ShooterExplorer`, `ShooterTests`) – the old test level `L_ShooterTest_Basic` belonged to `ShooterTests` He brought a strange default experience with him.
+- **Important find – double initialization of GAS between Duel Dummy and Player Pawn:** `BP_Paladin`s `BeginPlay` had its own manual init logic for the Duel Dummies, collided with Lyra's automatic initialization of the actual possessed player pawn over `AbilitySet_Paladin` + `HeroComponent` (Fehler: "Health component ... has already been initialized with an ability system").
+  - Obvious but faulty first attempt: manual logic with `IsPlayerControlled()` gaten — did not work reliably since Possession at `BeginPlay` has not yet been completed.
+  - Functioning fix: `DelayUntilNextTick` before the `IsPlayerControlled()`-Check.
+- **Mesh/Animation:** Lyras standard mannequin mesh plus `ABP_Mannequin_Base` assigned. **Did not work in the end** (see addendum below and Issue #14) – ultimately one of the main triggers for the change of architecture.
+
+#### Addendum (2026-07-26): Frozen animation — diagnosis at `ABP_Mannequin_Base`
+
+Live diagnosed by MCP (symptom: all paladin instances in the standalone PIE window in identical, frozen reference pose). [GitHub Issue #14](https://github.com/Unaragan/camelot-realms-at-war/issues/14) (now closed, overtaken by architectural change).
+
+- **Diagnosed cause:** `ABP_Mannequin_Base`s Locomotion-States deliver their pose via `LinkedAnimLayer`-Nodes (interface) `ALI_ItemAnimLayers`), intended for a weapon-equip system (ShooterCore, deactivated), which at runtime per `LinkAnimClassLayers()` Without this system, `instanceClass` on all nodes `None`, fallback to a completely empty self-implementation. `BS_MM_Rifle_Jog_Leans`Blend-Space in `Start`/`Cycle`/`Pivot`.
+- **Tested fix:** `instanceClass` of all 10 `LinkedAnimLayer`-Nodes on `ABP_UnarmedAnimLayers` Set up, Blend-Space `BS_MM_Unarmed_Jog_Walk` First reported as "verified" (motion-blur screenshot), but stopped **not** Several direct user tests continued to show completely frozen or purely sliding motion without animation.
+- **Final assessment:** Lyra’s Experience/PawnData/LinkedAnimLayer system is structurally difficult to reliably verify via MCP property/log checks (distributed runtime wiring instead of directly inspectable states) – this was the decisive reason for the architecture change to the third person template.
+- **Close combat animation for `GA_Paladin_Strike`:** `AN_Melee` was only one `AnimNotify`-marker, not animation. `AM_MM_Rifle_Melee` (gun-piston swing) `PlayMontageAndWait` Built-in — coarse placeholder, obsolete with the changeover.
+
+### First reference implementation (knight prototype, discarded — before Lyra switch)
+
+Successfully implemented and verified by PIE (status 2026-07-19), under `/Game/Knights/` (no longer present in the project):
+- `BP_KnightAttributeSet` – Health/MaxHealth 250
+- `GE_MeleeDamageHeal` Reusable GameplayEffect with two set-by-caller magnitudes (“Damage”, “Healing”)
+- `BP_KnightAttackAbilityBase` (ServerOnly) with server-side 120° back angle check via dot product
+- `GA_KnightAttack1` (25 Damage), `GA_KnightAttack2` (15 Damage + 15 Self-Healing, Healing Percentage Deliberately DOES NOT Double in Back Attack)
+- `BP_Sword` (ChildActorComponent on hand_r-Socket), `BP_Knight` (Character with ASC, Primitive Body, Team Colors)
+
+Confirmed test results: frontal attack 1 = −25 HP, frontal attack 2 = target −15 HP/attacker +15 HP, back attack 1 = −50 HP (doubled), back attack 2 = target −30 HP (doubled) + healing still +15 HP (unchanged).
+
+---
+
+## From SETUP.md
+
+### Lyra C++ build stumbling blocks (not applicable with third-person template, pure blueprint project)
+
+| Error | Cause | Solution |
 |---|---|---|
-| `error CS0579: Doppeltes Attribut "AssemblyTitleAttribute"/"AssemblyVersionAttribute"` in `Lyra.Automation.AssemblyInfo.cs` beim AutomationTool-Build | Stale generierter .NET-Build-Cache unter `Build/Scripts/obj/` (entsteht v. a. nach Projekt-Verschiebungen) | `Build/Scripts/obj/`, `Build/Scripts/bin/` und `Build/Scripts/uatobj/` löschen (reine generierte Caches), danach Build erneut anstoßen |
-| Live Coding: `Could not spawn process ...UnrealBuildAccelerator/x64/UbaCli.exe. Error: 267` bei jedem Modul, "Failed to link patch (0.000s)" | Der Live-Coding-Hot-Patch-Schritt scheiterte konsequent an diesem UBA-Hilfsprogramm (auch mit AV komplett deaktiviert). Der eigentliche Compile/Link-Schritt selbst war davon nicht betroffen | Live Coding deaktivieren (Editor Preferences → General → Live Coding), nach C++-Änderungen Editor komplett schließen/neu starten |
+| `error CS0579: Doppeltes Attribut "AssemblyTitleAttribute"/"AssemblyVersionAttribute"` in `Lyra.Automation.AssemblyInfo.cs` The AutomationTool-Build | Stale generated .NET build cache under `Build/Scripts/obj/` (originates mainly after project shifts) | `Build/Scripts/obj/`, `Build/Scripts/bin/` and `Build/Scripts/uatobj/` delete (purely generated caches), then restart build |
+| Live Coding: `Could not spawn process ...UnrealBuildAccelerator/x64/UbaCli.exe. Error: 267` for each module, "Failed to link patch (0.000s)" | The live coding hot patch step failed consistently because of this UBA help program (also completely deactivated with AV). | Deactivate Live Coding (Editor Preferences → General → Live Coding), completely close/restart editor after C++ changes |
 
-### Alter Projektname/Pfad
+### Old project name/path
 
-Projekt hieß zu Lyra-Zeiten `Camelot_RAW.uproject`, davor kurzzeitig eine zweite Kopie unter `Documents\Unreal Projects\CamelotRAW` (Ursache für "Assets fehlen im Git"-Verwirrung). Aktueller Name/Pfad: `D:\Claude\camelot-realms-at-war\CamelotRAW_TP.uproject`, siehe SETUP.md.
+Project was called in Lyra times `Camelot_RAW.uproject`, before a brief second copy under `Documents\Unreal Projects\CamelotRAW` (Cause of "Assets Missing in Git" Confusion). `D:\Claude\camelot-realms-at-war\CamelotRAW_TP.uproject`See SETUP.md.

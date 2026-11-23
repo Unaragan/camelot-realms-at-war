@@ -1,45 +1,45 @@
 > **Archived workflow.** This page preserves earlier project instructions. Use [AGENTS.md](AGENTS.md) and [Developer Setup](SETUP.md) for the current ChatGPT/Codex and GitHub Copilot workflow. The LFS quota and Lyra instructions below are historical.
 
-# Camelot: Realms at War — Projektleitfaden
+# Camelot: Realms at War — Project Guide
 
-Spiritual Successor zu Dark Age of Camelot (UE5.8), Drei-Fraktionen-RvR. Details/Begründungen: [README.md](README.md). Kosten: [COSTS.md](COSTS.md). Klassen-Design: [CLASSES.md](CLASSES.md). Character-Struktur pro Reich: [Docs/Design/Character_Structure_Realms.md](Docs/Design/Character_Structure_Realms.md). Rüstungs- & Waffen-Naming: [Docs/Design/Armor_Weapons_Naming.md](Docs/Design/Armor_Weapons_Naming.md). GUI/UI-Design: [Docs/Design/GUI_UI_Design.md](Docs/Design/GUI_UI_Design.md). Skill Tree & Talent-Progression: [Docs/Design/SkillTree_Progression.md](Docs/Design/SkillTree_Progression.md). Chat-System: [Docs/Design/Chat_System.md](Docs/Design/Chat_System.md). Crafting & Professions: [Docs/Design/Crafting_Professions.md](Docs/Design/Crafting_Professions.md). Material-Lieferanten (POIs): [Docs/Design/Material_Suppliers_POI.md](Docs/Design/Material_Suppliers_POI.md). Spirituelle Stätten (POIs): [Docs/Design/Spiritual_Sites_POI.md](Docs/Design/Spiritual_Sites_POI.md). Auktionshaus (Realm-Marktplatz): [Docs/Design/Auction_House.md](Docs/Design/Auction_House.md). Item-Level-Requirements & Penalties: [Docs/Design/Item_Requirements_Penalties.md](Docs/Design/Item_Requirements_Penalties.md). Skill-/Stat-/GUI-Schemas: [SYSTEMS.md](SYSTEMS.md). Überholte/archivierte Inhalte (v. a. Lyra-Implementierungsdetails vor dem Architekturwechsel): [Archive.md](Archive.md). Unreal-MCP-Setup: [SETUP.md](SETUP.md). Wiederverwendbare Terminal-Prompts: [PROMPTS.md](PROMPTS.md). NPC-Namenspools: [NPC_NAMES.md](NPC_NAMES.md). Frontier-NPCs & Questline-Backlog: [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md). Epic-Questlines (Lv 1–50) je Reich: [Albion](Docs/Design/Albion_Epic_Questline.md), [Midgard](Docs/Design/Midgard_Epic_Questline.md), [Hibernia](Docs/Design/Hibernia_Epic_Questline.md). Quest-Content & Umsetzungsstand (zentraler Tracker): [Docs/Design/Quests.md](Docs/Design/Quests.md).
+Spiritual Successor for Dark Age of Camelot (UE5.8), Three-Faction RvR. [README.md](README.md) Costs: [COSTS.md](COSTS.md) Class design: [CLASSES.md](CLASSES.md) Character Structure per realm: [Docs/Design/Character_Structure_Realms.md](Docs/Design/Character_Structure_Realms.md) Arms & Weapons naming: [Docs/Design/Armor_Weapons_Naming.md](Docs/Design/Armor_Weapons_Naming.md)GUI/UI design: [Docs/Design/GUI_UI_Design.md](Docs/Design/GUI_UI_Design.md) Skill Tree & Talent Progression: [Docs/Design/SkillTree_Progression.md](Docs/Design/SkillTree_Progression.md) Chat system: [Docs/Design/Chat_System.md](Docs/Design/Chat_System.md) Crafting & Professions: [Docs/Design/Crafting_Professions.md](Docs/Design/Crafting_Professions.md) Material suppliers (POIs): [Docs/Design/Material_Suppliers_POI.md](Docs/Design/Material_Suppliers_POI.md) Spiritual sites (POIs): [Docs/Design/Spiritual_Sites_POI.md](Docs/Design/Spiritual_Sites_POI.md) Auction House (Realm Marketplace): [Docs/Design/Auction_House.md](Docs/Design/Auction_House.md) Item Level Requirements & Penalties: [Docs/Design/Item_Requirements_Penalties.md](Docs/Design/Item_Requirements_Penalties.md) Skill/Stat/GUI schemes: [SYSTEMS.md](SYSTEMS.md) Refurbished/archived content (especially Lyra implementation details before the architecture change): [Archive.md](Archive.md) Unreal MCP setup: [SETUP.md](SETUP.md) Reusable terminal prompts: [PROMPTS.md](PROMPTS.md)NPC name pools: [NPC_NAMES.md](NPC_NAMES.md) Frontier NPCs & Questline backlog: [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md) Epic-Questlines (Lv 1-50) per realm: [Albion](Docs/Design/Albion_Epic_Questline.md), [Midgard](Docs/Design/Midgard_Epic_Questline.md), [Hibernia](Docs/Design/Hibernia_Epic_Questline.md) Quest content & implementation status (central tracker): [Docs/Design/Quests.md](Docs/Design/Quests.md).
 
-## Arbeitsumgebung: Codex und Unreal
+## Working Environment: Codex and Unreal
 
-Seit 2026-09-29 ist Codex Desktop der aktive Assistent. Unreal-MCP kann direkt im
-Codex-Chat verwendet werden; eine separate Claude-Terminal-Sitzung ist nicht erforderlich.
-Konfiguration, Startablauf und bekannte Synchronisationsgrenzen: **AGENTS.md**.
-Vor neuer Arbeit Git-Stand prüfen und nur bei sauberem Arbeitsbaum fast-forward pullen.
-Spieltests bleiben durch den Nutzer zu bestätigen.
+Since 2026-09-29, Codex Desktop has been the active assistant.
+Codex chat can be used; a separate Claude terminal session is not required.
+Configuration, start sequence and known synchronization limits: **AGENTS.md**.
+Check git stand before new work and pull fast-forward only when the work tree is clean.
+Game tests remain to be confirmed by the user.
 
-## Definition of Done (Editor-Arbeit)
+## Definition of Done (editor work)
 
-Eine Terminal-Sitzung darf eine Änderung **nicht** als "behoben"/"verifiziert" melden, nur weil Logs fehlerfrei sind oder Objekt-Properties den erwarteten Wert zeigen. Log-/Property-Checks bestätigen nur "keine Fehlermeldung", nicht "sieht beim tatsächlichen Spielen richtig aus" — das ist wiederholt auseinandergefallen (Animation, Kamera, Instanz-Anzahl). Als "erledigt" gilt eine Änderung erst, wenn der Nutzer sie selbst in einer laufenden Play-Session (nicht nur Edit-Modus) bestätigt hat, idealerweise mit Screenshot. Bis dahin: als "vorgenommen, ungetestet" oder "vorgenommen, wartet auf Bestätigung" melden, nicht als erledigt.
+A terminal session may make a change **not** Report as "fixed"/"verified" only because logs are error-free or object properties show the expected value. Log/property checks only confirm "no error message", not "looks right when actually playing" — this has repeatedly fallen apart (animation, camera, instance number). A change is not considered "finished" until the user has confirmed it himself in a running play session (not just edit mode), ideally with screenshot. Until then: report as "made, untested" or "made, waiting for confirmation", not as done.
 
-## Nicht verhandelbare Regeln
+## Non-negotiable rules
 
-- **Jeder spieler-sichtbare Text ist `FText`**, nie `FString`/hartcodiert. C++: `LOCTEXT`/`NSLOCTEXT`. Blueprints: `Text`-Typ. DataTables: `FText`-Spalten. Zielsprachen: en (Quelle), de, fr, es.
-- **Kein Lumen, kein Nanite für Charaktere.** Gebackenes Licht (Lightmass). Ziel-Hardware ist Mittelklasse, nicht der Entwicklerrechner. *Gilt für POC/Vertical Slice.* Artdirection/Rendering-Technik fürs finale Produkt (ggf. Lumen/Nanite/realistischer Look) ist bewusst noch offen — siehe [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
-- **Gameplay-Klassen referenzieren Mesh/Material als austauschbare Variable**, nie hart verdrahtet — Platzhalter-Toon-Art muss später ersetzbar sein, ohne Logik anzufassen. Standard-Mannequin-Skeleton für Animations-Retargeting.
-- **Blueprint-first, kein neuer eigener C++-Code.** Neue Inhalte (Klassen, Fähigkeiten, Items) werden als Blueprints gebaut, nicht als neue .cpp/.h-Dateien — passt zum Skillset des Nutzers (kein C++-Spezialist). GAS (Ability-System) wird seit dem Architekturwechsel (siehe unten) manuell per Blueprint auf Basis des Third Person Templates nachgerüstet, nicht mehr von Lyra vorgefertigt übernommen. Eigener neuer C++-Code nur im Ausnahmefall, wenn in Blueprint wirklich nicht machbar.
-- **Kein Original-DAOC-Content** (Assets, Texte, exakte Markennamen). Namensgebung siehe [CLASSES.md](CLASSES.md) — Archetypen ja, unverwechselbare erfundene Namen nein.
+- **Every player-visible text is `FText`**, never `FString`C++ is hard-coded. `LOCTEXT`/`NSLOCTEXT`Blueprints: `Text`Type. DataTables: `FText`-Column. Target languages: en (source), de, fr, es.
+- **No lumen, no nanite for characters.** The target hardware is mid-range, not the developer's computer. *Applies to POC/Vertical Slice.* Artdirection/rendering technique for the final product (possibly lumen/nanite/realistic look) is deliberately still open – see [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md).
+- **Gameplay classes reference mesh/material as an interchangeable variable**, never hard-wired — wildcard toon art must be replaceable later without touching logic. standard mannequin skeleton for animation retargeting.
+- **Blueprint-first, not a new own C++ code.** New content (classes, skills, items) are built as blueprints, not as new .cpp/.h files — fits the user’s skillset (not a C++ specialist). GAS (Ability System) has been retrofitted manually using the third-person template since the change of architecture (see below) and is no longer prefabricated by Lyra.
+- **No original DAOC content** (assets, texts, exact brand names). [CLASSES.md](CLASSES.md) — Archetypes yes, distinctive invented names no.
 
-## Aktuelle Priorität
+## Current priority
 
-Battleground-Vertical-Slice vor Startgebiet/Tutorial-Zone (siehe Roadmap in README.md). Zwei Fraktionen zum Einstieg, dritte kommt später dazu.
+Battleground vertical slice before starting area/tutorial zone (see roadmap in README.md).
 
-## Scope-Disziplin (Nicht-jetzt)
+## Scope discipline (not now)
 
-Crafting, Housing, offene persistente Welt, Login-/Account-Server, tiefe Itemization, mehr als 3 Klassen pro Fraktion, Startgebiet, große Netzwerk-Skalierung (100+ vs. 100+). Vollständige Liste: README.md → "Nicht-jetzt-Liste".
+Crafting, housing, open persistent world, login/account server, deep itemization, more than 3 classes per faction, starting area, large network scaling (100+ vs. 100+).
 
-## Server/Hardware-Kontext
+## Server/hardware context
 
-Linux-VPS für späteres Dedicated-Server-Hosting (Contabo). Zwei vorhandene Testgeräte: HP ZBook (unteres Performance-Ziel), Ryzen-9/RTX-40er-Desktop (High-End-Referenz) — beide gegen testen, nicht nur den Entwicklerrechner.
+Linux VPS for later dedicated server hosting (Contabo). Two existing test devices: HP ZBook (lower performance target), Ryzen-9/RTX-40s desktop (high-end reference) — both against testing, not just the developer computer.
 
-## Bug-Tracking
+## Bug tracking
 
-Aktive, noch ungelöste Bugs werden als **GitHub Issues** mit Label `bug` angelegt (`gh issue create --label bug`), nicht nur in SETUP.md/SYSTEMS.md erwähnt. Beim Beheben: Issue schließen (`gh issue close <Nummer>`) mit Verweis auf die Doku-Stelle (SETUP.md-Stolperfallen-Tabelle oder SYSTEMS.md-Referenzimplementierung), die den Fix erklärt. Unterschied zur bisherigen Doku: SETUP.md/SYSTEMS.md sind die **Wissensbasis** (wie wurde X gelöst), GitHub Issues sind der **Statusüberblick** (was ist gerade offen) – `gh issue list --label bug` zeigt auf einen Blick, was noch aktiv ist.
+Active, still unresolved bugs are **GitHub Issues** with label `bug` created ()`gh issue create --label bug`), not only mentioned in SETUP.md/SYSTEMS.md.`gh issue close <Nummer>`) with reference to the docu location (SETUP.md Stumbling-Trap Table or SYSTEMS.md Reference Implementation), which explains the fix. **Knowledge base** (how X was solved), GitHub issues are the **Status overview** (what is open now) – `gh issue list --label bug` It shows at a glance what is still active.
 
-## Bekannte technische Einschränkung
+## Known technical limitation
 
-Git LFS auf GitHub Free hat nur 1 GB Speicher/Monat — mit Lyra als Basis (Content 1,8 GB, Plugins 1,6 GB) bereits eingetreten. Lösung: Content/Plugins bewusst nicht versioniert, separat pro Rechner über Epic Games Launcher installiert. Siehe SETUP.md → "Projekt-Basis: Lyra + Sync-Workflow".
+Git LFS on GitHub Free has only 1 GB of memory per month — with Lyra as the base (content 1.8 GB, plugins 1.6 GB) already entered. Solution: Content/Plugins deliberately not versioned, installed separately per computer via Epic Games Launcher. See SETUP.md → "Project Base: Lyra + Sync Workflow".

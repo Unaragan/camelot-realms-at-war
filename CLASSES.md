@@ -1,88 +1,88 @@
-# Klassen-Konzept (Design-Referenz)
+# Class concept (design reference)
 
-Erste Design-Referenz für das Klassenroster, orientiert an DAOCs bewährter Drei-Rollen-Struktur pro Fraktion (Tank/Nahkampf, Heiler/Support, Fernkampf/Zauber) — nicht an den konkreten, teils sehr eigenwilligen DAOC-Klassennamen.
+First design reference for the class roster, based on DAOC’s proven three-role structure per faction (tank/near combat, healer/support, distance combat/magic) – not on the concrete, partly very idiosyncratic DAOC class name.
 
-## Rechtlicher Rahmen (kurz, keine Rechtsberatung)
+## Legal framework (short, no legal advice)
 
-Spielmechaniken und Klassen-**Archetypen** (Tank, Heiler, Fernkämpfer) sind nicht schutzfähig — das ist reines Gameplay-Konzept, wie bei jedem anderen RPG auch. Bei den **Namen** wird unterschieden:
+Game mechanics and class**Archetypes** (tank, healer, range fighter) are not protective — this is pure gameplay concept, just like any other RPG. **Names** a distinction is made between:
 
-- **Generische Fantasy-/Mythologie-Begriffe** (Wizard, Cleric, Druid, Ranger, Paladin, Champion, Shaman, Berserker, Hunter, Rogue, Bard, Minstrel, Skald, Raider, Duelist) werden in Dutzenden Spielen verwendet bzw. sind echte historische/mythologische Begriffe (Skald = historischer nordischer Kriegerdichter, Bard = historisch-mythologisch keltisch), nicht exklusiv mit DAOC verbunden und damit unbedenklich.
-- **Ungewöhnliche, erkennbar für DAOC erfundene Namen/Schreibweisen** (z. B. "Vampiir", "Bainshee", "Animist", "Valewalker", "Mauler", "Runemaster", "Bonedancer", "Spiritmaster") werden hier bewusst **nicht** übernommen — genau wie beim Projektnamen selbst halten wir bewusst Abstand zu allem, was zu eindeutig wiedererkennbar ist.
+- **Generic fantasy/mythology terms** (Wizard, Cleric, Druid, Ranger, Paladin, Champion, Shaman, Berserker, Hunter, Rogue, Bard, Minstrel, Skald, Raider, Duelist) are used in dozens of games or are real historical/mythological terms (Skald = historical Nordic warrior poet, Bard = historical-mythological Celtic), not exclusively associated with DAOC and therefore harmless.
+- **Unusual, recognizable for DAOC invented names / spellings** (e.g. "Vampiir", "Bainshee", "Animist", "Valewalker", "Mauler", "Runemaster", "Bonedancer", "Spiritmaster") become aware here **not** As with the project name itself, we deliberately keep our distance from everything that is too clearly recognizable.
 
-Die Realm-Namen (Albion, Midgard, Hibernia) sind wie "Camelot" gemeinfreie historische/mythologische Begriffe (Albion = alter Name für Britannien, Midgard = nordische Mythologie, Hibernia = lateinischer Name für Irland) und unbedenklich.
+The Realm names (Albion, Midgard, Hibernia) are like "Camelot" in the public domain historical/mythological terms (Albion = ancient name for Britain, Midgard = Norse mythology, Hibernia = Latin name for Ireland) and harmless.
 
-## Roster: Vertical Slice vs. Endversion
+## Roster: Vertical Slice vs. Final Version
 
-**Vertical Slice (jetzt):** drei Archetypen pro Fraktion, passend zur Nicht-jetzt-Grenze ("max. 3 Klassen pro Fraktion"). Baureihenfolge folgt der Roadmap (Task #6: erste Klasse, Task #7: zweite Fraktion/Klasse).
+**Vertical Slice (now):** three archetypes per faction, corresponding to the non-now limit ("max. 3 classes per faction"). Order of construction follows the roadmap (Task #6: first class, Task #7: second fraction/class).
 
-**Endversion (Zielbild, nicht jetzt bauen):** fünf Klassen pro Fraktion — die drei bestehenden plus zwei weitere Archetypen (Nahkampf-Burst/Stealth, Support/Buffs), die die Rolle des Rückenangriff-Mechanik (SYSTEMS.md) und Gruppenkontrolle stärker bedienen.
+**Final version (target image, not build now):** five classes per faction — the three existing plus two other archetypes (near-fighting burst/stealth, support/buffs) that serve the role of back attack mechanics (SYSTEMS.md) and group control.
 
-### Albion (arthurianisch, vielseitig, schwere Rüstung)
+### Albion (arthurian, versatile, heavy armor)
 
-| Klasse | Archetyp | Kurzbeschreibung | Phase |
+| Category | Archetype | Short description | Phase phase |
 |---|---|---|---|
-| Paladin | Tank/Support-Hybrid | Schwer gepanzert, Buffs für die Gruppe, solide Nahkampf-Verteidigung | Vertical Slice |
-| Cleric | Heiler | Klassischer Gruppenheiler, defensive Unterstützung | Vertical Slice |
-| Wizard | Fernkampf-Zauber | Hoher Einzelschaden aus der Distanz, geringe Eigenverteidigung | Vertical Slice |
-| Rogue | Nahkampf-Burst/Stealth | Hohe Einzelziel-Burst, Mobilität, profitiert stark vom Rückenangriff | Endversion |
-| Minstrel | Support/Buffs | Gruppen-Buffs, Debuffs/Kontrolle, mittelalterlich-englische Musiker-Tradition | Endversion |
+| paladine | Tank/Support Hybrid | Heavy armor, buffs for the group, solid melee defense | Vertical Slice |
+| Cleric | Healers | Classic group healer, defensive support | Vertical Slice |
+| Wizard | Distance wizards | High individual damage from a distance, low self-defense | Vertical Slice |
+| Rogue | Close combat burst/stealth | High single target burst, mobility, benefits greatly from back attack | Final version |
+| Minstrel | Support/Buffs | Group buffs, debuffs/control, medieval English musician tradition | Final version |
 
-### Midgard (nordisch)
+### Midgard (Nordic)
 
-| Klasse | Archetyp | Kurzbeschreibung | Phase |
+| Category | Archetype | Short description | Phase phase |
 |---|---|---|---|
-| Berserker | Nahkampf-DPS/Tank | Aggressiver Frontkämpfer, hoher Schaden bei Risiko | Vertical Slice |
-| Shaman | Heiler/Support | Gruppenheilung mit nordisch geprägten Buffs/Debuffs | Vertical Slice |
-| Hunter | Fernkampf | Distanzkampf, Mobilität, Einzelzielfokus | Vertical Slice |
-| Raider | Nahkampf-Burst/Mobilität | Wikingerhafter Schnellangreifer, profitiert vom Rückenangriff | Endversion |
-| Skald | Support/Buffs | Historischer nordischer Kriegerdichter, Gruppen-Buffs/Kontrolle | Endversion |
+| Berserkers | Close combat DPS/tank | Aggressive front-line fighter, high damage at risk | Vertical Slice |
+| Shaman | Healer/Support | Group healing with Nordic buffs/debuffs | Vertical Slice |
+| Hunters | Distance combat | Distance combat, mobility, single target focus | Vertical Slice |
+| Raiders | Close combat burst/mobility | Viking Quick Attacker, Benefits from Back Attack | Final version |
+| Skald | Support/Buffs | Historic Norse warrior poet, group buffs/control | Final version |
 
-### Hibernia (keltisch)
+### Hibernia (Celtic)
 
-| Klasse | Archetyp | Kurzbeschreibung | Phase |
+| Category | Archetype | Short description | Phase phase |
 |---|---|---|---|
-| Champion | Nahkampf-Tank | Robuster Frontkämpfer, keltisch geprägte Fähigkeiten | Vertical Slice |
-| Druid | Heiler | Naturbasierte Heilung/Support, Flächenwirkung | Vertical Slice |
-| Ranger | Fernkampf/Stealth-nah | Distanzkampf mit Mobilitäts- und Tarnungselementen | Vertical Slice |
-| Duelist | Nahkampf-Burst/Beweglichkeit | Schneller Einzelkämpfer, profitiert vom Rückenangriff | Endversion |
-| Bard | Support/Buffs | Historisch-mythologisch keltischer Begriff, Gruppen-Buffs/Kontrolle | Endversion |
+| Champion | Close combat tank | Robust frontline fighter, Celtic-influenced skills | Vertical Slice |
+| Druid | Healers | Nature-based healing/support, surface effect | Vertical Slice |
+| Rangers | Distance combat/stealth-nah | Distance combat with mobility and camouflage elements | Vertical Slice |
+| Duelists | Close combat burst/mobility | Fast lone fighter, benefits from the back attack | Final version |
+| Bard | Support/Buffs | Historical-mythological Celtic term, group buffs/control | Final version |
 
-## Spezialisierungs-Pfade (Talent-Wahl pro Archetyp)
+## Specialization path (talent choice per archetype)
 
-Jeder Archetyp bekommt zwei Talent-Pfade – einen defensiv/support-orientierten, einen offensiv/schadensorientierten. Passt zum "schlanke Talent-Wahlpunkte"-Prinzip aus SYSTEMS.md (2-3 Optionen, keine tiefe Verzweigung).
+Each archetype gets two talent paths – one defensive/support-oriented, one offensive/damage-oriented. Matches the “slim talent choice points” principle from SYSTEMS.md (2-3 options, no deep branch).
 
-| Archetyp | Spec A (defensiv/support) | Spec B (offensiv) |
+| Archetype | Spec A (defensive/support) | Spec B (offensive) |
 |---|---|---|
-| Tank (Paladin/Berserker/Champion) | Def-Tank: hohe Verteidigung, Aggro-Bindung, Gruppenschutz | 2H-Schaden: offensiv, hoher Einzelschaden, weniger Verteidigung |
-| Heiler (Cleric/Shaman/Druid) | Gruppenheilung: AoE-Heal, Buffs | Einzelheilung + Schaden: starke Einzelzielheilung, offensive Hybrid-Fähigkeiten |
-| Caster (Wizard) | Flächenschaden: mehrere Ziele gleichzeitig, schwächer pro Ziel | Einzelziel-Burst: hoher Schaden auf ein Ziel |
-| Fernkämpfer (Hunter/Ranger) | Kontrolle: Fesseln/Verlangsamen, Gruppenkontrolle | Präzision: hoher Einzelschaden, Mobilität |
-| Nahkampf-Burst (Rogue/Raider/Duelist, Endversion) | Stealth/Vorbereitung: aus Tarnung heraus, verlässlicher Rückenangriff | Offene Klinge: höheres Grundtempo, weniger auf Rückenangriff angewiesen |
-| Support (Minstrel/Skald/Bard, Endversion) | Gruppen-Buffs: Stat-Boosts, Ausdauer/Ressourcen-Unterstützung | Kontrolle: Debuffs, Crowd-Control, Gegner schwächen |
+| Tank (Paladin/Berserker/Champion) | Def tank: high defense, aggro binding, group protection | 2H damage: offensive, high individual damage, less defense |
+| Healer (Cleric/Shaman/Druid) | Group healing: AoE-Heal, Buffs | Single healing + damage: strong single target healing, offensive hybrid capabilities |
+| Caster (Wizard) | Area damage: multiple targets at the same time, weaker per target | Single target burst: high damage to a target |
+| Long range fighter (Hunter/Ranger) | Control: shackling/slowing, group control | Precision: high individual damage, mobility |
+| Close combat burst (Rogue/Raider/Duelist, final version) | Stealth/Preparation: out of camouflage, reliable back attack | Open blade: higher basic speed, less reliant on back attack |
+| Support (Minstrel/Skald/Bard, final version) | Group Buffs: Stat-Boosts, Endurance/Resource Support | Control: Debuffs, crowd control, weaken opponents |
 
-Technisch: ein Wahlpunkt pro Archetyp/Levelstufe in der Talent-Tabelle aus SYSTEMS.md, keine tiefere Verzweigung als diese zwei Optionen.
+Technically: one choice point per archetype/level in the talent table from SYSTEMS.md, no deeper branch than these two options.
 
-## Für den Vertical Slice (Phase 2)
+## For the Vertical Slice (Phase 2)
 
-- **Task #6:** eine Klasse für Fraktion 1 – **entschieden: Paladin** (der bisherige `BP_TestKnight`-Prototyp passt bereits inhaltlich: hoher Health-Pool, Angriff + Selbstheil-Angriff = Tank/Support-Hybrid, siehe unten "TestKnight → Paladin")
-- **Task #7:** erste Klasse für Fraktion 2 (Vorschlag: Berserker — maximal unterschiedliches Kampfgefühl zur ersten Klasse, testet die Asymmetrie am deutlichsten)
-- Fraktion 3 (Hibernia) und weitere Klassen pro Fraktion kommen nach der Nicht-jetzt-Liste erst, wenn sich der Zwei-Fraktionen-Kampf schon gut anfühlt
+- **Task #6:** one class for fraction 1 – **decided: Paladin** (the previous one) `BP_TestKnight`-Prototype already fits content: high health pool, attack + self-healing attack = tank/support hybrid, see below "TestKnight → Paladin"
+- **Task #7:** first class for fraction 2 (suggestion: berserker — maximum different fighting feeling to the first class, tests the asymmetry most clearly)
+- Fraction 3 (Hibernia) and other classes per faction come after the not-now list only when the two-faction fight already feels good
 
-### TestKnight → Paladin: Umbenennungs-Mapping (Task #6 Abschluss)
+### TestKnight → Paladin: renaming mapping (task #6 completion)
 
-Reine Umbenennung/Neuflavorisierung der bestehenden, verifizierten Assets (siehe SYSTEMS.md → "Referenzimplementierung v2") – keine neue Mechanik, keine Wertänderung. Werte (250 HP, 25/15 Schaden) bleiben vorerst unverändert; echte Stat-Differenzierung zwischen Klassen folgt erst mit Task #13 (DataTable-Schema) bzw. sobald Task #7 (Berserker) für spürbaren Kontrast sorgt.
+Pure renaming/reflavoring of the existing verified assets (see SYSTEMS.md → "Reference Implementation v2") – no new mechanics, no change in value. Values (250 HP, 25/15 damage) remain unchanged for the time being; true stat differentiation between classes only follows with Task #13 (DataTable scheme) or as soon as Task #7 (Berserker) provides noticeable contrast.
 
-| Alt | Neu | Hinweis |
+| Old | New | Note: |
 |---|---|---|
-| `BP_TestKnight` | `BP_Paladin` | Actor-Blueprint |
-| `GA_TestKnight_MeleeBase` | `GA_Paladin_MeleeBase` | Basis-Ability (Schaden-/Heil-Funktionen, Rücken-Check) |
-| `GA_Attack1` (25 Schaden) | `GA_Paladin_Strike` | Basisangriff |
-| `GA_Attack2` (15 Schaden + 15 Selbstheilung) | `GA_Paladin_LayOnHands` | Passt inhaltlich gut zum Tank/Support-Hybrid – Selbstheil-Angriff ist ein generischer Paladin-Trope, kein DAOC-spezifischer Name |
-| `GE_Init_TestKnightHealth` | `GE_Init_PaladinHealth` | Health-Initialisierung |
-| `/Game/Characters/TestKnights/` | `/Game/Characters/Paladin/` | Ordnerstruktur – Vorbild für künftige Klassenordner (Task #7: `/Game/Characters/Berserker/`) |
+| `BP_TestKnight` | `BP_Paladin` | Actor blueprint |
+| `GA_TestKnight_MeleeBase` | `GA_Paladin_MeleeBase` | Basic Ability (damage/healing functions, back check) |
+| `GA_Attack1` (25 Damage) | `GA_Paladin_Strike` | Base attack |
+| `GA_Attack2` (15 Damage + 15 Self-Healing) | `GA_Paladin_LayOnHands` | Matches the content well with the tank/support hybrid – self-healing attack is a generic paladin trope, not a DAOC-specific name |
+| `GE_Init_TestKnightHealth` | `GE_Init_PaladinHealth` | Health initialization |
+| `/Game/Characters/TestKnights/` | `/Game/Characters/Paladin/` | Folder Structure – Model for future class folders (Task #7): `/Game/Characters/Berserker/`) |
 
-Zusätzlich: Albion-Team/-Farbe über Lyras vorhandenes Team-System zuweisen – sinnvoll jetzt, weil Task #7 ohnehin zwei unterscheidbare Teams braucht.
+In addition: Assign Albion team/color via Lyra’s existing team system – useful now because Task #7 needs two distinguishable teams anyway.
 
 ## Status
 
-🟡 Design-Referenz, noch keine Implementierung. Feinschliff (konkrete Fähigkeiten, Werte, Cooldowns) folgt bei der Umsetzung von Task #6/#7. 5-Klassen-Zielbild pro Fraktion (2026-07-21) ist reine Vormerkung für die Endversion, ändert nichts an der aktuellen Nicht-jetzt-Grenze.
+🟡 Design reference, no implementation yet. Fine-tuning (concrete capabilities, values, cooldowns) follows when implementing Task #6/#7. 5-class target image per faction (2026-07-21) is pure pre-allocation for the final version, does not change the current non-now boundary.

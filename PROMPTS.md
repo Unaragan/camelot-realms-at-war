@@ -1,68 +1,68 @@
 > **Archived prompt examples.** These prompts assume older tools and project structures. Use [AGENTS.md](AGENTS.md) and [Developer Setup](SETUP.md) for the current workflow.
 
-# Prompt-Vorlagen
+# Prompt template
 
-Wiederverwendbare Prompts – zwei Kategorien: **Terminal-Claude-Code** (MCP-verbunden mit dem Unreal Editor, für Editor-Aktionen) und **Copilot** (Content-Generierung wie Quest-/Dialogtexte, kein Editor-Zugriff nötig). Nicht jede Kleinanweisung – nur Muster, die wiederholt gebraucht werden, damit sie nicht bei jeder Nutzung neu erfunden werden müssen.
+Reusable prompts – two categories: **Terminal Claude code** (MCP-connected to the Unreal Editor, for editor actions) and **Co-pilot** (Content generation like quest/dialog texts, no editor access required.) Not every small statement — just patterns that are used repeatedly so they don't have to be reinvented every time they're used.
 
-## Terminal-Claude-Code (Unreal-MCP)
+## Terminal Claude Code (Unreal-MCP)
 
-## Kampf-Charakter mit GAS-Fähigkeiten (Lyra-Basis)
+## Combat Character with GAS Abilities (Lyra Base)
 
-Verwendet für: erste Ritter-Testcharaktere (POC, verworfen), Neuaufbau nach Lyra-Umstieg (Task #6), Vorlage für Task #7 (weitere Klassen).
+Used for: First Knight Test Characters (POC, discarded), Rebuild after Lyra Switch (Task #6), Template for Task #7 (other classes).
 
-> "Wir bauen auf der Lyra-Basis. Erstelle zwei kämpfende [Rollen]-Testcharaktere als Blueprint-Unterklassen von Lyras bestehenden GAS-/Charakter-Klassen (kein neuer C++-Code) – nutze wo möglich Lyras vorhandenes Ability-System-Framework statt eigener Attribute-Sets von Grund auf. Je [X] Health. Zwei Fähigkeiten: Angriff 1 fügt dem Ziel [X] Schaden zu; Angriff 2 fügt [X] Schaden zu und heilt den Angreifer um [X] Punkte. Beide nutzen einen modularen, wiederverwendbaren GameplayEffect mit Set-by-Caller-Magnitude statt eigener Effekte pro Fähigkeit. Zusätzlich: serverseitiger Winkel-Check zwischen Blickrichtung des Ziels und Position des Angreifers – liegt der Angreifer innerhalb eines ca. 120°-Kegels hinter dem Ziel, wird nur der Schadensanteil verdoppelt (Heilung bleibt unverändert). Platziere beide [Rollen] so, dass sie sich gegenseitig angreifen können, und teste per PIE."
+> "We're building on the Lyra base." [Rollers]Test characters as blueprint subclasses of Lyra’s existing GAS/character classes (not a new C++ code) – where possible, use Lyra’s existing Ability System framework from scratch instead of own attribute sets. [X] Health. Two abilities: Attack 1 adds to the target [X] Damage to; Attack 2 adds [X] Damage and heal the attacker [X] Both use a modular, reusable GameplayEffect with set-by-caller magnitude instead of their own effects per ability. In addition: server-side angle check between target's viewing direction and attacker's position - if the attacker is within a 120° cone behind the target, only the damage portion is doubled (healing remains unchanged). [Rollers] so that they can attack each other, and test by PIE.
 
-**Anpassbare Platzhalter:** `[Rollen]` (z. B. Ritter/Paladin/Berserker aus CLASSES.md), `[X]` Health/Schaden/Heilung-Werte aus SYSTEMS.md.
+**Adaptable placeholders:** `[Rollen]` (e.g. Knight/Paladin/Berserker from CLASSES.md), `[X]` Health/Damage/Curing Values from SYSTEMS.md.
 
-## Tod & Respawn (Lyra-Basis)
+## Tod & Respawn (Lyra Base)
 
-Verwendet für: Task #6, Tod/Respawn-Handling für die TestKnight-Charaktere. Design-Hintergrund: [SYSTEMS.md](SYSTEMS.md) → "2e. Tod & Respawn-Handling".
+Used for: Task #6, Death/Respawn handling for the TestKnight characters. [SYSTEMS.md](SYSTEMS.md) → "2e. Tod & Respawn-Handling".
 
-> "Prüfe zuerst, ob `BP_TestKnight` bereits eine `ULyraHealthComponent` besitzt. Falls nicht, ergänze sie – Lyras `LyraHealthSet` löst bereits ein `OnOutOfHealth`-Delegate aus, sobald Health auf 0 fällt, das übernimmt die komplette Tod-Sequenz (State-Tags, `GA_Hero_Death`-Ability für Ragdoll/Deaktivierung) automatisch, kein neuer Code nötig. Richte danach Respawn ein: [X] Sekunden Verzögerung nach dem Tod, Respawn an der ursprünglich platzierten Position (kein Team-Spawnsystem, das kommt erst mit der Battleground-Map), volle Health, keine übrig gebliebenen State-Tags/Cooldowns. Prüfe, ob die Gegner-Ziel-Findung aus `BeginPlay` beim Respawn erneut ausgelöst werden muss. Teste per PIE: Ritter im Duell bis zum Tod kämpfen lassen, Tod-Sequenz (Ragdoll/Deaktivierung) und Respawn nach Ablauf des Timers beobachten."
+> "First, check if there's a problem." `BP_TestKnight` already one `ULyraHealthComponent` If not, supplement them. – Lyras `LyraHealthSet` Already solves a `OnOutOfHealth`-Delegates from, as soon as Health falls to 0, this takes over the complete death sequence (state tags, `GA_Hero_Death`-Ability for Ragdoll/Deactivation) automatically, no new code required. [X] Seconds of delay after death, respawn to the original position (not a team spawn system that comes with the Battleground map), full health, no leftover state tags/cooldowns. `BeginPlay` Test by PIE: make knights fight to the death in a duel, watch death sequence (Ragdoll/Deactivation) and Respawn after the timer expires.
 
-**Anpassbare Platzhalter:** `[X]` Respawn-Delay in Sekunden (Vorschlag: 5).
+**Adaptable placeholders:** `[X]` Respawn delay in seconds (suggestion: 5).
 
-## Umbenennung TestKnight → Paladin (Task #6 Abschluss)
+## Renaming TestKnight → Paladin (Task #6 Completion)
 
-Verwendet für: Task #6 finalisieren. Mapping-Tabelle: [CLASSES.md](CLASSES.md) → "TestKnight → Paladin: Umbenennungs-Mapping".
+Used for: Finalize Task #6. [CLASSES.md](CLASSES.md) → "TestKnight → Paladin: renaming mapping".
 
-> "Benenne die TestKnight-Prototyp-Assets unter `/Game/Characters/TestKnights/` gemäß Mapping-Tabelle in CLASSES.md zur finalen Paladin-Klasse um: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`. Verschiebe die Assets nach `/Game/Characters/Paladin/`. Werte (250 Health, 25/15 Schaden) unverändert lassen – reine Umbenennung, keine Balance-Änderung. Weise beiden platzierten Instanzen zusätzlich Albion als Team über Lyras vorhandenes Team-System zu (Team-Farbe sichtbar). Prüfe nach der Umbenennung alle internen Referenzen (Blueprint-Reparent, Asset-Referenzen in BeginPlay/Grant-Ability-Logik) und teste per PIE erneut das komplette Duell inkl. Tod/Respawn, um sicherzustellen, dass nichts durch die Umbenennung gebrochen ist."
+> "Name the TestKnight prototype assets under" `/Game/Characters/TestKnights/` in accordance with the mapping table in CLASSES.md to the final paladin class: `BP_TestKnight` → `BP_Paladin`, `GA_TestKnight_MeleeBase` → `GA_Paladin_MeleeBase`, `GA_Attack1` → `GA_Paladin_Strike`, `GA_Attack2` → `GA_Paladin_LayOnHands`, `GE_Init_TestKnightHealth` → `GE_Init_PaladinHealth`Move the assets `/Game/Characters/Paladin/`Leave values (250 Health, 25/15 Damage) unchanged – pure renaming, no balance change. Add Albion as a team to both placed instances via Lyra’s existing team system (team color visible). After renaming, check all internal references (blueprint repair, asset references in BeginPlay/Grant Ability logic) and test the complete duel including death/respawn again via PIE to ensure that nothing is broken by the renaming.
 
-## Startup-Map setzen (statt Lyras Standard-Frontend) — historisch, gelöst seit ShooterCore-Deaktivierung
+## Setting Startup Map (instead of Lyra’s standard frontend) — historical, solved since ShooterCore deactivation
 
-**Status (2026-07-22): erledigt.** Seit die ShooterCore-Plugin-Familie komplett deaktiviert wurde (siehe SETUP.md) und `/Game/Maps/L_PaladinTest` als eigenes Testlevel existiert, zeigen `GameDefaultMap`/`EditorStartupMap` in `Config/DefaultEngine.ini` korrekt darauf. Dieser Prompt bleibt nur als Referenz für das damalige Symptom/die Lösung stehen.
+**Status (2026-07-22): done.** Since the ShooterCore plugin family has been completely deactivated (see SETUP.md) and `/Game/Maps/L_PaladinTest` exists as its own test level, show `GameDefaultMap`/`EditorStartupMap` in `Config/DefaultEngine.ini` This prompt remains only as a reference for the symptom/solution at that time.
 
-Verwendet für (historisch): Play startete standardmäßig Lyras eigenes Frontend/Default-Game statt unserer Testkarte.
+Used for (historical): Play launched Lyra’s own frontend/default game by default instead of our test card.
 
 > "The editor is opening Lyra's default showcase hub level (L_DefaultEditorOverview) on startup instead of our test level. Fix both settings: (1) Project Settings → Maps & Modes → set 'Editor Startup Map' and 'Game Default Map' to `/ShooterTests/Maps/L_ShooterTest_Basic`. (2) Editor Preferences → General → Loading & Saving → 'Load Level at Startup' → set to 'Editor Startup Map' (not 'Last Opened Level' or similar) so it actually respects setting (1). Confirm by fully closing and reopening the editor — it should open directly into `L_ShooterTest_Basic` with both Paladin instances, not the Lyra showcase hub."
 
-**Hinweis:** `[Levelpfad]` ggf. anpassen, falls ein anderer Testlevel als `L_ShooterTest_Basic` aktuell in Benutzung ist (siehe SYSTEMS.md → Referenzimplementierung). Beide Einstellungen (Project Settings *und* Editor Preferences) sind nötig — Erkenntnis vom 2026-07-22: Project Settings allein reichte nicht, Lyras eigene "Default Editor Overview"-Hub-Map öffnete sich trotzdem, mit einem eingeblendeten Hinweis im Level selbst auf genau diese zwei Stellen.
+**Note:** `[Levelpfad]` Adjust if necessary if a different test level than `L_ShooterTest_Basic` is currently in use (see SYSTEMS.md → Reference Implementation). *and* Editor Preferences are needed — Insight from 2026-07-22: Project Settings alone was not enough, Lyra’s own “Default Editor Overview” hub map opened anyway, with a faded hint in the level itself to exactly these two digits.
 
-## Albion-Team + Farbe zuweisen (Task #6 Abschluss)
+## Albion Team + Assign Color (Task #6 Completion)
 
-Verwendet für: letzter offener Punkt aus der TestKnight→Paladin-Umbenennung. Voraussetzung: `RealmTeamStatics` (C++-Wrapper um `ULyraTeamSubsystem::ChangeTeamForActor`) ist kompiliert, siehe [SYSTEMS.md](SYSTEMS.md) → Abschnitt 2d.
+Used for: last open point from the TestKnight→Paladin renaming. `RealmTeamStatics` (C++ wrapper) `ULyraTeamSubsystem::ChangeTeamForActor`is compiled, see [SYSTEMS.md](SYSTEMS.md) → Section 2d.
 
-> "Verdrahte die Albion-Team-Zuweisung in `BP_Paladin`s `BeginPlay`: nach einem `Switch Has Authority`-Node ausschließlich im Authority-Zweig `AssignTeam(Actor=Self, TeamId=0)` aus `RealmTeamStatics` aufrufen — zwingend, da `ChangeTeamForActor` selbst keine Authority prüft, sonst würden auch Clients `SetGenericTeamId` lokal aufrufen. Danach eine einfache sichtbare Material-Einfärbung für Team 0/Albion ergänzen (Karminrot laut README-Fraktionsfarben) — per dynamischer Material-Instance, ausgelöst entweder über `OnTeamIndexChangedDelegate` oder direkt im Anschluss an den `AssignTeam`-Aufruf. Teste per PIE: Team-Zugehörigkeit ist sichtbar (Farbe bzw. Print-Ausgabe), und bestätige, dass der Aufruf nur serverseitig passiert."
+> "Wire the Albion team assignment in" `BP_Paladin`s `BeginPlay`: after one `Switch Has Authority`-Node exclusively in the authority branch `AssignTeam(Actor=Self, TeamId=0)` Excl. `RealmTeamStatics` Call – mandatory, since `ChangeTeamForActor` no authority checks, otherwise clients would also `SetGenericTeamId` Call locally, then add a simple visible material coloring for Team 0/Albion (Carmine red according to README fraction colors) — by dynamic material instance, triggered either via `OnTeamIndexChangedDelegate` or immediately following the `AssignTeam`Call. Test by PIE: Team membership is visible (color or print output) and confirm that the call is only on the server side.
 
-## Beleuchtung bauen (schwarzer Spiel-Viewport)
+## Build lighting (black game viewport)
 
-> "Baue die Beleuchtung für das aktuelle Level ([Levelname])."
+> "Build the lighting for the current level" ([Level name])."
 
-Nötig nach jedem neuen/geänderten Level, wenn Lumen deaktiviert ist (siehe CLAUDE.md) und der Play-Viewport schwarz bleibt.
+Necessary after each new/changed level, if Lumen is disabled (see CLAUDE.md) and the Play-Viewport remains black.
 
-## Copilot (Content-Generierung)
+## Copilot (content generation)
 
-Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – siehe [README.md](README.md) → "Werkzeug-Aufteilung: Copilot vs. Claude". Claude Code hat keinen direkten Zugriff auf Copilot (kein MCP, IDE-Tippen ist ohnehin blockiert) – diese Prompts müssen manuell eingefügt werden.
+For text/dialog content that Copilot generates directly in the editor or chat – see [README.md](README.md) → "Tool split: Copilot vs. Claude". Claude Code does not have direct access to Copilot (no MCP, IDE typing is blocked anyway) - these prompts must be inserted manually.
 
-**Wichtig:** Diese Datei enthält nur die **Anfrage-Vorlagen** (Prompts), nicht die generierten Ergebnisse. Fertiger Quest-Content plus Umsetzungsstand im Spiel lebt in [Docs/Design/Quests.md](Docs/Design/Quests.md) – dort auch der Master-Index aller Quest-IDs (AEQ, FNQ).
+**Important:** This file contains only the **Request templates** (Prompts), not the generated results. Finished quest content plus implementation status in the game lives in [Docs/Design/Quests.md](Docs/Design/Quests.md) – there is also the master index of all Quest IDs (AEQ, FNQ).
 
 ### Beispiel-Questline Albion: Lord Ector → Burgvogt Kay (AEQ-01 bis AEQ-03, 2026-07-21)
 
-3-teilige Kette, Beispiel-Content passend zu den Quest-Hooks aus [NPC_NAMES.md](NPC_NAMES.md) → "Grundkonflikt-Vorschlag". Eskalation Diplomatie (Ector) → Mobilisierung (Kay), endet mit Übergang Richtung Grenze/Battleground. Ausgabe bewusst auf Englisch angefordert (FText-Quellsprache laut CLAUDE.md). Ergebnisse: siehe [Quests.md](Docs/Design/Quests.md) → AEQ-01/02/03.
+3-piece chain, sample content matching the quest hooks [NPC_NAMES.md](NPC_NAMES.md) → "Basic Conflict Proposal". Escalation Diplomacy (Ector) → Mobilization (Kay), ends with transition to border/battleground. Edition deliberately requested in English (FText source language according to CLAUDE.md). [Quests.md](Docs/Design/Quests.md) AEQ-01/02/03.
 
-**Quest 1 – Vermisste Grenzkundschafter:**
+**Quest 1 – Missing Border Explorers:**
 
-> "You are writing content for 'Camelot: Realms at War', a toon-styled 3-faction RvR fantasy game (spiritual successor to Dark Age of Camelot, but with no DAOC-specific names/lore reused — only generic medieval-English/Arthurian-inspired flavor). Write the FIRST quest of a 3-part questline for the Albion faction, given by the castle lord 'Lord Ector' (dutiful, patient, traditionalist, protective of his people).
+> "You are writing content for 'Camelot: Realms at War', a toon-styled 3-faction RvR fantasy game (spiritual successor to Dark Age of Camelot, but with no DAOC-specific names/lore reused — only generic medieval-English/Arthurian-inspired flavor).
 >
 > Quest premise: several border scouts near the frontier with the rival realms have gone missing; Ector asks the player to investigate.
 >
@@ -75,9 +75,9 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 >
 > Keep the tone grounded/medieval, not high-fantasy melodrama. No mention of Dark Age of Camelot or DAOC-specific proper nouns."
 
-**Quest 2 – Beweise für einen gezielten Übergriff:**
+**Quest 2 – Evidence of Targeted Assault:**
 
-> "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, Lord Ector as quest giver, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the SECOND quest of the 3-part chain, following directly from a quest where the player investigated missing border scouts.
+> "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, Lord Ector as quest giver, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names).
 >
 > Quest premise: while searching, the player found physical evidence suggesting the scouts' disappearance was not an accident but a deliberate incursion by a rival realm (generic signs — a broken banner, foreign tracks, a discarded weapon of foreign make; keep the responsible realm a to-be-revealed mystery for now, don't lock in Midgard or Hibernia specifics yet). The player must bring this evidence back to Lord Ector, who grows concerned and decides the matter needs his military commander's attention.
 >
@@ -88,7 +88,7 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 > - Dialogue from Ector reacting to the evidence (4-5 lines, shift from calm to genuine concern)
 > - A short closing line where Ector says he's sending the player to his military commander, 'Burgvogt Kay', to decide next steps — this is the handoff into quest 3."
 
-**Quest 3 – Mobilisierung / Grenzpatrouille:**
+**Quest 3 – Mobilization / Border Patrol:**
 
 > "Continuing the same questline for 'Camelot: Realms at War' (Albion faction, toon-styled 3-faction RvR fantasy game, generic medieval-English/Arthurian flavor, no DAOC-specific names). Write the THIRD and final quest of the 3-part chain. The quest giver is now 'Burgvogt Kay', Albion's military commander — more impatient and action-oriented than Lord Ector, eager to respond decisively.
 >
@@ -103,4 +103,4 @@ Für Text-/Dialog-Content, den Copilot direkt im Editor oder Chat erzeugt – si
 
 ## Status
 
-🟡 Zuletzt erweitert 2026-07-21 (Copilot-Kategorie ergänzt) – wird bei Bedarf um weitere wiederverwendbare Muster ergänzt (z. B. Battleground-Grayboxing, Vegetation platzieren), nicht rückwirkend für jede Einzelanweisung.
+🟡 Recently expanded 2026-07-21 (copilot category added) – will be supplemented with additional reusable patterns (e.g. battleground greyboxing, vegetation placement) if necessary, not retroactively for each individual statement.

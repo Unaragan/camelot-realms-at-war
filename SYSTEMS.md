@@ -1,46 +1,46 @@
-# Gameplay-Systeme: Vorausplanung (Skills, Passive Werte, GUI)
+# Gameplay systems: Pre-planning (Skills, Passive Values, GUI)
 
-Design-Referenz, damit Fähigkeiten, Charakterwerte und HUD von Anfang an daten-getrieben sind – neue Klasse/Fähigkeit später heißt "neue DataTable-Zeile", nicht "neuer Code". Baut auf GAS (Gameplay Ability System) auf, siehe Tech-Stack in README.md.
+Design reference so that skills, character values and HUD are data-driven from the start – new class/ability later is called "new DataTable line", not "new code".
 
-## Grundprinzip
+## Basic principle
 
-Alles, was sich zwischen Klassen/Fähigkeiten unterscheidet, liegt in DataTables – nicht in Blueprint-Verzweigungen oder C++-Sonderfällen pro Klasse. Eine neue Fähigkeit anzulegen sollte bedeuten: neue Zeile in der Ability-Tabelle ausfüllen, keine neue Klasse programmieren.
+Everything that differs between classes/skills is in DataTables – not in Blueprint branches or C++ special cases per class. Creating a new ability should mean filling in a new row in the Ability table, not programming a new class.
 
-## 1. Passive Werte (GAS Attribute Set)
+## Passive Values (GAS Attribute Set)
 
-**Für den Vertical Slice reicht ein schlankes Set:**
+**For the Vertical Slice, a slim set is enough:**
 
-| Attribut | Zweck |
+| Attribute | Purpose |
 |---|---|
-| Health | Lebenspunkte |
-| Resource | Generischer Ressourcentyp (Mana/Ausdauer/etc. – pro Klasse später reflavored, technisch derselbe Attributtyp) |
-| Damage | Basis-Schadenswert |
-| Armor | Basis-Rüstung/Schadensreduktion |
+| Health | Life Points |
+| Resources | Generic resource type (mana/endurance/etc. – later reflavored per class, technically the same attribute type) |
+| Damage | Base damage value |
+| Armor | Basic armor/damage reduction |
 
-Bewusst **nicht** jetzt: Krit-Chance, Ausweichen, Elementarresistenzen, Itemization-Boni – das ist Teil der "Nicht-jetzt: tiefe Itemization" aus der README. GAS-Attribute-Sets sind aber von Natur aus erweiterbar, das lässt sich später ohne Umbau nachrüsten.
+Consciously **not** Now: critical hit chance, Dodge, Elemental Resistances, Itemization Bonuses – this is part of the "Not Now: Deep Itemization" from the README. GAS attribute sets, however, can be extended by nature, which can be retrofitted later without remodeling.
 
-**Start-Werte pro Klasse** als eigene DataTable (`FCharacterClassData`, bereits im Art-Stil-Abschnitt der README angedacht): Spalten für Fraktion, Basis-Health, Basis-Resource, Basis-Damage, Basis-Armor. Bewusste Asymmetrie zwischen den Klassen aus CLASSES.md (z. B. Berserker hohe Health/Damage, Wizard niedrige Health/hoher Resource-Pool).
+**Starting values per class** as its own DataTable (`FCharacterClassData`). Columns for fraction, basic health, basic resource, basic damage, basic armor. Conscious asymmetry between the classes from CLASSES.md (e.g. Berserker high health/damage, wizard low health/high resource pool).
 
-## 2. Fähigkeiten (Skills)
+## Skills (Skills)
 
-**DataTable-Schema-Vorschlag** (eine Zeile = eine Fähigkeit):
+**DataTable scheme proposal** (one row = one ability):
 
-| Spalte | Typ | Zweck |
+| Column | Type | Purpose |
 |---|---|---|
-| AbilityID | Name | Eindeutiger Schlüssel |
-| DisplayName | FText | Anzeigename (lokalisiert, siehe Lokalisierungs-Regel) |
-| Description | FText | Tooltip-Text (lokalisiert) |
-| Icon | Soft-Objekt-Referenz | UI-Icon |
-| Cooldown | float | Sekunden |
-| ResourceCost | float | Kosten in Resource-Attribut |
-| CastTime | float | 0 = instant |
-| GameplayEffectClass | Klassen-Referenz | Welcher modulare Effekt ausgelöst wird (siehe unten) |
-| GameplayTags | Gameplay-Tag-Container | Kategorisierung (siehe Taxonomie unten) |
-| AnimationMontage | Soft-Objekt-Referenz | Abspielanimation |
+| AbilityID | Name | Unique key |
+| DisplayName | FText | Display name (localized, see localization rule) |
+| Description | FText | Tooltip text (localized) |
+| icon | Soft object reference | UI-icon |
+| Cooldown | Float | Seconds |
+| ResourceCost | Float | Costs in resource attribute |
+| Casttime | Float | 0 = instant |
+| GameplayEffectClass | Class reference | Which modular effect is triggered (see below) |
+| Gameplay Tags | Gameplay tag containers | Categorization (see taxonomy below) |
+| AnimationMontage | Soft object reference | Playback animation |
 
-**Modulare GameplayEffects statt Einzel-Assets pro Fähigkeit:** Ein generischer `GE_InstantDamage` mit Set-by-Caller-Magnitude (Zahl wird zur Laufzeit von der Fähigkeit übergeben) deckt viele Schadensfähigkeiten ab, statt für jede Fähigkeit einen eigenen GameplayEffect anzulegen. Genauso `GE_InstantHeal`, `GE_ApplyBuff`, `GE_ApplyDebuff` als wiederverwendbare Bausteine. Hält die Anzahl der Assets klein, während das Klassenroster wächst.
+**Modular GameplayEffects instead of single assets per ability:** A generic `GE_InstantDamage` With set-by-caller magnitude (number is passed by the ability at runtime) covers many damage abilities instead of creating its own gameplay effect for each ability. `GE_InstantHeal`, `GE_ApplyBuff`, `GE_ApplyDebuff` Keeps the number of assets small as the class roster grows.
 
-**Gameplay-Tag-Taxonomie (Startvorschlag):**
+**Gameplay Tag Taxonomy (Starting Suggestion):**
 
 ```
 Ability.Damage.Melee
@@ -55,67 +55,67 @@ State.Stunned
 State.Silenced
 ```
 
-Tags treiben in GAS Aktivierungssperren, Cooldown-Tracking und CC-Zustände – von Anfang an eine konsistente Hierarchie zu nutzen (statt ad-hoc benannter Tags pro Fähigkeit) spart später viel Aufräumarbeit.
+Drive tags in GAS activation locks, cool-down tracking and CC states – using a consistent hierarchy from the start (rather than ad-hoc tags per ability) saves a lot of cleanup work later.
 
-## 2b. Fähigkeiten-Umfang & Progression (DAOC-/MMO-Erfahrungswert)
+## Capacity Scope & Progression (DAOC/MMO Experience Value)
 
-- **Harte Slot-Grenze:** 2 aktive Hotbars à 10 Felder = maximal 20 aktive Fähigkeiten gleichzeitig verfügbar. Das begrenzt bewusst, wie viele Fähigkeiten pro Klasse überhaupt sinnvoll sind – lieber wenige, gut ausbalancierte Fähigkeiten als eine wachsende Fähigkeitenflut.
-- **Progression bevorzugt Skalierung bestehender Fähigkeiten** mit Levelanstieg (Schaden/Cooldown/Reichweite verbessern sich) statt ständig neue Fähigkeiten freizuschalten. Technisch: GAS-Modifier-Magnitude über eine Curve-Table, skaliert mit Charakterlevel – keine separate DataTable-Zeile pro Levelstufe.
-- **Skill-Tree/Talente:** begrenzte Auswahlpunkte (Spieler wählt zwischen wenigen Spezialisierungs-Optionen bei bestimmten Levelstufen), kein sprawling Talentbaum. Eigene schlanke Talent-Tabelle: eine Zeile pro Wahlpunkt mit 2-3 Optionen, keine tiefe Verzweigung.
-- **Crafting-UI:** separat und später (siehe Nicht-jetzt-Liste: Crafting) – entweder eigene Leiste oder direkt aus der Rezeptliste. Keine Festlegung jetzt nötig, nur als bekannter offener Punkt vermerkt.
+- **Hard slot border:** 2 active hotbars of 10 fields = a maximum of 20 active abilities available at the same time. This deliberately limits how many abilities per class make sense at all - rather few, well-balanced abilities than a growing flood of abilities.
+- **Progression Prefers Scaling of Existing Skills** with level increase (damage/cooldown/range improve) instead of constantly unlocking new abilities. technical: GAS modifier magnitude via a curve table, scaled with character level – no separate DataTable line per level level.
+- **Skill tree/talents:** limited selection points (player chooses between few specialization options at certain levels), no sprawling talent tree. Own slim talent table: one line per choice point with 2-3 options, no deep branch.
+- **Crafting UI:** separately and later (see not-now list: Crafting) - either own bar or directly from the recipe list.
 
-## 2c. Positionsabhängiger Schaden (Rückenangriff)
+## 2 c. Position-dependent damage (back attack)
 
-Angriffe von hinten verursachen doppelten Schaden – als wiederverwendbare Mechanik, nicht nur für einzelne Fähigkeiten. Technisch: Winkel-Check zwischen der Blickrichtung des Ziels und der Position des Angreifers zum Aktivierungszeitpunkt (z. B. Angreifer innerhalb eines ~120°-Kegels hinter dem Ziel = Rückenangriff). **Serverseitig auswerten**, nicht clientseitig – sonst leicht manipulierbar. Nur der Schadensanteil verdoppelt sich, nicht Heilungsanteile bei Hybrid-Fähigkeiten.
+Attacks from behind cause double damage – as a reusable mechanic, not just for individual abilities. Technically: Angle check between the target’s gaze direction and the attacker’s position at the activation time (e.g. attacker within a ~120° cone behind the target = back attack). **Evaluation on the server side**, not client-side - otherwise easily manipulated. Only the damage portion doubles, not healing portions in hybrid capabilities.
 
-## 2d. Tod & Respawn-Handling
+## Death and Respawn-Handling
 
-**Grundsatz:** kein neuer eigener Code wo vermeidbar — vorhandene Engine-/Framework-Bausteine wiederverwenden statt selbst zu bauen (siehe CLAUDE.md, "Blueprint-first").
+**Principle:** no new own code where avoidable — reuse existing engine/framework building blocks instead of building them (see CLAUDE.md, "Blueprint-first").
 
-**Zu klären für den Third-Person-Template-Aufbau:** das Template bringt kein fertiges Tod/Respawn-System mit (anders als Lyra). AttributeSet mit `OnOutOfHealth`-artigem Delegate, Death-Ability und Respawn-Timing/Spawnpunkt-Logik müssen manuell auf Basis des selbst gebauten GAS-Grundgerüsts entstehen (siehe README "Architekturwechsel"). Frühere, Lyra-spezifische Implementierungsdetails und Testergebnisse: [Archive.md](Archive.md) — als Referenz, welche Fallstricke (z. B. Ziel-Findung bei Respawn, `RespawnDelaySeconds`-Instanz-Default-Falle) generisch wiederkehren können.
+**To be clarified for the third-person template structure:** the template does not bring a finished death/respawn system (unlike Lyra). AttributeSet `OnOutOfHealth`Delegate, Death Ability and Respawn Timing/Spawn Point logic must be created manually on the basis of the self-built GAS framework (see README "Architectural Change"). [Archive.md](Archive.md) — as a reference, which pitfalls (e.g. target finding at respawn), `RespawnDelaySeconds`-Instance-Default-Trap) can recur generically.
 
-**Bewusst nicht jetzt:** Fraktions-Spawnpunkte, Respawn-Wellen/-Timer-UI, Tod-Statistiken/Killfeed – das ist Battleground-Scope (Task #8), hier geht es nur um funktionierendes Tod/Respawn am aktuellen Testcharakter.
+**Consciously not now:** Faction spawn points, respawn waves/timer UI, death statistics/killfeed – this is Battleground Scope (task #8), this is only about working death/respawn on the current test character.
 
-## Referenzimplementierungen (Lyra-Ära, archiviert)
+## Reference implementations (Lyra era, archived)
 
-Die früheren Kampfsystem-Prototypen (Ritter-Prototyp vor Lyra, `BP_TestKnight` auf Lyra-Basis, `BP_Paladin` als Lyra-Experience inkl. der Animation-Diagnose, die zum Architekturwechsel führte) sind nach [Archive.md](Archive.md) ausgelagert — nicht mehr direkt anwendbar, da Lyra-spezifisch, aber als Referenz für generische GAS-Lehren (Set-by-Caller-Muster, Rückenangriff-Winkel-Check, Timing-Fallstricke bei BeginPlay vs. Possession) nützlich.
+The earlier combat system prototypes (knight prototype before Lyra, `BP_TestKnight` Lyra-based, `BP_Paladin` as a lyra experience including the animation diagnosis that led to the change of architecture [Archive.md](Archive.md) outsourced — no longer directly applicable as Lyra-specific, but useful as a reference for generic GAS teachings (set-by-caller pattern, back attack angle check, timing pitfalls at BeginPlay vs. Possession).
 
-## 3. Quests (Datenschema-Vorschlag)
+## Quests (Data Scheme Proposal)
 
-Analog zum Fähigkeiten-Schema in Abschnitt 2: eine Quest anzulegen soll "neue DataTable-Zeile" heißen, kein neuer Code. Der eigentliche Quest-**Inhalt** (Texte, Story, Umsetzungsstand) lebt in [Docs/Design/Quests.md](Docs/Design/Quests.md) – hier nur das technische Schema, nach dem er später ins Spiel eingepflegt wird.
+Similar to the skill scheme in Section 2: Create a quest to be called "new DataTable line," not new code.**Content** (texts, story, implementation status) lives in [Docs/Design/Quests.md](Docs/Design/Quests.md) – here only the technical scheme, according to which he is later entered into the game.
 
-**DataTable-Schema-Vorschlag** (eine Zeile = eine Quest):
+**DataTable scheme proposal** (one line = one quest):
 
-| Spalte | Typ | Zweck |
+| Column | Type | Purpose |
 |---|---|---|
-| QuestID | Name | Eindeutiger Schlüssel (z. B. `AEQ-01`, siehe Quests.md-Konvention) |
-| DisplayName | FText | Questtitel (lokalisiert) |
-| Description | FText | Questlog-Beschreibung (lokalisiert) |
-| GiverNPC | Objekt-Referenz | Welcher NPC-Blueprint vergibt die Quest |
-| Objectives | Array\<FText\> | Zielschritte (lokalisiert) |
-| PrerequisiteQuestID | Name | Ketten-Voraussetzung, leer = keine |
-| RequiresGroup | bool | Solo vs. Gruppenpflicht (siehe Albion-Epic-Questline-Stufen mit Gruppenzwang) |
-| MinLevel | int | Level-Empfehlung |
-| RewardID | Objekt-Referenz | Platzhalter-Referenz, bis ein echtes Itemization-System existiert (Nicht-jetzt-Liste) |
-| DialogueOpening / DialogueClosing | FText | Dialogzeilen (lokalisiert) |
+| QuestID | Name | Unique key (e.g. `AEQ-01`, see Quests.md Convention |
+| DisplayName | FText | Quest title (localized) |
+| Description | FText | Questlog description (localized) |
+| GiverNPC | Object reference | Which NPC blueprint awards the quest |
+| Objectives | Array<FText\> | Goal steps (localized) |
+| PrerequisiteQuestID | Name | Chain prerequisite, empty = none |
+| RequirementsGroup | bool | Solo vs. Group Duty (see Albion Epic Questline Levels with Group Duty) |
+| Minlevel | int | Level recommendation |
+| Reward ID | Object reference | Placeholder reference until a real Itemization system exists (not-now list) |
+| DialogueOpening / DialogueClosing | FText | dialog lines (localized) |
 
-**Bewusst noch nicht entschieden:** ob Dialogzeilen direkt in der Quest-DataTable liegen oder in einer separaten Dialogue-Tabelle (bei mehrzeiligen Dialogen mit Verzweigungen sinnvoller) – relevant erst, wenn die ersten Quests aus Quests.md tatsächlich implementiert werden.
+**Consciously not yet decided:** Whether dialog lines are located directly in the Quest DataTable or in a separate dialogue table (more meaningful for multi-line dialogs with branches) – relevant only when the first quests from Quests.md are actually implemented.
 
-**Status:** reines Schema, noch keine Implementierung – kein Quest-System (DataTable, Dialog-UI, Objective-Tracking) existiert bisher im Projekt. Das ist selbst der wichtigste offene Punkt, bevor einzelne Quests aus Quests.md ins Spiel wandern können.
+**Status:** pure schema, no implementation yet – no quest system (DataTable, Dialog UI, Objective-Tracking) exists in the project so far. This is even the most important open point before individual quests from Quests.md can migrate into the game.
 
 ## 4. GUI (HUD)
 
-**Architekturprinzip:** UMG-Widgets binden sich an GAS-Attribute-Delegates (`OnAttributeChanged`), statt den Wert jeden Tick abzufragen – performanter und passt zum Performance-Grundsatz aus der README. MVVM-Pattern (Model-View-ViewModel, in UE5 nativ über UMG Viewmodels unterstützt) entkoppelt UI-Widgets von der Gameplay-Logik – wichtig, damit später der Art-Stil-Wechsel (Platzhalter → finale Art) die UI nicht mit umbauen muss.
+**Architectural principle:** UMG widgets bind to GAS attribute delegates`OnAttributeChanged`), instead of querying the value of each tick – more performant and fits the performance principle from the README. MVVM patterns (Model-View-ViewModel, natively supported in UE5 via UMG Viewmodels) decouples UI widgets from the gameplay logic – important so that later the art-style change (placeholder → final art) does not have to rebuild the UI.
 
-**Minimale HUD-Elemente für den Vertical Slice** (Battleground, Task #8):
-- Health-/Resource-Balken (eigener Charakter)
-- Fähigkeiten-Leiste: 2 Hotbars à 10 Felder, Cooldown-Anzeige liest Icon/Cooldown direkt aus der Ability-DataTable (keine hartcodierte UI pro Fähigkeit)
-- Ziel-Anzeige (Health des anvisierten Gegners)
-- Fraktions-/Team-Kennzeichnung
-- RvR-Ziel-Status (Flaggenpunkt-Fortschritt)
+**Minimum HUD elements for the Vertical Slice** (Battleground, Task #8):
+- Health/resource bars (own character)
+- Ability bar: 2 hotbars of 10 fields, cooldown display reads icon/cooldown directly from the Ability DataTable (no hard-coded UI per ability)
+- Target indicator (Health of the targeted opponent)
+- Faction/team indicator
+- RvR target status (flag point progress)
 
-Bewusst **nicht** jetzt: Inventar-UI, Charakterbogen, Crafting-UI – folgt der Nicht-jetzt-Liste.
+Consciously **not** Now: Inventory UI, Character Arc, Crafting UI – follow the non-now list.
 
 ## Status
 
-🟡 Design-Referenz, noch keine Implementierung. Konkretisierung bei Umsetzung von Task #6 (erste Fähigkeit) und #9 (Toon-Artstyle/UI-Look).
+🟡 Design reference, not yet implemented. Concrete when implementing Task #6 (first ability) and #9 (toon-artstyle/UI-look).

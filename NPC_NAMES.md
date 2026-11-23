@@ -1,103 +1,103 @@
-# NPC-Namen (Design-Referenz)
+# NPC names (design reference)
 
-Namenspools pro Reich für Questgeber, Händler, Wachen und andere NPCs. Basiert auf echten historischen/mythologischen Namenstraditionen der jeweiligen Kultur (gemeinfrei, wie schon bei "Camelot"/Albion/Midgard/Hibernia selbst) — keine erfundenen DAOC-NPC-Namen übernommen.
+Name pools per realm for quest givers, traders, guards and other NPCs. Based on real historical/mythological name traditions of the respective culture (common, as already in "Camelot"/Albion/Midgard/Hibernia itself) - no invented DAOC NPC names adopted.
 
-## Rechtlicher Hinweis
+## Legal notice
 
-Wie bei Klassennamen (siehe CLASSES.md): historische/mythologische Eigennamen sind gemeinfrei. Eine Ausnahme: die **bekanntesten** Arthur-Sagen-Namen (Merlin, Arthur, Lancelot, Guinevere, Excalibur) wirken für gewöhnliche Füll-NPCs seltsam abgenutzt/deplatziert — besser für eine mögliche spätere Hauptstory-Figur aufheben, statt sie wahllos auf x-beliebige Questgeber zu verteilen. Für normale NPCs die unten stehenden, weniger bekannten Namen nutzen.
+As with class names (see CLASSES.md): historical/mythological proper names are in the public domain. **The most famous** Arthur-say names (Merlin, Arthur, Lancelot, Guinevere, Excalibur) seem strangely worn/deprecated for ordinary filling NPCs — better to pick up a possible later main story character instead of randomly distributing them to any x-questers.
 
-## Albion (arthurianisch/mittelalterlich-englisch)
+## Albion (arthurian/medieval-english)
 
-**Aus der Artus-Sage (weniger bekannte Figuren, gemeinfrei):**
+**From the Arthurian saga (lesser known figures, in the public domain):**
 Bedivere, Kay, Percival, Gawain, Ector, Pellinore, Elaine, Nimue, Igraine, Lynette, Tristan, Isolde, Gareth, Lamorak
 
-**Generische mittelalterlich-englische Namen:**
-- Männlich: Aldric, Cedric, Edmund, Godwin, Wulfric, Osric, Baldwin, Alaric, Leofric, Harold
+**Generic medieval English names:**
+- Male: Aldric, Cedric, Edmund, Godwin, Wulfric, Osric, Baldwin, Alaric, Leofric, Harold
 - Weiblich: Beatrice, Eleanor, Rosalind, Matilda, Millicent, Adelina, Winifred, Editha, Cwen, Alys
 
-## Midgard (nordisch)
+## Midgard (Nordic)
 
-**Aus der nordischen Mythologie (Nebenfiguren, gemeinfrei) — für besondere/einmalige NPCs, nicht inflationär:**
+**From Norse mythology (side characters, in the public domain) — for special/unique NPCs, not inflationary:**
 Bragi, Idun, Njord, Skadi, Vidar, Vili, Ve, Mimir, Sif
 
-**Generische altnordische Personennamen (historisch, nicht mythologisch — passend für gewöhnliche NPCs):**
-- Männlich: Bjorn, Ragnar, Gunnar, Erik, Ulf, Halvar, Sven, Torvald, Leif, Ingvar
+**Generic Old Norse personal names (historical, not mythological — suitable for ordinary NPCs):**
+- Male: Bjorn, Ragnar, Gunnar, Erik, Ulf, Halvar, Sven, Torvald, Leif, Ingvar
 - Weiblich: Ingrid, Astrid, Sigrid, Helga, Thora, Freydis, Runa, Signe, Gudrun, Solveig
 
-## Hibernia (keltisch/irisch)
+## Hibernia (Celtic/Irish)
 
-**Aus der keltischen Mythologie (Nebenfiguren, gemeinfrei) — für besondere/einmalige NPCs, nicht inflationär:**
+**From Celtic mythology (side figures, in the public domain) — for special/unique NPCs, not inflationary:**
 Aoife, Niamh, Oisín, Brigid, Lugh, Danu, Aengus, Fand, Etain
 
-**Generische gälische Namen (passend für gewöhnliche NPCs):**
-- Männlich: Aidan, Ronan, Cormac, Declan, Eamon, Cian, Fintan, Diarmuid, Tadhg, Ruairi
+**Generic Gaelic names (suitable for ordinary NPCs):**
+- Male: Aidan, Ronan, Cormac, Declan, Eamon, Cian, Fintan, Diarmuid, Tadhg, Ruairi
 - Weiblich: Aoibheann, Siobhan, Fionnuala, Saoirse, Brenna, Maeve, Orla, Niav, Ailbhe, Sorcha
 
-## Wichtige NPCs: Burgherren & Militärische Befehlshaber (Reichsführung)
+## Important NPCs: Burgherren & Military Commander (realm leadership)
 
-Pro Reich zwei benannte, wiederkehrende Führungsfiguren — bewusst aus dem oben reservierten "besondere/einmalige NPCs"-Pool der jeweiligen Mythologie gewählt (nicht aus den generischen Füll-Namen), da sie öfter in Quest-Dialogen auftauchen als gewöhnliche Questgeber. Trennung zwischen **Burgherr(in)** (politischer/adliger Besitzer der Reichsfeste) und **militärischer Befehlshaber(in)** (professioneller Verteidiger/Anführer) — historisch begründetes Muster (z. B. Lehnsherr vs. Burgvogt), erzeugt auch erzählerisch Reibung (Diplomatie vs. Konfrontation), die sich gut für Questlinien eignet.
+Per realm, two named recurring leaders — deliberately chosen from the "special/unique NPCs" pool of the respective mythology reserved above (not from the generic fill names), as they appear more often in quest dialogues than ordinary quest givers. **Burgherr(in)** (political/noble owner of the Reichsfeste) and **Military commander(s)** (professional defender/leader) — historically based pattern (e.g. lord vs. Burgvogt), also generates narrative friction (diplomacy vs. confrontation), which is well suited to quest lines.
 
 ### Albion
 
-| Rolle | Titel + Name | Charakter |
+| Role | Title + Name | Characteristic |
 |---|---|---|
-| Burgherr | Lord Ector | Bedächtig, pflichtbewusst, hält an Recht/Tradition fest — sieht den Reichsanspruch auf die zentrale Reliktburg als ererbtes Recht, nicht als Eroberung |
-| Militärischer Befehlshaber | Burgvogt Kay | Ungeduldiger als Ector, drängt auf entschlossenes Handeln, verwaltet Ausbildung und Verteidigung der Burg |
+| Castle owner | Lord Ector | Conscious, dutiful, adheres to right/tradition — sees the imperial claim to the central relic castle as an inherited right, not as a conquest |
+| Military Commander | Burgvot Kay | More impatient than Ector, urges decisive action, administers training and defense of the castle |
 
 ### Midgard
 
-| Rolle | Titel + Name | Charakter |
+| Role | Title + Name | Characteristic |
 |---|---|---|
-| Burgherrin | Jarl Skadi | Stolz, prüft Neuankömmlinge auf Tatkraft, bevor sie in der Halle Ansehen gewinnen — Ehre muss bewiesen werden, nicht behauptet |
-| Militärischer Befehlshaber | Hersir Vidar | Wortkarg, entschlossen, führt Raid-/Vorstoßtrupps an die Grenze — testet Rekruten direkt im Feld statt durch Zeremonie |
+| The castle owner | Jarl Skadi | Pride, test newcomers for energy before they gain prestige in the hall - honor must be proven, not claimed |
+| Military Commander | Hersir Vidar | Wordless, determined, leads raid/advance squads to the border — tests recruits directly in the field instead of through ceremony |
 
 ### Hibernia
 
-| Rolle | Titel + Name | Charakter |
+| Role | Title + Name | Characteristic |
 |---|---|---|
-| Burgherr | Rí Aengus | Sieht sich als Hüter, nicht Besitzer der Reliktstätte — Sorge gilt dem Gleichgewicht des Landes selbst (Waldsterben/schwindende Wardstein-Magie als wiederkehrendes Thema) |
-| Militärische Befehlshaberin | Ceann Cogaidh Aoife | Bildet Neulinge im hibernischen Scharmützel-/Guerillastil aus, prüft sie in kleinen Gefechten, bevor sie zur Grenzverteidigung zugelassen werden |
+| Castle owner | River Aengus | Sees itself as the custodian, not the owner of the relic site — care is given to the balance of the land itself (forest death/dwindling Wardstein magic as a recurring theme) |
+| Military Commander | Ceann Cogaidh Aoife | Train newcomers in the Hibernian skirmish/guerrilla style, test them in small battles before they are admitted to border defense |
 
-**Hinweis:** Ector/Kay, Skadi/Vidar, Aengus/Aoife gelten ab jetzt als reserviert für diese Reichsführungsrollen — nicht zusätzlich für beliebige Füll-NPCs wiederverwenden, um Verwechslung zu vermeiden.
+**Note:** Ector/Kay, Skadi/Vidar, Aengus/Aoife are now considered reserved for these realm leadership roles — not to be reused additionally for any filling NPCs in order to avoid confusion.
 
-## Grundkonflikt-Vorschlag (Basis für Questlinien)
+## Basic Conflict Proposal (Basic for Quest Lines)
 
-Anknüpfend an die zentrale "Relic Castle" aus [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md): alle drei Reiche erheben Anspruch auf dieselbe zentrale Reliktstätte, aber aus unterschiedlichen, reichstypischen Beweggründen — das liefert automatisch unterschiedlichen Ton pro Reichs-Questlinie, ohne dass die Reiche sich mechanisch unterscheiden müssen:
+Following the central "Relic Castle" [Docs/Design/OpenWorld_Frontier_3Realms_Vision.md](Docs/Design/OpenWorld_Frontier_3Realms_Vision.md): all three empires claim the same central relic site, but for different motives typical of the empire — this automatically delivers different sounds per realm questline, without the empires having to mechanically differ:
 
-- **Albion – Rechtsanspruch:** die Reliktstätte wurde einst von albischen Vorfahren errichtet/versiegelt, der Anspruch ist ererbtes Recht, keine Eroberung. Passt zu Lord Ectors bedächtigem Auftreten.
-- **Midgard – Ehr-/Eroberungsanspruch:** die Reliktstätte gehört dem, der sie halten und verteidigen kann — Anspruch muss im Kampf bewiesen werden, nicht durch Urkunden. Passt zu Jarl Skadis Prüfungs-Ethos.
-- **Hibernia – Hüteranspruch:** die Reliktstätte ist keine Trophäe, sondern schützt das Land selbst (Wardstein-Magie, Waldgleichgewicht) — Hibernia sieht sich als Wächter in Verantwortung, nicht als Besitzer. Passt zu Rí Aengus' Sorge ums Gleichgewicht.
+- **Albion – Legal Entitlement:** The relic site was once built/sealed by Albanian ancestors, the claim is inherited right, not conquest.
+- **Midgard – Honor/Conquest Claim:** The place of relic belongs to those who can hold and defend it—claims must be proven in battle, not by documents.
+- **Hibernia – Guardianship claim:** The relic site is not a trophy, but protects the land itself (Wardstein magic, forest balance) — Hibernia sees himself as a guardian, not an owner.
 
-**Kleinteilige Quest-Hooks fürs spätere Startgebiet** (niedrige Einstiegsstufe, führt schrittweise zum Battleground-Übergang):
+**Small-scale quest hooks for later starting area** (low entry level, leads gradually to the Battleground transition):
 
-- *Lord Ector:* vermisste Grenzkundschafter nahe dem Reichsrand — niedrigschwellige Erkundungsquest, führt Spieler erstmals an die Reichsgrenze heran.
-- *Burgvogt Kay:* Ausbildungs-/Bewährungsaufträge (Trainingsgegner, kleine Wachposten sichern), eskalierend bis zur ersten echten Grenzpatrouille — natürlicher Übergang Startgebiet → Battleground.
-- *Jarl Skadi:* Bewährungsprobe-Kette, bevor Neuankömmlinge als vollwertige Krieger der Halle gelten.
-- *Hersir Vidar:* direkter Rekrutierungs-Hook für einen ersten Vorstoßtrupp an die Grenze — die unmittelbarste Brücke ins Battleground.
-- *Rí Aengus:* ein Hain/Steinkreis nahe der Grenze zeigt Verfallserscheinungen (Wardstein-Magie schwächelt) — Erkundungs-/Untersuchungsquest mit Naturmagie-Ton statt Militär-Ton.
-- *Ceann Cogaidh Aoife:* kleine Scharmützel-Bewährungsproben im hibernischen Guerilla-Stil, bevor Rekruten zur Grenzverteidigung zugelassen werden.
+- *Lord Ector:* Missing border scouts near the Reichsrand – low-threshold exploration quest, leads players for the first time to the Reichsbord.
+- *Burgvogt Kay:* Training/probation orders (defendants, secure small guard posts), escalating to the first real border patrol – natural transition starting area → Battleground.
+- *Jarl Skadi:* Test chain before newcomers are considered full-fledged warriors of the hall.
+- *Hersir Vidar* Direct recruitment hook for a first advance squad to the border — the most immediate bridge to the battleground.
+- *River Aengus:* a grove/stone circle near the border shows signs of decay (Wardstein magic weakens) — exploration/investigation quest with natural magic clay instead of military clay.
+- *Ceann Cogaidh Aoife:* small skirmish trials in the Hibernian guerrilla style, before recruits are admitted to the border defense.
 
-**Einordnung:** reine Design-Vorlage, keine ausgearbeiteten Quest-Skripte/Dialoge — relevant erst ab der Startgebiet-Phase (siehe Roadmap in README.md, nach dem Vertical Slice), ändert nichts am aktuellen Battleground-Fokus.
+**Classification:** pure design template, no elaborated quest scripts/dialogues — relevant only from the starting area phase (see roadmap in README.md, after the Vertical Slice), does not change the current Battleground focus.
 
-**Erweiterung um Eroberungspunkt-NPCs (Wachtürme, Dörfer, Minen, Schreine, neutrales Belagerungslager):** siehe [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md) — dort auch der Quest-Backlog mit Copilot-Prompt-Vorlage für die spätere Open-World-Frontier.
+**Expansion with conquest point NPCs (watchtowers, villages, mines, shrines, neutral siege camp):** See also [Docs/Design/Frontier_NPCs_and_Questlines.md](Docs/Design/Frontier_NPCs_and_Questlines.md) — there also the quest backlog with co-pilot prompt template for the later open-world frontier.
 
-**Erweiterung um Albion-Epic-Questline (Level 1–50):** siehe [Docs/Design/Albion_Epic_Questline.md](Docs/Design/Albion_Epic_Questline.md) — führt einen neuen Antagonisten ein: **Sir Alaric**, "der Hollow Warden", Anführer der häretischen Splittergruppe "Der Gebrochene Eid". Name aus dem generischen Albion-Männerpool oben entnommen (Alaric) – ab jetzt für diese Rolle reserviert, nicht zusätzlich als Füll-NPC-Name verwenden.
+**Extension to Albion-Epic-Questline (Level 1-50):** See also [Docs/Design/Albion_Epic_Questline.md](Docs/Design/Albion_Epic_Questline.md) introduces a new antagonist: **Sir Alaric**, "the Hollow Warden", leader of the heretical splinter group "The Broken Oath". Name taken from the generic Albion men's pool above (Alaric) - now reserved for this role, not to use additionally as a fill NPC name.
 
-**Erweiterung um Midgard-Epic-Questline (Level 1–50):** siehe [Docs/Design/Midgard_Epic_Questline.md](Docs/Design/Midgard_Epic_Questline.md) — Antagonist: **Ragnar Half-Sworn**, Anführer von **"The Ironbrood"**, einer Splittergruppe, die Midgards Kriegereid-Ehrenkodex verwirft. Name aus dem generischen Midgard-Männerpool (Ragnar) – ab jetzt reserviert.
+**Extension by Midgard-Epic-Questline (Level 1-50):** See also [Docs/Design/Midgard_Epic_Questline.md](Docs/Design/Midgard_Epic_Questline.md) — Antagonist: **Ragnar Half-Sworn**, leader of **"The Ironbrood"**, a splinter group that discards Midgard's warrior code of honor. Name from the generic Midgard men's pool (Ragnar) - reserved now.
 
-**Erweiterung um Hibernia-Epic-Questline (Level 1–50):** siehe [Docs/Design/Hibernia_Epic_Questline.md](Docs/Design/Hibernia_Epic_Questline.md) — Antagonistin/Antagonist: **Fintan the Rootbound**, Anführer von **"The Withered Circle"**. Name aus dem generischen Hibernia-Männerpool (Fintan) – ab jetzt reserviert.
+**Hibernia Epic Questline (Level 1–50):** See also [Docs/Design/Hibernia_Epic_Questline.md](Docs/Design/Hibernia_Epic_Questline.md) — antagonist/antagonist: **Fintan the Rootbound**, leader of **"The Withered Circle"**Name from the generic Hibernia men’s pool (Fintan) – reserved from now on.
 
-**Instanz-Bosse (Lv~16/28/39, siehe [Docs/Design/Quests.md](Docs/Design/Quests.md) → "Instanzen-Übersicht"):** ebenfalls aus den generischen Pools entnommen, ab jetzt für diese Encounter reserviert – **Osric the Turned, Leofric the Hollow-Marked** (Albion); **Erik/Ingvar of the Ironbrood** (Midgard); **Eamon the Withered, Tadhg the Withered** (Hibernia). Die drei Wächter-Konstrukte (The Hollow Sentinel, The Iron Wolf, The Bramble Warden) sind Kreaturen, keine Personennamen, keine Pool-Reservierung nötig.
+**Instance bosses (Lv~16/28/39, see [Docs/Design/Quests.md](Docs/Design/Quests.md) → "Instance Overview":** also taken from the generic pools, now reserved for these Encounters – **Osric the Turned, Leofric the Hollow-Marked** (Albion); **Erik/Ingvar of the Ironbrood** (Midgard); **Eamon the Withered, Tadhg the Withered** (Hibernia) The three guardian constructs (The Hollow Sentinel, The Iron Wolf, The Bramble Warden) are creatures, no personal names, no pool reservations necessary.
 
-## Praktische Nutzung für Questgeber
+## Practical use for quest givers
 
-Name + Rolle/Titel kombinieren statt nur Eigenname, z. B.:
-- "Schmied Godwin" (Albion)
-- "Ältester Torvald" (Midgard)
-- "Heilerin Sorcha" (Hibernia)
+Combine name + role/title instead of just own name, e.g.:
+- "Smith Godwin" (Albion)
+- "Elder Torvald" (Midgard)
+- "Healer Sorcha" (Hibernia)
 
-Rollen-Ideen für Questgeber: Schmied, Wache, Ältester/Älteste, Heiler(in), Händler(in), Bote/Botin, Gelehrte(r), Fährmann/-frau.
+Roles for quest givers: blacksmith, guard, elder, healer, dealer, messenger/botin, scholar, ferryman/woman.
 
 ## Status
 
-🟡 Design-Referenz. Namenspool weiterhin ohne konkrete Quests verknüpft; die sechs Reichsführungs-NPCs (Burgherren/militärische Befehlshaber) haben jetzt Charakter- und Quest-Hook-Vorschläge (2026-07-21), aber noch keine ausgearbeiteten Quest-Skripte/Dialoge. Relevant erst ab Startgebiet-Phase (siehe README-Roadmap, nach dem Vertical Slice).
+Name pool still linked without specific quests; the six realm leaderships-NPCs (Burgherren/military commander) now have character and quest hook proposals (2026-07-21), but no elaborated quest scripts/dialogues. Relevant only from the starting area phase (see README roadmap, after the Vertical Slice).
