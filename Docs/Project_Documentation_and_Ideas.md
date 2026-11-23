@@ -1,10 +1,42 @@
-# Project Documentation and Design Ideas
+# Project Handbook
 
 ## Project direction
 
 Camelot: Realms at War is a tactical Realm versus Realm (RvR) multiplayer prototype. Albion draws on Arthurian traditions, Midgard on Norse traditions, and Hibernia on Celtic traditions. The prototype tests whether distinct faction roles, positioning, and group coordination make small fights worth replaying.
 
 The immediate milestone is a compact battleground with one central objective. Start with two connected players, one class with auto-attacks and one or two abilities, and replicated health, death, and respawn. Add a second faction and class to test asymmetric play. Bring in the third faction after the two-faction test plays well. Use friends' playtests to tune abilities, travel times, and how quickly a losing team can rejoin a fight.
+
+## Developer onboarding
+
+1. Sign in to GitHub with your own account and confirm that the private repository is visible. Clone it to a local Windows drive with Git and Git LFS installed. Use the repository's GitHub remote for shared work.
+2. Install the Unreal Engine version declared by the project's `.uproject`. The repository's `CamelotRAW_TP.uproject` currently declares UE 5.8. **Caledonia 5.9 is the active Caledonia workspace**, and its level and assets should be opened in that project with UE 5.9. These are distinct workspaces. Ask the project maintainer for the matching Caledonia 5.9 project snapshot and dependency list before attempting a full map load.
+3. Install the Visual Studio C++ build workload and Windows SDK for native builds. If opening the project for the first time prompts for a module rebuild, build against the matching engine version.
+4. Run the commands below from the repository root. Open the repository's test level and run Play in Editor before beginning a task. For multiplayer changes, run two clients and verify the behavior on both.
+
+```powershell
+git lfs install
+git lfs pull
+.\tools\start-dev.ps1
+```
+
+The launcher targets the repository's UE 5.8 project. It checks for a clean worktree before synchronization, starts or reuses the editor, and checks Unreal MCP readiness. Use `-SkipSync` when deliberately working from the local version without pulling or copying the download cache. Keep worktrees local and coordinate changes to shared Unreal binaries before editing. See [developer workspace notes](../AGENTS.md) for startup and troubleshooting details.
+
+## ChatGPT, Codex, and Copilot
+
+- **ChatGPT and Codex** support planning, documentation, code review, and changes that span files or systems. Codex is the current workflow for editor-assisted tasks through Unreal MCP when the editor connection is available. Discover registered tools and their schemas before use. Verify the work in the editor or build rather than relying on a tool's success response alone.
+- **GitHub Copilot** supports focused implementation and completions in the IDE, including C++, test scaffolding, Blueprint-facing code, and repetitive structures.
+- Human reviewers own changes to gameplay, balance, content, and architecture. In a pull request, record the project and engine version used, what was tested, and any remaining verification or dependencies.
+
+## Collaboration and asset handoff
+
+- Use a focused branch and pull request for each change. Explain the intended outcome, list affected maps, Blueprints, or project settings, and include reproducible verification steps. Add screenshots to visual changes.
+- Coordinate ownership before editing the same `.umap` or `.uasset`. These files are difficult to merge. Use the repository's existing Git LFS rules for tracked Unreal binaries.
+- **A Git checkout alone does not restore Caledonia.** The published Biesenthal `.umap` is a level file and depends on the matching project content. The repository also documents gaps in cross-machine sync for World Partition external actor and object files. Verify all required packages, plugins, and external actor data on a second machine before calling a handoff complete. Treat the NAS download cache as a cache.
+- Use the private [Caledonia release](https://github.com/Unaragan/camelot-realms-at-war/releases/tag/caledonia-katalog-2026-11-23) for dated map snapshots, gallery files, and approved original asset exports. Include provenance, engine version, and any dependencies with each package. Share third-party source assets only when the license permits redistribution.
+
+## First contribution
+
+A practical first task is to open the repository prototype, run a two-client session, and record the connection, movement, and replication baseline. For Caledonia asset work, start with an isolated mesh and confirm Nanite, material appearance, and collision in UE 5.9 before integrating it into the main map. Record whether the evidence came from a build, editor inspection, or playtest.
 
 ## Combat and implementation
 
@@ -52,7 +84,7 @@ Build a small number of complete encounters before expanding the quest list. Rec
 
 ## Design sources
 
-This English overview consolidates current project decisions and selected ideas. The linked source documents preserve detailed mechanics and alternatives in their original language.
+This handbook is the current starting point for contributors. The linked design sources provide detailed mechanics, alternatives, and historical context. Where an older setup note describes a different workflow, use the onboarding section above.
 
 - [Project README](../README.md), [game design document](../Design.md), [gameplay systems](../SYSTEMS.md), and [class concepts](../CLASSES.md)
 - [Frontier vision](Design/OpenWorld_Frontier_3Realms_Vision.md), [home realms vision](Design/OpenWorld_HomeRealms_Vision.md), and [multiplayer scaling](Technical/Multiplayer_Scaling.md)
