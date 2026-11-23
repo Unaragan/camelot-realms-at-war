@@ -1,3 +1,5 @@
+> **Dated cost record.** Prices, service tiers, and LFS allowances below are historical. Verify current terms when budgeting or planning a large upload.
+
 # Kosten-Tracking
 
 Laufende Dokumentation aller Kosten für Camelot: Realms at War – aktuell anfallend und geplant für spätere Phasen. Alle Beträge sind Schätzungen zum Zeitpunkt der Eintragung und sollten vor tatsächlicher Zahlung neu geprüft werden (Preise ändern sich, siehe Notizen).
